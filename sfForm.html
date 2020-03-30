@@ -1,0 +1,2019 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfForm Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfForm Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      form      </strong>
+      <small> - <a href="form.html">10 classes</a></small>
+
+              <ul>
+                      <li><a href="sfForm.html">sfForm</a></li>
+                      <li><a href="sfFormDoctrine.html">sfFormDoctrine</a></li>
+                      <li><a href="sfFormField.html">sfFormField</a></li>
+                      <li><a href="sfFormFieldSchema.html">sfFormFieldSchema</a></li>
+                      <li><a href="sfFormFilter.html">sfFormFilter</a></li>
+                      <li><a href="sfFormFilterDoctrine.html">sfFormFilterDoctrine</a></li>
+                      <li><a href="sfFormFilterPropel.html">sfFormFilterPropel</a></li>
+                      <li><a href="sfFormObject.html">sfFormObject</a></li>
+                      <li><a href="sfFormPropel.html">sfFormPropel</a></li>
+                      <li><a href="sfFormSymfony.html">sfFormSymfony</a></li>
+                  </ul>
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfForm.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfForm.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfForm.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfForm.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfForm represents a form.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="sfFormSymfony.html">sfFormSymfony</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfForm</strong>
+
+              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_addcsrfprotection">addCSRFProtection</a>($secret)
+                <br />
+                <span class="description">Adds CSRF protection to the current form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_bind">bind</a>($taintedValues, $taintedFiles)
+                <br />
+                <span class="description">Binds the form with input values.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_configure">configure</a>()
+                <br />
+                <span class="description">Configures the current form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_convertfileinformation">convertFileInformation</a>($taintedFiles)
+                <br />
+                <span class="description">Converts uploaded file array to a format following the $_GET and $POST naming convention.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfForm.html#method_count">count</a>()
+                <br />
+                <span class="description">Returns the number of form fields (implements the Countable interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfForm.html#method_current">current</a>()
+                <br />
+                <span class="description">Returns the current form field (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_deeparrayunion">deepArrayUnion</a>($array1, $array2)
+                <br />
+                <span class="description">Merges two arrays without reindexing numeric keys.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_disablecsrfprotection">disableCSRFProtection</a>()
+                <br />
+                <span class="description">Disables CSRF protection for all forms.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_disablelocalcsrfprotection">disableLocalCSRFProtection</a>()
+                <br />
+                <span class="description">Disables CSRF protection for this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_dobind">doBind</a>($values)
+                <br />
+                <span class="description">Cleans and binds values to the current form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_embedform">embedForm</a>($name, $form, $decorator)
+                <br />
+                <span class="description">Embeds a sfForm into the current form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_embedformforeach">embedFormForEach</a>($name, $form, $n, $decorator, $innerDecorator, $options, $attributes, $labels)
+                <br />
+                <span class="description">Embeds a sfForm into the current form n times.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_enablecsrfprotection">enableCSRFProtection</a>($secret)
+                <br />
+                <span class="description">Enables CSRF protection for all forms.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_enablelocalcsrfprotection">enableLocalCSRFProtection</a>($secret)
+                <br />
+                <span class="description">Enables CSRF protection for this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_fixphpfilesarray">fixPhpFilesArray</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method_getcsrffieldname">getCSRFFieldName</a>()
+                <br />
+                <span class="description">Gets the CSRF field name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method_getcsrftoken">getCSRFToken</a>($secret)
+                <br />
+                <span class="description">Returns a CSRF token, given a secret.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_getdefault">getDefault</a>($name, )
+                <br />
+                <span class="description">Gets a default value for a form field.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_getdefaults">getDefaults</a>()
+                <br />
+                <span class="description">Gets the default values for the form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_getembeddedform">getEmbeddedForm</a>($name)
+                <br />
+                <span class="description">Returns an embedded form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_getembeddedforms">getEmbeddedForms</a>()
+                <br />
+                <span class="description">Gets the list of embedded forms.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfValidatorErrorSchema</span>
+                <a href="sfForm.html#method_geterrorschema">getErrorSchema</a>()
+                <br />
+                <span class="description">Gets the error schema associated with the form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfFormFieldSchema</span>
+                <a href="sfForm.html#method_getformfieldschema">getFormFieldSchema</a>()
+                <br />
+                <span class="description">Returns a form field for the main widget schema.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_getglobalerrors">getGlobalErrors</a>()
+                <br />
+                <span class="description">Gets the global errors associated with the form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_getjavascripts">getJavaScripts</a>()
+                <br />
+                <span class="description">Gets the JavaScript paths associated with the form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string|boolean</span>
+                <a href="sfForm.html#method_getname">getName</a>()
+                <br />
+                <span class="description">Returns the array name under which user data can retrieved.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_getoption">getOption</a>($name, $default, )
+                <br />
+                <span class="description">Gets an option value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_getoptions">getOptions</a>()
+                <br />
+                <span class="description">Returns the current form&#039;s options.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_getstylesheets">getStylesheets</a>()
+                <br />
+                <span class="description">Gets the stylesheet paths associated with the form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_gettaintedvalues">getTaintedValues</a>()
+                <br />
+                <span class="description">Returns the submitted tainted values.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Exception</span>
+                <a href="sfForm.html#method_gettostringexception">getToStringException</a>()
+                <br />
+                <span class="description">Gets the exception if one was thrown in the __toString() method.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfValidatorBase</span>
+                <a href="sfForm.html#method_getvalidator">getValidator</a>($name)
+                <br />
+                <span class="description">Gets a validator for the given field name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfValidatorSchema</span>
+                <a href="sfForm.html#method_getvalidatorschema">getValidatorSchema</a>()
+                <br />
+                <span class="description">Gets the validator schema associated with this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method_getvalue">getValue</a>($field)
+                <br />
+                <span class="description">Returns a cleaned value by field name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfForm.html#method_getvalues">getValues</a>()
+                <br />
+                <span class="description">Returns the array of cleaned values.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidgetForm</span>
+                <a href="sfForm.html#method_getwidget">getWidget</a>($name)
+                <br />
+                <span class="description">Gets a widget for the given field name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidgetFormSchema</span>
+                <a href="sfForm.html#method_getwidgetschema">getWidgetSchema</a>()
+                <br />
+                <span class="description">Gets the widget schema associated with this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_hasdefault">hasDefault</a>($name, )
+                <br />
+                <span class="description">Returns true if the form has a default value for a form field.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfForm.html#method_haserrors">hasErrors</a>()
+                <br />
+                <span class="description">Returns true if the form has some errors.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfForm.html#method_hasglobalerrors">hasGlobalErrors</a>()
+                <br />
+                <span class="description">Returns true if the form has some global errors.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfForm.html#method_hastostringexception">hasToStringException</a>()
+                <br />
+                <span class="description">Returns true if a form thrown an exception in the __toString() method</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfForm.html#method_isbound">isBound</a>()
+                <br />
+                <span class="description">Returns true if the form is bound to input values.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_iscsrfprotected">isCSRFProtected</a>()
+                <br />
+                <span class="description">@return true if this form is CSRF protected</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfForm.html#method_ismultipart">isMultipart</a>()
+                <br />
+                <span class="description">Returns true if the form is multipart.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfForm.html#method_isvalid">isValid</a>()
+                <br />
+                <span class="description">Returns true if the form is valid.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method_key">key</a>()
+                <br />
+                <span class="description">Gets the key associated with the current form field (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_mergeform">mergeForm</a>($form)
+                <br />
+                <span class="description">Merges current form widget and validator schemas with the ones from the</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_mergepostvalidator">mergePostValidator</a>($validator)
+                <br />
+                <span class="description">Merges a validator with the current post validators.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_mergeprevalidator">mergePreValidator</a>($validator)
+                <br />
+                <span class="description">Merges a validator with the current pre validators.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_next">next</a>()
+                <br />
+                <span class="description">Moves to the next form field (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfForm.html#method_offsetexists">offsetExists</a>($name)
+                <br />
+                <span class="description">Returns true if the bound field exists (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfFormField</span>
+                <a href="sfForm.html#method_offsetget">offsetGet</a>($name)
+                <br />
+                <span class="description">Returns the form field associated with the name (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_offsetset">offsetSet</a>($offset, $value)
+                <br />
+                <span class="description">Throws an exception saying that values cannot be set (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_offsetunset">offsetUnset</a>($offset)
+                <br />
+                <span class="description">Removes a field from the form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method_render">render</a>($attributes)
+                <br />
+                <span class="description">Renders the widget schema associated with this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method_renderformtag">renderFormTag</a>($url, $attributes)
+                <br />
+                <span class="description">Renders the form tag.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method_renderglobalerrors">renderGlobalErrors</a>()
+                <br />
+                <span class="description">Renders global errors associated with this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method_renderhiddenfields">renderHiddenFields</a>($recursive)
+                <br />
+                <span class="description">Renders hidden form fields.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method_renderusing">renderUsing</a>($formatterName, $attributes)
+                <br />
+                <span class="description">Renders the widget schema using a specific form formatter</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_resetformfields">resetFormFields</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_rewind">rewind</a>()
+                <br />
+                <span class="description">Resets the field names array to the beginning (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_setcsrffieldname">setCSRFFieldName</a>($name)
+                <br />
+                <span class="description">Sets the CSRF field name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_setdefault">setDefault</a>($name, $default)
+                <br />
+                <span class="description">Sets a default value for a form field.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_setdefaults">setDefaults</a>($defaults)
+                <br />
+                <span class="description">Sets the default values for the form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_setoption">setOption</a>($name, $value)
+                <br />
+                <span class="description">Sets an option value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_settostringexception">setToStringException</a>($e)
+                <br />
+                <span class="description">Sets an exception thrown by the __toString() method.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_setup">setup</a>()
+                <br />
+                <span class="description">Setups the current form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_setvalidator">setValidator</a>($name, $validator)
+                <br />
+                <span class="description">Set a validator for the given field name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_setvalidators">setValidators</a>($validators)
+                <br />
+                <span class="description">Sets the validators associated with this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_setvalidatorschema">setValidatorSchema</a>($validatorSchema)
+                <br />
+                <span class="description">Sets the validator schema associated with this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_setwidget">setWidget</a>($name, $widget)
+                <br />
+                <span class="description">Set a widget for the given field name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_setwidgets">setWidgets</a>($widgets)
+                <br />
+                <span class="description">Sets the widgets associated with this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfForm.html#method_setwidgetschema">setWidgetSchema</a>($widgetSchema)
+                <br />
+                <span class="description">Sets the widget schema associated with this form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method_usefields">useFields</a>($fields, $ordered)
+                <br />
+                <span class="description">Removes all visible fields from the form except the ones given as an argument.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfForm.html#method_valid">valid</a>()
+                <br />
+                <span class="description">Returns true if the current form field is valid (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method___clone">__clone</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfForm.html#method___construct">__construct</a>($defaults, $options, $CSRFSecret)
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfForm.html#method___tostring">__toString</a>()
+                <br />
+                <span class="description">Returns a string representation of the form.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_addcsrfprotection"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">addCSRFProtection</span>&nbsp;($secret)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$secret</td>
+                <td>The secret to use to compute the CSRF token</td>
+              </tr>
+                        </table>
+              <p><strong>Adds CSRF protection to the current form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_bind"></a>
+              <h3>
+                <span class="method-name">bind</span>&nbsp;($taintedValues, $taintedFiles)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$taintedValues</td>
+                <td>An array of input values</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$taintedFiles</td>
+                <td>An array of uploaded files (in the $_FILES or $_GET format)</td>
+              </tr>
+                        </table>
+              <p><strong>Binds the form with input values.</strong></p>
+              <p><p>
+<br /> It triggers the validator schema validation.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_configure"></a>
+              <h3>
+                <span class="method-name">configure</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Configures the current form.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_convertfileinformation"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">convertFileInformation</span>&nbsp;($taintedFiles)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$taintedFiles</td>
+                <td>An array representing uploaded file information</td>
+              </tr>
+                        </table>
+              <p><strong>Converts uploaded file array to a format following the $_GET and $POST naming convention.</strong></p>
+              <p><p>
+<br /> It's safe to pass an already converted array, in which case this method just returns the original array unmodified.</p></p>
+                        <p><strong>returns</strong> An array of re-ordered uploaded file information</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_count"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">count</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the number of form fields (implements the Countable interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The number of embedded form fields</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_current"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">current</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current form field (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The escaped value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_deeparrayunion"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">deepArrayUnion</span>&nbsp;($array1, $array2)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$array1</td>
+                <td>An array to merge</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$array2</td>
+                <td>An array to merge</td>
+              </tr>
+                        </table>
+              <p><strong>Merges two arrays without reindexing numeric keys.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The merged array</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_disablecsrfprotection"></a>
+              <h3>
+                <span class="method-name">disableCSRFProtection</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Disables CSRF protection for all forms.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_disablelocalcsrfprotection"></a>
+              <h3>
+                <span class="method-name">disableLocalCSRFProtection</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Disables CSRF protection for this form.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_dobind"></a>
+              <h3>
+                <span class="method-name">doBind</span>&nbsp;($values)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$values</td>
+                <td>A merged array of values and files</td>
+              </tr>
+                        </table>
+              <p><strong>Cleans and binds values to the current form.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_embedform"></a>
+              <h3>
+                <span class="method-name">embedForm</span>&nbsp;($name, $form, $decorator)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$form</td>
+                <td>A sfForm instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$decorator</td>
+                <td>A HTML decorator for the embedded form</td>
+              </tr>
+                        </table>
+              <p><strong>Embeds a sfForm into the current form.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_embedformforeach"></a>
+              <h3>
+                <span class="method-name">embedFormForEach</span>&nbsp;($name, $form, $n, $decorator, $innerDecorator, $options, $attributes, $labels)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$form</td>
+                <td>A sfForm instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$n</td>
+                <td>The number of times to embed the form</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$decorator</td>
+                <td>A HTML decorator for the main form around embedded forms</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$innerDecorator</td>
+                <td>A HTML decorator for each embedded form</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>Options for schema</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>Attributes for schema</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$labels</td>
+                <td>Labels for schema</td>
+              </tr>
+                        </table>
+              <p><strong>Embeds a sfForm into the current form n times.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_enablecsrfprotection"></a>
+              <h3>
+                <span class="method-name">enableCSRFProtection</span>&nbsp;($secret)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$secret</td>
+                <td>A secret to use when computing the CSRF token</td>
+              </tr>
+                        </table>
+              <p><strong>Enables CSRF protection for all forms.</strong></p>
+              <p><p>
+<br /> The given secret will be used for all forms, except if you pass a secret in the constructor.
+<br /> Even if a secret is automatically generated if you don't provide a secret, you're strongly advised
+<br /> to provide one by yourself.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_enablelocalcsrfprotection"></a>
+              <h3>
+                <span class="method-name">enableLocalCSRFProtection</span>&nbsp;($secret)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$secret</td>
+                <td>A secret to use when computing the CSRF token</td>
+              </tr>
+                        </table>
+              <p><strong>Enables CSRF protection for this form.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_fixphpfilesarray"></a>
+              <h3>
+                <span class="method-name">fixPhpFilesArray</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcsrffieldname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getCSRFFieldName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the CSRF field name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The CSRF field name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcsrftoken"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getCSRFToken</span>&nbsp;($secret)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$secret</td>
+                <td>The secret string to use (null to use the current secret)</td>
+              </tr>
+                        </table>
+              <p><strong>Returns a CSRF token, given a secret.</strong></p>
+              <p><p>
+<br /> If you want to change the algorithm used to compute the token, you
+<br /> can override this method.</p></p>
+                        <p><strong>returns</strong> A token string</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdefault"></a>
+              <h3>
+                <span class="method-name">getDefault</span>&nbsp;($name, )
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      </table>
+              <p><strong>Gets a default value for a form field.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdefaults"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getDefaults</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the default values for the form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of default values</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getembeddedform"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">getEmbeddedForm</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name used to embed the form</td>
+              </tr>
+                        </table>
+              <p><strong>Returns an embedded form.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> InvalidArgumentException If there is no form embedded with the supplied name</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getembeddedforms"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getEmbeddedForms</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the list of embedded forms.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of embedded forms</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geterrorschema"></a>
+              <h3>
+                (sfValidatorErrorSchema)&nbsp;<span class="method-name">getErrorSchema</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the error schema associated with the form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A sfValidatorErrorSchema instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformfieldschema"></a>
+              <h3>
+                (sfFormFieldSchema)&nbsp;<span class="method-name">getFormFieldSchema</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns a form field for the main widget schema.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A sfFormFieldSchema instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getglobalerrors"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getGlobalErrors</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the global errors associated with the form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of global errors</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getjavascripts"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getJavaScripts</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the JavaScript paths associated with the form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of JavaScript paths</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getname"></a>
+              <h3>
+                (string|boolean)&nbsp;<span class="method-name">getName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the array name under which user data can retrieved.</strong></p>
+              <p><p>
+<br /> If the user data is not stored under an array, it returns false.</p></p>
+                        <p><strong>returns</strong> The name or false if the name format is not an array format</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getoption"></a>
+              <h3>
+                <span class="method-name">getOption</span>&nbsp;($name, $default, )
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The option name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value (null by default)</td>
+              </tr>
+                                      </table>
+              <p><strong>Gets an option value.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getoptions"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getOptions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current form&#039;s options.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form's options</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getstylesheets"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getStylesheets</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the stylesheet paths associated with the form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of stylesheet paths</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettaintedvalues"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getTaintedValues</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the submitted tainted values.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of tainted values</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettostringexception"></a>
+              <h3>
+                (Exception)&nbsp;<span class="method-name">getToStringException</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the exception if one was thrown in the __toString() method.</strong></p>
+              <p><p>
+<br /> This is a hack needed because PHP does not allow to throw exceptions in __toString() magic method.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvalidator"></a>
+              <h3>
+                (sfValidatorBase)&nbsp;<span class="method-name">getValidator</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a validator for the given field name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> $validator The validator</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvalidatorschema"></a>
+              <h3>
+                (sfValidatorSchema)&nbsp;<span class="method-name">getValidatorSchema</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the validator schema associated with this form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A sfValidatorSchema instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvalue"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getValue</span>&nbsp;($field)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$field</td>
+                <td>The name of the value required</td>
+              </tr>
+                        </table>
+              <p><strong>Returns a cleaned value by field name.</strong></p>
+              <p><p>
+<br /> If the form is not bound, it will return null.</p></p>
+                        <p><strong>returns</strong> The cleaned value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvalues"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getValues</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the array of cleaned values.</strong></p>
+              <p><p>
+<br /> If the form is not bound, it returns an empty array.</p></p>
+                        <p><strong>returns</strong> An array of cleaned values</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getwidget"></a>
+              <h3>
+                (sfWidgetForm)&nbsp;<span class="method-name">getWidget</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a widget for the given field name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> $widget The widget</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getwidgetschema"></a>
+              <h3>
+                (sfWidgetFormSchema)&nbsp;<span class="method-name">getWidgetSchema</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the widget schema associated with this form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A sfWidgetFormSchema instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasdefault"></a>
+              <h3>
+                <span class="method-name">hasDefault</span>&nbsp;($name, )
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      </table>
+              <p><strong>Returns true if the form has a default value for a form field.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_haserrors"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">hasErrors</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the form has some errors.</strong></p>
+              <p><p>
+<br /> It returns false if the form is not bound.</p></p>
+                        <p><strong>returns</strong> true if the form has no errors, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasglobalerrors"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">hasGlobalErrors</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the form has some global errors.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the form has some global errors, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hastostringexception"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">hasToStringException</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if a form thrown an exception in the __toString() method</strong></p>
+              <p><p>
+<br /> This is a hack needed because PHP does not allow to throw exceptions in __toString() magic method.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isbound"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">isBound</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the form is bound to input values.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the form is bound to input values, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_iscsrfprotected"></a>
+              <h3>
+                <span class="method-name">isCSRFProtected</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@return true if this form is CSRF protected</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_ismultipart"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">isMultipart</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the form is multipart.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the form is multipart</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isvalid"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">isValid</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the form is valid.</strong></p>
+              <p><p>
+<br /> It returns false if the form is not bound.</p></p>
+                        <p><strong>returns</strong> true if the form is valid, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_key"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">key</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the key associated with the current form field (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The key</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_mergeform"></a>
+              <h3>
+                <span class="method-name">mergeForm</span>&nbsp;($form)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$form</td>
+                <td>The sfForm instance to merge with current form</td>
+              </tr>
+                        </table>
+              <p><strong>Merges current form widget and validator schemas with the ones from the</strong></p>
+              <p><p> sfForm object passed as parameter. Please note it also merge defaults.</p></p>
+                                  <p><strong>throws</strong> LogicException      If one of the form has already been bound</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_mergepostvalidator"></a>
+              <h3>
+                <span class="method-name">mergePostValidator</span>&nbsp;($validator)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$validator</td>
+                <td>A validator to be merged</td>
+              </tr>
+                        </table>
+              <p><strong>Merges a validator with the current post validators.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_mergeprevalidator"></a>
+              <h3>
+                <span class="method-name">mergePreValidator</span>&nbsp;($validator)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$validator</td>
+                <td>A validator to be merged</td>
+              </tr>
+                        </table>
+              <p><strong>Merges a validator with the current pre validators.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_next"></a>
+              <h3>
+                <span class="method-name">next</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Moves to the next form field (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetexists"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">offsetExists</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the bound field</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if the bound field exists (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the widget exists, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetget"></a>
+              <h3>
+                (sfFormField)&nbsp;<span class="method-name">offsetGet</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The offset of the value to get</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the form field associated with the name (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A form field instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetset"></a>
+              <h3>
+                <span class="method-name">offsetSet</span>&nbsp;($offset, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$offset</td>
+                <td>(ignored)</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>(ignored)</td>
+              </tr>
+                        </table>
+              <p><strong>Throws an exception saying that values cannot be set (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> <b>LogicException</b></p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetunset"></a>
+              <h3>
+                <span class="method-name">offsetUnset</span>&nbsp;($offset)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$offset</td>
+                <td>The field name</td>
+              </tr>
+                        </table>
+              <p><strong>Removes a field from the form.</strong></p>
+              <p><p>
+<br /> It removes the widget and the validator for the given field.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_render"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">render</span>&nbsp;($attributes)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of HTML attributes</td>
+              </tr>
+                        </table>
+              <p><strong>Renders the widget schema associated with this form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The rendered widget schema</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_renderformtag"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">renderFormTag</span>&nbsp;($url, $attributes)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$url</td>
+                <td>The URL for the action</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of HTML attributes</td>
+              </tr>
+                        </table>
+              <p><strong>Renders the form tag.</strong></p>
+              <p><p>
+<br /> This methods only renders the opening form tag.
+<br /> You need to close it after the form rendering.</p><p> This method takes into account the multipart widgets
+<br /> and converts PUT and DELETE methods to a hidden field
+<br /> for later processing.</p></p>
+                        <p><strong>returns</strong> An HTML representation of the opening form tag</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_renderglobalerrors"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">renderGlobalErrors</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Renders global errors associated with this form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The rendered global errors</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_renderhiddenfields"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">renderHiddenFields</span>&nbsp;($recursive)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$recursive</td>
+                <td>False will prevent hidden fields from embedded forms from rendering</td>
+              </tr>
+                        </table>
+              <p><strong>Renders hidden form fields.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_renderusing"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">renderUsing</span>&nbsp;($formatterName, $attributes)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$formatterName</td>
+                <td>The form formatter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of HTML attributes</td>
+              </tr>
+                        </table>
+              <p><strong>Renders the widget schema using a specific form formatter</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The rendered widget schema</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_resetformfields"></a>
+              <h3>
+                <span class="method-name">resetFormFields</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_rewind"></a>
+              <h3>
+                <span class="method-name">rewind</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Resets the field names array to the beginning (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setcsrffieldname"></a>
+              <h3>
+                <span class="method-name">setCSRFFieldName</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The CSRF field name</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the CSRF field name.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdefault"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">setDefault</span>&nbsp;($name, $default)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a default value for a form field.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdefaults"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">setDefaults</span>&nbsp;($defaults)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$defaults</td>
+                <td>An array of default values</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the default values for the form.</strong></p>
+              <p><p>
+<br /> The default values are only used if the form is not bound.</p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setoption"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">setOption</span>&nbsp;($name, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The option name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Sets an option value.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_settostringexception"></a>
+              <h3>
+                <span class="method-name">setToStringException</span>&nbsp;($e)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$e</td>
+                <td>The exception thrown by __toString()</td>
+              </tr>
+                        </table>
+              <p><strong>Sets an exception thrown by the __toString() method.</strong></p>
+              <p><p>
+<br /> This is a hack needed because PHP does not allow to throw exceptions in __toString() magic method.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setup"></a>
+              <h3>
+                <span class="method-name">setup</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Setups the current form.</strong></p>
+              <p><p>
+<br /> This method is overridden by generator.</p><p> If you want to do something at initialization, you have to override the configure() method.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setvalidator"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">setValidator</span>&nbsp;($name, $validator)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$validator</td>
+                <td>The validator</td>
+              </tr>
+                        </table>
+              <p><strong>Set a validator for the given field name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setvalidators"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">setValidators</span>&nbsp;($validators)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$validators</td>
+                <td>An array of named validators</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the validators associated with this form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setvalidatorschema"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">setValidatorSchema</span>&nbsp;($validatorSchema)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$validatorSchema</td>
+                <td>A sfValidatorSchema instance</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the validator schema associated with this form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setwidget"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">setWidget</span>&nbsp;($name, $widget)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$widget</td>
+                <td>The widget</td>
+              </tr>
+                        </table>
+              <p><strong>Set a widget for the given field name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setwidgets"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">setWidgets</span>&nbsp;($widgets)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$widgets</td>
+                <td>An array of named widgets</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the widgets associated with this form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setwidgetschema"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">setWidgetSchema</span>&nbsp;($widgetSchema)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$widgetSchema</td>
+                <td>A sfWidgetFormSchema instance</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the widget schema associated with this form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current form instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_usefields"></a>
+              <h3>
+                <span class="method-name">useFields</span>&nbsp;($fields, $ordered)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$fields</td>
+                <td>An array of field names</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$ordered</td>
+                <td>Whether to use the array of field names to reorder the fields</td>
+              </tr>
+                        </table>
+              <p><strong>Removes all visible fields from the form except the ones given as an argument.</strong></p>
+              <p><p>
+<br /> Hidden fields are not affected.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_valid"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">valid</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the current form field is valid (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The validity of the current element; true if it is valid</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___clone"></a>
+              <h3>
+                <span class="method-name">__clone</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($defaults, $options, $CSRFSecret)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$defaults</td>
+                <td>An array of field default values</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>An array of options</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$CSRFSecret</td>
+                <td>A CSRF secret</td>
+              </tr>
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___tostring"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">__toString</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns a string representation of the form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A string representation of the form</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+div.auto_complete
+{
+  width: 350px;
+  background: #fff;
+}
+
+div.auto_complete ul
+{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border: 1px solid #bbb;
+}
+
+div.auto_complete ul li
+{
+  margin: 0;
+  padding: 3px;
+  border-bottom: 1px solid #eee;
+  list-style-type: none;
+}
+
+div.auto_complete ul li.selected
+{
+  background-color: #ffb;
+}
+
+div.auto_complete ul strong.highlight
+{
+  margin: 0;
+  padding: 0;
+  color: #800;
+}
+
+/*
+     FILE ARCHIVED ON 18:36:53 Jun 08, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:24:00 Mar 30, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 373.718
+  exclusion.robots.policy: 0.304
+  LoadShardBlock: 343.259 (3)
+  esindex: 0.013
+  exclusion.robots: 0.325
+  RedisCDXSource: 5.345
+  CDXLines.iter: 19.157 (3)
+  PetaboxLoader3.datanode: 314.199 (5)
+  PetaboxLoader3.resolve: 247.702 (3)
+  load_resource: 298.244
+*/

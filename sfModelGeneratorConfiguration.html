@@ -1,0 +1,1171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfModelGeneratorConfiguration Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfModelGeneratorConfiguration Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      generator      </strong>
+      <small> - <a href="generator.html">10 classes</a></small>
+
+              <ul>
+                      <li><a href="sfDoctrineFormFilterGenerator.html">sfDoctrineFormFilterGenerator</a></li>
+                      <li><a href="sfDoctrineFormGenerator.html">sfDoctrineFormGenerator</a></li>
+                      <li><a href="sfGenerator.html">sfGenerator</a></li>
+                      <li><a href="sfGeneratorManager.html">sfGeneratorManager</a></li>
+                      <li><a href="sfModelGenerator.html">sfModelGenerator</a></li>
+                      <li><a href="sfModelGeneratorConfiguration.html">sfModelGeneratorConfiguration</a></li>
+                      <li><a href="sfModelGeneratorConfigurationField.html">sfModelGeneratorConfigurationField</a></li>
+                      <li><a href="sfModelGeneratorHelper.html">sfModelGeneratorHelper</a></li>
+                      <li><a href="sfPropelFormFilterGenerator.html">sfPropelFormFilterGenerator</a></li>
+                      <li><a href="sfPropelFormGenerator.html">sfPropelFormGenerator</a></li>
+                  </ul>
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfModelGeneratorConfiguration.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfModelGeneratorConfiguration.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfModelGeneratorConfiguration.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfModelGeneratorConfiguration.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>Model generator configuration.</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_compile">compile</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_fixactionparameters">fixActionParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getactionsdefault">getActionsDefault</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getconfig">getConfig</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getcontextconfiguration">getContextConfiguration</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getcredentials">getCredentials</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_geteditactions">getEditActions</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_geteditdisplay">getEditDisplay</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getedittitle">getEditTitle</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfieldconfiguration">getFieldConfiguration</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfieldconfigvalue">getFieldConfigValue</a>($config, $key, $default)
+                <br />
+                <span class="description">Gets the value for a given key.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfieldsdefault">getFieldsDefault</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfieldsedit">getFieldsEdit</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfieldsfilter">getFieldsFilter</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfieldsform">getFieldsForm</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfieldslist">getFieldsList</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfieldsnew">getFieldsNew</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfilterdefaults">getFilterDefaults</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfilterdisplay">getFilterDisplay</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfilterform">getFilterForm</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfilterformclass">getFilterFormClass</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getfilterformoptions">getFilterFormOptions</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="sfModelGeneratorConfiguration.html#method_getform">getForm</a>($object, $options)
+                <br />
+                <span class="description">Gets a new form object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getformactions">getFormActions</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getformclass">getFormClass</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getformdisplay">getFormDisplay</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getformfields">getFormFields</a>($form, $context)
+                <br />
+                <span class="description">Gets the fields that represents the form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getformfilterfields">getFormFilterFields</a>($form)
+                <br />
+                <span class="description">Gets the fields that represents the filters.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getformoptions">getFormOptions</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getlistactions">getListActions</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getlistbatchactions">getListBatchActions</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getlistdisplay">getListDisplay</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getlistlayout">getListLayout</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getlistobjectactions">getListObjectActions</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getlistparams">getListParams</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getlisttitle">getListTitle</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getnewactions">getNewActions</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getnewdisplay">getNewDisplay</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getnewtitle">getNewTitle</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_getpager">getPager</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfModelGeneratorConfiguration.html#method_getvalue">getValue</a>($key, $default, $escaped)
+                <br />
+                <span class="description">Gets the configuration for a given field.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_hasfilterform">hasFilterForm</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_mapfieldname">mapFieldName</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method_parsevariables">parseVariables</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfModelGeneratorConfiguration.html#method___construct">__construct</a>()
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_compile"></a>
+              <h3>
+                <span class="method-name">compile</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_fixactionparameters"></a>
+              <h3>
+                <span class="method-name">fixActionParameters</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getactionsdefault"></a>
+              <h3>
+                <span class="method-name">getActionsDefault</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getconfig"></a>
+              <h3>
+                <span class="method-name">getConfig</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcontextconfiguration"></a>
+              <h3>
+                <span class="method-name">getContextConfiguration</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcredentials"></a>
+              <h3>
+                <span class="method-name">getCredentials</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geteditactions"></a>
+              <h3>
+                <span class="method-name">getEditActions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geteditdisplay"></a>
+              <h3>
+                <span class="method-name">getEditDisplay</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getedittitle"></a>
+              <h3>
+                <span class="method-name">getEditTitle</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfieldconfiguration"></a>
+              <h3>
+                <span class="method-name">getFieldConfiguration</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfieldconfigvalue"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getFieldConfigValue</span>&nbsp;($config, $key, $default)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$config</td>
+                <td>The configuration</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>The key name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the value for a given key.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The key value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfieldsdefault"></a>
+              <h3>
+                <span class="method-name">getFieldsDefault</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfieldsedit"></a>
+              <h3>
+                <span class="method-name">getFieldsEdit</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfieldsfilter"></a>
+              <h3>
+                <span class="method-name">getFieldsFilter</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfieldsform"></a>
+              <h3>
+                <span class="method-name">getFieldsForm</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfieldslist"></a>
+              <h3>
+                <span class="method-name">getFieldsList</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfieldsnew"></a>
+              <h3>
+                <span class="method-name">getFieldsNew</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfilterdefaults"></a>
+              <h3>
+                <span class="method-name">getFilterDefaults</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfilterdisplay"></a>
+              <h3>
+                <span class="method-name">getFilterDisplay</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfilterform"></a>
+              <h3>
+                <span class="method-name">getFilterForm</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfilterformclass"></a>
+              <h3>
+                <span class="method-name">getFilterFormClass</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfilterformoptions"></a>
+              <h3>
+                <span class="method-name">getFilterFormOptions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getform"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">getForm</span>&nbsp;($object, $options)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                                    <tr>
+                <td class="parameter-name">$options</td>
+                <td>An array of options to merge with the options returned by getFormOptions()</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a new form object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformactions"></a>
+              <h3>
+                <span class="method-name">getFormActions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformclass"></a>
+              <h3>
+                <span class="method-name">getFormClass</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformdisplay"></a>
+              <h3>
+                <span class="method-name">getFormDisplay</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformfields"></a>
+              <h3>
+                <span class="method-name">getFormFields</span>&nbsp;($form, $context)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$form</td>
+                <td>The form with the fields</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$context</td>
+                <td>The display context</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the fields that represents the form.</strong></p>
+              <p><p>
+<br /> If no form.display parameter is passed in the configuration,
+<br /> all the fields from the form are returned (dynamically).</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformfilterfields"></a>
+              <h3>
+                <span class="method-name">getFormFilterFields</span>&nbsp;($form)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$form</td>
+                <td>The form with the fields</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the fields that represents the filters.</strong></p>
+              <p><p>
+<br /> If no filter.display parameter is passed in the configuration,
+<br /> all the fields from the form are returned (dynamically).</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformoptions"></a>
+              <h3>
+                <span class="method-name">getFormOptions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlistactions"></a>
+              <h3>
+                <span class="method-name">getListActions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlistbatchactions"></a>
+              <h3>
+                <span class="method-name">getListBatchActions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlistdisplay"></a>
+              <h3>
+                <span class="method-name">getListDisplay</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlistlayout"></a>
+              <h3>
+                <span class="method-name">getListLayout</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlistobjectactions"></a>
+              <h3>
+                <span class="method-name">getListObjectActions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlistparams"></a>
+              <h3>
+                <span class="method-name">getListParams</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlisttitle"></a>
+              <h3>
+                <span class="method-name">getListTitle</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnewactions"></a>
+              <h3>
+                <span class="method-name">getNewActions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnewdisplay"></a>
+              <h3>
+                <span class="method-name">getNewDisplay</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnewtitle"></a>
+              <h3>
+                <span class="method-name">getNewTitle</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpager"></a>
+              <h3>
+                <span class="method-name">getPager</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvalue"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getValue</span>&nbsp;($key, $default, $escaped)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>The configuration key (title.list.name for example)</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value if none has been defined</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$escaped</td>
+                <td>Whether to escape single quote (false by default)</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the configuration for a given field.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The configuration value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasfilterform"></a>
+              <h3>
+                <span class="method-name">hasFilterForm</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_mapfieldname"></a>
+              <h3>
+                <span class="method-name">mapFieldName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_parsevariables"></a>
+              <h3>
+                <span class="method-name">parseVariables</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

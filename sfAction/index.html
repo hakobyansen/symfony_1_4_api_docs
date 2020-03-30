@@ -1,0 +1,1256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfAction Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfAction Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+      <strong>      action      </strong>
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfAction">sfAction</a></li>
+                      <li><a href="/api/1_4/sfActions">sfActions</a></li>
+                      <li><a href="/api/1_4/sfActionStack">sfActionStack</a></li>
+                      <li><a href="/api/1_4/sfActionStackEntry">sfActionStackEntry</a></li>
+                      <li><a href="/api/1_4/sfComponent">sfComponent</a></li>
+                      <li><a href="/api/1_4/sfComponents">sfComponents</a></li>
+                  </ul>
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfAction">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfAction">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfAction">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfAction">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfAction executes all the logic for the current request.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="/api/1_4/sfActions">sfActions</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfAction</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="/api/1_4/sfComponent">sfComponent</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_forward">forward</a>($module, $action)
+                <br />
+                <span class="description">Forwards current action to a new one (without browser redirection).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_forward404">forward404</a>($message)
+                <br />
+                <span class="description">Forwards current action to the default 404 error action.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_forward404if">forward404If</a>($condition, $message)
+                <br />
+                <span class="description">Forwards current action to the default 404 error action if the specified condition is true.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_forward404unless">forward404Unless</a>($condition, $message)
+                <br />
+                <span class="description">Forwards current action to the default 404 error action unless the specified condition is true.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_forwardif">forwardIf</a>($condition, $module, $action)
+                <br />
+                <span class="description">If the condition is true, forwards current action to a new one (without browser redirection).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_forwardunless">forwardUnless</a>($condition, $module, $action)
+                <br />
+                <span class="description">Unless the condition is true, forwards current action to a new one (without browser redirection).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_get404message">get404Message</a>($message)
+                <br />
+                <span class="description">Returns a formatted message for a 404 error.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getcomponent">getComponent</a>($moduleName, $componentName, $vars)
+                <br />
+                <span class="description">Returns the component rendered content.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method_getcredential">getCredential</a>()
+                <br />
+                <span class="description">Gets credentials the user must have to access this action.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method_getlayout">getLayout</a>()
+                <br />
+                <span class="description">Gets the name of the alternate layout for this sfAction.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpartial">getPartial</a>($templateName, $vars)
+                <br />
+                <span class="description">Returns the partial rendered content.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfRoute</span>
+                <a href="#method_getroute">getRoute</a>()
+                <br />
+                <span class="description">Returns the current route for this request</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getsecurityconfiguration">getSecurityConfiguration</a>()
+                <br />
+                <span class="description">Returns the security configuration for this module.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method_getsecurityvalue">getSecurityValue</a>($name, $default)
+                <br />
+                <span class="description">Returns a value from security.yml.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_gettemplate">getTemplate</a>()
+                <br />
+                <span class="description">Gets the name of the alternate template for this sfAction.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_initialize">initialize</a>($context, $moduleName, $actionName)
+                <br />
+                <span class="description">Initializes this action.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_issecure">isSecure</a>()
+                <br />
+                <span class="description">Indicates that this action requires security.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_postexecute">postExecute</a>()
+                <br />
+                <span class="description">Execute an application defined process immediately after execution of this sfAction object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_preexecute">preExecute</a>()
+                <br />
+                <span class="description">Executes an application defined process prior to execution of this sfAction object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_redirect">redirect</a>($url, $statusCode)
+                <br />
+                <span class="description">Redirects current request to a new URL.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_redirect404">redirect404</a>()
+                <br />
+                <span class="description">Redirects current action to the default 404 error action (with browser redirection).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_redirectif">redirectIf</a>($condition, $url, $statusCode)
+                <br />
+                <span class="description">Redirects current request to a new URL, only if specified condition is true.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_redirectunless">redirectUnless</a>($condition, $url, $statusCode)
+                <br />
+                <span class="description">Redirects current request to a new URL, unless specified condition is true.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfView::NONE</span>
+                <a href="#method_rendercomponent">renderComponent</a>($moduleName, $componentName, $vars)
+                <br />
+                <span class="description">Appends the result of the given component execution to the response content.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfView::NONE</span>
+                <a href="#method_renderpartial">renderPartial</a>($templateName, $vars)
+                <br />
+                <span class="description">Appends the result of the given partial execution to the response content.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfView::NONE</span>
+                <a href="#method_rendertext">renderText</a>($text)
+                <br />
+                <span class="description">Appends the given text to the response content and bypasses the built-in view system.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setlayout">setLayout</a>($name)
+                <br />
+                <span class="description">Sets an alternate layout for this sfAction.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setsecurityconfiguration">setSecurityConfiguration</a>($security)
+                <br />
+                <span class="description">Overrides the current security configuration for this module.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_settemplate">setTemplate</a>($name, $module)
+                <br />
+                <span class="description">Sets an alternate template for this sfAction.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setviewclass">setViewClass</a>($class)
+                <br />
+                <span class="description">Changes the default view class used for rendering the template associated with the current action.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="/api/1_4/sfComponent">sfComponent</a>              </h3>
+                                                                <a href="/api/1_4/sfComponent#method__amp_">&amp;</a>                  ,                                   <a href="/api/1_4/sfComponent#method_execute">execute</a>                  ,                                   <a href="/api/1_4/sfComponent#method_generateurl">generateUrl</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getactionname">getActionName</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getcontext">getContext</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getcontroller">getController</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getlogger">getLogger</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getmailer">getMailer</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getmodulename">getModuleName</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getrequest">getRequest</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getrequestparameter">getRequestParameter</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getresponse">getResponse</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getuser">getUser</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getvar">getVar</a>                  ,                                   <a href="/api/1_4/sfComponent#method_getvarholder">getVarHolder</a>                  ,                                   <a href="/api/1_4/sfComponent#method_hasrequestparameter">hasRequestParameter</a>                  ,                                   <a href="/api/1_4/sfComponent#method_initialize">initialize</a>                  ,                                   <a href="/api/1_4/sfComponent#method_logmessage">logMessage</a>                  ,                                   <a href="/api/1_4/sfComponent#method_setvar">setVar</a>                  ,                                   <a href="/api/1_4/sfComponent#method___call">__call</a>                  ,                                   <a href="/api/1_4/sfComponent#method___construct">__construct</a>                  ,                                   <a href="/api/1_4/sfComponent#method___isset">__isset</a>                  ,                                   <a href="/api/1_4/sfComponent#method___set">__set</a>                  ,                                   <a href="/api/1_4/sfComponent#method___unset">__unset</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_forward"></a>
+              <h3>
+                <span class="method-name">forward</span>&nbsp;($module, $action)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$module</td>
+                <td>A module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$action</td>
+                <td>An action name</td>
+              </tr>
+                        </table>
+              <p><strong>Forwards current action to a new one (without browser redirection).</strong></p>
+              <p><p>
+<br /> This method stops the action. So, no code is executed after a call to this method.</p></p>
+                                  <p><strong>throws</strong> sfStopException</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_forward404"></a>
+              <h3>
+                <span class="method-name">forward404</span>&nbsp;($message)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$message</td>
+                <td>Message of the generated exception</td>
+              </tr>
+                        </table>
+              <p><strong>Forwards current action to the default 404 error action.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> sfError404Exception</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_forward404if"></a>
+              <h3>
+                <span class="method-name">forward404If</span>&nbsp;($condition, $message)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$condition</td>
+                <td>A condition that evaluates to true or false</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$message</td>
+                <td>Message of the generated exception</td>
+              </tr>
+                        </table>
+              <p><strong>Forwards current action to the default 404 error action if the specified condition is true.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> sfError404Exception</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_forward404unless"></a>
+              <h3>
+                <span class="method-name">forward404Unless</span>&nbsp;($condition, $message)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$condition</td>
+                <td>A condition that evaluates to true or false</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$message</td>
+                <td>Message of the generated exception</td>
+              </tr>
+                        </table>
+              <p><strong>Forwards current action to the default 404 error action unless the specified condition is true.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> sfError404Exception</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_forwardif"></a>
+              <h3>
+                <span class="method-name">forwardIf</span>&nbsp;($condition, $module, $action)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$condition</td>
+                <td>A condition that evaluates to true or false</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$module</td>
+                <td>A module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$action</td>
+                <td>An action name</td>
+              </tr>
+                        </table>
+              <p><strong>If the condition is true, forwards current action to a new one (without browser redirection).</strong></p>
+              <p><p>
+<br /> This method stops the action. So, no code is executed after a call to this method.</p></p>
+                                  <p><strong>throws</strong> sfStopException</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_forwardunless"></a>
+              <h3>
+                <span class="method-name">forwardUnless</span>&nbsp;($condition, $module, $action)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$condition</td>
+                <td>A condition that evaluates to true or false</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$module</td>
+                <td>A module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$action</td>
+                <td>An action name</td>
+              </tr>
+                        </table>
+              <p><strong>Unless the condition is true, forwards current action to a new one (without browser redirection).</strong></p>
+              <p><p>
+<br /> This method stops the action. So, no code is executed after a call to this method.</p></p>
+                                  <p><strong>throws</strong> sfStopException</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_get404message"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">get404Message</span>&nbsp;($message)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$message</td>
+                <td>An error message (null by default)</td>
+              </tr>
+                        </table>
+              <p><strong>Returns a formatted message for a 404 error.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The error message or a default one if null</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcomponent"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getComponent</span>&nbsp;($moduleName, $componentName, $vars)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$componentName</td>
+                <td>component name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$vars</td>
+                <td>vars</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the component rendered content.</strong></p>
+              <p><p>
+<br /> If the vars parameter is omitted, the action's internal variables
+<br /> will be passed, just as it would to a normal template.</p><p> If the vars parameter is set then only those values are
+<br /> available in the component.</p></p>
+                        <p><strong>returns</strong> The component rendered content</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcredential"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getCredential</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets credentials the user must have to access this action.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array or a string describing the credentials the user must have to access this action</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlayout"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getLayout</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the name of the alternate layout for this sfAction.</strong></p>
+              <p><p>
+<br /> WARNING: It only returns the layout you set with the setLayout() method,
+<br />          and does not return the layout that you configured in your view.yml.</p></p>
+                        <p><strong>returns</strong> Layout name. Returns null if no layout has been set within the action</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpartial"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPartial</span>&nbsp;($templateName, $vars)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$templateName</td>
+                <td>partial name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$vars</td>
+                <td>vars</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the partial rendered content.</strong></p>
+              <p><p>
+<br /> If the vars parameter is omitted, the action's internal variables
+<br /> will be passed, just as it would to a normal template.</p><p> If the vars parameter is set then only those values are
+<br /> available in the partial.</p></p>
+                        <p><strong>returns</strong> The partial content</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getroute"></a>
+              <h3>
+                (sfRoute)&nbsp;<span class="method-name">getRoute</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current route for this request</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The route for the request</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getsecurityconfiguration"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getSecurityConfiguration</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the security configuration for this module.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Current security configuration as an array</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getsecurityvalue"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getSecurityValue</span>&nbsp;($name, $default)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the value to pull from security.yml</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value to return if none is found in security.yml</td>
+              </tr>
+                        </table>
+              <p><strong>Returns a value from security.yml.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettemplate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getTemplate</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the name of the alternate template for this sfAction.</strong></p>
+              <p><p>
+<br /> WARNING: It only returns the template you set with the setTemplate() method,
+<br />          and does not return the template that you configured in your view.yml.</p><p> See 'Naming Conventions' in the 'Symfony View' documentation.</p></p>
+                        <p><strong>returns</strong> Template name. Returns null if no template has been set within the action</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">initialize</span>&nbsp;($context, $moduleName, $actionName)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$context</td>
+                <td>The current application context.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>The module name.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$actionName</td>
+                <td>The action name.</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes this action.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if initialization completes successfully, otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_issecure"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isSecure</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Indicates that this action requires security.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if this action requires security, otherwise false.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_postexecute"></a>
+              <h3>
+                <span class="method-name">postExecute</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Execute an application defined process immediately after execution of this sfAction object.</strong></p>
+              <p><p>
+<br /> By default, this method is empty.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_preexecute"></a>
+              <h3>
+                <span class="method-name">preExecute</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Executes an application defined process prior to execution of this sfAction object.</strong></p>
+              <p><p>
+<br /> By default, this method is empty.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_redirect"></a>
+              <h3>
+                <span class="method-name">redirect</span>&nbsp;($url, $statusCode)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$url</td>
+                <td>Url</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$statusCode</td>
+                <td>Status code (default to 302)</td>
+              </tr>
+                        </table>
+              <p><strong>Redirects current request to a new URL.</strong></p>
+              <p><p>
+<br /> 2 URL formats are accepted :
+<br />  - a full URL: http://www.google.com/
+<br />  - an internal URL (url_for() format): module/action</p><p> This method stops the action. So, no code is executed after a call to this method.</p></p>
+                                  <p><strong>throws</strong> sfStopException</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_redirect404"></a>
+              <h3>
+                <span class="method-name">redirect404</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Redirects current action to the default 404 error action (with browser redirection).</strong></p>
+              <p><p>
+<br /> This method stops the current code flow.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_redirectif"></a>
+              <h3>
+                <span class="method-name">redirectIf</span>&nbsp;($condition, $url, $statusCode)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$condition</td>
+                <td>A condition that evaluates to true or false</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$url</td>
+                <td>Url</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$statusCode</td>
+                <td>Status code (default to 302)</td>
+              </tr>
+                        </table>
+              <p><strong>Redirects current request to a new URL, only if specified condition is true.</strong></p>
+              <p><p>
+<br /> This method stops the action. So, no code is executed after a call to this method.</p></p>
+                                  <p><strong>throws</strong> sfStopException</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_redirectunless"></a>
+              <h3>
+                <span class="method-name">redirectUnless</span>&nbsp;($condition, $url, $statusCode)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$condition</td>
+                <td>A condition that evaluates to true or false</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$url</td>
+                <td>Url</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$statusCode</td>
+                <td>Status code (default to 302)</td>
+              </tr>
+                        </table>
+              <p><strong>Redirects current request to a new URL, unless specified condition is true.</strong></p>
+              <p><p>
+<br /> This method stops the action. So, no code is executed after a call to this method.</p></p>
+                                  <p><strong>throws</strong> sfStopException</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_rendercomponent"></a>
+              <h3>
+                (sfView::NONE)&nbsp;<span class="method-name">renderComponent</span>&nbsp;($moduleName, $componentName, $vars)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$componentName</td>
+                <td>component name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$vars</td>
+                <td>vars</td>
+              </tr>
+                        </table>
+              <p><strong>Appends the result of the given component execution to the response content.</strong></p>
+              <p><p>
+<br /> This method must be called as with a return:</p><p> <code>return $this->renderComponent('foo', 'bar')</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_renderpartial"></a>
+              <h3>
+                (sfView::NONE)&nbsp;<span class="method-name">renderPartial</span>&nbsp;($templateName, $vars)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$templateName</td>
+                <td>partial name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$vars</td>
+                <td>vars</td>
+              </tr>
+                        </table>
+              <p><strong>Appends the result of the given partial execution to the response content.</strong></p>
+              <p><p>
+<br /> This method must be called as with a return:</p><p> <code>return $this->renderPartial('foo/bar')</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_rendertext"></a>
+              <h3>
+                (sfView::NONE)&nbsp;<span class="method-name">renderText</span>&nbsp;($text)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$text</td>
+                <td>Text to append to the response</td>
+              </tr>
+                        </table>
+              <p><strong>Appends the given text to the response content and bypasses the built-in view system.</strong></p>
+              <p><p>
+<br /> This method must be called as with a return:</p><p> <code>return $this->renderText('some text')</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setlayout"></a>
+              <h3>
+                <span class="method-name">setLayout</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Layout name or false to de-activate the layout</td>
+              </tr>
+                        </table>
+              <p><strong>Sets an alternate layout for this sfAction.</strong></p>
+              <p><p>
+<br /> To de-activate the layout, set the layout name to false.</p><p> To revert the layout to the one configured in the view.yml, set the template name to null.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setsecurityconfiguration"></a>
+              <h3>
+                <span class="method-name">setSecurityConfiguration</span>&nbsp;($security)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$security</td>
+                <td>The new security configuration</td>
+              </tr>
+                        </table>
+              <p><strong>Overrides the current security configuration for this module.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_settemplate"></a>
+              <h3>
+                <span class="method-name">setTemplate</span>&nbsp;($name, $module)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Template name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$module</td>
+                <td>The module (current if null)</td>
+              </tr>
+                        </table>
+              <p><strong>Sets an alternate template for this sfAction.</strong></p>
+              <p><p>
+<br /> See 'Naming Conventions' in the 'Symfony View' documentation.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setviewclass"></a>
+              <h3>
+                <span class="method-name">setViewClass</span>&nbsp;($class)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfAction.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$class</td>
+                <td>View class name</td>
+              </tr>
+                        </table>
+              <p><strong>Changes the default view class used for rendering the template associated with the current action.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

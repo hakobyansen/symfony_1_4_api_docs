@@ -1,0 +1,1015 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfModelGenerator Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfModelGenerator Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      generator      </strong>
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfDoctrineFormFilterGenerator">sfDoctrineFormFilterGenerator</a></li>
+                      <li><a href="/api/1_4/sfDoctrineFormGenerator">sfDoctrineFormGenerator</a></li>
+                      <li><a href="/api/1_4/sfGenerator">sfGenerator</a></li>
+                      <li><a href="/api/1_4/sfGeneratorManager">sfGeneratorManager</a></li>
+                      <li><a href="/api/1_4/sfModelGenerator">sfModelGenerator</a></li>
+                      <li><a href="/api/1_4/sfModelGeneratorConfiguration">sfModelGeneratorConfiguration</a></li>
+                      <li><a href="/api/1_4/sfModelGeneratorConfigurationField">sfModelGeneratorConfigurationField</a></li>
+                      <li><a href="/api/1_4/sfModelGeneratorHelper">sfModelGeneratorHelper</a></li>
+                      <li><a href="/api/1_4/sfPropelFormFilterGenerator">sfPropelFormFilterGenerator</a></li>
+                      <li><a href="/api/1_4/sfPropelFormGenerator">sfPropelFormGenerator</a></li>
+                  </ul>
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfModelGenerator">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfModelGenerator">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfModelGenerator">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfModelGenerator">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>Model generator.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="/api/1_4/sfPropelGenerator">sfPropelGenerator</a>, <a href="/api/1_4/sfDoctrineGenerator">sfDoctrineGenerator</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfModelGenerator</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="/api/1_4/sfGenerator">sfGenerator</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_addcredentialcondition">addCredentialCondition</a>($content, $params)
+                <br />
+                <span class="description">Wraps content with a credential condition.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_asphp">asPhp</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_configure">configure</a>()
+                <br />
+                <span class="description">Configures this generator.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_escapestring">escapeString</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_generate">generate</a>($params)
+                <br />
+                <span class="description">Generates classes and templates in cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getactionsbaseclass">getActionsBaseClass</a>()
+                <br />
+                <span class="description">Gets the actions base class for the generated module.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_getallfieldnames">getAllFieldNames</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getcolumngetter">getColumnGetter</a>($column, $developed, $prefix)
+                <br />
+                <span class="description">Returns the getter either non-developped: &#039;getFoo&#039; or developped: &#039;$class-&gt;getFoo()&#039;.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getformmultiparthtml">getFormMultipartHtml</a>()
+                <br />
+                <span class="description">Gets the HTML to add to the form tag if the form is multipart.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfForm</span>
+                <a href="#method_getformobject">getFormObject</a>()
+                <br />
+                <span class="description">Gets the form object</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_geti18ncatalogue">getI18nCatalogue</a>()
+                <br />
+                <span class="description">Gets the i18n catalogue to use for user strings.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_geti18nstring">getI18NString</a>($key)
+                <br />
+                <span class="description">Wraps a content for I18N.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getlinktoaction">getLinkToAction</a>($actionName, $params, $pk_link)
+                <br />
+                <span class="description">Returns HTML code for an action link.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_getmanytomanytables">getManyToManyTables</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getmodelclass">getModelClass</a>()
+                <br />
+                <span class="description">Gets the class name for current model.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpluralname">getPluralName</a>()
+                <br />
+                <span class="description">Gets the plural name for current model.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getprimarykeys">getPrimaryKeys</a>($firstOne)
+                <br />
+                <span class="description">Gets the primary key name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getprimarykeyurlparams">getPrimaryKeyUrlParams</a>($prefix)
+                <br />
+                <span class="description">Returns PHP code to add to a URL for primary keys.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getretrievebypkparamsforaction">getRetrieveByPkParamsForAction</a>($indent, $callee)
+                <br />
+                <span class="description">Returns PHP code for primary keys parameters.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getsingularname">getSingularName</a>()
+                <br />
+                <span class="description">Gets the singular name for current model.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_gettype">getType</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_geturlforaction">getUrlForAction</a>()
+                <br />
+                <span class="description">Returns the URL for a given action.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_loadconfiguration">loadConfiguration</a>()
+                <br />
+                <span class="description">Loads the configuration for this generated module.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_renderfield">renderField</a>($field)
+                <br />
+                <span class="description">Returns HTML code for a field.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_validateparameters">validateParameters</a>($params)
+                <br />
+                <span class="description">Validates the basic structure of the parameters.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="/api/1_4/sfGenerator">sfGenerator</a>              </h3>
+                                                                <a href="/api/1_4/sfGenerator#method_evaltemplate">evalTemplate</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_generate">generate</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_generatephpfiles">generatePhpFiles</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_getgeneratedmodulename">getGeneratedModuleName</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_getgeneratorclass">getGeneratorClass</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_getgeneratormanager">getGeneratorManager</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_getmodulename">getModuleName</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_gettheme">getTheme</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_initialize">initialize</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_replacephpmarks">replacePhpMarks</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_setgeneratedmodulename">setGeneratedModuleName</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_setgeneratorclass">setGeneratorClass</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_setmodulename">setModuleName</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_settheme">setTheme</a>                  ,                                   <a href="/api/1_4/sfGenerator#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_addcredentialcondition"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">addCredentialCondition</span>&nbsp;($content, $params)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$content</td>
+                <td>The content</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$params</td>
+                <td>The parameters</td>
+              </tr>
+                        </table>
+              <p><strong>Wraps content with a credential condition.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> HTML code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_asphp"></a>
+              <h3>
+                <span class="method-name">asPhp</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_configure"></a>
+              <h3>
+                <span class="method-name">configure</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Configures this generator.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_escapestring"></a>
+              <h3>
+                <span class="method-name">escapeString</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">generate</span>&nbsp;($params)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$params</td>
+                <td>The parameters</td>
+              </tr>
+                        </table>
+              <p><strong>Generates classes and templates in cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The data to put in configuration cache</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getactionsbaseclass"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getActionsBaseClass</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the actions base class for the generated module.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The actions base class</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getallfieldnames"></a>
+              <h3>
+                <span class="method-name">getAllFieldNames</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcolumngetter"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getColumnGetter</span>&nbsp;($column, $developed, $prefix)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$column</td>
+                <td>The column name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$developed</td>
+                <td>true if you want developped method names, false otherwise</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$prefix</td>
+                <td>The prefix value</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the getter either non-developped: &#039;getFoo&#039; or developped: &#039;$class-&gt;getFoo()&#039;.</strong></p>
+              <p><p>
+<br /> This method is ORM dependant.</p></p>
+                        <p><strong>returns</strong> PHP code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformmultiparthtml"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getFormMultipartHtml</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the HTML to add to the form tag if the form is multipart.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformobject"></a>
+              <h3>
+                (sfForm)&nbsp;<span class="method-name">getFormObject</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the form object</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geti18ncatalogue"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getI18nCatalogue</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the i18n catalogue to use for user strings.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The i18n catalogue</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geti18nstring"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getI18NString</span>&nbsp;($key)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>The configuration key name</td>
+              </tr>
+                        </table>
+              <p><strong>Wraps a content for I18N.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> HTML code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlinktoaction"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getLinkToAction</span>&nbsp;($actionName, $params, $pk_link)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$actionName</td>
+                <td>The action name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$params</td>
+                <td>The parameters</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pk_link</td>
+                <td>Whether to add a primary key link or not</td>
+              </tr>
+                        </table>
+              <p><strong>Returns HTML code for an action link.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> HTML code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmanytomanytables"></a>
+              <h3>
+                <span class="method-name">getManyToManyTables</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmodelclass"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getModelClass</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the class name for current model.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpluralname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPluralName</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the plural name for current model.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getprimarykeys"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPrimaryKeys</span>&nbsp;($firstOne)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$firstOne</td>
+                <td>Whether to return the first PK or not</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the primary key name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of primary keys</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getprimarykeyurlparams"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPrimaryKeyUrlParams</span>&nbsp;($prefix)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$prefix</td>
+                <td>The prefix value</td>
+              </tr>
+                        </table>
+              <p><strong>Returns PHP code to add to a URL for primary keys.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> PHP code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getretrievebypkparamsforaction"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getRetrieveByPkParamsForAction</span>&nbsp;($indent, $callee)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$indent</td>
+                <td>The indentation value</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$callee</td>
+                <td>The function to call</td>
+              </tr>
+                        </table>
+              <p><strong>Returns PHP code for primary keys parameters.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The PHP code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getsingularname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getSingularName</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the singular name for current model.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettype"></a>
+              <h3>
+                <span class="method-name">getType</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geturlforaction"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getUrlForAction</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the URL for a given action.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The URL related to a given action</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_loadconfiguration"></a>
+              <h3>
+                <span class="method-name">loadConfiguration</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Loads the configuration for this generated module.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_renderfield"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">renderField</span>&nbsp;($field)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$field</td>
+                <td>The field</td>
+              </tr>
+                        </table>
+              <p><strong>Returns HTML code for a field.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> HTML code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_validateparameters"></a>
+              <h3>
+                <span class="method-name">validateParameters</span>&nbsp;($params)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/generator/sfModelGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$params</td>
+                <td>An array of parameters</td>
+              </tr>
+                        </table>
+              <p><strong>Validates the basic structure of the parameters.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

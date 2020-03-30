@@ -1,0 +1,1039 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfWidgetFormSchemaDecorator Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfWidgetFormSchemaDecorator Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      widget      </strong>
+      <small> - <a href="widget.html">36 classes</a></small>
+
+              <ul>
+                      <li><a href="sfWidget.html">sfWidget</a></li>
+                      <li><a href="sfWidgetForm.html">sfWidgetForm</a></li>
+                      <li><a href="sfWidgetFormChoice.html">sfWidgetFormChoice</a></li>
+                      <li><a href="sfWidgetFormChoiceBase.html">sfWidgetFormChoiceBase</a></li>
+                      <li><a href="sfWidgetFormDate.html">sfWidgetFormDate</a></li>
+                      <li><a href="sfWidgetFormDateRange.html">sfWidgetFormDateRange</a></li>
+                      <li><a href="sfWidgetFormDateTime.html">sfWidgetFormDateTime</a></li>
+                      <li><a href="sfWidgetFormFilterDate.html">sfWidgetFormFilterDate</a></li>
+                      <li><a href="sfWidgetFormFilterInput.html">sfWidgetFormFilterInput</a></li>
+                      <li><a href="sfWidgetFormI18nChoiceCountry.html">sfWidgetFormI18nChoiceCountry</a></li>
+                      <li><a href="sfWidgetFormI18nChoiceCurrency.html">sfWidgetFormI18nChoiceCurrency</a></li>
+                      <li><a href="sfWidgetFormI18nChoiceLanguage.html">sfWidgetFormI18nChoiceLanguage</a></li>
+                      <li><a href="sfWidgetFormI18nChoiceTimezone.html">sfWidgetFormI18nChoiceTimezone</a></li>
+                      <li><a href="sfWidgetFormI18nDate.html">sfWidgetFormI18nDate</a></li>
+                      <li><a href="sfWidgetFormI18nDateTime.html">sfWidgetFormI18nDateTime</a></li>
+                      <li><a href="sfWidgetFormI18nTime.html">sfWidgetFormI18nTime</a></li>
+                      <li><a href="sfWidgetFormInput.html">sfWidgetFormInput</a></li>
+                      <li><a href="sfWidgetFormInputCheckbox.html">sfWidgetFormInputCheckbox</a></li>
+                      <li><a href="sfWidgetFormInputFile.html">sfWidgetFormInputFile</a></li>
+                      <li><a href="sfWidgetFormInputFileEditable.html">sfWidgetFormInputFileEditable</a></li>
+                      <li><a href="sfWidgetFormInputHidden.html">sfWidgetFormInputHidden</a></li>
+                      <li><a href="sfWidgetFormInputPassword.html">sfWidgetFormInputPassword</a></li>
+                      <li><a href="sfWidgetFormInputText.html">sfWidgetFormInputText</a></li>
+                      <li><a href="sfWidgetFormPropelChoice.html">sfWidgetFormPropelChoice</a></li>
+                      <li><a href="sfWidgetFormSchema.html">sfWidgetFormSchema</a></li>
+                      <li><a href="sfWidgetFormSchemaDecorator.html">sfWidgetFormSchemaDecorator</a></li>
+                      <li><a href="sfWidgetFormSchemaForEach.html">sfWidgetFormSchemaForEach</a></li>
+                      <li><a href="sfWidgetFormSchemaFormatter.html">sfWidgetFormSchemaFormatter</a></li>
+                      <li><a href="sfWidgetFormSchemaFormatterList.html">sfWidgetFormSchemaFormatterList</a></li>
+                      <li><a href="sfWidgetFormSchemaFormatterTable.html">sfWidgetFormSchemaFormatterTable</a></li>
+                      <li><a href="sfWidgetFormSelect.html">sfWidgetFormSelect</a></li>
+                      <li><a href="sfWidgetFormSelectCheckbox.html">sfWidgetFormSelectCheckbox</a></li>
+                      <li><a href="sfWidgetFormSelectMany.html">sfWidgetFormSelectMany</a></li>
+                      <li><a href="sfWidgetFormSelectRadio.html">sfWidgetFormSelectRadio</a></li>
+                      <li><a href="sfWidgetFormTextarea.html">sfWidgetFormTextarea</a></li>
+                      <li><a href="sfWidgetFormTime.html">sfWidgetFormTime</a></li>
+                  </ul>
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfWidgetFormSchemaDecorator.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfWidgetFormSchemaDecorator.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfWidgetFormSchemaDecorator.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfWidgetFormSchemaDecorator.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfWidgetFormSchemaDecorator wraps a form schema widget inside a given HTML snippet.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+              
+              <strong>sfWidgetFormSchemaDecorator</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="sfWidgetFormSchema.html">sfWidgetFormSchema</a>&nbsp;&lt;&nbsp;<a href="sfWidgetForm.html">sfWidgetForm</a>&nbsp;&lt;&nbsp;<a href="sfWidget.html">sfWidget</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_addformformatter">addFormFormatter</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_generatelabel">generateLabel</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchemaFormatter</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_generatelabelname">generateLabelName</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchemaFormatter</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_generatename">generateName</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getfields">getFields</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getformformatter">getFormFormatter</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getformformattername">getFormFormatterName</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getformformatters">getFormFormatters</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_gethelp">getHelp</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_gethelps">getHelps</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getjavascripts">getJavaScripts</a>()
+                <br />
+                <span class="description">Gets the JavaScript paths associated with the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getlabel">getLabel</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getlabels">getLabels</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getnameformat">getNameFormat</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getparent">getParent</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getpositions">getPositions</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getstylesheets">getStylesheets</a>()
+                <br />
+                <span class="description">Gets the stylesheet paths associated with the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_getwidget">getWidget</a>()
+                <br />
+                <span class="description">Returns the decorated widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_movefield">moveField</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_needsmultipartform">needsMultipartForm</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_offsetexists">offsetExists</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_offsetget">offsetGet</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_offsetset">offsetSet</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_offsetunset">offsetUnset</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_render">render</a>($name, $values, $attributes, $errors)
+                <br />
+                <span class="description">Renders the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_renderfield">renderField</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_setformformattername">setFormFormatterName</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_sethelp">setHelp</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_sethelps">setHelps</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_setlabel">setLabel</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_setlabels">setLabels</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_setnameformat">setNameFormat</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_setparent">setParent</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method_setpositions">setPositions</a>()
+                <br />
+                <span class="description">@see sfWidgetFormSchema</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method___clone">__clone</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetFormSchemaDecorator.html#method___construct">__construct</a>($widget, $decorator)
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="sfWidgetFormSchema.html">sfWidgetFormSchema</a>              </h3>
+                                                                <a href="sfWidgetFormSchema.html#method_addformformatter">addFormFormatter</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_generatename">generateName</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getdefault">getDefault</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getdefaults">getDefaults</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getfields">getFields</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getformformatter">getFormFormatter</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getformformattername">getFormFormatterName</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getformformatters">getFormFormatters</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getglobalerrors">getGlobalErrors</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_gethelp">getHelp</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_gethelps">getHelps</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getjavascripts">getJavaScripts</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getlabel">getLabel</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getlabels">getLabels</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getnameformat">getNameFormat</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getpositions">getPositions</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_getstylesheets">getStylesheets</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_movefield">moveField</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_needsmultipartform">needsMultipartForm</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_offsetexists">offsetExists</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_offsetget">offsetGet</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_offsetset">offsetSet</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_offsetunset">offsetUnset</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_render">render</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_renderfield">renderField</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_setdefault">setDefault</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_setdefaultformformattername">setDefaultFormFormatterName</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_setdefaults">setDefaults</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_setformformattername">setFormFormatterName</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_sethelp">setHelp</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_sethelps">setHelps</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_setlabel">setLabel</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_setlabels">setLabels</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_setnameformat">setNameFormat</a>                  ,                                   <a href="sfWidgetFormSchema.html#method_setpositions">setPositions</a>                  ,                                   <a href="sfWidgetFormSchema.html#method___clone">__clone</a>                  ,                                   <a href="sfWidgetFormSchema.html#method___construct">__construct</a>                                                                          <h3>
+                Methods inherited from <a href="sfWidgetForm.html">sfWidgetForm</a>              </h3>
+                                                                <a href="sfWidgetForm.html#method_fixformid">fixFormId</a>                  ,                                   <a href="sfWidgetForm.html#method_generateid">generateId</a>                  ,                                   <a href="sfWidgetForm.html#method_generatetwocharsrange">generateTwoCharsRange</a>                  ,                                   <a href="sfWidgetForm.html#method_getdefault">getDefault</a>                  ,                                   <a href="sfWidgetForm.html#method_getidformat">getIdFormat</a>                  ,                                   <a href="sfWidgetForm.html#method_getlabel">getLabel</a>                  ,                                   <a href="sfWidgetForm.html#method_getparent">getParent</a>                  ,                                   <a href="sfWidgetForm.html#method_ishidden">isHidden</a>                  ,                                   <a href="sfWidgetForm.html#method_needsmultipartform">needsMultipartForm</a>                  ,                                   <a href="sfWidgetForm.html#method_rendercontenttag">renderContentTag</a>                  ,                                   <a href="sfWidgetForm.html#method_rendertag">renderTag</a>                  ,                                   <a href="sfWidgetForm.html#method_setdefault">setDefault</a>                  ,                                   <a href="sfWidgetForm.html#method_sethidden">setHidden</a>                  ,                                   <a href="sfWidgetForm.html#method_setidformat">setIdFormat</a>                  ,                                   <a href="sfWidgetForm.html#method_setlabel">setLabel</a>                  ,                                   <a href="sfWidgetForm.html#method_setparent">setParent</a>                  ,                                   <a href="sfWidgetForm.html#method_translate">translate</a>                  ,                                   <a href="sfWidgetForm.html#method_translateall">translateAll</a>                  ,                                   <a href="sfWidgetForm.html#method___construct">__construct</a>                                                                          <h3>
+                Methods inherited from <a href="sfWidget.html">sfWidget</a>              </h3>
+                                                                <a href="sfWidget.html#method_addoption">addOption</a>                  ,                                   <a href="sfWidget.html#method_addrequiredoption">addRequiredOption</a>                  ,                                   <a href="sfWidget.html#method_attributestohtml">attributesToHtml</a>                  ,                                   <a href="sfWidget.html#method_attributestohtmlcallback">attributesToHtmlCallback</a>                  ,                                   <a href="sfWidget.html#method_configure">configure</a>                  ,                                   <a href="sfWidget.html#method_escapeonce">escapeOnce</a>                  ,                                   <a href="sfWidget.html#method_fixdoubleescape">fixDoubleEscape</a>                  ,                                   <a href="sfWidget.html#method_getattribute">getAttribute</a>                  ,                                   <a href="sfWidget.html#method_getattributes">getAttributes</a>                  ,                                   <a href="sfWidget.html#method_getcharset">getCharset</a>                  ,                                   <a href="sfWidget.html#method_getjavascripts">getJavaScripts</a>                  ,                                   <a href="sfWidget.html#method_getoption">getOption</a>                  ,                                   <a href="sfWidget.html#method_getoptions">getOptions</a>                  ,                                   <a href="sfWidget.html#method_getrequiredoptions">getRequiredOptions</a>                  ,                                   <a href="sfWidget.html#method_getstylesheets">getStylesheets</a>                  ,                                   <a href="sfWidget.html#method_hasoption">hasOption</a>                  ,                                   <a href="sfWidget.html#method_isxhtml">isXhtml</a>                  ,                                   <a href="sfWidget.html#method_render">render</a>                  ,                                   <a href="sfWidget.html#method_rendercontenttag">renderContentTag</a>                  ,                                   <a href="sfWidget.html#method_rendertag">renderTag</a>                  ,                                   <a href="sfWidget.html#method_setattribute">setAttribute</a>                  ,                                   <a href="sfWidget.html#method_setattributes">setAttributes</a>                  ,                                   <a href="sfWidget.html#method_setcharset">setCharset</a>                  ,                                   <a href="sfWidget.html#method_setoption">setOption</a>                  ,                                   <a href="sfWidget.html#method_setoptions">setOptions</a>                  ,                                   <a href="sfWidget.html#method_setxhtml">setXhtml</a>                  ,                                   <a href="sfWidget.html#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_addformformatter"></a>
+              <h3>
+                <span class="method-name">addFormFormatter</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generatelabel"></a>
+              <h3>
+                <span class="method-name">generateLabel</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchemaFormatter</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generatelabelname"></a>
+              <h3>
+                <span class="method-name">generateLabelName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchemaFormatter</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generatename"></a>
+              <h3>
+                <span class="method-name">generateName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfields"></a>
+              <h3>
+                <span class="method-name">getFields</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformformatter"></a>
+              <h3>
+                <span class="method-name">getFormFormatter</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformformattername"></a>
+              <h3>
+                <span class="method-name">getFormFormatterName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformformatters"></a>
+              <h3>
+                <span class="method-name">getFormFormatters</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethelp"></a>
+              <h3>
+                <span class="method-name">getHelp</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethelps"></a>
+              <h3>
+                <span class="method-name">getHelps</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getjavascripts"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getJavaScripts</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the JavaScript paths associated with the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of JavaScript paths</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlabel"></a>
+              <h3>
+                <span class="method-name">getLabel</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlabels"></a>
+              <h3>
+                <span class="method-name">getLabels</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnameformat"></a>
+              <h3>
+                <span class="method-name">getNameFormat</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getparent"></a>
+              <h3>
+                <span class="method-name">getParent</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpositions"></a>
+              <h3>
+                <span class="method-name">getPositions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getstylesheets"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getStylesheets</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the stylesheet paths associated with the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of stylesheet paths</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getwidget"></a>
+              <h3>
+                <span class="method-name">getWidget</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns the decorated widget.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_movefield"></a>
+              <h3>
+                <span class="method-name">moveField</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_needsmultipartform"></a>
+              <h3>
+                <span class="method-name">needsMultipartForm</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetexists"></a>
+              <h3>
+                <span class="method-name">offsetExists</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetget"></a>
+              <h3>
+                <span class="method-name">offsetGet</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetset"></a>
+              <h3>
+                <span class="method-name">offsetSet</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetunset"></a>
+              <h3>
+                <span class="method-name">offsetUnset</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_render"></a>
+              <h3>
+                <span class="method-name">render</span>&nbsp;($name, $values, $attributes, $errors)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The element name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$values</td>
+                <td>The value displayed in this widget</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of HTML attributes to be merged with the default HTML attributes</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$errors</td>
+                <td>An array of errors for the field</td>
+              </tr>
+                        </table>
+              <p><strong>Renders the widget.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_renderfield"></a>
+              <h3>
+                <span class="method-name">renderField</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setformformattername"></a>
+              <h3>
+                <span class="method-name">setFormFormatterName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_sethelp"></a>
+              <h3>
+                <span class="method-name">setHelp</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_sethelps"></a>
+              <h3>
+                <span class="method-name">setHelps</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setlabel"></a>
+              <h3>
+                <span class="method-name">setLabel</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setlabels"></a>
+              <h3>
+                <span class="method-name">setLabels</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnameformat"></a>
+              <h3>
+                <span class="method-name">setNameFormat</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setparent"></a>
+              <h3>
+                <span class="method-name">setParent</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpositions"></a>
+              <h3>
+                <span class="method-name">setPositions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfWidgetFormSchema</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___clone"></a>
+              <h3>
+                <span class="method-name">__clone</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($widget, $decorator)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$widget</td>
+                <td>A sfWidgetFormSchema instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$decorator</td>
+                <td>A decorator string</td>
+              </tr>
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

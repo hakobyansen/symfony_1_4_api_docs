@@ -1,0 +1,1138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfContext Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfContext Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      util      </strong>
+      <small> - <a href="util.html">16 classes</a></small>
+
+              <ul>
+                      <li><a href="sfBrowser.html">sfBrowser</a></li>
+                      <li><a href="sfBrowserBase.html">sfBrowserBase</a></li>
+                      <li><a href="sfCallable.html">sfCallable</a></li>
+                      <li><a href="sfClassManipulator.html">sfClassManipulator</a></li>
+                      <li><a href="sfContext.html">sfContext</a></li>
+                      <li><a href="sfDomCssSelector.html">sfDomCssSelector</a></li>
+                      <li><a href="sfFilesystem.html">sfFilesystem</a></li>
+                      <li><a href="sfFinder.html">sfFinder</a></li>
+                      <li><a href="sfGlobToRegex.html">sfGlobToRegex</a></li>
+                      <li><a href="sfInflector.html">sfInflector</a></li>
+                      <li><a href="sfNamespacedParameterHolder.html">sfNamespacedParameterHolder</a></li>
+                      <li><a href="sfNumberCompare.html">sfNumberCompare</a></li>
+                      <li><a href="sfParameterHolder.html">sfParameterHolder</a></li>
+                      <li><a href="sfTimer.html">sfTimer</a></li>
+                      <li><a href="sfTimerManager.html">sfTimerManager</a></li>
+                      <li><a href="sfToolkit.html">sfToolkit</a></li>
+                  </ul>
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfContext.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfContext.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfContext.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfContext.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfContext provides information about the current application context, such as</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">sfContext</span>
+                <a href="sfContext.html#method_createinstance">createInstance</a>($configuration, $name, $class)
+                <br />
+                <span class="description">Creates a new context instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfContext.html#method_dispatch">dispatch</a>()
+                <br />
+                <span class="description">Dispatches the current request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfContext.html#method_filtertemplateparameters">filterTemplateParameters</a>($event, $parameters)
+                <br />
+                <span class="description">Listens to the template.filter_parameters event.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">object</span>
+                <a href="sfContext.html#method_get">get</a>($name)
+                <br />
+                <span class="description">Gets an object from the current context.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfContext.html#method_getactionname">getActionName</a>()
+                <br />
+                <span class="description">Retrieve the action name for this context.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfActionStack</span>
+                <a href="sfContext.html#method_getactionstack">getActionStack</a>()
+                <br />
+                <span class="description">Retrieve the ActionStack.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfConfigCache</span>
+                <a href="sfContext.html#method_getconfigcache">getConfigCache</a>()
+                <br />
+                <span class="description">Returns the configuration cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfApplicationConfiguration</span>
+                <a href="sfContext.html#method_getconfiguration">getConfiguration</a>()
+                <br />
+                <span class="description">Returns the configuration instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfController</span>
+                <a href="sfContext.html#method_getcontroller">getController</a>()
+                <br />
+                <span class="description">Retrieve the controller.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfContext.html#method_getdatabaseconnection">getDatabaseConnection</a>($name)
+                <br />
+                <span class="description">Retrieve a database connection from the database manager.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfDatabaseManager</span>
+                <a href="sfContext.html#method_getdatabasemanager">getDatabaseManager</a>()
+                <br />
+                <span class="description">Retrieve the database manager.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfEventDispatcher</span>
+                <a href="sfContext.html#method_geteventdispatcher">getEventDispatcher</a>()
+                <br />
+                <span class="description">Retrieves the current event dispatcher.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfI18N</span>
+                <a href="sfContext.html#method_geti18n">getI18N</a>()
+                <br />
+                <span class="description">Retrieve the i18n instance</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfContext</span>
+                <a href="sfContext.html#method_getinstance">getInstance</a>($name, $class)
+                <br />
+                <span class="description">Retrieves the singleton instance of this class.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfLogger</span>
+                <a href="sfContext.html#method_getlogger">getLogger</a>()
+                <br />
+                <span class="description">Retrieve the logger.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfMailer</span>
+                <a href="sfContext.html#method_getmailer">getMailer</a>()
+                <br />
+                <span class="description">Retrieves the mailer.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfContext.html#method_getmoduledirectory">getModuleDirectory</a>()
+                <br />
+                <span class="description">Retrieve the module directory for this context.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfContext.html#method_getmodulename">getModuleName</a>()
+                <br />
+                <span class="description">Retrieve the module name for this context.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfRequest</span>
+                <a href="sfContext.html#method_getrequest">getRequest</a>()
+                <br />
+                <span class="description">Retrieve the request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfResponse</span>
+                <a href="sfContext.html#method_getresponse">getResponse</a>()
+                <br />
+                <span class="description">Retrieve the response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfRouting</span>
+                <a href="sfContext.html#method_getrouting">getRouting</a>()
+                <br />
+                <span class="description">Retrieve the routing instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfStorage</span>
+                <a href="sfContext.html#method_getstorage">getStorage</a>()
+                <br />
+                <span class="description">Retrieve the storage.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfUser</span>
+                <a href="sfContext.html#method_getuser">getUser</a>()
+                <br />
+                <span class="description">Retrieve the user.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfViewCacheManager</span>
+                <a href="sfContext.html#method_getviewcachemanager">getViewCacheManager</a>()
+                <br />
+                <span class="description">Retrieve the view cache manager</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfContext.html#method_has">has</a>($name)
+                <br />
+                <span class="description">Returns true if an object is currently stored in the current context with the given name, false otherwise.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfContext.html#method_hasinstance">hasInstance</a>($name)
+                <br />
+                <span class="description">Checks to see if there has been a context created</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfContext.html#method_initialize">initialize</a>($configuration)
+                <br />
+                <span class="description">Initializes the current sfContext instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfContext.html#method_loadfactories">loadFactories</a>()
+                <br />
+                <span class="description">Loads the symfony factories.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfContext.html#method_offsetexists">offsetExists</a>($name)
+                <br />
+                <span class="description">Returns true if the context object exists (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfContext.html#method_offsetget">offsetGet</a>($name)
+                <br />
+                <span class="description">Returns the context object associated with the name (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfContext.html#method_offsetset">offsetSet</a>($offset, $value)
+                <br />
+                <span class="description">Sets the context object associated with the offset (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfContext.html#method_offsetunset">offsetUnset</a>($offset)
+                <br />
+                <span class="description">Unsets the context object associated with the offset (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfContext.html#method_set">set</a>($name, $object)
+                <br />
+                <span class="description">Puts an object in the current context.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfContext.html#method_setmailerconfiguration">setMailerConfiguration</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">void</span>
+                <a href="sfContext.html#method_setresponse">setResponse</a>($response)
+                <br />
+                <span class="description">Set the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">void</span>
+                <a href="sfContext.html#method_shutdown">shutdown</a>()
+                <br />
+                <span class="description">Execute the shutdown procedure.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfContext.html#method_switchto">switchTo</a>($name)
+                <br />
+                <span class="description">Sets the current context to something else</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfContext.html#method___call">__call</a>($method, $arguments)
+                <br />
+                <span class="description">Calls methods defined via sfEventDispatcher.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_createinstance"></a>
+              <h3>
+                (sfContext)&nbsp;<span class="method-name">createInstance</span>&nbsp;($configuration, $name, $class)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$configuration</td>
+                <td>An sfApplicationConfiguration instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>A name for this context (application name by default)</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$class</td>
+                <td>The context class to use (sfContext by default)</td>
+              </tr>
+                        </table>
+              <p><strong>Creates a new context instance.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An sfContext instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_dispatch"></a>
+              <h3>
+                <span class="method-name">dispatch</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Dispatches the current request.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_filtertemplateparameters"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">filterTemplateParameters</span>&nbsp;($event, $parameters)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$event</td>
+                <td>An sfEvent instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$parameters</td>
+                <td>An array of template parameters to filter</td>
+              </tr>
+                        </table>
+              <p><strong>Listens to the template.filter_parameters event.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The filtered parameters array</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_get"></a>
+              <h3>
+                (object)&nbsp;<span class="method-name">get</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the object to retrieve</td>
+              </tr>
+                        </table>
+              <p><strong>Gets an object from the current context.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The object associated with the given name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getactionname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getActionName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the action name for this context.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The currently executing action name, if one is set, otherwise null.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getactionstack"></a>
+              <h3>
+                (sfActionStack)&nbsp;<span class="method-name">getActionStack</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the ActionStack.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> the sfActionStack instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getconfigcache"></a>
+              <h3>
+                (sfConfigCache)&nbsp;<span class="method-name">getConfigCache</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the configuration cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A sfConfigCache instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getconfiguration"></a>
+              <h3>
+                (sfApplicationConfiguration)&nbsp;<span class="method-name">getConfiguration</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the configuration instance.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current application configuration instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcontroller"></a>
+              <h3>
+                (sfController)&nbsp;<span class="method-name">getController</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the controller.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfController implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdatabaseconnection"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getDatabaseConnection</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>A database name.</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieve a database connection from the database manager.</strong></p>
+              <p><p>
+<br /> This is a shortcut to manually getting a connection from an existing
+<br /> database implementation instance.</p><p> If the [sf_use_database] setting is off, this will return null.</p></p>
+                        <p><strong>returns</strong> A database instance.</p>
+                                  <p><strong>throws</strong> sfDatabaseException if the requested database name does not exist.</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdatabasemanager"></a>
+              <h3>
+                (sfDatabaseManager)&nbsp;<span class="method-name">getDatabaseManager</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the database manager.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfDatabaseManager instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geteventdispatcher"></a>
+              <h3>
+                (sfEventDispatcher)&nbsp;<span class="method-name">getEventDispatcher</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current event dispatcher.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An sfEventDispatcher instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geti18n"></a>
+              <h3>
+                (sfI18N)&nbsp;<span class="method-name">getI18N</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the i18n instance</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfI18N implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getinstance"></a>
+              <h3>
+                (sfContext)&nbsp;<span class="method-name">getInstance</span>&nbsp;($name, $class)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the sfContext to retrieve.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$class</td>
+                <td>The context class to use (sfContext by default)</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves the singleton instance of this class.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An sfContext implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlogger"></a>
+              <h3>
+                (sfLogger)&nbsp;<span class="method-name">getLogger</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the logger.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfLogger implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmailer"></a>
+              <h3>
+                (sfMailer)&nbsp;<span class="method-name">getMailer</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the mailer.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfMailer implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmoduledirectory"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getModuleDirectory</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the module directory for this context.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An absolute filesystem path to the directory of the currently executing module, if one is set, otherwise null.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmodulename"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getModuleName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the module name for this context.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The currently executing module name, if one is set, otherwise null.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrequest"></a>
+              <h3>
+                (sfRequest)&nbsp;<span class="method-name">getRequest</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the request.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfRequest implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getresponse"></a>
+              <h3>
+                (sfResponse)&nbsp;<span class="method-name">getResponse</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the response.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfResponse implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrouting"></a>
+              <h3>
+                (sfRouting)&nbsp;<span class="method-name">getRouting</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the routing instance.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfRouting implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getstorage"></a>
+              <h3>
+                (sfStorage)&nbsp;<span class="method-name">getStorage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the storage.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfStorage implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getuser"></a>
+              <h3>
+                (sfUser)&nbsp;<span class="method-name">getUser</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the user.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfUser implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getviewcachemanager"></a>
+              <h3>
+                (sfViewCacheManager)&nbsp;<span class="method-name">getViewCacheManager</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieve the view cache manager</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfViewCacheManager implementation instance.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_has"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">has</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The object name</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if an object is currently stored in the current context with the given name, false otherwise.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the object is not null, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasinstance"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">hasInstance</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the sfContext to check for</td>
+              </tr>
+                        </table>
+              <p><strong>Checks to see if there has been a context created</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true is instanced, otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                <span class="method-name">initialize</span>&nbsp;($configuration)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$configuration</td>
+                <td>An sfApplicationConfiguration instance</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes the current sfContext instance.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_loadfactories"></a>
+              <h3>
+                <span class="method-name">loadFactories</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Loads the symfony factories.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetexists"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">offsetExists</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the context object</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if the context object exists (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the context object exists, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetget"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">offsetGet</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The offset of the value to get</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the context object associated with the name (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The context object if exists, null otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetset"></a>
+              <h3>
+                <span class="method-name">offsetSet</span>&nbsp;($offset, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$offset</td>
+                <td>The parameter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The parameter value</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the context object associated with the offset (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetunset"></a>
+              <h3>
+                <span class="method-name">offsetUnset</span>&nbsp;($offset)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$offset</td>
+                <td>The parameter name</td>
+              </tr>
+                        </table>
+              <p><strong>Unsets the context object associated with the offset (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_set"></a>
+              <h3>
+                <span class="method-name">set</span>&nbsp;($name, $object)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the object to store</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$object</td>
+                <td>The object to store</td>
+              </tr>
+                        </table>
+              <p><strong>Puts an object in the current context.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setmailerconfiguration"></a>
+              <h3>
+                <span class="method-name">setMailerConfiguration</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setresponse"></a>
+              <h3>
+                (void)&nbsp;<span class="method-name">setResponse</span>&nbsp;($response)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$response</td>
+                <td>An sfResponse instance.</td>
+              </tr>
+                        </table>
+              <p><strong>Set the response object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_shutdown"></a>
+              <h3>
+                (void)&nbsp;<span class="method-name">shutdown</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Execute the shutdown procedure.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_switchto"></a>
+              <h3>
+                <span class="method-name">switchTo</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the context to switch to</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the current context to something else</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___call"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">__call</span>&nbsp;($method, $arguments)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$method</td>
+                <td>The method name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$arguments</td>
+                <td>The method arguments</td>
+              </tr>
+                        </table>
+              <p><strong>Calls methods defined via sfEventDispatcher.</strong></p>
+              <p><p>
+<br /> If a method cannot be found via sfEventDispatcher, the method name will
+<br /> be parsed to magically handle getMyFactory() and setMyFactory() methods.</p></p>
+                        <p><strong>returns</strong> The returned value of the called method</p>
+                                  <p><strong>throws</strong> <b>sfException</b> if call fails</p>
+                        <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

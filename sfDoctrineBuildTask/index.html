@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfDoctrineBuildTask Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfDoctrineBuildTask Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      task      </strong>
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfAppRoutesTask">sfAppRoutesTask</a></li>
+                      <li><a href="/api/1_4/sfBaseTask">sfBaseTask</a></li>
+                      <li><a href="/api/1_4/sfCacheClearTask">sfCacheClearTask</a></li>
+                      <li><a href="/api/1_4/sfCommandApplicationTask">sfCommandApplicationTask</a></li>
+                      <li><a href="/api/1_4/sfConfigureAuthorTask">sfConfigureAuthorTask</a></li>
+                      <li><a href="/api/1_4/sfDeprecatedClassesValidation">sfDeprecatedClassesValidation</a></li>
+                      <li><a href="/api/1_4/sfDeprecatedConfigurationFilesValidation">sfDeprecatedConfigurationFilesValidation</a></li>
+                      <li><a href="/api/1_4/sfDeprecatedHelpersValidation">sfDeprecatedHelpersValidation</a></li>
+                      <li><a href="/api/1_4/sfDeprecatedMethodsValidation">sfDeprecatedMethodsValidation</a></li>
+                      <li><a href="/api/1_4/sfDeprecatedPluginsValidation">sfDeprecatedPluginsValidation</a></li>
+                      <li><a href="/api/1_4/sfDeprecatedSettingsValidation">sfDeprecatedSettingsValidation</a></li>
+                      <li><a href="/api/1_4/sfDoctrineBuildTask">sfDoctrineBuildTask</a></li>
+                      <li><a href="/api/1_4/sfDoctrineConfigureDatabaseTask">sfDoctrineConfigureDatabaseTask</a></li>
+                      <li><a href="/api/1_4/sfGenerateAppTask">sfGenerateAppTask</a></li>
+                      <li><a href="/api/1_4/sfGenerateModuleTask">sfGenerateModuleTask</a></li>
+                      <li><a href="/api/1_4/sfGenerateProjectTask">sfGenerateProjectTask</a></li>
+                      <li><a href="/api/1_4/sfGenerateTaskTask">sfGenerateTaskTask</a></li>
+                      <li><a href="/api/1_4/sfGeneratorBaseTask">sfGeneratorBaseTask</a></li>
+                      <li><a href="/api/1_4/sfHelpTask">sfHelpTask</a></li>
+                      <li><a href="/api/1_4/sfI18nExtractTask">sfI18nExtractTask</a></li>
+                      <li><a href="/api/1_4/sfI18nFindTask">sfI18nFindTask</a></li>
+                      <li><a href="/api/1_4/sfListTask">sfListTask</a></li>
+                      <li><a href="/api/1_4/sfLogClearTask">sfLogClearTask</a></li>
+                      <li><a href="/api/1_4/sfLogRotateTask">sfLogRotateTask</a></li>
+                      <li><a href="/api/1_4/sfParameterHolderValidation">sfParameterHolderValidation</a></li>
+                      <li><a href="/api/1_4/sfPluginAddChannelTask">sfPluginAddChannelTask</a></li>
+                      <li><a href="/api/1_4/sfPluginBaseTask">sfPluginBaseTask</a></li>
+                      <li><a href="/api/1_4/sfPluginInstallTask">sfPluginInstallTask</a></li>
+                      <li><a href="/api/1_4/sfPluginListTask">sfPluginListTask</a></li>
+                      <li><a href="/api/1_4/sfPluginPublishAssetsTask">sfPluginPublishAssetsTask</a></li>
+                      <li><a href="/api/1_4/sfPluginUninstallTask">sfPluginUninstallTask</a></li>
+                      <li><a href="/api/1_4/sfPluginUpgradeTask">sfPluginUpgradeTask</a></li>
+                      <li><a href="/api/1_4/sfProjectClearControllersTask">sfProjectClearControllersTask</a></li>
+                      <li><a href="/api/1_4/sfProjectDeployTask">sfProjectDeployTask</a></li>
+                      <li><a href="/api/1_4/sfProjectDisableTask">sfProjectDisableTask</a></li>
+                      <li><a href="/api/1_4/sfProjectEnableTask">sfProjectEnableTask</a></li>
+                      <li><a href="/api/1_4/sfProjectOptimizeTask">sfProjectOptimizeTask</a></li>
+                      <li><a href="/api/1_4/sfProjectPermissionsTask">sfProjectPermissionsTask</a></li>
+                      <li><a href="/api/1_4/sfProjectSendEmailsTask">sfProjectSendEmailsTask</a></li>
+                      <li><a href="/api/1_4/sfPropelBuildTask">sfPropelBuildTask</a></li>
+                      <li><a href="/api/1_4/sfPropelConfigureDatabaseTask">sfPropelConfigureDatabaseTask</a></li>
+                      <li><a href="/api/1_4/sfSymfonyTestTask">sfSymfonyTestTask</a></li>
+                      <li><a href="/api/1_4/sfTask">sfTask</a></li>
+                      <li><a href="/api/1_4/sfValidateTask">sfValidateTask</a></li>
+                      <li><a href="/api/1_4/sfValidation">sfValidation</a></li>
+                  </ul>
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfDoctrineBuildTask">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfDoctrineBuildTask">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfDoctrineBuildTask">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfDoctrineBuildTask">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>Generates code based on your schema.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+              
+              <strong>sfDoctrineBuildTask</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="/api/1_4/sfDoctrineBaseTask">sfDoctrineBaseTask</a>&nbsp;&lt;&nbsp;<a href="/api/1_4/sfBaseTask">sfBaseTask</a>&nbsp;&lt;&nbsp;<a href="/api/1_4/sfCommandApplicationTask">sfCommandApplicationTask</a>&nbsp;&lt;&nbsp;<a href="/api/1_4/sfTask">sfTask</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="#method_calculatemode">calculateMode</a>($options)
+                <br />
+                <span class="description">Calculates a bit mode based on the supplied options.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_configure">configure</a>()
+                <br />
+                <span class="description">@see sfTask</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_execute">execute</a>()
+                <br />
+                <span class="description">@see sfTask</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getbuildoptions">getBuildOptions</a>()
+                <br />
+                <span class="description">Returns an array of valid build options.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="/api/1_4/sfDoctrineBaseTask">sfDoctrineBaseTask</a>              </h3>
+                                                                <a href="/api/1_4/sfDoctrineBaseTask#method_calldoctrinecli">callDoctrineCli</a>                  ,                                   <a href="/api/1_4/sfDoctrineBaseTask#method_canonicalizemodeldefinition">canonicalizeModelDefinition</a>                  ,                                   <a href="/api/1_4/sfDoctrineBaseTask#method_filterschemaglobals">filterSchemaGlobals</a>                  ,                                   <a href="/api/1_4/sfDoctrineBaseTask#method_getcliconfig">getCliConfig</a>                  ,                                   <a href="/api/1_4/sfDoctrineBaseTask#method_getdoctrinedatabases">getDoctrineDatabases</a>                  ,                                   <a href="/api/1_4/sfDoctrineBaseTask#method_prepareschemafile">prepareSchemaFile</a>                                                                          <h3>
+                Methods inherited from <a href="/api/1_4/sfBaseTask">sfBaseTask</a>              </h3>
+                                                                <a href="/api/1_4/sfBaseTask#method_checkappexists">checkAppExists</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_checkmoduleexists">checkModuleExists</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_checkprojectexists">checkProjectExists</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_createconfiguration">createConfiguration</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_createtask">createTask</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_disableplugin">disablePlugin</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_dorun">doRun</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_enableplugin">enablePlugin</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_getfilesystem">getFilesystem</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_getfirstapplication">getFirstApplication</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_getpluginmanager">getPluginManager</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_initializeautoload">initializeAutoload</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_installdir">installDir</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_reloadautoload">reloadAutoload</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_reloadtasks">reloadTasks</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_replacetokens">replaceTokens</a>                  ,                                   <a href="/api/1_4/sfBaseTask#method_setconfiguration">setConfiguration</a>                                                                          <h3>
+                Methods inherited from <a href="/api/1_4/sfCommandApplicationTask">sfCommandApplicationTask</a>              </h3>
+                                                                <a href="/api/1_4/sfCommandApplicationTask#method_createtask">createTask</a>                  ,                                   <a href="/api/1_4/sfCommandApplicationTask#method_getmailer">getMailer</a>                  ,                                   <a href="/api/1_4/sfCommandApplicationTask#method_getrouting">getRouting</a>                  ,                                   <a href="/api/1_4/sfCommandApplicationTask#method_initializemailer">initializeMailer</a>                  ,                                   <a href="/api/1_4/sfCommandApplicationTask#method_initializerouting">initializeRouting</a>                  ,                                   <a href="/api/1_4/sfCommandApplicationTask#method_log">log</a>                  ,                                   <a href="/api/1_4/sfCommandApplicationTask#method_logsection">logSection</a>                  ,                                   <a href="/api/1_4/sfCommandApplicationTask#method_runtask">runTask</a>                  ,                                   <a href="/api/1_4/sfCommandApplicationTask#method_setcommandapplication">setCommandApplication</a>                                                                          <h3>
+                Methods inherited from <a href="/api/1_4/sfTask">sfTask</a>              </h3>
+                                                                <a href="/api/1_4/sfTask#method_addargument">addArgument</a>                  ,                                   <a href="/api/1_4/sfTask#method_addarguments">addArguments</a>                  ,                                   <a href="/api/1_4/sfTask#method_addoption">addOption</a>                  ,                                   <a href="/api/1_4/sfTask#method_addoptions">addOptions</a>                  ,                                   <a href="/api/1_4/sfTask#method_ask">ask</a>                  ,                                   <a href="/api/1_4/sfTask#method_askandvalidate">askAndValidate</a>                  ,                                   <a href="/api/1_4/sfTask#method_askconfirmation">askConfirmation</a>                  ,                                   <a href="/api/1_4/sfTask#method_asxml">asXml</a>                  ,                                   <a href="/api/1_4/sfTask#method_configure">configure</a>                  ,                                   <a href="/api/1_4/sfTask#method_dorun">doRun</a>                  ,                                   <a href="/api/1_4/sfTask#method_execute">execute</a>                  ,                                   <a href="/api/1_4/sfTask#method_getaliases">getAliases</a>                  ,                                   <a href="/api/1_4/sfTask#method_getarguments">getArguments</a>                  ,                                   <a href="/api/1_4/sfTask#method_getbriefdescription">getBriefDescription</a>                  ,                                   <a href="/api/1_4/sfTask#method_getdetaileddescription">getDetailedDescription</a>                  ,                                   <a href="/api/1_4/sfTask#method_getformatter">getFormatter</a>                  ,                                   <a href="/api/1_4/sfTask#method_getfullname">getFullName</a>                  ,                                   <a href="/api/1_4/sfTask#method_getname">getName</a>                  ,                                   <a href="/api/1_4/sfTask#method_getnamespace">getNamespace</a>                  ,                                   <a href="/api/1_4/sfTask#method_getoptions">getOptions</a>                  ,                                   <a href="/api/1_4/sfTask#method_getsynopsis">getSynopsis</a>                  ,                                   <a href="/api/1_4/sfTask#method_initialize">initialize</a>                  ,                                   <a href="/api/1_4/sfTask#method_log">log</a>                  ,                                   <a href="/api/1_4/sfTask#method_logblock">logBlock</a>                  ,                                   <a href="/api/1_4/sfTask#method_logsection">logSection</a>                  ,                                   <a href="/api/1_4/sfTask#method_process">process</a>                  ,                                   <a href="/api/1_4/sfTask#method_run">run</a>                  ,                                   <a href="/api/1_4/sfTask#method_runfromcli">runFromCLI</a>                  ,                                   <a href="/api/1_4/sfTask#method_setformatter">setFormatter</a>                  ,                                   <a href="/api/1_4/sfTask#method_strlen">strlen</a>                  ,                                   <a href="/api/1_4/sfTask#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_calculatemode"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">calculateMode</span>&nbsp;($options)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/task/sfDoctrineBuildTask.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Calculates a bit mode based on the supplied options.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_configure"></a>
+              <h3>
+                <span class="method-name">configure</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/task/sfDoctrineBuildTask.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfTask</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_execute"></a>
+              <h3>
+                <span class="method-name">execute</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/task/sfDoctrineBuildTask.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfTask</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getbuildoptions"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getBuildOptions</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/task/sfDoctrineBuildTask.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns an array of valid build options.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of option names and their mode</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

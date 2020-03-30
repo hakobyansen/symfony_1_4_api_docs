@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfWidgetForm Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfWidgetForm Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      widget      </strong>
+      <small> - <a href="widget.html">36 classes</a></small>
+
+              <ul>
+                      <li><a href="sfWidget.html">sfWidget</a></li>
+                      <li><a href="sfWidgetForm.html">sfWidgetForm</a></li>
+                      <li><a href="sfWidgetFormChoice.html">sfWidgetFormChoice</a></li>
+                      <li><a href="sfWidgetFormChoiceBase.html">sfWidgetFormChoiceBase</a></li>
+                      <li><a href="sfWidgetFormDate.html">sfWidgetFormDate</a></li>
+                      <li><a href="sfWidgetFormDateRange.html">sfWidgetFormDateRange</a></li>
+                      <li><a href="sfWidgetFormDateTime.html">sfWidgetFormDateTime</a></li>
+                      <li><a href="sfWidgetFormFilterDate.html">sfWidgetFormFilterDate</a></li>
+                      <li><a href="sfWidgetFormFilterInput.html">sfWidgetFormFilterInput</a></li>
+                      <li><a href="sfWidgetFormI18nChoiceCountry.html">sfWidgetFormI18nChoiceCountry</a></li>
+                      <li><a href="sfWidgetFormI18nChoiceCurrency.html">sfWidgetFormI18nChoiceCurrency</a></li>
+                      <li><a href="sfWidgetFormI18nChoiceLanguage.html">sfWidgetFormI18nChoiceLanguage</a></li>
+                      <li><a href="sfWidgetFormI18nChoiceTimezone.html">sfWidgetFormI18nChoiceTimezone</a></li>
+                      <li><a href="sfWidgetFormI18nDate.html">sfWidgetFormI18nDate</a></li>
+                      <li><a href="sfWidgetFormI18nDateTime.html">sfWidgetFormI18nDateTime</a></li>
+                      <li><a href="sfWidgetFormI18nTime.html">sfWidgetFormI18nTime</a></li>
+                      <li><a href="sfWidgetFormInput.html">sfWidgetFormInput</a></li>
+                      <li><a href="sfWidgetFormInputCheckbox.html">sfWidgetFormInputCheckbox</a></li>
+                      <li><a href="sfWidgetFormInputFile.html">sfWidgetFormInputFile</a></li>
+                      <li><a href="sfWidgetFormInputFileEditable.html">sfWidgetFormInputFileEditable</a></li>
+                      <li><a href="sfWidgetFormInputHidden.html">sfWidgetFormInputHidden</a></li>
+                      <li><a href="sfWidgetFormInputPassword.html">sfWidgetFormInputPassword</a></li>
+                      <li><a href="sfWidgetFormInputText.html">sfWidgetFormInputText</a></li>
+                      <li><a href="sfWidgetFormPropelChoice.html">sfWidgetFormPropelChoice</a></li>
+                      <li><a href="sfWidgetFormSchema.html">sfWidgetFormSchema</a></li>
+                      <li><a href="sfWidgetFormSchemaDecorator.html">sfWidgetFormSchemaDecorator</a></li>
+                      <li><a href="sfWidgetFormSchemaForEach.html">sfWidgetFormSchemaForEach</a></li>
+                      <li><a href="sfWidgetFormSchemaFormatter.html">sfWidgetFormSchemaFormatter</a></li>
+                      <li><a href="sfWidgetFormSchemaFormatterList.html">sfWidgetFormSchemaFormatterList</a></li>
+                      <li><a href="sfWidgetFormSchemaFormatterTable.html">sfWidgetFormSchemaFormatterTable</a></li>
+                      <li><a href="sfWidgetFormSelect.html">sfWidgetFormSelect</a></li>
+                      <li><a href="sfWidgetFormSelectCheckbox.html">sfWidgetFormSelectCheckbox</a></li>
+                      <li><a href="sfWidgetFormSelectMany.html">sfWidgetFormSelectMany</a></li>
+                      <li><a href="sfWidgetFormSelectRadio.html">sfWidgetFormSelectRadio</a></li>
+                      <li><a href="sfWidgetFormTextarea.html">sfWidgetFormTextarea</a></li>
+                      <li><a href="sfWidgetFormTime.html">sfWidgetFormTime</a></li>
+                  </ul>
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfWidgetForm.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfWidgetForm.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfWidgetForm.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfWidgetForm.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfWidgetForm is the base class for all form widgets.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="sfWidgetFormFilterInput.html">sfWidgetFormFilterInput</a>, <a href="sfWidgetFormInput.html">sfWidgetFormInput</a>, <a href="sfWidgetFormSchema.html">sfWidgetFormSchema</a>, <a href="sfWidgetFormTime.html">sfWidgetFormTime</a>, <a href="sfWidgetFormDate.html">sfWidgetFormDate</a>, <a href="sfWidgetFormChoiceBase.html">sfWidgetFormChoiceBase</a>, <a href="sfWidgetFormDateTime.html">sfWidgetFormDateTime</a>, <a href="sfWidgetFormDateRange.html">sfWidgetFormDateRange</a>, <a href="sfWidgetFormTextarea.html">sfWidgetFormTextarea</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfWidgetForm</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="sfWidget.html">sfWidget</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWidgetForm.html#method_fixformid">fixFormId</a>($attributes)
+                <br />
+                <span class="description">Adds an HTML id attributes to the array of attributes if none is given and a name attribute exists.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWidgetForm.html#method_generateid">generateId</a>($name, $value)
+                <br />
+                <span class="description">Returns a formatted id based on the field name and optionally on the field value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWidgetForm.html#method_generatetwocharsrange">generateTwoCharsRange</a>($start, $stop)
+                <br />
+                <span class="description">Generates a two chars range</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWidgetForm.html#method_getdefault">getDefault</a>()
+                <br />
+                <span class="description">Returns the default value for the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWidgetForm.html#method_getidformat">getIdFormat</a>()
+                <br />
+                <span class="description">Gets the HTML format string for id attributes.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWidgetForm.html#method_getlabel">getLabel</a>()
+                <br />
+                <span class="description">Returns the label for the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidgetFormSchema|null</span>
+                <a href="sfWidgetForm.html#method_getparent">getParent</a>()
+                <br />
+                <span class="description">Returns the parent widget schema.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfWidgetForm.html#method_ishidden">isHidden</a>()
+                <br />
+                <span class="description">Returns true if the widget is hidden.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfWidgetForm.html#method_needsmultipartform">needsMultipartForm</a>()
+                <br />
+                <span class="description">Returns true if the widget needs a multipart form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWidgetForm.html#method_rendercontenttag">renderContentTag</a>($tag, $content, $attributes)
+                <br />
+                <span class="description">Renders a HTML content tag.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWidgetForm.html#method_rendertag">renderTag</a>($tag, $attributes)
+                <br />
+                <span class="description">Renders a HTML tag.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="sfWidgetForm.html#method_setdefault">setDefault</a>($value)
+                <br />
+                <span class="description">Sets the default value for the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="sfWidgetForm.html#method_sethidden">setHidden</a>($boolean)
+                <br />
+                <span class="description">Sets the hidden flag for the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="sfWidgetForm.html#method_setidformat">setIdFormat</a>($format)
+                <br />
+                <span class="description">Sets the format for HTML id attributes.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="sfWidgetForm.html#method_setlabel">setLabel</a>($value)
+                <br />
+                <span class="description">Sets the label for the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidgetForm</span>
+                <a href="sfWidgetForm.html#method_setparent">setParent</a>($widgetSchema)
+                <br />
+                <span class="description">Sets the parent widget schema.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWidgetForm.html#method_translate">translate</a>($text, $parameters)
+                <br />
+                <span class="description">Translates the given text.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWidgetForm.html#method_translateall">translateAll</a>($texts, $parameters)
+                <br />
+                <span class="description">Translates all values of the given array.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWidgetForm.html#method___construct">__construct</a>($options, $attributes)
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="sfWidget.html">sfWidget</a>              </h3>
+                                                                <a href="sfWidget.html#method_addoption">addOption</a>                  ,                                   <a href="sfWidget.html#method_addrequiredoption">addRequiredOption</a>                  ,                                   <a href="sfWidget.html#method_attributestohtml">attributesToHtml</a>                  ,                                   <a href="sfWidget.html#method_attributestohtmlcallback">attributesToHtmlCallback</a>                  ,                                   <a href="sfWidget.html#method_configure">configure</a>                  ,                                   <a href="sfWidget.html#method_escapeonce">escapeOnce</a>                  ,                                   <a href="sfWidget.html#method_fixdoubleescape">fixDoubleEscape</a>                  ,                                   <a href="sfWidget.html#method_getattribute">getAttribute</a>                  ,                                   <a href="sfWidget.html#method_getattributes">getAttributes</a>                  ,                                   <a href="sfWidget.html#method_getcharset">getCharset</a>                  ,                                   <a href="sfWidget.html#method_getjavascripts">getJavaScripts</a>                  ,                                   <a href="sfWidget.html#method_getoption">getOption</a>                  ,                                   <a href="sfWidget.html#method_getoptions">getOptions</a>                  ,                                   <a href="sfWidget.html#method_getrequiredoptions">getRequiredOptions</a>                  ,                                   <a href="sfWidget.html#method_getstylesheets">getStylesheets</a>                  ,                                   <a href="sfWidget.html#method_hasoption">hasOption</a>                  ,                                   <a href="sfWidget.html#method_isxhtml">isXhtml</a>                  ,                                   <a href="sfWidget.html#method_render">render</a>                  ,                                   <a href="sfWidget.html#method_rendercontenttag">renderContentTag</a>                  ,                                   <a href="sfWidget.html#method_rendertag">renderTag</a>                  ,                                   <a href="sfWidget.html#method_setattribute">setAttribute</a>                  ,                                   <a href="sfWidget.html#method_setattributes">setAttributes</a>                  ,                                   <a href="sfWidget.html#method_setcharset">setCharset</a>                  ,                                   <a href="sfWidget.html#method_setoption">setOption</a>                  ,                                   <a href="sfWidget.html#method_setoptions">setOptions</a>                  ,                                   <a href="sfWidget.html#method_setxhtml">setXhtml</a>                  ,                                   <a href="sfWidget.html#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_fixformid"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">fixFormId</span>&nbsp;($attributes)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of attributes</td>
+              </tr>
+                        </table>
+              <p><strong>Adds an HTML id attributes to the array of attributes if none is given and a name attribute exists.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of attributes with an id.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generateid"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">generateId</span>&nbsp;($name, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The field value</td>
+              </tr>
+                        </table>
+              <p><strong>Returns a formatted id based on the field name and optionally on the field value.</strong></p>
+              <p><p>
+<br /> This method determines the proper form field id name based on the parameters. If a form field has an
+<br /> array value as a name we need to convert them to proper and unique ids like so:</p><p> <samp>
+<br />  name[] => name (if value == null)
+<br />  name[] => name_value (if value != null)
+<br />  name[bob] => name_bob
+<br />  name[item][total] => name_item_total
+<br /> </samp></p><p> This method also changes all invalid characters to an underscore (_):</p><p> Ids must begin with a letter ([A-Za-z]) and may be followed by any number of letters, digits
+<br /> ([0-9]), hyphens ("-"), underscores ("_"), colons (":"), and periods (".").</p></p>
+                        <p><strong>returns</strong> The field id or null.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generatetwocharsrange"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">generateTwoCharsRange</span>&nbsp;($start, $stop)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                                    </table>
+              <p><strong>Generates a two chars range</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdefault"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getDefault</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the default value for the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The default value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getidformat"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getIdFormat</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the HTML format string for id attributes.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The format string</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlabel"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getLabel</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the label for the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The label</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getparent"></a>
+              <h3>
+                (sfWidgetFormSchema|null)&nbsp;<span class="method-name">getParent</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the parent widget schema.</strong></p>
+              <p><p>
+<br /> If no schema has been set with setWidgetSchema(), NULL is returned.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_ishidden"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">isHidden</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the widget is hidden.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the widget is hidden, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_needsmultipartform"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">needsMultipartForm</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the widget needs a multipart form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the widget needs a multipart form, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_rendercontenttag"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">renderContentTag</span>&nbsp;($tag, $content, $attributes)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$tag</td>
+                <td>The tag name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$content</td>
+                <td>The content of the tag</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of HTML attributes to be merged with the default HTML attributes</td>
+              </tr>
+                        </table>
+              <p><strong>Renders a HTML content tag.</strong></p>
+              <p><p>
+<br /> The id attribute is added automatically to the array of attributes if none is specified.
+<br /> If uses for "id_format" option to generate the id.</p></p>
+                        <p><strong>returns</strong> An HTML tag string</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_rendertag"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">renderTag</span>&nbsp;($tag, $attributes)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$tag</td>
+                <td>The tag name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of HTML attributes to be merged with the default HTML attributes</td>
+              </tr>
+                        </table>
+              <p><strong>Renders a HTML tag.</strong></p>
+              <p><p>
+<br /> The id attribute is added automatically to the array of attributes if none is specified.
+<br /> If uses for "id_format" option to generate the id.</p></p>
+                        <p><strong>returns</strong> An HTML tag string</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdefault"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setDefault</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the default value for the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_sethidden"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setHidden</span>&nbsp;($boolean)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$boolean</td>
+                <td>true if the widget must be hidden, false otherwise</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the hidden flag for the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setidformat"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setIdFormat</span>&nbsp;($format)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$format</td>
+                <td>The format string (must contain a %s for the id placeholder)</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the format for HTML id attributes.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setlabel"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setLabel</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The label</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the label for the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setparent"></a>
+              <h3>
+                (sfWidgetForm)&nbsp;<span class="method-name">setParent</span>&nbsp;($widgetSchema)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Sets the parent widget schema.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_translate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">translate</span>&nbsp;($text, $parameters)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$text</td>
+                <td>The text with optional placeholders</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$parameters</td>
+                <td>The values to replace the placeholders</td>
+              </tr>
+                        </table>
+              <p><strong>Translates the given text.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The translated text</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_translateall"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">translateAll</span>&nbsp;($texts, $parameters)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$texts</td>
+                <td>The texts with optional placeholders</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$parameters</td>
+                <td>The values to replace the placeholders</td>
+              </tr>
+                        </table>
+              <p><strong>Translates all values of the given array.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The translated texts</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($options, $attributes)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>An array of options</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of default HTML attributes</td>
+              </tr>
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p>
+<br /> Available options:</p><p>  * id_format:       The format for the generated HTML id attributes (%s by default)
+<br />  * is_hidden:       true if the form widget must be hidden, false otherwise (false by default)
+<br />  * needs_multipart: true if the form widget needs a multipart form, false otherwise (false by default)
+<br />  * default:         The default value to use when rendering the widget
+<br />  * label:           The label to use when the widget is rendered by a widget schema</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

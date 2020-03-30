@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; TextHelper Functions | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>TextHelper Functions</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      helper      </strong>
+      <small> - <a href="helper.html">12 classes</a></small>
+
+              <ul>
+                      <li><a href="AssetHelper.html">AssetHelper</a></li>
+                      <li><a href="CacheHelper.html">CacheHelper</a></li>
+                      <li><a href="DateHelper.html">DateHelper</a></li>
+                      <li><a href="EscapingHelper.html">EscapingHelper</a></li>
+                      <li><a href="HelperHelper.html">HelperHelper</a></li>
+                      <li><a href="I18NHelper.html">I18NHelper</a></li>
+                      <li><a href="JavascriptBaseHelper.html">JavascriptBaseHelper</a></li>
+                      <li><a href="NumberHelper.html">NumberHelper</a></li>
+                      <li><a href="PartialHelper.html">PartialHelper</a></li>
+                      <li><a href="TagHelper.html">TagHelper</a></li>
+                      <li><a href="TextHelper.html">TextHelper</a></li>
+                      <li><a href="UrlHelper.html">UrlHelper</a></li>
+                  </ul>
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/TextHelper.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/TextHelper.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/TextHelper.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/TextHelper.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>TextHelper.</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Function Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="TextHelper.html#method_auto_link_text">auto_link_text</a>()
+                <br />
+                <span class="description">Turns all urls and email addresses into clickable links. The +link+ parameter can limit what should be linked.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="TextHelper.html#method_excerpt_text">excerpt_text</a>()
+                <br />
+                <span class="description">Extracts an excerpt from the +text+ surrounding the +phrase+ with a number of characters on each side determined</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="TextHelper.html#method_highlight_text">highlight_text</a>($text, $phrase, $highlighter)
+                <br />
+                <span class="description">Highlights the +phrase+ where it is found in the +text+ by surrounding it like</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="TextHelper.html#method_simple_format_text">simple_format_text</a>()
+                <br />
+                <span class="description">Returns +text+ transformed into html using very simple formatting rules</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="TextHelper.html#method_strip_links_text">strip_links_text</a>()
+                <br />
+                <span class="description">Turns all links into words, like &quot;&lt;a href=&quot;something&quot;&gt;else&lt;/a&gt;&quot; to &quot;else&quot;.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="TextHelper.html#method_truncate_text">truncate_text</a>()
+                <br />
+                <span class="description">Truncates +text+ to the length of +length+ and replaces the last three characters with the +truncate_string+</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="TextHelper.html#method_wrap_text">wrap_text</a>()
+                <br />
+                <span class="description">Word wrap long lines to line_width.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="TextHelper.html#method__auto_link_email_addresses">_auto_link_email_addresses</a>()
+                <br />
+                <span class="description">Turns all email addresses into clickable links.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="TextHelper.html#method__auto_link_urls">_auto_link_urls</a>()
+                <br />
+                <span class="description">Turns all urls into clickable links.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Function Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_auto_link_text"></a>
+              <h3>
+                <span class="method-name">auto_link_text</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Turns all urls and email addresses into clickable links. The +link+ parameter can limit what should be linked.</strong></p>
+              <p><p> Options are :all (default), :email_addresses, and :urls.</p><p> Example:
+<br />   auto_link("Go to http://www.symfony-project.com and say hello to fabien.potencier@example.com") =>
+<br />     Go to <a href="http://www.symfony-project.com">http://www.symfony-project.com</a> and
+<br />     say hello to <a href="mailto:fabien.potencier@example.com">fabien.potencier@example.com</a></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_excerpt_text"></a>
+              <h3>
+                <span class="method-name">excerpt_text</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Extracts an excerpt from the +text+ surrounding the +phrase+ with a number of characters on each side determined</strong></p>
+              <p><p> by +radius+. If the phrase isn't found, nil is returned. Ex:
+<br />   excerpt("hello my world", "my", 3) => "...lo my wo..."
+<br /> If +excerpt_space+ is true the text will only be truncated on whitespace, never inbetween words.
+<br /> This might return a smaller radius than specified.
+<br />   excerpt("hello my world", "my", 3, "...", true) => "... my ..."</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_highlight_text"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">highlight_text</span>&nbsp;($text, $phrase, $highlighter)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$text</td>
+                <td>subject input to preg_replace.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$phrase</td>
+                <td>string or array of words to highlight</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$highlighter</td>
+                <td>regex replacement input to preg_replace.</td>
+              </tr>
+                        </table>
+              <p><strong>Highlights the +phrase+ where it is found in the +text+ by surrounding it like</strong></p>
+              <p><p> <strong class="highlight">I'm a highlight phrase</strong>. The highlighter can be specialized by
+<br /> passing +highlighter+ as single-quoted string with \1 where the phrase is supposed to be inserted.
+<br /> N.B.: The +phrase+ is sanitized to include only letters, digits, and spaces before use.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_simple_format_text"></a>
+              <h3>
+                <span class="method-name">simple_format_text</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns +text+ transformed into html using very simple formatting rules</strong></p>
+              <p><p> Surrounds paragraphs with <tt>&lt;p&gt;</tt> tags, and converts line breaks into <tt>&lt;br /&gt;</tt>
+<br /> Two consecutive newlines(<tt></p><p></tt>) are considered as a paragraph, one newline (<tt>
+<br /></tt>) is
+<br /> considered a linebreak, three or more consecutive newlines are turned into two newlines</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_strip_links_text"></a>
+              <h3>
+                <span class="method-name">strip_links_text</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Turns all links into words, like &quot;&lt;a href=&quot;something&quot;&gt;else&lt;/a&gt;&quot; to &quot;else&quot;.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_truncate_text"></a>
+              <h3>
+                <span class="method-name">truncate_text</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Truncates +text+ to the length of +length+ and replaces the last three characters with the +truncate_string+</strong></p>
+              <p><p> if the +text+ is longer than +length+.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_wrap_text"></a>
+              <h3>
+                <span class="method-name">wrap_text</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Word wrap long lines to line_width.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method__auto_link_email_addresses"></a>
+              <h3>
+                <span class="method-name">_auto_link_email_addresses</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Turns all email addresses into clickable links.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method__auto_link_urls"></a>
+              <h3>
+                <span class="method-name">_auto_link_urls</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Turns all urls into clickable links.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

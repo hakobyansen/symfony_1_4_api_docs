@@ -1,0 +1,885 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfToolkit Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfToolkit Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      util      </strong>
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfBrowser">sfBrowser</a></li>
+                      <li><a href="/api/1_4/sfBrowserBase">sfBrowserBase</a></li>
+                      <li><a href="/api/1_4/sfCallable">sfCallable</a></li>
+                      <li><a href="/api/1_4/sfClassManipulator">sfClassManipulator</a></li>
+                      <li><a href="/api/1_4/sfContext">sfContext</a></li>
+                      <li><a href="/api/1_4/sfDomCssSelector">sfDomCssSelector</a></li>
+                      <li><a href="/api/1_4/sfFilesystem">sfFilesystem</a></li>
+                      <li><a href="/api/1_4/sfFinder">sfFinder</a></li>
+                      <li><a href="/api/1_4/sfGlobToRegex">sfGlobToRegex</a></li>
+                      <li><a href="/api/1_4/sfInflector">sfInflector</a></li>
+                      <li><a href="/api/1_4/sfNamespacedParameterHolder">sfNamespacedParameterHolder</a></li>
+                      <li><a href="/api/1_4/sfNumberCompare">sfNumberCompare</a></li>
+                      <li><a href="/api/1_4/sfParameterHolder">sfParameterHolder</a></li>
+                      <li><a href="/api/1_4/sfTimer">sfTimer</a></li>
+                      <li><a href="/api/1_4/sfTimerManager">sfTimerManager</a></li>
+                      <li><a href="/api/1_4/sfToolkit">sfToolkit</a></li>
+                  </ul>
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfToolkit">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfToolkit">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfToolkit">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfToolkit">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfToolkit provides basic utility methods.</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_addincludepath">addIncludePath</a>($path, $position)
+                <br />
+                <span class="description">Adds a path to the PHP include_path setting.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_arraydeepmerge">arrayDeepMerge</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_cleardirectory">clearDirectory</a>($directory)
+                <br />
+                <span class="description">Clear all files in a given directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_clearglob">clearGlob</a>($pattern)
+                <br />
+                <span class="description">Clear all files and directories corresponding to a glob pattern.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_extractclassname">extractClassName</a>($filename)
+                <br />
+                <span class="description">Extract the class or interface name from filename.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getarrayvalueforpath">getArrayValueForPath</a>($values, $name, $default)
+                <br />
+                <span class="description">Returns an array value for a path.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getphpcli">getPhpCli</a>()
+                <br />
+                <span class="description">Get path to php cli.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_i18n_toencoding">I18N_toEncoding</a>($string, $to)
+                <br />
+                <span class="description">Converts UTF-8 strings to a different encoding. NB. The result may not have been encoded if iconv fails.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_i18n_toutf8">I18N_toUTF8</a>($string, $from)
+                <br />
+                <span class="description">Converts strings to UTF-8 via iconv. NB, the result may not by UTF-8 if the conversion failed.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_isarrayvaluesempty">isArrayValuesEmpty</a>($array)
+                <br />
+                <span class="description">Checks if array values are empty</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_ispathabsolute">isPathAbsolute</a>($path)
+                <br />
+                <span class="description">Determine if a filesystem path is absolute.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_isutf8">isUTF8</a>()
+                <br />
+                <span class="description">Checks if a string is an utf8.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method_literalize">literalize</a>($value, $quoted)
+                <br />
+                <span class="description">Finds the type of the passed value, returns the value as the new type.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_pregtr">pregtr</a>($search, $replacePairs)
+                <br />
+                <span class="description">Returns subject replaced with regular expression matchs</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_replaceconstants">replaceConstants</a>($value)
+                <br />
+                <span class="description">Replaces constant identifiers in a scalar value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_stringtoarray">stringToArray</a>($string)
+                <br />
+                <span class="description">Converts string to array</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_stripcomments">stripComments</a>($source)
+                <br />
+                <span class="description">Strips comments from php source code</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_stripslashesdeep">stripslashesDeep</a>($value)
+                <br />
+                <span class="description">Strip slashes recursively from array</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_addincludepath"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">addIncludePath</span>&nbsp;($path, $position)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$path</td>
+                <td>Single string path or an array of paths</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$position</td>
+                <td>Either 'front' or 'back'</td>
+              </tr>
+                        </table>
+              <p><strong>Adds a path to the PHP include_path setting.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The old include path</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_arraydeepmerge"></a>
+              <h3>
+                <span class="method-name">arrayDeepMerge</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_cleardirectory"></a>
+              <h3>
+                <span class="method-name">clearDirectory</span>&nbsp;($directory)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$directory</td>
+                <td>An absolute filesystem path to a directory.</td>
+              </tr>
+                        </table>
+              <p><strong>Clear all files in a given directory.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_clearglob"></a>
+              <h3>
+                <span class="method-name">clearGlob</span>&nbsp;($pattern)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>An absolute filesystem pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Clear all files and directories corresponding to a glob pattern.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_extractclassname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">extractClassName</span>&nbsp;($filename)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$filename</td>
+                <td>A filename.</td>
+              </tr>
+                        </table>
+              <p><strong>Extract the class or interface name from filename.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A class or interface name, if one can be extracted, otherwise null.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getarrayvalueforpath"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getArrayValueForPath</span>&nbsp;($values, $name, $default)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$values</td>
+                <td>The values to search</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The token name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>Default if not found</td>
+              </tr>
+                        </table>
+              <p><strong>Returns an array value for a path.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getphpcli"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPhpCli</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Get path to php cli.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> sfException If no php cli found</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_i18n_toencoding"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">I18N_toEncoding</span>&nbsp;($string, $to)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$string</td>
+                <td>the UTF-8 string for conversion</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$to</td>
+                <td>new encoding</td>
+              </tr>
+                        </table>
+              <p><strong>Converts UTF-8 strings to a different encoding. NB. The result may not have been encoded if iconv fails.</strong></p>
+              <p><p>
+<br /> This file comes from Prado (BSD License)</p></p>
+                        <p><strong>returns</strong> encoded string.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_i18n_toutf8"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">I18N_toUTF8</span>&nbsp;($string, $from)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$string</td>
+                <td>string to convert to UTF-8</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$from</td>
+                <td>current encoding</td>
+              </tr>
+                        </table>
+              <p><strong>Converts strings to UTF-8 via iconv. NB, the result may not by UTF-8 if the conversion failed.</strong></p>
+              <p><p>
+<br /> This file comes from Prado (BSD License)</p></p>
+                        <p><strong>returns</strong> UTF-8 encoded string, original string if iconv failed.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isarrayvaluesempty"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isArrayValuesEmpty</span>&nbsp;($array)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$array</td>
+                <td>the array to check</td>
+              </tr>
+                        </table>
+              <p><strong>Checks if array values are empty</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if empty, otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_ispathabsolute"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isPathAbsolute</span>&nbsp;($path)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$path</td>
+                <td>A filesystem path.</td>
+              </tr>
+                        </table>
+              <p><strong>Determine if a filesystem path is absolute.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if the path is absolute, otherwise false.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isutf8"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isUTF8</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Checks if a string is an utf8.</strong></p>
+              <p><p>
+<br /> Yi Stone Li<yili@yahoo-inc.com>
+<br /> Copyright (c) 2007 Yahoo! Inc. All rights reserved.
+<br /> Licensed under the BSD open source license</p></p>
+                        <p><strong>returns</strong> true if $string is valid UTF-8 and false otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_literalize"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">literalize</span>&nbsp;($value, $quoted)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                                    <tr>
+                <td class="parameter-name">$quoted</td>
+                <td>Quote?</td>
+              </tr>
+                        </table>
+              <p><strong>Finds the type of the passed value, returns the value as the new type.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_pregtr"></a>
+              <h3>
+                <span class="method-name">pregtr</span>&nbsp;($search, $replacePairs)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$search</td>
+                <td>subject to search</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$replacePairs</td>
+                <td>array of search => replace pairs</td>
+              </tr>
+                        </table>
+              <p><strong>Returns subject replaced with regular expression matchs</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_replaceconstants"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">replaceConstants</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>the value to perform the replacement on</td>
+              </tr>
+                        </table>
+              <p><strong>Replaces constant identifiers in a scalar value.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> the value with substitutions made</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_stringtoarray"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">stringToArray</span>&nbsp;($string)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$string</td>
+                <td>the value to convert to array</td>
+              </tr>
+                        </table>
+              <p><strong>Converts string to array</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_stripcomments"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">stripComments</span>&nbsp;($source)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$source</td>
+                <td>PHP source code.</td>
+              </tr>
+                        </table>
+              <p><strong>Strips comments from php source code</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Comment free source code.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_stripslashesdeep"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">stripslashesDeep</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/util/sfToolkit.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>the value to strip</td>
+              </tr>
+                        </table>
+              <p><strong>Strip slashes recursively from array</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> clean value with slashes stripped</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

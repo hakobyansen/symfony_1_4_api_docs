@@ -1,0 +1,843 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfValidatorErrorSchema Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfValidatorErrorSchema Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      validator      </strong>
+      <small> - <a href="validator.html">33 classes</a></small>
+
+              <ul>
+                      <li><a href="sfValidatedFile.html">sfValidatedFile</a></li>
+                      <li><a href="sfValidatorAnd.html">sfValidatorAnd</a></li>
+                      <li><a href="sfValidatorBase.html">sfValidatorBase</a></li>
+                      <li><a href="sfValidatorBoolean.html">sfValidatorBoolean</a></li>
+                      <li><a href="sfValidatorCallback.html">sfValidatorCallback</a></li>
+                      <li><a href="sfValidatorChoice.html">sfValidatorChoice</a></li>
+                      <li><a href="sfValidatorCSRFToken.html">sfValidatorCSRFToken</a></li>
+                      <li><a href="sfValidatorDate.html">sfValidatorDate</a></li>
+                      <li><a href="sfValidatorDateRange.html">sfValidatorDateRange</a></li>
+                      <li><a href="sfValidatorDateTime.html">sfValidatorDateTime</a></li>
+                      <li><a href="sfValidatorDecorator.html">sfValidatorDecorator</a></li>
+                      <li><a href="sfValidatorEmail.html">sfValidatorEmail</a></li>
+                      <li><a href="sfValidatorError.html">sfValidatorError</a></li>
+                      <li><a href="sfValidatorErrorSchema.html">sfValidatorErrorSchema</a></li>
+                      <li><a href="sfValidatorFile.html">sfValidatorFile</a></li>
+                      <li><a href="sfValidatorFromDescription.html">sfValidatorFromDescription</a></li>
+                      <li><a href="sfValidatorI18nChoiceCountry.html">sfValidatorI18nChoiceCountry</a></li>
+                      <li><a href="sfValidatorI18nChoiceLanguage.html">sfValidatorI18nChoiceLanguage</a></li>
+                      <li><a href="sfValidatorI18nChoiceTimezone.html">sfValidatorI18nChoiceTimezone</a></li>
+                      <li><a href="sfValidatorInteger.html">sfValidatorInteger</a></li>
+                      <li><a href="sfValidatorNumber.html">sfValidatorNumber</a></li>
+                      <li><a href="sfValidatorOr.html">sfValidatorOr</a></li>
+                      <li><a href="sfValidatorPass.html">sfValidatorPass</a></li>
+                      <li><a href="sfValidatorPropelChoice.html">sfValidatorPropelChoice</a></li>
+                      <li><a href="sfValidatorPropelUnique.html">sfValidatorPropelUnique</a></li>
+                      <li><a href="sfValidatorRegex.html">sfValidatorRegex</a></li>
+                      <li><a href="sfValidatorSchema.html">sfValidatorSchema</a></li>
+                      <li><a href="sfValidatorSchemaCompare.html">sfValidatorSchemaCompare</a></li>
+                      <li><a href="sfValidatorSchemaFilter.html">sfValidatorSchemaFilter</a></li>
+                      <li><a href="sfValidatorSchemaForEach.html">sfValidatorSchemaForEach</a></li>
+                      <li><a href="sfValidatorString.html">sfValidatorString</a></li>
+                      <li><a href="sfValidatorTime.html">sfValidatorTime</a></li>
+                      <li><a href="sfValidatorUrl.html">sfValidatorUrl</a></li>
+                  </ul>
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfValidatorErrorSchema.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfValidatorErrorSchema.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfValidatorErrorSchema.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfValidatorErrorSchema.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfValidatorErrorSchema represents a validation schema error.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+              
+              <strong>sfValidatorErrorSchema</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="sfValidatorError.html">sfValidatorError</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">sfValidatorErrorSchema</span>
+                <a href="sfValidatorErrorSchema.html#method_adderror">addError</a>($error, $name)
+                <br />
+                <span class="description">Adds an error.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfValidatorErrorSchema</span>
+                <a href="sfValidatorErrorSchema.html#method_adderrors">addErrors</a>($errors)
+                <br />
+                <span class="description">Adds an array of errors.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="sfValidatorErrorSchema.html#method_count">count</a>()
+                <br />
+                <span class="description">Returns the number of errors (implements the Countable interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfValidatorErrorSchema.html#method_current">current</a>()
+                <br />
+                <span class="description">Returns the current error (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_getarguments">getArguments</a>()
+                <br />
+                <span class="description">@see sfValidatorError</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfValidatorErrorSchema.html#method_geterrors">getErrors</a>()
+                <br />
+                <span class="description">Gets an array of all errors</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfValidatorErrorSchema.html#method_getglobalerrors">getGlobalErrors</a>()
+                <br />
+                <span class="description">Gets an array of all global errors</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_getmessageformat">getMessageFormat</a>()
+                <br />
+                <span class="description">@see sfValidatorError</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfValidatorErrorSchema.html#method_getnamederrors">getNamedErrors</a>()
+                <br />
+                <span class="description">Gets an array of all named errors</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_getvalue">getValue</a>()
+                <br />
+                <span class="description">@see sfValidatorError</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfValidatorErrorSchema.html#method_key">key</a>()
+                <br />
+                <span class="description">Get the key associated with the current error (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_next">next</a>()
+                <br />
+                <span class="description">Moves to the next error (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfValidatorErrorSchema.html#method_offsetexists">offsetExists</a>($name)
+                <br />
+                <span class="description">Returns true if the error exists (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfValidatorError</span>
+                <a href="sfValidatorErrorSchema.html#method_offsetget">offsetGet</a>($name)
+                <br />
+                <span class="description">Returns the error associated with the name (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_offsetset">offsetSet</a>($offset, $value)
+                <br />
+                <span class="description">Throws an exception saying that values cannot be set (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_offsetunset">offsetUnset</a>($offset)
+                <br />
+                <span class="description">Impossible to call because this is an exception!</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_rewind">rewind</a>()
+                <br />
+                <span class="description">Reset the error array to the beginning (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfValidatorErrorSchema.html#method_serialize">serialize</a>()
+                <br />
+                <span class="description">Serializes the current instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_unserialize">unserialize</a>($serialized)
+                <br />
+                <span class="description">Unserializes a sfValidatorError instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_updatecode">updateCode</a>()
+                <br />
+                <span class="description">Updates the exception error code according to the current errors.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method_updatemessage">updateMessage</a>()
+                <br />
+                <span class="description">Updates the exception error message according to the current errors.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfValidatorErrorSchema.html#method_valid">valid</a>()
+                <br />
+                <span class="description">Returns true if the current error is valid (implements the Iterator interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfValidatorErrorSchema.html#method___construct">__construct</a>($validator, $errors)
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="sfValidatorError.html">sfValidatorError</a>              </h3>
+                                                                <a href="sfValidatorError.html#method_getarguments">getArguments</a>                  ,                                   <a href="sfValidatorError.html#method_getmessageformat">getMessageFormat</a>                  ,                                   <a href="sfValidatorError.html#method_getvalidator">getValidator</a>                  ,                                   <a href="sfValidatorError.html#method_getvalue">getValue</a>                  ,                                   <a href="sfValidatorError.html#method_serialize">serialize</a>                  ,                                   <a href="sfValidatorError.html#method_unserialize">unserialize</a>                  ,                                   <a href="sfValidatorError.html#method___construct">__construct</a>                  ,                                   <a href="sfValidatorError.html#method___tostring">__toString</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_adderror"></a>
+              <h3>
+                (sfValidatorErrorSchema)&nbsp;<span class="method-name">addError</span>&nbsp;($error, $name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$error</td>
+                <td>An sfValidatorError instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The error name</td>
+              </tr>
+                        </table>
+              <p><strong>Adds an error.</strong></p>
+              <p><p>
+<br /> This method merges sfValidatorErrorSchema errors with the current instance.</p></p>
+                        <p><strong>returns</strong> The current error schema instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_adderrors"></a>
+              <h3>
+                (sfValidatorErrorSchema)&nbsp;<span class="method-name">addErrors</span>&nbsp;($errors)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$errors</td>
+                <td>An array of sfValidatorError instances</td>
+              </tr>
+                        </table>
+              <p><strong>Adds an array of errors.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current error schema instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_count"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">count</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the number of errors (implements the Countable interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The number of array</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_current"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">current</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current error (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The escaped value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getarguments"></a>
+              <h3>
+                <span class="method-name">getArguments</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfValidatorError</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geterrors"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getErrors</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets an array of all errors</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of sfValidatorError instances</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getglobalerrors"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getGlobalErrors</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets an array of all global errors</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of sfValidatorError instances</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmessageformat"></a>
+              <h3>
+                <span class="method-name">getMessageFormat</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfValidatorError</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnamederrors"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getNamedErrors</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets an array of all named errors</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of sfValidatorError instances</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvalue"></a>
+              <h3>
+                <span class="method-name">getValue</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfValidatorError</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_key"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">key</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Get the key associated with the current error (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The key</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_next"></a>
+              <h3>
+                <span class="method-name">next</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Moves to the next error (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetexists"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">offsetExists</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the error</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if the error exists (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the error exists, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetget"></a>
+              <h3>
+                (sfValidatorError)&nbsp;<span class="method-name">offsetGet</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The offset of the value to get</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the error associated with the name (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A sfValidatorError instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetset"></a>
+              <h3>
+                <span class="method-name">offsetSet</span>&nbsp;($offset, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$offset</td>
+                <td>(ignored)</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>(ignored)</td>
+              </tr>
+                        </table>
+              <p><strong>Throws an exception saying that values cannot be set (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> LogicException</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetunset"></a>
+              <h3>
+                <span class="method-name">offsetUnset</span>&nbsp;($offset)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$offset</td>
+                <td>(ignored)</td>
+              </tr>
+                        </table>
+              <p><strong>Impossible to call because this is an exception!</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_rewind"></a>
+              <h3>
+                <span class="method-name">rewind</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Reset the error array to the beginning (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_serialize"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">serialize</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Serializes the current instance.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The instance as a serialized string</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_unserialize"></a>
+              <h3>
+                <span class="method-name">unserialize</span>&nbsp;($serialized)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$serialized</td>
+                <td>A serialized sfValidatorError instance</td>
+              </tr>
+                        </table>
+              <p><strong>Unserializes a sfValidatorError instance.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_updatecode"></a>
+              <h3>
+                <span class="method-name">updateCode</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Updates the exception error code according to the current errors.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_updatemessage"></a>
+              <h3>
+                <span class="method-name">updateMessage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Updates the exception error message according to the current errors.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_valid"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">valid</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the current error is valid (implements the Iterator interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The validity of the current element; true if it is valid</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($validator, $errors)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$validator</td>
+                <td>An sfValidatorBase instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$errors</td>
+                <td>An array of errors</td>
+              </tr>
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

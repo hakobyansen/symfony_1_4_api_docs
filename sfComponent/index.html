@@ -1,0 +1,1030 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfComponent Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfComponent Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+      <strong>      action      </strong>
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfAction">sfAction</a></li>
+                      <li><a href="/api/1_4/sfActions">sfActions</a></li>
+                      <li><a href="/api/1_4/sfActionStack">sfActionStack</a></li>
+                      <li><a href="/api/1_4/sfActionStackEntry">sfActionStackEntry</a></li>
+                      <li><a href="/api/1_4/sfComponent">sfComponent</a></li>
+                      <li><a href="/api/1_4/sfComponents">sfComponents</a></li>
+                  </ul>
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfComponent">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfComponent">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfComponent">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfComponent">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfComponent.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="/api/1_4/sfAction">sfAction</a>, <a href="/api/1_4/sfComponents">sfComponents</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfComponent</strong>
+
+              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method__amp_">&amp;</a>($key)
+                <br />
+                <span class="description">Gets a variable for the template.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method_execute">execute</a>($request)
+                <br />
+                <span class="description">Execute any application/business logic for this component.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_generateurl">generateUrl</a>(, , )
+                <br />
+                <span class="description">Generates a URL for the given route and arguments.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getactionname">getActionName</a>()
+                <br />
+                <span class="description">Gets the action name associated with this component.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfContext</span>
+                <a href="#method_getcontext">getContext</a>()
+                <br />
+                <span class="description">Retrieves the current application context.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfController</span>
+                <a href="#method_getcontroller">getController</a>()
+                <br />
+                <span class="description">Retrieves the current sfController object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfLogger</span>
+                <a href="#method_getlogger">getLogger</a>()
+                <br />
+                <span class="description">Retrieves the current logger instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfMailer</span>
+                <a href="#method_getmailer">getMailer</a>()
+                <br />
+                <span class="description">Gets the current mailer instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getmodulename">getModuleName</a>()
+                <br />
+                <span class="description">Gets the module name associated with this component.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfRequest</span>
+                <a href="#method_getrequest">getRequest</a>()
+                <br />
+                <span class="description">Retrieves the current sfRequest object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getrequestparameter">getRequestParameter</a>($name, $default)
+                <br />
+                <span class="description">Returns the value of a request parameter.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfResponse</span>
+                <a href="#method_getresponse">getResponse</a>()
+                <br />
+                <span class="description">Retrieves the current sfResponse object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfUser</span>
+                <a href="#method_getuser">getUser</a>()
+                <br />
+                <span class="description">Retrieves the current sfUser object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method_getvar">getVar</a>($name)
+                <br />
+                <span class="description">Gets a variable set for the template.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfParameterHolder</span>
+                <a href="#method_getvarholder">getVarHolder</a>()
+                <br />
+                <span class="description">Gets the sfParameterHolder object that stores the template variables.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_hasrequestparameter">hasRequestParameter</a>($name)
+                <br />
+                <span class="description">Returns true if a request parameter exists.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_initialize">initialize</a>($context, $moduleName, $actionName)
+                <br />
+                <span class="description">Initializes this component.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_logmessage">logMessage</a>($message, $priority)
+                <br />
+                <span class="description">Logs a message using the sfLogger object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setvar">setVar</a>($name, $value, $safe)
+                <br />
+                <span class="description">Sets a variable for the template.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method___call">__call</a>($method, $arguments)
+                <br />
+                <span class="description">Calls methods defined via sfEventDispatcher.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method___construct">__construct</a>()
+                <br />
+                <span class="description">Class constructor.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method___isset">__isset</a>($name)
+                <br />
+                <span class="description">Returns true if a variable for the template is set.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method___set">__set</a>($key, $value)
+                <br />
+                <span class="description">Sets a variable for the template.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method___unset">__unset</a>($name)
+                <br />
+                <span class="description">Removes a variable for the template.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method__amp_"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">&amp;</span>&nbsp;($key)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>The variable name</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a variable for the template.</strong></p>
+              <p><p>
+<br /> This is a shortcut for:</p><p> <code>$this->getVar('name')</code></p></p>
+                        <p><strong>returns</strong> The variable value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_execute"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">execute</span>&nbsp;($request)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$request</td>
+                <td>The current sfRequest object</td>
+              </tr>
+                        </table>
+              <p><strong>Execute any application/business logic for this component.</strong></p>
+              <p><p>
+<br /> In a typical database-driven application, execute() handles application
+<br /> logic itself and then proceeds to create a model instance. Once the model
+<br /> instance is initialized it handles all business logic for the action.</p><p> A model should represent an entity in your application. This could be a
+<br /> user account, a shopping cart, or even a something as simple as a
+<br /> single product.</p></p>
+                        <p><strong>returns</strong> A string containing the view name associated with this action</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generateurl"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">generateUrl</span>&nbsp;(, , )
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Generates a URL for the given route and arguments.</strong></p>
+              <p><p>
+<br /> This is a proxy method equivalent to:</p><p> <code>$this->getContext()->getRouting()->generate(...)</code></p></p>
+                        <p><strong>returns</strong> The URL</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getactionname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getActionName</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the action name associated with this component.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An action name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcontext"></a>
+              <h3>
+                (sfContext)&nbsp;<span class="method-name">getContext</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current application context.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfContext instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcontroller"></a>
+              <h3>
+                (sfController)&nbsp;<span class="method-name">getController</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current sfController object.</strong></p>
+              <p><p>
+<br /> This is a proxy method equivalent to:</p><p> <code>$this->getContext()->getController()</code></p></p>
+                        <p><strong>returns</strong> The current sfController implementation instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlogger"></a>
+              <h3>
+                (sfLogger)&nbsp;<span class="method-name">getLogger</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current logger instance.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfLogger instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmailer"></a>
+              <h3>
+                (sfMailer)&nbsp;<span class="method-name">getMailer</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the current mailer instance.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A sfMailer instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmodulename"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getModuleName</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the module name associated with this component.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A module name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrequest"></a>
+              <h3>
+                (sfRequest)&nbsp;<span class="method-name">getRequest</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current sfRequest object.</strong></p>
+              <p><p>
+<br /> This is a proxy method equivalent to:</p><p> <code>$this->getContext()->getRequest()</code></p></p>
+                        <p><strong>returns</strong> The current sfRequest implementation instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrequestparameter"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getRequestParameter</span>&nbsp;($name, $default)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The parameter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value if parameter does not exist</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the value of a request parameter.</strong></p>
+              <p><p>
+<br /> This is a proxy method equivalent to:</p><p> <code>$this->getRequest()->getParameterHolder()->get($name)</code></p></p>
+                        <p><strong>returns</strong> The request parameter value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getresponse"></a>
+              <h3>
+                (sfResponse)&nbsp;<span class="method-name">getResponse</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current sfResponse object.</strong></p>
+              <p><p>
+<br /> This is a proxy method equivalent to:</p><p> <code>$this->getContext()->getResponse()</code></p></p>
+                        <p><strong>returns</strong> The current sfResponse implementation instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getuser"></a>
+              <h3>
+                (sfUser)&nbsp;<span class="method-name">getUser</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current sfUser object.</strong></p>
+              <p><p>
+<br /> This is a proxy method equivalent to:</p><p> <code>$this->getContext()->getUser()</code></p></p>
+                        <p><strong>returns</strong> The current sfUser implementation instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvar"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getVar</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The variable name</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a variable set for the template.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The variable value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvarholder"></a>
+              <h3>
+                (sfParameterHolder)&nbsp;<span class="method-name">getVarHolder</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the sfParameterHolder object that stores the template variables.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The variable holder.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasrequestparameter"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">hasRequestParameter</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The parameter name</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if a request parameter exists.</strong></p>
+              <p><p>
+<br /> This is a proxy method equivalent to:</p><p> <code>$this->getRequest()->getParameterHolder()->has($name)</code></p></p>
+                        <p><strong>returns</strong> true if the request parameter exists, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">initialize</span>&nbsp;($context, $moduleName, $actionName)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$context</td>
+                <td>The current application context.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>The module name.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$actionName</td>
+                <td>The action name.</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes this component.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if initialization completes successfully, otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_logmessage"></a>
+              <h3>
+                <span class="method-name">logMessage</span>&nbsp;($message, $priority)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$message</td>
+                <td>String or object containing the message to log</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$priority</td>
+                <td>The priority of the message (available priorities: emerg, alert, crit, err, warning, notice, info, debug)</td>
+              </tr>
+                        </table>
+              <p><strong>Logs a message using the sfLogger object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setvar"></a>
+              <h3>
+                <span class="method-name">setVar</span>&nbsp;($name, $value, $safe)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The variable name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The variable value</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$safe</td>
+                <td>true if the value is safe for output (false by default)</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a variable for the template.</strong></p>
+              <p><p>
+<br /> If you add a safe value, the variable won't be output escaped
+<br /> by symfony, so this is your responsability to ensure that the
+<br /> value is escaped properly.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___call"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">__call</span>&nbsp;($method, $arguments)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$method</td>
+                <td>The method name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$arguments</td>
+                <td>The method arguments</td>
+              </tr>
+                        </table>
+              <p><strong>Calls methods defined via sfEventDispatcher.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The returned value of the called method</p>
+                                  <p><strong>throws</strong> sfException If called method is undefined</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Class constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___isset"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">__isset</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The variable name</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if a variable for the template is set.</strong></p>
+              <p><p>
+<br /> This is a shortcut for:</p><p> <code>$this->getVarHolder()->has('name')</code></p></p>
+                        <p><strong>returns</strong> true if the variable is set</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___set"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">__set</span>&nbsp;($key, $value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>The variable name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The variable value</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a variable for the template.</strong></p>
+              <p><p>
+<br /> This is a shortcut for:</p><p> <code>$this->setVar('name', 'value')</code></p></p>
+                        <p><strong>returns</strong> always true</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___unset"></a>
+              <h3>
+                <span class="method-name">__unset</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/action/sfComponent.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The variable Name</td>
+              </tr>
+                        </table>
+              <p><strong>Removes a variable for the template.</strong></p>
+              <p><p>
+<br /> This is just really a shortcut for:</p><p> <code>$this->getVarHolder()->remove('name')</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfProjectConfiguration Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfProjectConfiguration Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      config      </strong>
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfApplicationConfiguration">sfApplicationConfiguration</a></li>
+                      <li><a href="/api/1_4/sfAutoloadConfigHandler">sfAutoloadConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfCacheConfigHandler">sfCacheConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfCompileConfigHandler">sfCompileConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfConfig">sfConfig</a></li>
+                      <li><a href="/api/1_4/sfConfigCache">sfConfigCache</a></li>
+                      <li><a href="/api/1_4/sfConfigHandler">sfConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfDatabaseConfigHandler">sfDatabaseConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfDefineEnvironmentConfigHandler">sfDefineEnvironmentConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfFactoryConfigHandler">sfFactoryConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfFilterConfigHandler">sfFilterConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfGeneratorConfigHandler">sfGeneratorConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfPluginConfiguration">sfPluginConfiguration</a></li>
+                      <li><a href="/api/1_4/sfPluginConfigurationGeneric">sfPluginConfigurationGeneric</a></li>
+                      <li><a href="/api/1_4/sfProjectConfiguration">sfProjectConfiguration</a></li>
+                      <li><a href="/api/1_4/sfPropelPluginConfiguration">sfPropelPluginConfiguration</a></li>
+                      <li><a href="/api/1_4/sfRootConfigHandler">sfRootConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfRoutingConfigHandler">sfRoutingConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfSecurityConfigHandler">sfSecurityConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfSimpleYamlConfigHandler">sfSimpleYamlConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfViewConfigHandler">sfViewConfigHandler</a></li>
+                      <li><a href="/api/1_4/sfYamlConfigHandler">sfYamlConfigHandler</a></li>
+                  </ul>
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfProjectConfiguration">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfProjectConfiguration">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfProjectConfiguration">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfProjectConfiguration">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfProjectConfiguration represents a configuration for a symfony project.</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_disableplugins">disablePlugins</a>($plugins)
+                <br />
+                <span class="description">Disables a plugin.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_enableallpluginsexcept">enableAllPluginsExcept</a>($plugins)
+                <br />
+                <span class="description">Enabled all installed plugins except the one given as argument.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_enableplugins">enablePlugins</a>($plugins)
+                <br />
+                <span class="description">Enables a plugin or a list of plugins.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfProjectConfiguration</span>
+                <a href="#method_getactive">getActive</a>()
+                <br />
+                <span class="description">Returns the active configuration.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getallpluginpaths">getAllPluginPaths</a>()
+                <br />
+                <span class="description">Returns an array of paths for all available plugins.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfApplicationConfiguration</span>
+                <a href="#method_getapplicationconfiguration">getApplicationConfiguration</a>($application, $environment, $debug, $rootDir, $dispatcher)
+                <br />
+                <span class="description">Returns a sfApplicationConfiguration configuration for a given application.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getconfigpaths">getConfigPaths</a>($configPath)
+                <br />
+                <span class="description">Gets the configuration file paths for a given relative configuration path.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfEventDispatcher</span>
+                <a href="#method_geteventdispatcher">getEventDispatcher</a>()
+                <br />
+                <span class="description">Returns the event dispatcher.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getgeneratorskeletondirs">getGeneratorSkeletonDirs</a>($class, $theme)
+                <br />
+                <span class="description">Gets directories where the skeleton is stored for a generator class and a specific theme.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getgeneratortemplate">getGeneratorTemplate</a>($class, $theme, $path)
+                <br />
+                <span class="description">Gets the template to use for a generator class.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getgeneratortemplatedirs">getGeneratorTemplateDirs</a>($class, $theme)
+                <br />
+                <span class="description">Gets directories where template files are stored for a generator class and a specific theme.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getmodeldirs">getModelDirs</a>()
+                <br />
+                <span class="description">Gets directories where model classes are stored. The order of returned paths is lowest precedence</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfPluginConfiguration</span>
+                <a href="#method_getpluginconfiguration">getPluginConfiguration</a>($name)
+                <br />
+                <span class="description">Returns the configuration for the requested plugin.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getpluginpaths">getPluginPaths</a>()
+                <br />
+                <span class="description">Gets the paths to plugins root directories, minding overloaded plugins.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getplugins">getPlugins</a>()
+                <br />
+                <span class="description">Gets the list of enabled plugins.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getpluginsubpaths">getPluginSubPaths</a>($subPath)
+                <br />
+                <span class="description">Gets the paths plugin sub-directories, minding overloaded plugins.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getrootdir">getRootDir</a>()
+                <br />
+                <span class="description">Returns the project root directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getsymfonylibdir">getSymfonyLibDir</a>()
+                <br />
+                <span class="description">Returns the symfony lib directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_guessrootdir">guessRootDir</a>()
+                <br />
+                <span class="description">Guesses the project root directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_hasactive">hasActive</a>()
+                <br />
+                <span class="description">Returns true if these is an active configuration.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_loadplugins">loadPlugins</a>()
+                <br />
+                <span class="description">Loads the project&#039;s plugin configurations.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setcachedir">setCacheDir</a>($cacheDir)
+                <br />
+                <span class="description">Sets the cache root directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setlogdir">setLogDir</a>($logDir)
+                <br />
+                <span class="description">Sets the log directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setpluginpath">setPluginPath</a>($plugin, $path)
+                <br />
+                <span class="description">Manually sets the location of a particular plugin.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setplugins">setPlugins</a>($plugins)
+                <br />
+                <span class="description">Sets the enabled plugins.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setrootdir">setRootDir</a>($rootDir)
+                <br />
+                <span class="description">Sets the project root directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setup">setup</a>()
+                <br />
+                <span class="description">Setups the current configuration.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setupplugins">setupPlugins</a>()
+                <br />
+                <span class="description">Sets up plugin configurations.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setwebdir">setWebDir</a>($webDir)
+                <br />
+                <span class="description">Sets the web root directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method___call">__call</a>($method, $arguments)
+                <br />
+                <span class="description">Calls methods defined via sfEventDispatcher.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method___construct">__construct</a>($rootDir, $dispatcher)
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_disableplugins"></a>
+              <h3>
+                <span class="method-name">disablePlugins</span>&nbsp;($plugins)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$plugins</td>
+                <td>A plugin name or a plugin list</td>
+              </tr>
+                        </table>
+              <p><strong>Disables a plugin.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> LogicException If plugins have already been loaded</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_enableallpluginsexcept"></a>
+              <h3>
+                <span class="method-name">enableAllPluginsExcept</span>&nbsp;($plugins)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$plugins</td>
+                <td>A plugin name or a plugin list</td>
+              </tr>
+                        </table>
+              <p><strong>Enabled all installed plugins except the one given as argument.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> LogicException If plugins have already been loaded</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_enableplugins"></a>
+              <h3>
+                <span class="method-name">enablePlugins</span>&nbsp;($plugins)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$plugins</td>
+                <td>A plugin name or a plugin list</td>
+              </tr>
+                        </table>
+              <p><strong>Enables a plugin or a list of plugins.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getactive"></a>
+              <h3>
+                (sfProjectConfiguration)&nbsp;<span class="method-name">getActive</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the active configuration.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current sfProjectConfiguration instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getallpluginpaths"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getAllPluginPaths</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns an array of paths for all available plugins.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getapplicationconfiguration"></a>
+              <h3>
+                (sfApplicationConfiguration)&nbsp;<span class="method-name">getApplicationConfiguration</span>&nbsp;($application, $environment, $debug, $rootDir, $dispatcher)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$application</td>
+                <td>An application name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$environment</td>
+                <td>The environment name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$debug</td>
+                <td>true to enable debug mode</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$rootDir</td>
+                <td>The project root directory</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$dispatcher</td>
+                <td>An event dispatcher</td>
+              </tr>
+                        </table>
+              <p><strong>Returns a sfApplicationConfiguration configuration for a given application.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A sfApplicationConfiguration instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getconfigpaths"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getConfigPaths</span>&nbsp;($configPath)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$configPath</td>
+                <td>The configuration path</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the configuration file paths for a given relative configuration path.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of paths</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geteventdispatcher"></a>
+              <h3>
+                (sfEventDispatcher)&nbsp;<span class="method-name">getEventDispatcher</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the event dispatcher.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A sfEventDispatcher instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgeneratorskeletondirs"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getGeneratorSkeletonDirs</span>&nbsp;($class, $theme)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$class</td>
+                <td>The generator class name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$theme</td>
+                <td>The theme name</td>
+              </tr>
+                        </table>
+              <p><strong>Gets directories where the skeleton is stored for a generator class and a specific theme.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of directories</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgeneratortemplate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getGeneratorTemplate</span>&nbsp;($class, $theme, $path)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$class</td>
+                <td>The generator class name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$theme</td>
+                <td>The theme name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$path</td>
+                <td>The template path</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the template to use for a generator class.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A template path</p>
+                                  <p><strong>throws</strong> sfException</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgeneratortemplatedirs"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getGeneratorTemplateDirs</span>&nbsp;($class, $theme)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$class</td>
+                <td>The generator class name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$theme</td>
+                <td>The theme name</td>
+              </tr>
+                        </table>
+              <p><strong>Gets directories where template files are stored for a generator class and a specific theme.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of directories</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmodeldirs"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getModelDirs</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets directories where model classes are stored. The order of returned paths is lowest precedence</strong></p>
+              <p><p> to highest precedence.</p></p>
+                        <p><strong>returns</strong> An array of directories</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpluginconfiguration"></a>
+              <h3>
+                (sfPluginConfiguration)&nbsp;<span class="method-name">getPluginConfiguration</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns the configuration for the requested plugin.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpluginpaths"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPluginPaths</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the paths to plugins root directories, minding overloaded plugins.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The plugin root paths.</p>
+                                  <p><strong>throws</strong> InvalidArgumentException If an enabled plugin does not exist</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getplugins"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPlugins</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the list of enabled plugins.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of enabled plugins</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpluginsubpaths"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPluginSubPaths</span>&nbsp;($subPath)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$subPath</td>
+                <td>The subdirectory to look for</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the paths plugin sub-directories, minding overloaded plugins.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The plugin paths.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrootdir"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getRootDir</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the project root directory.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The project root directory</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getsymfonylibdir"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getSymfonyLibDir</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the symfony lib directory.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The symfony lib directory</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_guessrootdir"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">guessRootDir</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Guesses the project root directory.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The project root directory</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasactive"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">hasActive</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if these is an active configuration.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_loadplugins"></a>
+              <h3>
+                <span class="method-name">loadPlugins</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Loads the project&#039;s plugin configurations.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setcachedir"></a>
+              <h3>
+                <span class="method-name">setCacheDir</span>&nbsp;($cacheDir)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$cacheDir</td>
+                <td>The absolute path to the cache dir.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the cache root directory.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setlogdir"></a>
+              <h3>
+                <span class="method-name">setLogDir</span>&nbsp;($logDir)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$logDir</td>
+                <td>The absolute path to the log dir.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the log directory.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpluginpath"></a>
+              <h3>
+                <span class="method-name">setPluginPath</span>&nbsp;($plugin, $path)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                                    </table>
+              <p><strong>Manually sets the location of a particular plugin.</strong></p>
+              <p><p> 
+<br /> This method can be used to ease functional testing of plugins. It is not
+<br /> intended to support sharing plugins between projects, as many plugins
+<br /> save project specific code (to /lib/form/base, for example).</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setplugins"></a>
+              <h3>
+                <span class="method-name">setPlugins</span>&nbsp;($plugins)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$plugins</td>
+                <td>An array of plugin names</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the enabled plugins.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> LogicException If plugins have already been loaded</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setrootdir"></a>
+              <h3>
+                <span class="method-name">setRootDir</span>&nbsp;($rootDir)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$rootDir</td>
+                <td>The project root directory</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the project root directory.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setup"></a>
+              <h3>
+                <span class="method-name">setup</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Setups the current configuration.</strong></p>
+              <p><p>
+<br /> Override this method if you want to customize your project configuration.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setupplugins"></a>
+              <h3>
+                <span class="method-name">setupPlugins</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Sets up plugin configurations.</strong></p>
+              <p><p>
+<br /> Override this method if you want to customize plugin configurations.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setwebdir"></a>
+              <h3>
+                <span class="method-name">setWebDir</span>&nbsp;($webDir)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$webDir</td>
+                <td>The absolute path to the web dir.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the web root directory.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___call"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">__call</span>&nbsp;($method, $arguments)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$method</td>
+                <td>The method name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$arguments</td>
+                <td>The method arguments</td>
+              </tr>
+                        </table>
+              <p><strong>Calls methods defined via sfEventDispatcher.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The returned value of the called method</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($rootDir, $dispatcher)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/config/sfProjectConfiguration.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$rootDir</td>
+                <td>The project root directory</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$dispatcher</td>
+                <td>The event dispatcher</td>
+              </tr>
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

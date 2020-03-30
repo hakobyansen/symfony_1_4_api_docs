@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfGenerator Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfGenerator Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      generator      </strong>
+      <small> - <a href="generator.html">10 classes</a></small>
+
+              <ul>
+                      <li><a href="sfDoctrineFormFilterGenerator.html">sfDoctrineFormFilterGenerator</a></li>
+                      <li><a href="sfDoctrineFormGenerator.html">sfDoctrineFormGenerator</a></li>
+                      <li><a href="sfGenerator.html">sfGenerator</a></li>
+                      <li><a href="sfGeneratorManager.html">sfGeneratorManager</a></li>
+                      <li><a href="sfModelGenerator.html">sfModelGenerator</a></li>
+                      <li><a href="sfModelGeneratorConfiguration.html">sfModelGeneratorConfiguration</a></li>
+                      <li><a href="sfModelGeneratorConfigurationField.html">sfModelGeneratorConfigurationField</a></li>
+                      <li><a href="sfModelGeneratorHelper.html">sfModelGeneratorHelper</a></li>
+                      <li><a href="sfPropelFormFilterGenerator.html">sfPropelFormFilterGenerator</a></li>
+                      <li><a href="sfPropelFormGenerator.html">sfPropelFormGenerator</a></li>
+                  </ul>
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfGenerator.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfGenerator.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfGenerator.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfGenerator.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfGenerator is the abstract base class for all generators.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="sfModelGenerator.html">sfModelGenerator</a>, <a href="sfPropelFormGenerator.html">sfPropelFormGenerator</a>, <a href="sfDoctrineFormGenerator.html">sfDoctrineFormGenerator</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfGenerator</strong>
+
+              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfGenerator.html#method_evaltemplate">evalTemplate</a>($templateFile)
+                <br />
+                <span class="description">Evaluates a template file.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfGenerator.html#method_generate">generate</a>($params)
+                <br />
+                <span class="description">Generates classes and templates.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfGenerator.html#method_generatephpfiles">generatePhpFiles</a>($generatedModuleName, $files)
+                <br />
+                <span class="description">Generates PHP files for a given module name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfGenerator.html#method_getgeneratedmodulename">getGeneratedModuleName</a>()
+                <br />
+                <span class="description">Gets the module name of the generated module.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfGenerator.html#method_getgeneratorclass">getGeneratorClass</a>()
+                <br />
+                <span class="description">Gets the generator class.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfGenerator.html#method_getgeneratormanager">getGeneratorManager</a>()
+                <br />
+                <span class="description">Gets the sfGeneratorManager instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfGenerator.html#method_getmodulename">getModuleName</a>()
+                <br />
+                <span class="description">Gets the module name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfGenerator.html#method_gettheme">getTheme</a>()
+                <br />
+                <span class="description">Gets the theme name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfGenerator.html#method_initialize">initialize</a>($generatorManager)
+                <br />
+                <span class="description">Initializes the current sfGenerator instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfGenerator.html#method_replacephpmarks">replacePhpMarks</a>($text)
+                <br />
+                <span class="description">Replaces PHP marks by &lt;?php ?&gt;.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfGenerator.html#method_setgeneratedmodulename">setGeneratedModuleName</a>($moduleName)
+                <br />
+                <span class="description">Sets the module name of the generated module.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfGenerator.html#method_setgeneratorclass">setGeneratorClass</a>($generatorClass)
+                <br />
+                <span class="description">Sets the generator class.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfGenerator.html#method_setmodulename">setModuleName</a>($moduleName)
+                <br />
+                <span class="description">Sets the module name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfGenerator.html#method_settheme">setTheme</a>($theme)
+                <br />
+                <span class="description">Sets the theme name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfGenerator.html#method___construct">__construct</a>()
+                <br />
+                <span class="description">Class constructor.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_evaltemplate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">evalTemplate</span>&nbsp;($templateFile)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$templateFile</td>
+                <td>The template file path</td>
+              </tr>
+                        </table>
+              <p><strong>Evaluates a template file.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The evaluated template</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">generate</span>&nbsp;($params)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$params</td>
+                <td>An array of parameters</td>
+              </tr>
+                        </table>
+              <p><strong>Generates classes and templates.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The cache for the configuration file</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generatephpfiles"></a>
+              <h3>
+                <span class="method-name">generatePhpFiles</span>&nbsp;($generatedModuleName, $files)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$generatedModuleName</td>
+                <td>The name of module name to generate</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$files</td>
+                <td>A list of template files to generate</td>
+              </tr>
+                        </table>
+              <p><strong>Generates PHP files for a given module name.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgeneratedmodulename"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getGeneratedModuleName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the module name of the generated module.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The module name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgeneratorclass"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getGeneratorClass</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the generator class.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The generator class</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgeneratormanager"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getGeneratorManager</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the sfGeneratorManager instance.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The sfGeneratorManager instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmodulename"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getModuleName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the module name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The module name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettheme"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getTheme</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the theme name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The theme name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                <span class="method-name">initialize</span>&nbsp;($generatorManager)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$generatorManager</td>
+                <td>A sfGeneratorManager instance</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes the current sfGenerator instance.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_replacephpmarks"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">replacePhpMarks</span>&nbsp;($text)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$text</td>
+                <td>The PHP code</td>
+              </tr>
+                        </table>
+              <p><strong>Replaces PHP marks by &lt;?php ?&gt;.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The converted PHP code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setgeneratedmodulename"></a>
+              <h3>
+                <span class="method-name">setGeneratedModuleName</span>&nbsp;($moduleName)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>The module name</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the module name of the generated module.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setgeneratorclass"></a>
+              <h3>
+                <span class="method-name">setGeneratorClass</span>&nbsp;($generatorClass)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$generatorClass</td>
+                <td>The generator class</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the generator class.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setmodulename"></a>
+              <h3>
+                <span class="method-name">setModuleName</span>&nbsp;($moduleName)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>The module name</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the module name.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_settheme"></a>
+              <h3>
+                <span class="method-name">setTheme</span>&nbsp;($theme)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$theme</td>
+                <td>The theme name</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the theme name.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Class constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

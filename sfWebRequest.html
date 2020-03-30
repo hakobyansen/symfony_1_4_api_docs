@@ -1,0 +1,1266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfWebRequest Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfWebRequest Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      request      </strong>
+      <small> - <a href="request.html">2 classes</a></small>
+
+              <ul>
+                      <li><a href="sfRequest.html">sfRequest</a></li>
+                      <li><a href="sfWebRequest.html">sfWebRequest</a></li>
+                  </ul>
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfWebRequest.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfWebRequest.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfWebRequest.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfWebRequest.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfWebRequest class.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+              
+              <strong>sfWebRequest</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="sfRequest.html">sfRequest</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_addrequestparameters">addRequestParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_checkcsrfprotection">checkCSRFProtection</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebRequest.html#method_convertfileinformation">convertFileInformation</a>($taintedFiles)
+                <br />
+                <span class="description">Converts uploaded file array to a format following the $_GET and $POST naming convention.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_fixparameters">fixParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_fixphpfilesarray">fixPhpFilesArray</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebRequest.html#method_getacceptablecontenttypes">getAcceptableContentTypes</a>()
+                <br />
+                <span class="description">Gets a list of content types acceptable by the client browser</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebRequest.html#method_getcharsets">getCharsets</a>()
+                <br />
+                <span class="description">Gets a list of charsets acceptable by the client browser.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getcontenttype">getContentType</a>($trimmed)
+                <br />
+                <span class="description">Returns the content type of the current request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfWebRequest.html#method_getcookie">getCookie</a>($name, $defaultValue)
+                <br />
+                <span class="description">Gets a cookie value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebRequest.html#method_getfiles">getFiles</a>($key)
+                <br />
+                <span class="description">Retrieves an array of files.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getformat">getFormat</a>($mimeType)
+                <br />
+                <span class="description">Gets the format associated with the mime type.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string|null</span>
+                <a href="sfWebRequest.html#method_getforwardedfor">getForwardedFor</a>()
+                <br />
+                <span class="description">Returns an array containing a list of IPs, the first being the client address</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getgetparameter">getGetParameter</a>($name, $default)
+                <br />
+                <span class="description">Returns the value of a GET parameter.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_getgetparameters">getGetParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_gethost">getHost</a>()
+                <br />
+                <span class="description">Returns current host name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_gethttpheader">getHttpHeader</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebRequest.html#method_getlanguages">getLanguages</a>()
+                <br />
+                <span class="description">Gets a list of languages acceptable by the client browser</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getmimetype">getMimeType</a>($format)
+                <br />
+                <span class="description">Gets the mime type associated with the format.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getpathinfo">getPathInfo</a>()
+                <br />
+                <span class="description">Retrieves the path info for the current web request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebRequest.html#method_getpathinfoarray">getPathInfoArray</a>()
+                <br />
+                <span class="description">Returns the array that contains all request information ($_SERVER or $_ENV).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_getpathinfoprefix">getPathInfoPrefix</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getpostparameter">getPostParameter</a>($name, $default)
+                <br />
+                <span class="description">Returns the value of a POST parameter.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_getpostparameters">getPostParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getpreferredculture">getPreferredCulture</a>($cultures)
+                <br />
+                <span class="description">Returns the preferred culture for the current request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getreferer">getReferer</a>()
+                <br />
+                <span class="description">Returns referer.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getrelativeurlroot">getRelativeUrlRoot</a>()
+                <br />
+                <span class="description">Retrieves relative root url.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getremoteaddress">getRemoteAddress</a>()
+                <br />
+                <span class="description">Returns the remote IP address that made the request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebRequest.html#method_getrequestcontext">getRequestContext</a>()
+                <br />
+                <span class="description">Returns the request context used.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getrequestformat">getRequestFormat</a>()
+                <br />
+                <span class="description">Gets the request format.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_getrequestparameters">getRequestParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_getscriptname">getScriptName</a>()
+                <br />
+                <span class="description">Returns current script name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_geturi">getUri</a>()
+                <br />
+                <span class="description">Retrieves the uniform resource identifier for the current web request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_geturiprefix">getUriPrefix</a>()
+                <br />
+                <span class="description">Returns Uri prefix, including protocol, hostname and server port.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebRequest.html#method_geturlparameter">getUrlParameter</a>($name, $default)
+                <br />
+                <span class="description">Returns the value of a parameter passed as a URL segment.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfWebRequest.html#method_initialize">initialize</a>($dispatcher, $parameters, $attributes, $options)
+                <br />
+                <span class="description">Initializes this sfRequest.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfWebRequest.html#method_isabsuri">isAbsUri</a>()
+                <br />
+                <span class="description">See if the client is using absolute uri</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfWebRequest.html#method_isforwardedsecure">isForwardedSecure</a>()
+                <br />
+                <span class="description">Returns true if the current request is forwarded from a request that is secure.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfWebRequest.html#method_ismethod">isMethod</a>($method)
+                <br />
+                <span class="description">Checks if the request method is the given one.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfWebRequest.html#method_issecure">isSecure</a>()
+                <br />
+                <span class="description">Returns true if the current or forwarded request is secure (HTTPS protocol).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfWebRequest.html#method_isxmlhttprequest">isXmlHttpRequest</a>()
+                <br />
+                <span class="description">Returns true if the request is a XMLHttpRequest.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebRequest.html#method_parserequestparameters">parseRequestParameters</a>()
+                <br />
+                <span class="description">Parses the request parameters.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_setformat">setFormat</a>($format, $mimeTypes)
+                <br />
+                <span class="description">Associates a format with mime types.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_setrelativeurlroot">setRelativeUrlRoot</a>($value)
+                <br />
+                <span class="description">Sets the relative root url for the current web request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_setrequestformat">setRequestFormat</a>($format)
+                <br />
+                <span class="description">Sets the request format.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebRequest.html#method_splithttpacceptheader">splitHttpAcceptHeader</a>($header)
+                <br />
+                <span class="description">Splits an HTTP header for the current web request.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="sfRequest.html">sfRequest</a>              </h3>
+                                                                <a href="sfRequest.html#method_extractparameters">extractParameters</a>                  ,                                   <a href="sfRequest.html#method_getattribute">getAttribute</a>                  ,                                   <a href="sfRequest.html#method_getattributeholder">getAttributeHolder</a>                  ,                                   <a href="sfRequest.html#method_getcontent">getContent</a>                  ,                                   <a href="sfRequest.html#method_getmethod">getMethod</a>                  ,                                   <a href="sfRequest.html#method_getoptions">getOptions</a>                  ,                                   <a href="sfRequest.html#method_getparameter">getParameter</a>                  ,                                   <a href="sfRequest.html#method_getparameterholder">getParameterHolder</a>                  ,                                   <a href="sfRequest.html#method_hasattribute">hasAttribute</a>                  ,                                   <a href="sfRequest.html#method_hasparameter">hasParameter</a>                  ,                                   <a href="sfRequest.html#method_initialize">initialize</a>                  ,                                   <a href="sfRequest.html#method_offsetexists">offsetExists</a>                  ,                                   <a href="sfRequest.html#method_offsetget">offsetGet</a>                  ,                                   <a href="sfRequest.html#method_offsetset">offsetSet</a>                  ,                                   <a href="sfRequest.html#method_offsetunset">offsetUnset</a>                  ,                                   <a href="sfRequest.html#method_setattribute">setAttribute</a>                  ,                                   <a href="sfRequest.html#method_setmethod">setMethod</a>                  ,                                   <a href="sfRequest.html#method_setparameter">setParameter</a>                  ,                                   <a href="sfRequest.html#method___call">__call</a>                  ,                                   <a href="sfRequest.html#method___clone">__clone</a>                  ,                                   <a href="sfRequest.html#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_addrequestparameters"></a>
+              <h3>
+                <span class="method-name">addRequestParameters</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_checkcsrfprotection"></a>
+              <h3>
+                <span class="method-name">checkCSRFProtection</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_convertfileinformation"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">convertFileInformation</span>&nbsp;($taintedFiles)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$taintedFiles</td>
+                <td>An array representing uploaded file information</td>
+              </tr>
+                        </table>
+              <p><strong>Converts uploaded file array to a format following the $_GET and $POST naming convention.</strong></p>
+              <p><p>
+<br /> It's safe to pass an already converted array, in which case this method just returns the original array unmodified.</p></p>
+                        <p><strong>returns</strong> An array of re-ordered uploaded file information</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_fixparameters"></a>
+              <h3>
+                <span class="method-name">fixParameters</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_fixphpfilesarray"></a>
+              <h3>
+                <span class="method-name">fixPhpFilesArray</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getacceptablecontenttypes"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getAcceptableContentTypes</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets a list of content types acceptable by the client browser</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Languages ordered in the user browser preferences</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcharsets"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getCharsets</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets a list of charsets acceptable by the client browser.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> List of charsets in preferable order</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcontenttype"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getContentType</span>&nbsp;($trimmed)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$trimmed</td>
+                <td>If false the full Content-Type header will be returned</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the content type of the current request.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcookie"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getCookie</span>&nbsp;($name, $defaultValue)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Cookie name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$defaultValue</td>
+                <td>Default value returned when no cookie with given name is found</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a cookie value.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfiles"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getFiles</span>&nbsp;($key)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>A key</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves an array of files.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An associative array of files</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformat"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getFormat</span>&nbsp;($mimeType)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$mimeType</td>
+                <td>The associated mime type</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the format associated with the mime type.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The format (null if not found)</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getforwardedfor"></a>
+              <h3>
+                (string|null)&nbsp;<span class="method-name">getForwardedFor</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns an array containing a list of IPs, the first being the client address</strong></p>
+              <p><p> and the others the addresses of each proxy that passed the request. The address
+<br /> for the last proxy can be retrieved via getRemoteAddress().</p><p> This method returns null if no proxy passed this request. Note that some proxies
+<br /> do not use this header, and act as if they were the client.</p></p>
+                        <p><strong>returns</strong> An array of IP from the client and the proxies that passed the request, or null if no proxy was used.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgetparameter"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getGetParameter</span>&nbsp;($name, $default)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The GET parameter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the value of a GET parameter.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The GET parameter value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgetparameters"></a>
+              <h3>
+                <span class="method-name">getGetParameters</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethost"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getHost</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns current host name.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethttpheader"></a>
+              <h3>
+                <span class="method-name">getHttpHeader</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlanguages"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getLanguages</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets a list of languages acceptable by the client browser</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Languages ordered in the user browser preferences</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmimetype"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getMimeType</span>&nbsp;($format)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$format</td>
+                <td>The format</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the mime type associated with the format.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The associated mime type (null if not found)</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpathinfo"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPathInfo</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the path info for the current web request.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Path info</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpathinfoarray"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPathInfoArray</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the array that contains all request information ($_SERVER or $_ENV).</strong></p>
+              <p><p>
+<br /> This information is stored in the path_info_array option.</p></p>
+                        <p><strong>returns</strong> Path information</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpathinfoprefix"></a>
+              <h3>
+                <span class="method-name">getPathInfoPrefix</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpostparameter"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPostParameter</span>&nbsp;($name, $default)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The POST parameter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the value of a POST parameter.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The POST parameter value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpostparameters"></a>
+              <h3>
+                <span class="method-name">getPostParameters</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpreferredculture"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPreferredCulture</span>&nbsp;($cultures)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$cultures</td>
+                <td>An array of ordered cultures available</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the preferred culture for the current request.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The preferred culture</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getreferer"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getReferer</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns referer.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrelativeurlroot"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getRelativeUrlRoot</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves relative root url.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> URL</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getremoteaddress"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getRemoteAddress</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the remote IP address that made the request.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The remote IP address</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrequestcontext"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getRequestContext</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the request context used.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of values representing the current request</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrequestformat"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getRequestFormat</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the request format.</strong></p>
+              <p><p>
+<br /> Here is the process to determine the format:</p><p>  * format defined by the user (with setRequestFormat())
+<br />  * sf_format request parameter
+<br />  * default format from factories</p></p>
+                        <p><strong>returns</strong> The request format</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrequestparameters"></a>
+              <h3>
+                <span class="method-name">getRequestParameters</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getscriptname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getScriptName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns current script name.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geturi"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getUri</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the uniform resource identifier for the current web request.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Unified resource identifier</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geturiprefix"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getUriPrefix</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns Uri prefix, including protocol, hostname and server port.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Uniform resource identifier prefix</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geturlparameter"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getUrlParameter</span>&nbsp;($name, $default)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The parameter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the value of a parameter passed as a URL segment.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The parameter value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">initialize</span>&nbsp;($dispatcher, $parameters, $attributes, $options)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$dispatcher</td>
+                <td>An sfEventDispatcher instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$parameters</td>
+                <td>An associative array of initialization parameters</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An associative array of initialization attributes</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>An associative array of options</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes this sfRequest.</strong></p>
+              <p><p>
+<br /> Available options:</p><p>  * formats:           The list of supported format and their associated mime-types
+<br />  * path_info_key:     The path info key (default to PATH_INFO)
+<br />  * path_info_array:   The path info array (default to SERVER)
+<br />  * relative_url_root: The relative URL root
+<br />  * http_port:         The port to use for HTTP requests
+<br />  * https_port:        The port to use for HTTPS requests</p></p>
+                        <p><strong>returns</strong> true, if initialization completes successfully, otherwise false</p>
+                                  <p><strong>throws</strong> <b>sfInitializationException</b> If an error occurs while initializing this sfRequest</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isabsuri"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isAbsUri</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>See if the client is using absolute uri</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if is absolute uri otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isforwardedsecure"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isForwardedSecure</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the current request is forwarded from a request that is secure.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_ismethod"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isMethod</span>&nbsp;($method)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$method</td>
+                <td>The method name</td>
+              </tr>
+                        </table>
+              <p><strong>Checks if the request method is the given one.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the current method is the given one, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_issecure"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isSecure</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the current or forwarded request is secure (HTTPS protocol).</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isxmlhttprequest"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isXmlHttpRequest</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the request is a XMLHttpRequest.</strong></p>
+              <p><p>
+<br /> It works if your JavaScript library set an X-Requested-With HTTP header.
+<br /> Works with Prototype, Mootools, jQuery, and perhaps others.</p></p>
+                        <p><strong>returns</strong> true if the request is an XMLHttpRequest, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_parserequestparameters"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">parseRequestParameters</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Parses the request parameters.</strong></p>
+              <p><p>
+<br /> This method notifies the request.filter_parameters event.</p></p>
+                        <p><strong>returns</strong> An array of request parameters.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setformat"></a>
+              <h3>
+                <span class="method-name">setFormat</span>&nbsp;($format, $mimeTypes)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$format</td>
+                <td>The format</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$mimeTypes</td>
+                <td>The associated mime types (the preferred one must be the first as it will be used as the content type)</td>
+              </tr>
+                        </table>
+              <p><strong>Associates a format with mime types.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setrelativeurlroot"></a>
+              <h3>
+                <span class="method-name">setRelativeUrlRoot</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>Value for the url</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the relative root url for the current web request.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setrequestformat"></a>
+              <h3>
+                <span class="method-name">setRequestFormat</span>&nbsp;($format)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$format</td>
+                <td>The request format</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the request format.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_splithttpacceptheader"></a>
+              <h3>
+                <span class="method-name">splitHttpAcceptHeader</span>&nbsp;($header)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$header</td>
+                <td>Header to split</td>
+              </tr>
+                        </table>
+              <p><strong>Splits an HTTP header for the current web request.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

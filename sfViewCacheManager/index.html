@@ -1,0 +1,1528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfViewCacheManager Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfViewCacheManager Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      view      </strong>
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfOutputEscaper">sfOutputEscaper</a></li>
+                      <li><a href="/api/1_4/sfOutputEscaperArrayDecorator">sfOutputEscaperArrayDecorator</a></li>
+                      <li><a href="/api/1_4/sfOutputEscaperGetterDecorator">sfOutputEscaperGetterDecorator</a></li>
+                      <li><a href="/api/1_4/sfOutputEscaperIteratorDecorator">sfOutputEscaperIteratorDecorator</a></li>
+                      <li><a href="/api/1_4/sfOutputEscaperObjectDecorator">sfOutputEscaperObjectDecorator</a></li>
+                      <li><a href="/api/1_4/sfOutputEscaperSafe">sfOutputEscaperSafe</a></li>
+                      <li><a href="/api/1_4/sfPartialView">sfPartialView</a></li>
+                      <li><a href="/api/1_4/sfPHPView">sfPHPView</a></li>
+                      <li><a href="/api/1_4/sfView">sfView</a></li>
+                      <li><a href="/api/1_4/sfViewCacheManager">sfViewCacheManager</a></li>
+                      <li><a href="/api/1_4/sfViewParameterHolder">sfViewParameterHolder</a></li>
+                  </ul>
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfViewCacheManager">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfViewCacheManager">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfViewCacheManager">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfViewCacheManager">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>Cache class to cache the HTML results for actions and templates.</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_addcache">addCache</a>($moduleName, $actionName, $options)
+                <br />
+                <span class="description">Adds a cache to the manager.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_checkcachekey">checkCacheKey</a>($parameters)
+                <br />
+                <span class="description">Checks that the supplied parameters include a cache key.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_computecachekey">computeCacheKey</a>($parameters)
+                <br />
+                <span class="description">Computes the cache key based on the passed parameters.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_convertparameterstokey">convertParametersToKey</a>($params)
+                <br />
+                <span class="description">Transforms an associative array of parameters from an URI into a unique key</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_decoratecontentwithdebug">decorateContentWithDebug</a>($event, $content)
+                <br />
+                <span class="description">Listens to the &#039;view.cache.filter_content&#039; event to decorate a chunk of HTML with cache information.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_generatecachekey">generateCacheKey</a>($internalUri, $hostName, $vary, $contextualPrefix)
+                <br />
+                <span class="description">Generates a unique cache key for an internal URI.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_get">get</a>($internalUri)
+                <br />
+                <span class="description">Retrieves content in the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getactioncache">getActionCache</a>($uri)
+                <br />
+                <span class="description">Gets an action template from the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfCache</span>
+                <a href="#method_getcache">getCache</a>()
+                <br />
+                <span class="description">Retrieves the current cache object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method_getcacheconfig">getCacheConfig</a>($internalUri, $key, $defaultValue)
+                <br />
+                <span class="description">Gets a config option from the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">void</span>
+                <a href="#method_getcachekeyhostnamepart">getCacheKeyHostNamePart</a>($hostName)
+                <br />
+                <span class="description">Gets the hostname part of view cache key.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getcachekeyvaryheaderpart">getCacheKeyVaryHeaderPart</a>($vary)
+                <br />
+                <span class="description">Gets the vary header part of view cache key.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="#method_getclientlifetime">getClientLifeTime</a>($internalUri)
+                <br />
+                <span class="description">Retrieves client lifetime from the cache option list</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfContext</span>
+                <a href="#method_getcontext">getContext</a>()
+                <br />
+                <span class="description">Retrieves the current cache context.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getcurrentcachekey">getCurrentCacheKey</a>()
+                <br />
+                <span class="description">Returns the current request&#039;s cache key.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="#method_getlastmodified">getLastModified</a>($internalUri)
+                <br />
+                <span class="description">Retrieves the last modified time.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="#method_getlifetime">getLifeTime</a>($internalUri)
+                <br />
+                <span class="description">Retrieves lifetime from the cache option list.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpagecache">getPageCache</a>($uri)
+                <br />
+                <span class="description">Gets a page from the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpartialcache">getPartialCache</a>($module, $action, $cacheKey)
+                <br />
+                <span class="description">Gets a partial template from the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpartialuri">getPartialUri</a>($module, $action, $cacheKey)
+                <br />
+                <span class="description">Computes a partial internal URI.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="#method_gettimeout">getTimeout</a>($internalUri)
+                <br />
+                <span class="description">Retrieves the timeout.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getvary">getVary</a>($internalUri)
+                <br />
+                <span class="description">Retrieves vary option from the cache option list.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_has">has</a>($internalUri)
+                <br />
+                <span class="description">Returns true if there is a cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_hasactioncache">hasActionCache</a>($uri)
+                <br />
+                <span class="description">Returns whether an action template is in the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_haspartialcache">hasPartialCache</a>($module, $action, $cacheKey)
+                <br />
+                <span class="description">Returns whether a partial template is in the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_ignore">ignore</a>()
+                <br />
+                <span class="description">Ignores the cache functionality.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_initialize">initialize</a>($context, $cache)
+                <br />
+                <span class="description">Initializes the cache manager.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_isactioncacheable">isActionCacheable</a>($moduleName, $actionName)
+                <br />
+                <span class="description">Returns true if the action is cacheable.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_iscacheable">isCacheable</a>($internalUri)
+                <br />
+                <span class="description">Returns true if the current content is cacheable.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_iscontextual">isContextual</a>($internalUri)
+                <br />
+                <span class="description">Retrieves contextual option from the cache option list.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_registerconfiguration">registerConfiguration</a>($moduleName)
+                <br />
+                <span class="description">Registers configuration options for the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_remove">remove</a>($internalUri, $hostName, $vary, $contextualPrefix)
+                <br />
+                <span class="description">Removes the content in the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_set">set</a>($data, $internalUri)
+                <br />
+                <span class="description">Sets the cache content.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_setactioncache">setActionCache</a>($uri, $content, $decoratorTemplate)
+                <br />
+                <span class="description">Sets an action template in the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setpagecache">setPageCache</a>($uri)
+                <br />
+                <span class="description">Sets a page in the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_setpartialcache">setPartialCache</a>($module, $action, $cacheKey, $content)
+                <br />
+                <span class="description">Sets an action template in the cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_start">start</a>($name, $lifeTime, $clientLifeTime, $vary)
+                <br />
+                <span class="description">Starts the fragment cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_stop">stop</a>($name)
+                <br />
+                <span class="description">Stops the fragment cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_withlayout">withLayout</a>($internalUri)
+                <br />
+                <span class="description">Retrieves the layout from the cache option list.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method___construct">__construct</a>()
+                <br />
+                <span class="description">Class constructor.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_addcache"></a>
+              <h3>
+                <span class="method-name">addCache</span>&nbsp;($moduleName, $actionName, $options)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>Module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$actionName</td>
+                <td>Action name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>Options for the cache</td>
+              </tr>
+                        </table>
+              <p><strong>Adds a cache to the manager.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_checkcachekey"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">checkCacheKey</span>&nbsp;($parameters)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$parameters</td>
+                <td>An array of parameters</td>
+              </tr>
+                        </table>
+              <p><strong>Checks that the supplied parameters include a cache key.</strong></p>
+              <p><p>
+<br /> If no 'sf_cache_key' parameter is present one is added to the array as
+<br /> it is passed by reference.</p></p>
+                        <p><strong>returns</strong> The cache key</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_computecachekey"></a>
+              <h3>
+                <span class="method-name">computeCacheKey</span>&nbsp;($parameters)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$parameters</td>
+                <td>An array of parameters</td>
+              </tr>
+                        </table>
+              <p><strong>Computes the cache key based on the passed parameters.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_convertparameterstokey"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">convertParametersToKey</span>&nbsp;($params)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$params</td>
+                <td>Associative array of parameters from the URI (including, at least, module and action)</td>
+              </tr>
+                        </table>
+              <p><strong>Transforms an associative array of parameters from an URI into a unique key</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Unique key</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_decoratecontentwithdebug"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">decorateContentWithDebug</span>&nbsp;($event, $content)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$event</td>
+                <td>A sfEvent instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$content</td>
+                <td>The HTML content</td>
+              </tr>
+                        </table>
+              <p><strong>Listens to the &#039;view.cache.filter_content&#039; event to decorate a chunk of HTML with cache information.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The decorated HTML string</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generatecachekey"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">generateCacheKey</span>&nbsp;($internalUri, $hostName, $vary, $contextualPrefix)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>The internal unified resource identifier Accepts rules formatted like 'module/action?key1=value1&key2=value2' Does not accept rules starting with a route name, except for '@sf_cache_partial'</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$hostName</td>
+                <td>The host name Optional - defaults to the current host name bu default</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$vary</td>
+                <td>The vary headers, separated by |, or "all" for all vary headers Defaults to 'all'</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$contextualPrefix</td>
+                <td>The contextual prefix for contextual partials. Defaults to 'currentModule/currentAction/currentPAram1/currentvalue1' Used only by the sfViewCacheManager::remove() method</td>
+              </tr>
+                        </table>
+              <p><strong>Generates a unique cache key for an internal URI.</strong></p>
+              <p><p> This cache key can be used by any of the cache engines as a unique identifier to a cached resource</p><p> Basically, the cache key generated for the following internal URI:
+<br />   module/action?key1=value1&key2=value2
+<br /> Looks like:
+<br />   /localhost/all/module/action/key1/value1/key2/value2</p></p>
+                        <p><strong>returns</strong> The cache key If some of the parameters contained wildcards (* or **), the generated key will also have wildcards</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_get"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">get</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves content in the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The content in the cache</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getactioncache"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getActionCache</span>&nbsp;($uri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$uri</td>
+                <td>The internal URI</td>
+              </tr>
+                        </table>
+              <p><strong>Gets an action template from the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array composed of the cached content and the view attribute holder</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcache"></a>
+              <h3>
+                (sfCache)&nbsp;<span class="method-name">getCache</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current cache object.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current cache object</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcacheconfig"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getCacheConfig</span>&nbsp;($internalUri, $key, $defaultValue)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>Option name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$defaultValue</td>
+                <td>Default value of the option</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a config option from the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Value of the option</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcachekeyhostnamepart"></a>
+              <h3>
+                (void)&nbsp;<span class="method-name">getCacheKeyHostNamePart</span>&nbsp;($hostName)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Gets the hostname part of view cache key.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcachekeyvaryheaderpart"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getCacheKeyVaryHeaderPart</span>&nbsp;($vary)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Gets the vary header part of view cache key.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getclientlifetime"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getClientLifeTime</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves client lifetime from the cache option list</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Client lifetime</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcontext"></a>
+              <h3>
+                (sfContext)&nbsp;<span class="method-name">getContext</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current cache context.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The sfContext instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcurrentcachekey"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getCurrentCacheKey</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current request&#039;s cache key.</strong></p>
+              <p><p>
+<br /> This cache key is calculated based on the routing factory's current URI
+<br /> and any GET parameters from the current request factory.</p></p>
+                        <p><strong>returns</strong> The cache key for the current request</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlastmodified"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getLastModified</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves the last modified time.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The last modified datetime</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlifetime"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getLifeTime</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves lifetime from the cache option list.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> LifeTime</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpagecache"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPageCache</span>&nbsp;($uri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$uri</td>
+                <td>The internal URI</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a page from the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The cached page</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpartialcache"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPartialCache</span>&nbsp;($module, $action, $cacheKey)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$module</td>
+                <td>The module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$action</td>
+                <td>The action name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$cacheKey</td>
+                <td>The cache key</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a partial template from the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The cache content</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpartialuri"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPartialUri</span>&nbsp;($module, $action, $cacheKey)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$module</td>
+                <td>The module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$action</td>
+                <td>The action name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$cacheKey</td>
+                <td>The cache key</td>
+              </tr>
+                        </table>
+              <p><strong>Computes a partial internal URI.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The internal URI</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettimeout"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getTimeout</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves the timeout.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The timeout datetime</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvary"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getVary</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves vary option from the cache option list.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Vary options for the cache</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_has"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">has</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if there is a cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if there is a cache otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasactioncache"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">hasActionCache</span>&nbsp;($uri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$uri</td>
+                <td>The internal URI</td>
+              </tr>
+                        </table>
+              <p><strong>Returns whether an action template is in the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if an action is in the cache, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_haspartialcache"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">hasPartialCache</span>&nbsp;($module, $action, $cacheKey)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$module</td>
+                <td>The module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$action</td>
+                <td>The action name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$cacheKey</td>
+                <td>The cache key</td>
+              </tr>
+                        </table>
+              <p><strong>Returns whether a partial template is in the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if a partial is in the cache, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_ignore"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">ignore</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Ignores the cache functionality.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if the cache is ignore otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                <span class="method-name">initialize</span>&nbsp;($context, $cache)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$context</td>
+                <td>Current application context</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$cache</td>
+                <td>An sfCache instance</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes the cache manager.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isactioncacheable"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isActionCacheable</span>&nbsp;($moduleName, $actionName)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>A module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$actionName</td>
+                <td>An action or partial template name</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if the action is cacheable.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> True if the action is cacheable</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_iscacheable"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isCacheable</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if the current content is cacheable.</strong></p>
+              <p><p>
+<br /> Possible break in backward compatibility: If the sf_lazy_cache_key
+<br /> setting is turned on in settings.yml, this method is not used when
+<br /> initially checking a partial's cacheability.</p></p>
+                        <p><strong>returns</strong> true, if the content is cacheable otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_iscontextual"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isContextual</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves contextual option from the cache option list.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if is contextual otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_registerconfiguration"></a>
+              <h3>
+                <span class="method-name">registerConfiguration</span>&nbsp;($moduleName)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>Module name</td>
+              </tr>
+                        </table>
+              <p><strong>Registers configuration options for the cache.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_remove"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">remove</span>&nbsp;($internalUri, $hostName, $vary, $contextualPrefix)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$hostName</td>
+                <td>The host name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$vary</td>
+                <td>The vary headers, separated by |, or "all" for all vary headers</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$contextualPrefix</td>
+                <td>The removal prefix for contextual partials. Defaults to '**' (all actions, all params)</td>
+              </tr>
+                        </table>
+              <p><strong>Removes the content in the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if the remove happened, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_set"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">set</span>&nbsp;($data, $internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$data</td>
+                <td>Data to put in the cache</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the cache content.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if the data get set successfully otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setactioncache"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">setActionCache</span>&nbsp;($uri, $content, $decoratorTemplate)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$uri</td>
+                <td>The internal URI</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$content</td>
+                <td>The content to cache</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$decoratorTemplate</td>
+                <td>The view attribute holder to cache</td>
+              </tr>
+                        </table>
+              <p><strong>Sets an action template in the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The cached content</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpagecache"></a>
+              <h3>
+                <span class="method-name">setPageCache</span>&nbsp;($uri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$uri</td>
+                <td>The internal URI</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a page in the cache.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpartialcache"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">setPartialCache</span>&nbsp;($module, $action, $cacheKey, $content)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$module</td>
+                <td>The module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$action</td>
+                <td>The action name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$cacheKey</td>
+                <td>The cache key</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$content</td>
+                <td>The content to cache</td>
+              </tr>
+                        </table>
+              <p><strong>Sets an action template in the cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The cached content</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_start"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">start</span>&nbsp;($name, $lifeTime, $clientLifeTime, $vary)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Unique fragment name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$lifeTime</td>
+                <td>Life time for the cache</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$clientLifeTime</td>
+                <td>Client life time for the cache</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$vary</td>
+                <td>Vary options for the cache</td>
+              </tr>
+                        </table>
+              <p><strong>Starts the fragment cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if success otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_stop"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">stop</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Unique fragment name</td>
+              </tr>
+                        </table>
+              <p><strong>Stops the fragment cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if success otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_withlayout"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">withLayout</span>&nbsp;($internalUri)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$internalUri</td>
+                <td>Internal uniform resource identifier</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves the layout from the cache option list.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if have layout otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/view/sfViewCacheManager.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Class constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

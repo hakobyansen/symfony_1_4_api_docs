@@ -1,0 +1,1101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfView Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfView Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      view      </strong>
+      <small> - <a href="view.html">11 classes</a></small>
+
+              <ul>
+                      <li><a href="sfOutputEscaper.html">sfOutputEscaper</a></li>
+                      <li><a href="sfOutputEscaperArrayDecorator.html">sfOutputEscaperArrayDecorator</a></li>
+                      <li><a href="sfOutputEscaperGetterDecorator.html">sfOutputEscaperGetterDecorator</a></li>
+                      <li><a href="sfOutputEscaperIteratorDecorator.html">sfOutputEscaperIteratorDecorator</a></li>
+                      <li><a href="sfOutputEscaperObjectDecorator.html">sfOutputEscaperObjectDecorator</a></li>
+                      <li><a href="sfOutputEscaperSafe.html">sfOutputEscaperSafe</a></li>
+                      <li><a href="sfPartialView.html">sfPartialView</a></li>
+                      <li><a href="sfPHPView.html">sfPHPView</a></li>
+                      <li><a href="sfView.html">sfView</a></li>
+                      <li><a href="sfViewCacheManager.html">sfViewCacheManager</a></li>
+                      <li><a href="sfViewParameterHolder.html">sfViewParameterHolder</a></li>
+                  </ul>
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfView.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfView.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfView.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfView.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>A view represents the presentation layer of an action. Output can be</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="sfPHPView.html">sfPHPView</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfView</strong>
+
+              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_configure">configure</a>()
+                <br />
+                <span class="description">Configures template.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_execute">execute</a>()
+                <br />
+                <span class="description">Executes any presentation logic and set template attributes.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfView.html#method_getactionname">getActionName</a>()
+                <br />
+                <span class="description">Gets the action name associated with this view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfView.html#method_getattribute">getAttribute</a>($name, $default)
+                <br />
+                <span class="description">Retrieves an attribute for the current view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfParameterHolder</span>
+                <a href="sfView.html#method_getattributeholder">getAttributeHolder</a>()
+                <br />
+                <span class="description">Retrieves attributes for the current view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfView.html#method_getcomponentslot">getComponentSlot</a>($name)
+                <br />
+                <span class="description">Gets a component slot</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfView.html#method_getdecoratordirectory">getDecoratorDirectory</a>()
+                <br />
+                <span class="description">Retrieves this views decorator template directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfView.html#method_getdecoratortemplate">getDecoratorTemplate</a>()
+                <br />
+                <span class="description">Retrieves this views decorator template.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfView.html#method_getdirectory">getDirectory</a>()
+                <br />
+                <span class="description">Retrieves this view template directory.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfView.html#method_getengine">getEngine</a>()
+                <br />
+                <span class="description">Retrieves the template engine associated with this view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfView.html#method_getextension">getExtension</a>()
+                <br />
+                <span class="description">Retrieves the current view extension.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfView.html#method_getmodulename">getModuleName</a>()
+                <br />
+                <span class="description">Gets the module name associated with this view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfView.html#method_getparameter">getParameter</a>($name, $default)
+                <br />
+                <span class="description">Retrieves a parameter from the current view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfParameterHolder</span>
+                <a href="sfView.html#method_getparameterholder">getParameterHolder</a>()
+                <br />
+                <span class="description">Retrieves the parameters for the current view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfView.html#method_gettemplate">getTemplate</a>()
+                <br />
+                <span class="description">Retrieves this views template.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfView.html#method_getviewname">getViewName</a>()
+                <br />
+                <span class="description">Gets the view name associated with this view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfView.html#method_hasattribute">hasAttribute</a>($name)
+                <br />
+                <span class="description">Returns true if the view have attributes.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfView.html#method_hascomponentslot">hasComponentSlot</a>($name)
+                <br />
+                <span class="description">Indicates whether or not a component slot exists.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfView.html#method_hasparameter">hasParameter</a>($name)
+                <br />
+                <span class="description">Indicates whether or not a parameter exist for the current view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfView.html#method_initialize">initialize</a>($context, $moduleName, $actionName, $viewName)
+                <br />
+                <span class="description">Initializes this view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_initializeattributeholder">initializeAttributeHolder</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfView.html#method_isdecorator">isDecorator</a>()
+                <br />
+                <span class="description">Indicates that this view is a decorating view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_prerendercheck">preRenderCheck</a>()
+                <br />
+                <span class="description">Executes a basic pre-render check to verify all required variables exist</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfView.html#method_render">render</a>()
+                <br />
+                <span class="description">Renders the presentation.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_setattribute">setAttribute</a>($name, $value)
+                <br />
+                <span class="description">Sets an attribute of the view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_setcomponentslot">setComponentSlot</a>($attributeName, $moduleName, $componentName)
+                <br />
+                <span class="description">Sets the module and action to be executed in place of a particular template attribute.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_setdecorator">setDecorator</a>($boolean)
+                <br />
+                <span class="description">Sets the decorating mode for the current view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_setdecoratordirectory">setDecoratorDirectory</a>($directory)
+                <br />
+                <span class="description">Sets the decorator template directory for this view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_setdecoratortemplate">setDecoratorTemplate</a>($template)
+                <br />
+                <span class="description">Sets the decorator template for this view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_setdirectory">setDirectory</a>($directory)
+                <br />
+                <span class="description">Sets the template directory for this view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_setextension">setExtension</a>($extension)
+                <br />
+                <span class="description">Sets an extension for the current view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_setparameter">setParameter</a>($name, $value)
+                <br />
+                <span class="description">Sets a parameter for the view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method_settemplate">setTemplate</a>($template)
+                <br />
+                <span class="description">Sets the template for this view.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfView.html#method___call">__call</a>($method, $arguments)
+                <br />
+                <span class="description">Calls methods defined via sfEventDispatcher.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfView.html#method___construct">__construct</a>()
+                <br />
+                <span class="description">Class constructor.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_configure"></a>
+              <h3>
+                <span class="method-name">configure</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Configures template.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_execute"></a>
+              <h3>
+                <span class="method-name">execute</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Executes any presentation logic and set template attributes.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getactionname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getActionName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the action name associated with this view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An action name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getattribute"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getAttribute</span>&nbsp;($name, $default)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Name of the attribute</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>Value of the attribute</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves an attribute for the current view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Attribute</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getattributeholder"></a>
+              <h3>
+                (sfParameterHolder)&nbsp;<span class="method-name">getAttributeHolder</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves attributes for the current view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The attribute parameter holder</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcomponentslot"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getComponentSlot</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The component slot name</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a component slot</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The component slot</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdecoratordirectory"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getDecoratorDirectory</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves this views decorator template directory.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An absolute filesystem path to this views decorator template directory</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdecoratortemplate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getDecoratorTemplate</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves this views decorator template.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A template filename, if a template has been set, otherwise null</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdirectory"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getDirectory</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves this view template directory.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An absolute filesystem path to this views template directory</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getengine"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getEngine</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the template engine associated with this view.</strong></p>
+              <p><p>
+<br /> Note: This will return null for PHPView instances.</p></p>
+                        <p><strong>returns</strong> A template engine instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getextension"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getExtension</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the current view extension.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The extension for current view.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmodulename"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getModuleName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the module name associated with this view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A module name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getparameter"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getParameter</span>&nbsp;($name, $default)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Parameter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>Default parameter value</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves a parameter from the current view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A parameter value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getparameterholder"></a>
+              <h3>
+                (sfParameterHolder)&nbsp;<span class="method-name">getParameterHolder</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the parameters for the current view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The parameter holder</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettemplate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getTemplate</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves this views template.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A template filename, if a template has been set, otherwise null</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getviewname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getViewName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the view name associated with this view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An action name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasattribute"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">hasAttribute</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Name of the attribute</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if the view have attributes.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Attribute of the view</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hascomponentslot"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">hasComponentSlot</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The component slot name</td>
+              </tr>
+                        </table>
+              <p><strong>Indicates whether or not a component slot exists.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if the component slot exists, otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasparameter"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">hasParameter</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Name of the parameter</td>
+              </tr>
+                        </table>
+              <p><strong>Indicates whether or not a parameter exist for the current view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if the parameter exists otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">initialize</span>&nbsp;($context, $moduleName, $actionName, $viewName)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$context</td>
+                <td>The current application context</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>The module name for this view</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$actionName</td>
+                <td>The action name for this view</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$viewName</td>
+                <td>The view name</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes this view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if initialization completes successfully, otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initializeattributeholder"></a>
+              <h3>
+                <span class="method-name">initializeAttributeHolder</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isdecorator"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isDecorator</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Indicates that this view is a decorating view.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if this view is a decorating view, otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_prerendercheck"></a>
+              <h3>
+                <span class="method-name">preRenderCheck</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Executes a basic pre-render check to verify all required variables exist</strong></p>
+              <p><p> and that the template is readable.</p></p>
+                                  <p><strong>throws</strong> sfRenderException If the pre-render check fails</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_render"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">render</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Renders the presentation.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A string representing the rendered presentation</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setattribute"></a>
+              <h3>
+                <span class="method-name">setAttribute</span>&nbsp;($name, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Attribute name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>Value for the attribute</td>
+              </tr>
+                        </table>
+              <p><strong>Sets an attribute of the view.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setcomponentslot"></a>
+              <h3>
+                <span class="method-name">setComponentSlot</span>&nbsp;($attributeName, $moduleName, $componentName)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$attributeName</td>
+                <td>A template attribute name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$moduleName</td>
+                <td>A module name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$componentName</td>
+                <td>A component name</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the module and action to be executed in place of a particular template attribute.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdecorator"></a>
+              <h3>
+                <span class="method-name">setDecorator</span>&nbsp;($boolean)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$boolean</td>
+                <td>Set the decorating mode for the view</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the decorating mode for the current view.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdecoratordirectory"></a>
+              <h3>
+                <span class="method-name">setDecoratorDirectory</span>&nbsp;($directory)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$directory</td>
+                <td>An absolute filesystem path to a template directory</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the decorator template directory for this view.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdecoratortemplate"></a>
+              <h3>
+                <span class="method-name">setDecoratorTemplate</span>&nbsp;($template)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$template</td>
+                <td>An absolute or relative filesystem path to a template</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the decorator template for this view.</strong></p>
+              <p><p>
+<br /> If the template path is relative, it will be based on the currently
+<br /> executing module's template sub-directory.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdirectory"></a>
+              <h3>
+                <span class="method-name">setDirectory</span>&nbsp;($directory)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$directory</td>
+                <td>An absolute filesystem path to a template directory</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the template directory for this view.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setextension"></a>
+              <h3>
+                <span class="method-name">setExtension</span>&nbsp;($extension)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$extension</td>
+                <td>The extension name.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets an extension for the current view.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setparameter"></a>
+              <h3>
+                <span class="method-name">setParameter</span>&nbsp;($name, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Name of the parameter</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The parameter value</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a parameter for the view.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_settemplate"></a>
+              <h3>
+                <span class="method-name">setTemplate</span>&nbsp;($template)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$template</td>
+                <td>An absolute or relative filesystem path to a template</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the template for this view.</strong></p>
+              <p><p>
+<br /> If the template path is relative, it will be based on the currently
+<br /> executing module's template sub-directory.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___call"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">__call</span>&nbsp;($method, $arguments)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$method</td>
+                <td>The method name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$arguments</td>
+                <td>The method arguments</td>
+              </tr>
+                        </table>
+              <p><strong>Calls methods defined via sfEventDispatcher.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The returned value of the called method</p>
+                                  <p><strong>throws</strong> sfException< If the calls fails</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Class constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

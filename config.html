@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; config Package | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>config Package</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      config      </strong>
+      <small> - <a href="config.html">22 classes</a></small>
+
+              <ul>
+                      <li><a href="sfApplicationConfiguration.html">sfApplicationConfiguration</a></li>
+                      <li><a href="sfAutoloadConfigHandler.html">sfAutoloadConfigHandler</a></li>
+                      <li><a href="sfCacheConfigHandler.html">sfCacheConfigHandler</a></li>
+                      <li><a href="sfCompileConfigHandler.html">sfCompileConfigHandler</a></li>
+                      <li><a href="sfConfig.html">sfConfig</a></li>
+                      <li><a href="sfConfigCache.html">sfConfigCache</a></li>
+                      <li><a href="sfConfigHandler.html">sfConfigHandler</a></li>
+                      <li><a href="sfDatabaseConfigHandler.html">sfDatabaseConfigHandler</a></li>
+                      <li><a href="sfDefineEnvironmentConfigHandler.html">sfDefineEnvironmentConfigHandler</a></li>
+                      <li><a href="sfFactoryConfigHandler.html">sfFactoryConfigHandler</a></li>
+                      <li><a href="sfFilterConfigHandler.html">sfFilterConfigHandler</a></li>
+                      <li><a href="sfGeneratorConfigHandler.html">sfGeneratorConfigHandler</a></li>
+                      <li><a href="sfPluginConfiguration.html">sfPluginConfiguration</a></li>
+                      <li><a href="sfPluginConfigurationGeneric.html">sfPluginConfigurationGeneric</a></li>
+                      <li><a href="sfProjectConfiguration.html">sfProjectConfiguration</a></li>
+                      <li><a href="sfPropelPluginConfiguration.html">sfPropelPluginConfiguration</a></li>
+                      <li><a href="sfRootConfigHandler.html">sfRootConfigHandler</a></li>
+                      <li><a href="sfRoutingConfigHandler.html">sfRoutingConfigHandler</a></li>
+                      <li><a href="sfSecurityConfigHandler.html">sfSecurityConfigHandler</a></li>
+                      <li><a href="sfSimpleYamlConfigHandler.html">sfSimpleYamlConfigHandler</a></li>
+                      <li><a href="sfViewConfigHandler.html">sfViewConfigHandler</a></li>
+                      <li><a href="sfYamlConfigHandler.html">sfYamlConfigHandler</a></li>
+                  </ul>
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/index.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/index.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/index.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/index.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+        <h2>config</h2>
+        <ul>
+                      <li>
+              <a href="sfApplicationConfiguration.html">sfApplicationConfiguration</a>:
+              sfConfiguration represents a configuration for a symfony application.            </li>
+                      <li>
+              <a href="sfAutoloadConfigHandler.html">sfAutoloadConfigHandler</a>:
+              @package    symfony            </li>
+                      <li>
+              <a href="sfCacheConfigHandler.html">sfCacheConfigHandler</a>:
+              sfCacheConfigHandler allows you to configure cache.            </li>
+                      <li>
+              <a href="sfCompileConfigHandler.html">sfCompileConfigHandler</a>:
+              sfCompileConfigHandler gathers multiple files and puts them into a single file.            </li>
+                      <li>
+              <a href="sfConfig.html">sfConfig</a>:
+              sfConfig stores all configuration information for a symfony application.            </li>
+                      <li>
+              <a href="sfConfigCache.html">sfConfigCache</a>:
+              sfConfigCache allows you to customize the format of a configuration file to            </li>
+                      <li>
+              <a href="sfConfigHandler.html">sfConfigHandler</a>:
+              sfConfigHandler allows a developer to create a custom formatted configuration            </li>
+                      <li>
+              <a href="sfDatabaseConfigHandler.html">sfDatabaseConfigHandler</a>:
+              sfDatabaseConfigHandler allows you to setup database connections in a            </li>
+                      <li>
+              <a href="sfDefineEnvironmentConfigHandler.html">sfDefineEnvironmentConfigHandler</a>:
+              @package    symfony            </li>
+                      <li>
+              <a href="sfFactoryConfigHandler.html">sfFactoryConfigHandler</a>:
+              sfFactoryConfigHandler allows you to specify which factory implementation the            </li>
+                      <li>
+              <a href="sfFilterConfigHandler.html">sfFilterConfigHandler</a>:
+              sfFilterConfigHandler allows you to register filters with the system.            </li>
+                      <li>
+              <a href="sfGeneratorConfigHandler.html">sfGeneratorConfigHandler</a>:
+              sfGeneratorConfigHandler.            </li>
+                      <li>
+              <a href="sfPluginConfiguration.html">sfPluginConfiguration</a>:
+              sfPluginConfiguration represents a configuration for a symfony plugin.            </li>
+                      <li>
+              <a href="sfPluginConfigurationGeneric.html">sfPluginConfigurationGeneric</a>:
+              sfPluginConfigurationGeneric represents a configuration for a plugin with no configuration class.            </li>
+                      <li>
+              <a href="sfProjectConfiguration.html">sfProjectConfiguration</a>:
+              sfProjectConfiguration represents a configuration for a symfony project.            </li>
+                      <li>
+              <a href="sfPropelPluginConfiguration.html">sfPropelPluginConfiguration</a>:
+              sfPropelPlugin configuration.            </li>
+                      <li>
+              <a href="sfRootConfigHandler.html">sfRootConfigHandler</a>:
+              sfRootConfigHandler allows you to specify configuration handlers for the            </li>
+                      <li>
+              <a href="sfRoutingConfigHandler.html">sfRoutingConfigHandler</a>:
+              @package    symfony            </li>
+                      <li>
+              <a href="sfSecurityConfigHandler.html">sfSecurityConfigHandler</a>:
+              sfSecurityConfigHandler allows you to configure action security.            </li>
+                      <li>
+              <a href="sfSimpleYamlConfigHandler.html">sfSimpleYamlConfigHandler</a>:
+              sfSimpleYamlConfigHandler allows you to load simple configuration files formatted as YAML.            </li>
+                      <li>
+              <a href="sfViewConfigHandler.html">sfViewConfigHandler</a>:
+              sfViewConfigHandler allows you to configure views.            </li>
+                      <li>
+              <a href="sfYamlConfigHandler.html">sfYamlConfigHandler</a>:
+              sfYamlConfigHandler is a base class for YAML (.yml) configuration handlers. This class            </li>
+                  </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

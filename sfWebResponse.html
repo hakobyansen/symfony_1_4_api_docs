@@ -1,0 +1,1332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfWebResponse Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfWebResponse Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      response      </strong>
+      <small> - <a href="response.html">2 classes</a></small>
+
+              <ul>
+                      <li><a href="sfResponse.html">sfResponse</a></li>
+                      <li><a href="sfWebResponse.html">sfWebResponse</a></li>
+                  </ul>
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfWebResponse.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfWebResponse.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfWebResponse.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfWebResponse.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfWebResponse class.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+              
+              <strong>sfWebResponse</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="sfResponse.html">sfResponse</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_addcachecontrolhttpheader">addCacheControlHttpHeader</a>($name, $value)
+                <br />
+                <span class="description">Adds an control cache http header.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_addhttpmeta">addHttpMeta</a>($key, $value, $replace)
+                <br />
+                <span class="description">Adds a HTTP meta header.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_addjavascript">addJavascript</a>($file, $position, $options)
+                <br />
+                <span class="description">Adds javascript code to the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_addmeta">addMeta</a>($key, $value, $replace, $escape)
+                <br />
+                <span class="description">Adds a meta header.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_addstylesheet">addStylesheet</a>($file, $position, $options)
+                <br />
+                <span class="description">Adds a stylesheet to the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_addvaryhttpheader">addVaryHttpHeader</a>($header)
+                <br />
+                <span class="description">Adds vary to a http header.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_clearhttpheaders">clearHttpHeaders</a>()
+                <br />
+                <span class="description">Cleans HTTP headers from the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_copyproperties">copyProperties</a>($response)
+                <br />
+                <span class="description">Copies all properties from a given sfWebResponse object to the current one.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_fixcontenttype">fixContentType</a>($contentType)
+                <br />
+                <span class="description">Fixes the content type by adding the charset for text content types.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_getcharset">getCharset</a>()
+                <br />
+                <span class="description">Gets the current charset as defined by the content type.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebResponse.html#method_getcontenttype">getContentType</a>()
+                <br />
+                <span class="description">Gets response content type.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebResponse.html#method_getcookies">getCookies</a>()
+                <br />
+                <span class="description">Retrieves cookies from the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_getdate">getDate</a>($timestamp, $type)
+                <br />
+                <span class="description">Retrieves a formated date.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_gethttpheader">getHttpHeader</a>($name, $default)
+                <br />
+                <span class="description">Gets HTTP header current value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_gethttpheaders">getHttpHeaders</a>()
+                <br />
+                <span class="description">Retrieves HTTP headers from the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_gethttpmetas">getHttpMetas</a>()
+                <br />
+                <span class="description">Retrieves meta headers for the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebResponse.html#method_getjavascripts">getJavascripts</a>($position)
+                <br />
+                <span class="description">Retrieves javascript files from the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebResponse.html#method_getmetas">getMetas</a>()
+                <br />
+                <span class="description">Retrieves all meta headers.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebResponse.html#method_getpositions">getPositions</a>()
+                <br />
+                <span class="description">Returns the available position names for stylesheets and javascripts in order.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_getslots">getSlots</a>()
+                <br />
+                <span class="description">Retrieves slots from the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfWebResponse.html#method_getstatuscode">getStatusCode</a>()
+                <br />
+                <span class="description">Retrieves status code for the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_getstatustext">getStatusText</a>()
+                <br />
+                <span class="description">Retrieves status text for the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfWebResponse.html#method_getstylesheets">getStylesheets</a>($position)
+                <br />
+                <span class="description">Retrieves stylesheets for the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_gettitle">getTitle</a>()
+                <br />
+                <span class="description">Retrieves title for the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfWebResponse.html#method_hashttpheader">hasHttpHeader</a>($name)
+                <br />
+                <span class="description">Checks if response has given HTTP header.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfWebResponse.html#method_initialize">initialize</a>($dispatcher, $options)
+                <br />
+                <span class="description">Initializes this sfWebResponse.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="sfWebResponse.html#method_isheaderonly">isHeaderOnly</a>()
+                <br />
+                <span class="description">Returns if the response must only consist of HTTP headers.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_merge">merge</a>($response)
+                <br />
+                <span class="description">Merges all properties from a given sfWebResponse object to the current one.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfWebResponse.html#method_normalizeheadername">normalizeHeaderName</a>($name)
+                <br />
+                <span class="description">Retrieves a normalized Header.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_removejavascript">removeJavascript</a>($file)
+                <br />
+                <span class="description">Removes a JavaScript file from the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_removestylesheet">removeStylesheet</a>($file)
+                <br />
+                <span class="description">Removes a stylesheet from the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_send">send</a>()
+                <br />
+                <span class="description">Sends the HTTP headers and the content.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_sendcontent">sendContent</a>()
+                <br />
+                <span class="description">Send content for the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_sendhttpheaders">sendHttpHeaders</a>()
+                <br />
+                <span class="description">Sends HTTP headers and cookies. Only the first invocation of this method will send the headers.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_serialize">serialize</a>()
+                <br />
+                <span class="description">@see sfResponse</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_setcontenttype">setContentType</a>($value)
+                <br />
+                <span class="description">Sets response content type.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_setcookie">setCookie</a>($name, $value, $expire, $path, $domain, $secure, $httpOnly)
+                <br />
+                <span class="description">Sets a cookie.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_setheaderonly">setHeaderOnly</a>($value)
+                <br />
+                <span class="description">Sets if the response consist of just HTTP headers.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_sethttpheader">setHttpHeader</a>($name, $value, $replace)
+                <br />
+                <span class="description">Sets a HTTP header.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_setslot">setSlot</a>($name, $content)
+                <br />
+                <span class="description">Sets a slot content.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_setstatuscode">setStatusCode</a>($code, $name)
+                <br />
+                <span class="description">Sets response status code.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_settitle">setTitle</a>($title, $escape)
+                <br />
+                <span class="description">Sets title for the current web response.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_unserialize">unserialize</a>()
+                <br />
+                <span class="description">@see sfResponse</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfWebResponse.html#method_validateposition">validatePosition</a>($position)
+                <br />
+                <span class="description">Validate a position name.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="sfResponse.html">sfResponse</a>              </h3>
+                                                                <a href="sfResponse.html#method_getcontent">getContent</a>                  ,                                   <a href="sfResponse.html#method_getoptions">getOptions</a>                  ,                                   <a href="sfResponse.html#method_initialize">initialize</a>                  ,                                   <a href="sfResponse.html#method_send">send</a>                  ,                                   <a href="sfResponse.html#method_sendcontent">sendContent</a>                  ,                                   <a href="sfResponse.html#method_serialize">serialize</a>                  ,                                   <a href="sfResponse.html#method_setcontent">setContent</a>                  ,                                   <a href="sfResponse.html#method_seteventdispatcher">setEventDispatcher</a>                  ,                                   <a href="sfResponse.html#method_unserialize">unserialize</a>                  ,                                   <a href="sfResponse.html#method___call">__call</a>                  ,                                   <a href="sfResponse.html#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_addcachecontrolhttpheader"></a>
+              <h3>
+                <span class="method-name">addCacheControlHttpHeader</span>&nbsp;($name, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>HTTP header</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>Value for the http header</td>
+              </tr>
+                        </table>
+              <p><strong>Adds an control cache http header.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_addhttpmeta"></a>
+              <h3>
+                <span class="method-name">addHttpMeta</span>&nbsp;($key, $value, $replace)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>Key to replace</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>HTTP meta header value (if null, remove the HTTP meta)</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$replace</td>
+                <td>Replace or not</td>
+              </tr>
+                        </table>
+              <p><strong>Adds a HTTP meta header.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_addjavascript"></a>
+              <h3>
+                <span class="method-name">addJavascript</span>&nbsp;($file, $position, $options)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$file</td>
+                <td>The JavaScript file</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$position</td>
+                <td>Position</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>Javascript options</td>
+              </tr>
+                        </table>
+              <p><strong>Adds javascript code to the current web response.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_addmeta"></a>
+              <h3>
+                <span class="method-name">addMeta</span>&nbsp;($key, $value, $replace, $escape)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>Name of the header</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>Meta header value (if null, remove the meta)</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$replace</td>
+                <td>true if it's replaceable</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$escape</td>
+                <td>true for escaping the header</td>
+              </tr>
+                        </table>
+              <p><strong>Adds a meta header.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_addstylesheet"></a>
+              <h3>
+                <span class="method-name">addStylesheet</span>&nbsp;($file, $position, $options)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$file</td>
+                <td>The stylesheet file</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$position</td>
+                <td>Position</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>Stylesheet options</td>
+              </tr>
+                        </table>
+              <p><strong>Adds a stylesheet to the current web response.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_addvaryhttpheader"></a>
+              <h3>
+                <span class="method-name">addVaryHttpHeader</span>&nbsp;($header)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$header</td>
+                <td>HTTP header</td>
+              </tr>
+                        </table>
+              <p><strong>Adds vary to a http header.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_clearhttpheaders"></a>
+              <h3>
+                <span class="method-name">clearHttpHeaders</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Cleans HTTP headers from the current web response.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_copyproperties"></a>
+              <h3>
+                <span class="method-name">copyProperties</span>&nbsp;($response)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$response</td>
+                <td>An sfWebResponse instance</td>
+              </tr>
+                        </table>
+              <p><strong>Copies all properties from a given sfWebResponse object to the current one.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_fixcontenttype"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">fixContentType</span>&nbsp;($contentType)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$contentType</td>
+                <td>The content type</td>
+              </tr>
+                        </table>
+              <p><strong>Fixes the content type by adding the charset for text content types.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The content type with the charset if needed</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcharset"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getCharset</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the current charset as defined by the content type.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current charset</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcontenttype"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getContentType</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets response content type.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcookies"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getCookies</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves cookies from the current web response.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Cookies</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getDate</span>&nbsp;($timestamp, $type)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$timestamp</td>
+                <td>Timestamp</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$type</td>
+                <td>Format type</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves a formated date.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Formatted date</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethttpheader"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getHttpHeader</span>&nbsp;($name, $default)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>HTTP header name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>Default value returned if named HTTP header is not found</td>
+              </tr>
+                        </table>
+              <p><strong>Gets HTTP header current value.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethttpheaders"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getHttpHeaders</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves HTTP headers from the current web response.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> HTTP headers</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethttpmetas"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getHttpMetas</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves meta headers for the current web response.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Meta headers</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getjavascripts"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getJavascripts</span>&nbsp;($position)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$position</td>
+                <td>The position</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves javascript files from the current web response.</strong></p>
+              <p><p>
+<br /> By default, the position is sfWebResponse::ALL,
+<br /> and the method returns all javascripts ordered by position.</p></p>
+                        <p><strong>returns</strong> An associative array of javascript files as keys and options as values</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmetas"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getMetas</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves all meta headers.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> List of meta headers</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpositions"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPositions</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the available position names for stylesheets and javascripts in order.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of position names</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getslots"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getSlots</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves slots from the current web response.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Javascript code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getstatuscode"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getStatusCode</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves status code for the current web response.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Status code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getstatustext"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getStatusText</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves status text for the current web response.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Status text</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getstylesheets"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getStylesheets</span>&nbsp;($position)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$position</td>
+                <td>The position</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves stylesheets for the current web response.</strong></p>
+              <p><p>
+<br /> By default, the position is sfWebResponse::ALL,
+<br /> and the method returns all stylesheets ordered by position.</p></p>
+                        <p><strong>returns</strong> An associative array of stylesheet files as keys and options as values</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettitle"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getTitle</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves title for the current web response.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Title</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hashttpheader"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">hasHttpHeader</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>HTTP header name</td>
+              </tr>
+                        </table>
+              <p><strong>Checks if response has given HTTP header.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">initialize</span>&nbsp;($dispatcher, $options)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$dispatcher</td>
+                <td>An sfEventDispatcher instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>An array of options</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes this sfWebResponse.</strong></p>
+              <p><p>
+<br /> Available options:</p><p>  * charset:           The charset to use (utf-8 by default)
+<br />  * content_type:      The content type (text/html by default)
+<br />  * send_http_headers: Whether to send HTTP headers or not (true by default)
+<br />  * http_protocol:     The HTTP protocol to use for the response (HTTP/1.0 by default)</p></p>
+                        <p><strong>returns</strong> true, if initialization completes successfully, otherwise false</p>
+                                  <p><strong>throws</strong> <b>sfInitializationException</b> If an error occurs while initializing this sfResponse</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isheaderonly"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isHeaderOnly</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns if the response must only consist of HTTP headers.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> returns true if, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_merge"></a>
+              <h3>
+                <span class="method-name">merge</span>&nbsp;($response)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$response</td>
+                <td>An sfWebResponse instance</td>
+              </tr>
+                        </table>
+              <p><strong>Merges all properties from a given sfWebResponse object to the current one.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_normalizeheadername"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">normalizeHeaderName</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Header name</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves a normalized Header.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Normalized header</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_removejavascript"></a>
+              <h3>
+                <span class="method-name">removeJavascript</span>&nbsp;($file)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$file</td>
+                <td>The Javascript file to remove</td>
+              </tr>
+                        </table>
+              <p><strong>Removes a JavaScript file from the current web response.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_removestylesheet"></a>
+              <h3>
+                <span class="method-name">removeStylesheet</span>&nbsp;($file)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$file</td>
+                <td>The stylesheet file to remove</td>
+              </tr>
+                        </table>
+              <p><strong>Removes a stylesheet from the current web response.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_send"></a>
+              <h3>
+                <span class="method-name">send</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Sends the HTTP headers and the content.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_sendcontent"></a>
+              <h3>
+                <span class="method-name">sendContent</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Send content for the current web response.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_sendhttpheaders"></a>
+              <h3>
+                <span class="method-name">sendHttpHeaders</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Sends HTTP headers and cookies. Only the first invocation of this method will send the headers.</strong></p>
+              <p><p> Subsequent invocations will silently do nothing. This allows certain actions to send headers early,
+<br /> while still using the standard controller.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_serialize"></a>
+              <h3>
+                <span class="method-name">serialize</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfResponse</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setcontenttype"></a>
+              <h3>
+                <span class="method-name">setContentType</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>Content type</td>
+              </tr>
+                        </table>
+              <p><strong>Sets response content type.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setcookie"></a>
+              <h3>
+                <span class="method-name">setCookie</span>&nbsp;($name, $value, $expire, $path, $domain, $secure, $httpOnly)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>HTTP header name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>Value for the cookie</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$expire</td>
+                <td>Cookie expiration period</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$path</td>
+                <td>Path</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$domain</td>
+                <td>Domain name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$secure</td>
+                <td>If secure</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$httpOnly</td>
+                <td>If uses only HTTP</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a cookie.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> <b>sfException</b> If fails to set the cookie</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setheaderonly"></a>
+              <h3>
+                <span class="method-name">setHeaderOnly</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Sets if the response consist of just HTTP headers.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_sethttpheader"></a>
+              <h3>
+                <span class="method-name">setHttpHeader</span>&nbsp;($name, $value, $replace)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>HTTP header name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>Value (if null, remove the HTTP header)</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$replace</td>
+                <td>Replace for the value</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a HTTP header.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setslot"></a>
+              <h3>
+                <span class="method-name">setSlot</span>&nbsp;($name, $content)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Slot name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$content</td>
+                <td>Content</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a slot content.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setstatuscode"></a>
+              <h3>
+                <span class="method-name">setStatusCode</span>&nbsp;($code, $name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$code</td>
+                <td>HTTP status code</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>HTTP status text</td>
+              </tr>
+                        </table>
+              <p><strong>Sets response status code.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_settitle"></a>
+              <h3>
+                <span class="method-name">setTitle</span>&nbsp;($title, $escape)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$title</td>
+                <td>Title name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$escape</td>
+                <td>true, for escaping the title</td>
+              </tr>
+                        </table>
+              <p><strong>Sets title for the current web response.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_unserialize"></a>
+              <h3>
+                <span class="method-name">unserialize</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfResponse</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_validateposition"></a>
+              <h3>
+                <span class="method-name">validatePosition</span>&nbsp;($position)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Validate a position name.</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> InvalidArgumentException if the position is not available</p>
+                        <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

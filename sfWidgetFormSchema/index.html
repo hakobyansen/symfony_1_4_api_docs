@@ -1,0 +1,1444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfWidgetFormSchema Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfWidgetFormSchema Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      widget      </strong>
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfWidget">sfWidget</a></li>
+                      <li><a href="/api/1_4/sfWidgetForm">sfWidgetForm</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormChoice">sfWidgetFormChoice</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormChoiceBase">sfWidgetFormChoiceBase</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormDate">sfWidgetFormDate</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormDateRange">sfWidgetFormDateRange</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormDateTime">sfWidgetFormDateTime</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormFilterDate">sfWidgetFormFilterDate</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormFilterInput">sfWidgetFormFilterInput</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormI18nChoiceCountry">sfWidgetFormI18nChoiceCountry</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormI18nChoiceCurrency">sfWidgetFormI18nChoiceCurrency</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormI18nChoiceLanguage">sfWidgetFormI18nChoiceLanguage</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormI18nChoiceTimezone">sfWidgetFormI18nChoiceTimezone</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormI18nDate">sfWidgetFormI18nDate</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormI18nDateTime">sfWidgetFormI18nDateTime</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormI18nTime">sfWidgetFormI18nTime</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormInput">sfWidgetFormInput</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormInputCheckbox">sfWidgetFormInputCheckbox</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormInputFile">sfWidgetFormInputFile</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormInputFileEditable">sfWidgetFormInputFileEditable</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormInputHidden">sfWidgetFormInputHidden</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormInputPassword">sfWidgetFormInputPassword</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormInputText">sfWidgetFormInputText</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormPropelChoice">sfWidgetFormPropelChoice</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSchema">sfWidgetFormSchema</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSchemaDecorator">sfWidgetFormSchemaDecorator</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSchemaForEach">sfWidgetFormSchemaForEach</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSchemaFormatter">sfWidgetFormSchemaFormatter</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSchemaFormatterList">sfWidgetFormSchemaFormatterList</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSchemaFormatterTable">sfWidgetFormSchemaFormatterTable</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSelect">sfWidgetFormSelect</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSelectCheckbox">sfWidgetFormSelectCheckbox</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSelectMany">sfWidgetFormSelectMany</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormSelectRadio">sfWidgetFormSelectRadio</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormTextarea">sfWidgetFormTextarea</a></li>
+                      <li><a href="/api/1_4/sfWidgetFormTime">sfWidgetFormTime</a></li>
+                  </ul>
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfWidgetFormSchema">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfWidgetFormSchema">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfWidgetFormSchema">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfWidgetFormSchema">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfWidgetFormSchema represents an array of fields.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="/api/1_4/sfWidgetFormSchemaDecorator">sfWidgetFormSchemaDecorator</a>, <a href="/api/1_4/sfWidgetFormSchemaForEach">sfWidgetFormSchemaForEach</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfWidgetFormSchema</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="/api/1_4/sfWidgetForm">sfWidgetForm</a>&nbsp;&lt;&nbsp;<a href="/api/1_4/sfWidget">sfWidget</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_addformformatter">addFormFormatter</a>($name, $formatter)
+                <br />
+                <span class="description">Adds a form formatter.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_generatename">generateName</a>($name)
+                <br />
+                <span class="description">Generates a name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getdefault">getDefault</a>($name)
+                <br />
+                <span class="description">Gets the default value of a field.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getdefaults">getDefaults</a>()
+                <br />
+                <span class="description">Returns the defaults values for the widget schema.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_getfields">getFields</a>()
+                <br />
+                <span class="description">Returns an array of fields.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidgetFormSchemaFormatter</span>
+                <a href="#method_getformformatter">getFormFormatter</a>()
+                <br />
+                <span class="description">Returns the form formatter to use for widget schema rendering</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getformformattername">getFormFormatterName</a>()
+                <br />
+                <span class="description">Gets the form formatter name that will be used to render the widget schema.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getformformatters">getFormFormatters</a>()
+                <br />
+                <span class="description">Returns all the form formats defined for this form schema.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getglobalerrors">getGlobalErrors</a>($errors)
+                <br />
+                <span class="description">Gets errors that need to be included in global errors.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_gethelp">getHelp</a>($name)
+                <br />
+                <span class="description">Gets a text help by field name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_gethelps">getHelps</a>()
+                <br />
+                <span class="description">Sets the help texts.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getjavascripts">getJavaScripts</a>()
+                <br />
+                <span class="description">Gets the JavaScript paths associated with the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getlabel">getLabel</a>($name)
+                <br />
+                <span class="description">Gets a label by field name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getlabels">getLabels</a>()
+                <br />
+                <span class="description">Gets the labels.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getnameformat">getNameFormat</a>()
+                <br />
+                <span class="description">Gets the format string for the name HTML attribute.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getpositions">getPositions</a>()
+                <br />
+                <span class="description">Gets the positions of the fields.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getstylesheets">getStylesheets</a>()
+                <br />
+                <span class="description">Gets the stylesheet paths associated with the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_movefield">moveField</a>($field, $action, $pivot)
+                <br />
+                <span class="description">Moves a field in a given position</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_needsmultipartform">needsMultipartForm</a>()
+                <br />
+                <span class="description">Returns true if the widget schema needs a multipart form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_offsetexists">offsetExists</a>($name)
+                <br />
+                <span class="description">Returns true if the schema has a field with the given name (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget|null</span>
+                <a href="#method_offsetget">offsetGet</a>($name)
+                <br />
+                <span class="description">Gets the field associated with the given name (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_offsetset">offsetSet</a>($name, $widget)
+                <br />
+                <span class="description">Sets a field (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_offsetunset">offsetUnset</a>($name)
+                <br />
+                <span class="description">Removes a field by name (implements the ArrayAccess interface).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_render">render</a>($name, $values, $attributes, $errors)
+                <br />
+                <span class="description">Renders the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_renderfield">renderField</a>($name, $value, $attributes, $errors)
+                <br />
+                <span class="description">Renders a field by name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_setdefault">setDefault</a>($name, $value)
+                <br />
+                <span class="description">Sets the default value for a field.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setdefaultformformattername">setDefaultFormFormatterName</a>($name)
+                <br />
+                <span class="description">Sets the generic default formatter name used by the class. If you want all</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_setdefaults">setDefaults</a>($values)
+                <br />
+                <span class="description">Sets the default values for the widget.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_setformformattername">setFormFormatterName</a>($name)
+                <br />
+                <span class="description">Sets the form formatter name to use when rendering the widget schema.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_sethelp">setHelp</a>($name, $help)
+                <br />
+                <span class="description">Sets a help text.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_sethelps">setHelps</a>($helps)
+                <br />
+                <span class="description">Sets the help texts to render for each field.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_setlabel">setLabel</a>($name, $value)
+                <br />
+                <span class="description">Sets a label.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_setlabels">setLabels</a>($labels)
+                <br />
+                <span class="description">Sets the label names to render for each field.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_setnameformat">setNameFormat</a>($format)
+                <br />
+                <span class="description">Sets the format string for the name HTML attribute.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfWidget</span>
+                <a href="#method_setpositions">setPositions</a>($positions)
+                <br />
+                <span class="description">Sets the positions of the fields.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method___clone">__clone</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method___construct">__construct</a>($fields, $options, $attributes, $labels, $helps)
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="/api/1_4/sfWidgetForm">sfWidgetForm</a>              </h3>
+                                                                <a href="/api/1_4/sfWidgetForm#method_fixformid">fixFormId</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_generateid">generateId</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_generatetwocharsrange">generateTwoCharsRange</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_getdefault">getDefault</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_getidformat">getIdFormat</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_getlabel">getLabel</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_getparent">getParent</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_ishidden">isHidden</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_needsmultipartform">needsMultipartForm</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_rendercontenttag">renderContentTag</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_rendertag">renderTag</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_setdefault">setDefault</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_sethidden">setHidden</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_setidformat">setIdFormat</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_setlabel">setLabel</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_setparent">setParent</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_translate">translate</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method_translateall">translateAll</a>                  ,                                   <a href="/api/1_4/sfWidgetForm#method___construct">__construct</a>                                                                          <h3>
+                Methods inherited from <a href="/api/1_4/sfWidget">sfWidget</a>              </h3>
+                                                                <a href="/api/1_4/sfWidget#method_addoption">addOption</a>                  ,                                   <a href="/api/1_4/sfWidget#method_addrequiredoption">addRequiredOption</a>                  ,                                   <a href="/api/1_4/sfWidget#method_attributestohtml">attributesToHtml</a>                  ,                                   <a href="/api/1_4/sfWidget#method_attributestohtmlcallback">attributesToHtmlCallback</a>                  ,                                   <a href="/api/1_4/sfWidget#method_configure">configure</a>                  ,                                   <a href="/api/1_4/sfWidget#method_escapeonce">escapeOnce</a>                  ,                                   <a href="/api/1_4/sfWidget#method_fixdoubleescape">fixDoubleEscape</a>                  ,                                   <a href="/api/1_4/sfWidget#method_getattribute">getAttribute</a>                  ,                                   <a href="/api/1_4/sfWidget#method_getattributes">getAttributes</a>                  ,                                   <a href="/api/1_4/sfWidget#method_getcharset">getCharset</a>                  ,                                   <a href="/api/1_4/sfWidget#method_getjavascripts">getJavaScripts</a>                  ,                                   <a href="/api/1_4/sfWidget#method_getoption">getOption</a>                  ,                                   <a href="/api/1_4/sfWidget#method_getoptions">getOptions</a>                  ,                                   <a href="/api/1_4/sfWidget#method_getrequiredoptions">getRequiredOptions</a>                  ,                                   <a href="/api/1_4/sfWidget#method_getstylesheets">getStylesheets</a>                  ,                                   <a href="/api/1_4/sfWidget#method_hasoption">hasOption</a>                  ,                                   <a href="/api/1_4/sfWidget#method_isxhtml">isXhtml</a>                  ,                                   <a href="/api/1_4/sfWidget#method_render">render</a>                  ,                                   <a href="/api/1_4/sfWidget#method_rendercontenttag">renderContentTag</a>                  ,                                   <a href="/api/1_4/sfWidget#method_rendertag">renderTag</a>                  ,                                   <a href="/api/1_4/sfWidget#method_setattribute">setAttribute</a>                  ,                                   <a href="/api/1_4/sfWidget#method_setattributes">setAttributes</a>                  ,                                   <a href="/api/1_4/sfWidget#method_setcharset">setCharset</a>                  ,                                   <a href="/api/1_4/sfWidget#method_setoption">setOption</a>                  ,                                   <a href="/api/1_4/sfWidget#method_setoptions">setOptions</a>                  ,                                   <a href="/api/1_4/sfWidget#method_setxhtml">setXhtml</a>                  ,                                   <a href="/api/1_4/sfWidget#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_addformformatter"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">addFormFormatter</span>&nbsp;($name, $formatter)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The formatter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$formatter</td>
+                <td>An sfWidgetFormSchemaFormatter instance</td>
+              </tr>
+                        </table>
+              <p><strong>Adds a form formatter.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generatename"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">generateName</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name</td>
+              </tr>
+                        </table>
+              <p><strong>Generates a name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The generated name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdefault"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getDefault</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name (required - the default value is here because PHP do not allow signature changes with inheritance)</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the default value of a field.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The default value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdefaults"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getDefaults</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the defaults values for the widget schema.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of default values</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfields"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">getFields</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns an array of fields.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of sfWidget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformformatter"></a>
+              <h3>
+                (sfWidgetFormSchemaFormatter)&nbsp;<span class="method-name">getFormFormatter</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the form formatter to use for widget schema rendering</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> sfWidgetFormSchemaFormatter instance</p>
+                                  <p><strong>throws</strong> InvalidArgumentException when the form formatter not exists</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformformattername"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getFormFormatterName</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the form formatter name that will be used to render the widget schema.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The form formatter name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformformatters"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getFormFormatters</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns all the form formats defined for this form schema.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of named form formats</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getglobalerrors"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getGlobalErrors</span>&nbsp;($errors)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$errors</td>
+                <td>An array of errors</td>
+              </tr>
+                        </table>
+              <p><strong>Gets errors that need to be included in global errors.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An HTML representation of global errors for the widget</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethelp"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getHelp</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a text help by field name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The help text or an empty string if it is not defined</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethelps"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getHelps</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Sets the help texts.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of help texts</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getjavascripts"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getJavaScripts</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the JavaScript paths associated with the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of JavaScript paths</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlabel"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getLabel</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name (required - the default value is here because PHP do not allow signature changes with inheritance)</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a label by field name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The label name or an empty string if it is not defined</p>
+                                  <p><strong>throws</strong> InvalidArgumentException when you try to get a label for a none existing widget</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlabels"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getLabels</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the labels.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of label names</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnameformat"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getNameFormat</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the format string for the name HTML attribute.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The format string</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpositions"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPositions</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the positions of the fields.</strong></p>
+              <p><p>
+<br /> The field positions are only used when rendering the schema with ->render().</p></p>
+                        <p><strong>returns</strong> An ordered array of field names</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getstylesheets"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getStylesheets</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the stylesheet paths associated with the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of stylesheet paths</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_movefield"></a>
+              <h3>
+                <span class="method-name">moveField</span>&nbsp;($field, $action, $pivot)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$field</td>
+                <td>The field name to move</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$action</td>
+                <td>The action (see above for all possible actions)</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pivot</td>
+                <td>The field name used for AFTER and BEFORE actions</td>
+              </tr>
+                        </table>
+              <p><strong>Moves a field in a given position</strong></p>
+              <p><p>
+<br /> Available actions are:</p><p>  * sfWidgetFormSchema::BEFORE
+<br />  * sfWidgetFormSchema::AFTER
+<br />  * sfWidgetFormSchema::LAST
+<br />  * sfWidgetFormSchema::FIRST</p></p>
+                                  <p><strong>throws</strong> InvalidArgumentException when field not exist</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_needsmultipartform"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">needsMultipartForm</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the widget schema needs a multipart form.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the widget schema needs a multipart form, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetexists"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">offsetExists</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if the schema has a field with the given name (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the schema has a field with the given name, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetget"></a>
+              <h3>
+                (sfWidget|null)&nbsp;<span class="method-name">offsetGet</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the field associated with the given name (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The sfWidget instance associated with the given name, null if it does not exist</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetset"></a>
+              <h3>
+                <span class="method-name">offsetSet</span>&nbsp;($name, $widget)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$widget</td>
+                <td>An sfWidget instance</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a field (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                                  <p><strong>throws</strong> InvalidArgumentException when the field is not instance of sfWidget</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_offsetunset"></a>
+              <h3>
+                <span class="method-name">offsetUnset</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>field name</td>
+              </tr>
+                        </table>
+              <p><strong>Removes a field by name (implements the ArrayAccess interface).</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_render"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">render</span>&nbsp;($name, $values, $attributes, $errors)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The name of the HTML widget</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$values</td>
+                <td>The values of the widget</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of HTML attributes</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$errors</td>
+                <td>An array of errors</td>
+              </tr>
+                        </table>
+              <p><strong>Renders the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An HTML representation of the widget</p>
+                                  <p><strong>throws</strong> InvalidArgumentException when values type is not array|ArrayAccess</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_renderfield"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">renderField</span>&nbsp;($name, $value, $attributes, $errors)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The field value</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of HTML attributes to be merged with the current HTML attributes</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$errors</td>
+                <td>An array of errors for the field</td>
+              </tr>
+                        </table>
+              <p><strong>Renders a field by name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An HTML string representing the rendered widget</p>
+                                  <p><strong>throws</strong> InvalidArgumentException when the widget not exist</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdefault"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setDefault</span>&nbsp;($name, $value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The default value (required - the default value is here because PHP do not allow signature changes with inheritance)</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the default value for a field.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdefaultformformattername"></a>
+              <h3>
+                <span class="method-name">setDefaultFormFormatterName</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>New default formatter name</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the generic default formatter name used by the class. If you want all</strong></p>
+              <p><p> of your forms to be generated with the <code>list</code> format, you can
+<br /> do it in a project or application configuration class:</p><p> <pre>
+<br /> class ProjectConfiguration extends sfProjectConfiguration
+<br /> {
+<br />   public function setup()
+<br />   {
+<br />     sfWidgetFormSchema::setDefaultFormFormatterName('list');
+<br />   }
+<br /> }
+<br /> </pre></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdefaults"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setDefaults</span>&nbsp;($values)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$values</td>
+                <td>The default values for the widget</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the default values for the widget.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setformformattername"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setFormFormatterName</span>&nbsp;($name)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The form formatter name</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the form formatter name to use when rendering the widget schema.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_sethelp"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setHelp</span>&nbsp;($name, $help)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$help</td>
+                <td>The help text</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a help text.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_sethelps"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setHelps</span>&nbsp;($helps)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$helps</td>
+                <td>An array of help texts</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the help texts to render for each field.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setlabel"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setLabel</span>&nbsp;($name, $value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The field name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The label name (required - the default value is here because PHP do not allow signature changes with inheritance)</td>
+              </tr>
+                        </table>
+              <p><strong>Sets a label.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <p><strong>throws</strong> InvalidArgumentException when you try to set a label on a none existing widget</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setlabels"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setLabels</span>&nbsp;($labels)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$labels</td>
+                <td>An array of label names</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the label names to render for each field.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnameformat"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setNameFormat</span>&nbsp;($format)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$format</td>
+                <td>The format string (must contain a %s for the name placeholder)</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the format string for the name HTML attribute.</strong></p>
+              <p><p>
+<br /> If you are using the form framework with symfony, do not use a reserved word in the
+<br /> name format.  If you do, symfony may act in an unexpected manner.</p><p> For symfony 1.1+, the following words are reserved and must NOT be used as
+<br /> the name format:</p><p>  * module    (example: module[%s])
+<br />  * action    (example: action[%s])</p><p> However, you CAN use other variations, such as actions[%s] (note the s).</p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <p><strong>throws</strong> InvalidArgumentException when no %s exists in the format</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpositions"></a>
+              <h3>
+                (sfWidget)&nbsp;<span class="method-name">setPositions</span>&nbsp;($positions)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$positions</td>
+                <td>An ordered array of field names</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the positions of the fields.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The current widget instance</p>
+                                  <p><strong>throws</strong> InvalidArgumentException when not all fields set in $positions</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___clone"></a>
+              <h3>
+                <span class="method-name">__clone</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($fields, $options, $attributes, $labels, $helps)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/widget/sfWidgetFormSchema.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$fields</td>
+                <td>Initial fields</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>An array of options</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An array of default HTML attributes</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$labels</td>
+                <td>An array of HTML labels</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$helps</td>
+                <td>An array of help texts</td>
+              </tr>
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p>
+<br /> The first argument can be:</p><p>  * null
+<br />  * an array of sfWidget instances</p><p> Available options:</p><p>  * name_format:    The sprintf pattern to use for input names
+<br />  * form_formatter: The form formatter name (table and list are bundled)</p></p>
+                                  <p><strong>throws</strong> InvalidArgumentException when the passed fields not null or array</p>
+                        <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

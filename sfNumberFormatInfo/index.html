@@ -1,0 +1,1432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfNumberFormatInfo Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfNumberFormatInfo Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      i18n      </strong>
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfChoiceFormat">sfChoiceFormat</a></li>
+                      <li><a href="/api/1_4/sfCultureInfo">sfCultureInfo</a></li>
+                      <li><a href="/api/1_4/sfDateFormat">sfDateFormat</a></li>
+                      <li><a href="/api/1_4/sfDateTimeFormatInfo">sfDateTimeFormatInfo</a></li>
+                      <li><a href="/api/1_4/sfI18N">sfI18N</a></li>
+                      <li><a href="/api/1_4/sfI18nApplicationExtract">sfI18nApplicationExtract</a></li>
+                      <li><a href="/api/1_4/sfI18nExtract">sfI18nExtract</a></li>
+                      <li><a href="/api/1_4/sfI18nExtractorInterface">sfI18nExtractorInterface</a></li>
+                      <li><a href="/api/1_4/sfI18nModuleExtract">sfI18nModuleExtract</a></li>
+                      <li><a href="/api/1_4/sfI18nPhpExtractor">sfI18nPhpExtractor</a></li>
+                      <li><a href="/api/1_4/sfI18nYamlExtractor">sfI18nYamlExtractor</a></li>
+                      <li><a href="/api/1_4/sfI18nYamlGeneratorExtractor">sfI18nYamlGeneratorExtractor</a></li>
+                      <li><a href="/api/1_4/sfI18nYamlValidateExtractor">sfI18nYamlValidateExtractor</a></li>
+                      <li><a href="/api/1_4/sfIMessageSource">sfIMessageSource</a></li>
+                      <li><a href="/api/1_4/sfMessageFormat">sfMessageFormat</a></li>
+                      <li><a href="/api/1_4/sfMessageSource">sfMessageSource</a></li>
+                      <li><a href="/api/1_4/sfMessageSource_Aggregate">sfMessageSource_Aggregate</a></li>
+                      <li><a href="/api/1_4/sfMessageSource_Database">sfMessageSource_Database</a></li>
+                      <li><a href="/api/1_4/sfMessageSource_File">sfMessageSource_File</a></li>
+                      <li><a href="/api/1_4/sfMessageSource_gettext">sfMessageSource_gettext</a></li>
+                      <li><a href="/api/1_4/sfMessageSource_MySQL">sfMessageSource_MySQL</a></li>
+                      <li><a href="/api/1_4/sfMessageSource_SQLite">sfMessageSource_SQLite</a></li>
+                      <li><a href="/api/1_4/sfMessageSource_XLIFF">sfMessageSource_XLIFF</a></li>
+                      <li><a href="/api/1_4/sfNumberFormat">sfNumberFormat</a></li>
+                      <li><a href="/api/1_4/sfNumberFormatInfo">sfNumberFormatInfo</a></li>
+                  </ul>
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfNumberFormatInfo">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfNumberFormatInfo">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfNumberFormatInfo">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfNumberFormatInfo">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfNumberFormatInfo class</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">sfNumberFormatInfo</span>
+                <a href="#method_getcurrencyinstance">getCurrencyInstance</a>($culture)
+                <br />
+                <span class="description">Returns the currency format info associated with the specified culture.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getcurrencysymbol">getCurrencySymbol</a>()
+                <br />
+                <span class="description">Gets the string to use as the currency symbol.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="#method_getdecimaldigits">getDecimalDigits</a>()
+                <br />
+                <span class="description">Indicates the number of decimal places.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getdecimalseparator">getDecimalSeparator</a>()
+                <br />
+                <span class="description">Gets the string to use as the decimal separator.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="#method_getdigitsize">getDigitSize</a>()
+                <br />
+                <span class="description">Indicates the digit size.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getgroupseparator">getGroupSeparator</a>()
+                <br />
+                <span class="description">Gets the string that separates groups of digits to the left </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getgroupsizes">getGroupSizes</a>()
+                <br />
+                <span class="description">Gets the number of digits in each group to the left of the decimal</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfNumberFormatInfo</span>
+                <a href="#method_getinstance">getInstance</a>($culture, $type)
+                <br />
+                <span class="description">Returns the sfNumberFormatInfo associated with the specified culture.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfNumberFormatInfo</span>
+                <a href="#method_getinvariantinfo">getInvariantInfo</a>()
+                <br />
+                <span class="description">Gets the default sfNumberFormatInfo that is culture-independent (invariant).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getnansymbol">getNaNSymbol</a>()
+                <br />
+                <span class="description">Gets the string that represents the IEEE NaN (not a number) value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getnegativeinfinitysymbol">getNegativeInfinitySymbol</a>()
+                <br />
+                <span class="description">Gets the string that represents negative infinity.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">arary</span>
+                <a href="#method_getnegativepattern">getNegativePattern</a>()
+                <br />
+                <span class="description">Gets the format pattern for negative values.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getnegativesign">getNegativeSign</a>()
+                <br />
+                <span class="description">Gets the string that denotes that the associated number is negative.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_getpattern">getPattern</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfNumberFormatInfo</span>
+                <a href="#method_getpercentageinstance">getPercentageInstance</a>($culture)
+                <br />
+                <span class="description">Returns the percentage format info associated with the specified culture.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpercentsymbol">getPercentSymbol</a>()
+                <br />
+                <span class="description">Gets the string to use as the percent symbol.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpermillesymbol">getPerMilleSymbol</a>()
+                <br />
+                <span class="description">Gets the string to use as the per mille symbol.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpositiveinfinitysymbol">getPositiveInfinitySymbol</a>()
+                <br />
+                <span class="description">Gets the string that represents positive infinity.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">arary</span>
+                <a href="#method_getpositivepattern">getPositivePattern</a>()
+                <br />
+                <span class="description">Gets the format pattern for positive values.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpositivesign">getPositiveSign</a>()
+                <br />
+                <span class="description">Gets the string that denotes that the associated number is positive.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getprepostfix">getPrePostfix</a>($pattern)
+                <br />
+                <span class="description">Gets the prefix and postfix of a pattern.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfNumberFormatInfo</span>
+                <a href="#method_getscientificinstance">getScientificInstance</a>($culture)
+                <br />
+                <span class="description">Returns the scientific format info associated with the specified culture.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_parsepattern">parsePattern</a>($pattern)
+                <br />
+                <span class="description">Parses the given pattern and return a list of known properties.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setcurrencysymbol">setCurrencySymbol</a>($symbol)
+                <br />
+                <span class="description">Sets the string to use as the currency symbol.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setdecimaldigits">setDecimalDigits</a>($value)
+                <br />
+                <span class="description">Sets the number of decimal places.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setdecimalseparator">setDecimalSeparator</a>($value)
+                <br />
+                <span class="description">Sets the string to use as the decimal separator.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setdigitsize">setDigitSize</a>($value)
+                <br />
+                <span class="description">Sets the digit size.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setgroupseparator">setGroupSeparator</a>($value)
+                <br />
+                <span class="description">Sets the string to use as the group separator.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setgroupsizes">setGroupSizes</a>($groupSize)
+                <br />
+                <span class="description">Sets the number of digits in each group to the left of the decimal.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setnansymbol">setNaNSymbol</a>($value)
+                <br />
+                <span class="description">Sets the string that represents the IEEE NaN (not a number) value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setnegativeinfinitysymbol">setNegativeInfinitySymbol</a>($value)
+                <br />
+                <span class="description">Sets the string that represents negative infinity.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setnegativepattern">setNegativePattern</a>($pattern)
+                <br />
+                <span class="description">Sets the format pattern for negative values.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setnegativesign">setNegativeSign</a>($value)
+                <br />
+                <span class="description">Sets the string that denotes that the associated number is negative.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setpattern">setPattern</a>($type)
+                <br />
+                <span class="description">Sets the pattern for a specific number pattern. The validate patterns</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setpercentsymbol">setPercentSymbol</a>($value)
+                <br />
+                <span class="description">Sets the string to use as the percent symbol.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setpermillesymbol">setPerMilleSymbol</a>($value)
+                <br />
+                <span class="description">Sets the string to use as the per mille symbol.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setpositiveinfinitysymbol">setPositiveInfinitySymbol</a>($value)
+                <br />
+                <span class="description">Sets the string that represents positive infinity.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setpositivepattern">setPositivePattern</a>($pattern)
+                <br />
+                <span class="description">Sets the format pattern for positive values.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setpositivesign">setPositiveSign</a>($value)
+                <br />
+                <span class="description">Sets the string that denotes that the associated number is positive.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method___construct">__construct</a>($data, $type)
+                <br />
+                <span class="description">Initializes a new writable instance of the sfNumberFormatInfo class </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method___get">__get</a>()
+                <br />
+                <span class="description">Allows functions that begins with &#039;set&#039; to be called directly</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method___set">__set</a>()
+                <br />
+                <span class="description">Allows functions that begins with &#039;set&#039; to be called directly</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_getcurrencyinstance"></a>
+              <h3>
+                (sfNumberFormatInfo)&nbsp;<span class="method-name">getCurrencyInstance</span>&nbsp;($culture)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>the culture that gets the NumberFormat property.</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the currency format info associated with the specified culture.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> sfNumberFormatInfo for the specified culture.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcurrencysymbol"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getCurrencySymbol</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string to use as the currency symbol.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> $currency currency symbol.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdecimaldigits"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getDecimalDigits</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Indicates the number of decimal places.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> number of decimal places.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdecimalseparator"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getDecimalSeparator</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string to use as the decimal separator.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> decimal separator.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdigitsize"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getDigitSize</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Indicates the digit size.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> digit size.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgroupseparator"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getGroupSeparator</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string that separates groups of digits to the left </strong></p>
+              <p><p> of the decimal in currency values.</p></p>
+                        <p><strong>returns</strong> currency group separator.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgroupsizes"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getGroupSizes</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the number of digits in each group to the left of the decimal</strong></p>
+              <p><p> There can be two grouping sizes, this fucntion
+<br /> returns <b>array(group1, group2)</b>, if there is only 1 grouping size,
+<br /> group2 will be false.</p></p>
+                        <p><strong>returns</strong> grouping size(s).</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getinstance"></a>
+              <h3>
+                (sfNumberFormatInfo)&nbsp;<span class="method-name">getInstance</span>&nbsp;($culture, $type)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>the culture that gets the sfNumberFormat property.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$type</td>
+                <td>the number formatting type, it should be sfNumberFormatInfo::DECIMAL, sfNumberFormatInfo::CURRENCY, sfNumberFormatInfo::PERCENTAGE, or sfNumberFormatInfo::SCIENTIFIC</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the sfNumberFormatInfo associated with the specified culture.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> sfNumberFormatInfo for the specified culture.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getinvariantinfo"></a>
+              <h3>
+                (sfNumberFormatInfo)&nbsp;<span class="method-name">getInvariantInfo</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the default sfNumberFormatInfo that is culture-independent (invariant).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> default sfNumberFormatInfo.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnansymbol"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getNaNSymbol</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string that represents the IEEE NaN (not a number) value.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> NaN symbol.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnegativeinfinitysymbol"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getNegativeInfinitySymbol</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string that represents negative infinity.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> negative infinity.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnegativepattern"></a>
+              <h3>
+                (arary)&nbsp;<span class="method-name">getNegativePattern</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the format pattern for negative values.</strong></p>
+              <p><p> The negative pattern is composed of a prefix, and postfix.
+<br /> This function returns <b>array(prefix, postfix)</b>.</p></p>
+                        <p><strong>returns</strong> negative pattern.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnegativesign"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getNegativeSign</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string that denotes that the associated number is negative.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> negative sign.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpattern"></a>
+              <h3>
+                <span class="method-name">getPattern</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpercentageinstance"></a>
+              <h3>
+                (sfNumberFormatInfo)&nbsp;<span class="method-name">getPercentageInstance</span>&nbsp;($culture)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>the culture that gets the NumberFormat property.</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the percentage format info associated with the specified culture.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> sfNumberFormatInfo for the specified culture.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpercentsymbol"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPercentSymbol</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string to use as the percent symbol.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> percent symbol.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpermillesymbol"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPerMilleSymbol</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string to use as the per mille symbol.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> percent symbol.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpositiveinfinitysymbol"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPositiveInfinitySymbol</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string that represents positive infinity.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> positive infinity.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpositivepattern"></a>
+              <h3>
+                (arary)&nbsp;<span class="method-name">getPositivePattern</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the format pattern for positive values.</strong></p>
+              <p><p> The positive pattern is composed of a prefix, and postfix.
+<br /> This function returns <b>array(prefix, postfix)</b>.</p></p>
+                        <p><strong>returns</strong> positive pattern.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpositivesign"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPositiveSign</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the string that denotes that the associated number is positive.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> positive sign.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getprepostfix"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPrePostfix</span>&nbsp;($pattern)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>pattern</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the prefix and postfix of a pattern.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> of prefix and postfix, array(prefix,postfix).</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getscientificinstance"></a>
+              <h3>
+                (sfNumberFormatInfo)&nbsp;<span class="method-name">getScientificInstance</span>&nbsp;($culture)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>the culture that gets the NumberFormat property.</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the scientific format info associated with the specified culture.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> sfNumberFormatInfo for the specified culture.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_parsepattern"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">parsePattern</span>&nbsp;($pattern)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a number pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Parses the given pattern and return a list of known properties.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> list of pattern properties.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setcurrencysymbol"></a>
+              <h3>
+                <span class="method-name">setCurrencySymbol</span>&nbsp;($symbol)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$symbol</td>
+                <td>currency symbol.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string to use as the currency symbol.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdecimaldigits"></a>
+              <h3>
+                <span class="method-name">setDecimalDigits</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>number of decimal places.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the number of decimal places.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdecimalseparator"></a>
+              <h3>
+                <span class="method-name">setDecimalSeparator</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>the decimal point</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string to use as the decimal separator.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdigitsize"></a>
+              <h3>
+                <span class="method-name">setDigitSize</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>digit size.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the digit size.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setgroupseparator"></a>
+              <h3>
+                <span class="method-name">setGroupSeparator</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>the group separator.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string to use as the group separator.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setgroupsizes"></a>
+              <h3>
+                <span class="method-name">setGroupSizes</span>&nbsp;($groupSize)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$groupSize</td>
+                <td>grouping size(s).</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the number of digits in each group to the left of the decimal.</strong></p>
+              <p><p> There can be two grouping sizes, the value should
+<br /> be an <b>array(group1, group2)</b>, if there is only 1 grouping size,
+<br /> group2 should be false.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnansymbol"></a>
+              <h3>
+                <span class="method-name">setNaNSymbol</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>NaN symbol.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string that represents the IEEE NaN (not a number) value.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnegativeinfinitysymbol"></a>
+              <h3>
+                <span class="method-name">setNegativeInfinitySymbol</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>negative infinity.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string that represents negative infinity.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnegativepattern"></a>
+              <h3>
+                <span class="method-name">setNegativePattern</span>&nbsp;($pattern)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>negative pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the format pattern for negative values.</strong></p>
+              <p><p> The negative pattern is composed of a prefix, and postfix in the form
+<br /> <b>array(prefix, postfix)</b>.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnegativesign"></a>
+              <h3>
+                <span class="method-name">setNegativeSign</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>negative sign.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string that denotes that the associated number is negative.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpattern"></a>
+              <h3>
+                <span class="method-name">setPattern</span>&nbsp;($type)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$type</td>
+                <td>pattern type.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the pattern for a specific number pattern. The validate patterns</strong></p>
+              <p><p> sfNumberFormatInfo::DECIMAL, sfNumberFormatInfo::CURRENCY,
+<br /> sfNumberFormatInfo::PERCENTAGE, or sfNumberFormatInfo::SCIENTIFIC</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpercentsymbol"></a>
+              <h3>
+                <span class="method-name">setPercentSymbol</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>percent symbol.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string to use as the percent symbol.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpermillesymbol"></a>
+              <h3>
+                <span class="method-name">setPerMilleSymbol</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>percent symbol.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string to use as the per mille symbol.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpositiveinfinitysymbol"></a>
+              <h3>
+                <span class="method-name">setPositiveInfinitySymbol</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>positive infinity.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string that represents positive infinity.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpositivepattern"></a>
+              <h3>
+                <span class="method-name">setPositivePattern</span>&nbsp;($pattern)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>positive pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the format pattern for positive values.</strong></p>
+              <p><p> The positive pattern is composed of a prefix, and postfix in the form
+<br /> <b>array(prefix, postfix)</b>.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpositivesign"></a>
+              <h3>
+                <span class="method-name">setPositiveSign</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>positive sign.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the string that denotes that the associated number is positive.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($data, $type)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$data</td>
+                <td>ICU data for date time formatting.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$type</td>
+                <td>The sfNumberFormatInfo type</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes a new writable instance of the sfNumberFormatInfo class </strong></p>
+              <p><p> that is dependent on the ICU data for number, decimal, and currency
+<br /> formatting information. <b>N.B.</b>You should not initialize this 
+<br /> class directly unless you know what you are doing. Please use use 
+<br /> sfNumberFormatInfo::getInstance() to create an instance.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___get"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">__get</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Allows functions that begins with &#039;set&#039; to be called directly</strong></p>
+              <p><p> as an attribute/property to retrieve the value.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___set"></a>
+              <h3>
+                <span class="method-name">__set</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/i18n/sfNumberFormatInfo.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Allows functions that begins with &#039;set&#039; to be called directly</strong></p>
+              <p><p> as an attribute/property to set the value.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfPager Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfPager Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      addon      </strong>
+      <small> - <a href="addon.html">4 classes</a></small>
+
+              <ul>
+                      <li><a href="sfData.html">sfData</a></li>
+                      <li><a href="sfPager.html">sfPager</a></li>
+                      <li><a href="sfPropel.html">sfPropel</a></li>
+                      <li><a href="sfPropelPager.html">sfPropelPager</a></li>
+                  </ul>
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfPager.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfPager.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfPager.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfPager.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfPager class.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="sfPropelPager.html">sfPropelPager</a>, <a href="sfDoctrinePager.html">sfDoctrinePager</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfPager</strong>
+
+              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_count">count</a>()
+                <br />
+                <span class="description">Returns the total number of results.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_current">current</a>()
+                <br />
+                <span class="description">Returns the current result.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfPager.html#method_getclass">getClass</a>()
+                <br />
+                <span class="description">Returns the current class.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfPager.html#method_getcurrent">getCurrent</a>()
+                <br />
+                <span class="description">Returns the current object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getcurrentmaxlink">getCurrentMaxLink</a>()
+                <br />
+                <span class="description">Returns the current pager&#039;s max link.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getcursor">getCursor</a>()
+                <br />
+                <span class="description">Returns the current cursor.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getfirstindice">getFirstIndice</a>()
+                <br />
+                <span class="description">Returns the first index on the current page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getfirstpage">getFirstPage</a>()
+                <br />
+                <span class="description">Returns the first page number.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getlastindice">getLastIndice</a>()
+                <br />
+                <span class="description">Returns the last index on the current page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getlastpage">getLastPage</a>()
+                <br />
+                <span class="description">Returns the last page number.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfPager.html#method_getlinks">getLinks</a>($nb_links)
+                <br />
+                <span class="description">Returns an array of page numbers to use in pagination links.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getmaxperpage">getMaxPerPage</a>()
+                <br />
+                <span class="description">Returns the maximum number of results per page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getmaxrecordlimit">getMaxRecordLimit</a>()
+                <br />
+                <span class="description">Returns the current pager&#039;s max record limit.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getnbresults">getNbResults</a>()
+                <br />
+                <span class="description">Returns the number of results.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed|null</span>
+                <a href="sfPager.html#method_getnext">getNext</a>()
+                <br />
+                <span class="description">Returns the next object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getnextpage">getNextPage</a>()
+                <br />
+                <span class="description">Returns the next page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfPager.html#method_getobjectbycursor">getObjectByCursor</a>($pos)
+                <br />
+                <span class="description">Returns an object by cursor position.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getpage">getPage</a>()
+                <br />
+                <span class="description">Returns the current page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfPager.html#method_getparameter">getParameter</a>($name, $default)
+                <br />
+                <span class="description">Returns a parameter.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfParameterHolder</span>
+                <a href="sfPager.html#method_getparameterholder">getParameterHolder</a>()
+                <br />
+                <span class="description">Returns the current pager&#039;s parameter holder.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed|null</span>
+                <a href="sfPager.html#method_getprevious">getPrevious</a>()
+                <br />
+                <span class="description">Returns the previous object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfPager.html#method_getpreviouspage">getPreviousPage</a>()
+                <br />
+                <span class="description">Returns the previous page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfPager.html#method_getresults">getResults</a>()
+                <br />
+                <span class="description">Returns an array of results on the given page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfPager.html#method_hasparameter">hasParameter</a>($name)
+                <br />
+                <span class="description">Checks whether a parameter has been set.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfPager.html#method_havetopaginate">haveToPaginate</a>()
+                <br />
+                <span class="description">Returns true if the current query requires pagination.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_init">init</a>()
+                <br />
+                <span class="description">Initialize the pager.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_initializeiterator">initializeIterator</a>()
+                <br />
+                <span class="description">Loads data into properties used for iteration.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfPager.html#method_isfirstpage">isFirstPage</a>()
+                <br />
+                <span class="description">Returns true if on the first page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfPager.html#method_isiteratorinitialized">isIteratorInitialized</a>()
+                <br />
+                <span class="description">Returns true if the properties used for iteration have been initialized.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfPager.html#method_islastpage">isLastPage</a>()
+                <br />
+                <span class="description">Returns true if on the last page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_key">key</a>()
+                <br />
+                <span class="description">Returns the current key.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_next">next</a>()
+                <br />
+                <span class="description">Advances the internal pointer and returns the current result.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_resetiterator">resetIterator</a>()
+                <br />
+                <span class="description">Empties properties used for iteration.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfPager.html#method_retrieveobject">retrieveObject</a>()
+                <br />
+                <span class="description">Returns an object at a certain offset.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_rewind">rewind</a>()
+                <br />
+                <span class="description">Resets the internal pointer and returns the current result.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_setclass">setClass</a>($class)
+                <br />
+                <span class="description">Sets the current class.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_setcursor">setCursor</a>($pos)
+                <br />
+                <span class="description">Sets the current cursor.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_setlastpage">setLastPage</a>($page)
+                <br />
+                <span class="description">Sets the last page number.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_setmaxperpage">setMaxPerPage</a>($max)
+                <br />
+                <span class="description">Sets the maximum number of results per page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_setmaxrecordlimit">setMaxRecordLimit</a>($limit)
+                <br />
+                <span class="description">Sets the current pager&#039;s max record limit.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_setnbresults">setNbResults</a>($nb)
+                <br />
+                <span class="description">Sets the number of results.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_setpage">setPage</a>($page)
+                <br />
+                <span class="description">Sets the current page.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_setparameter">setParameter</a>($name, $value)
+                <br />
+                <span class="description">Sets a parameter.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method_valid">valid</a>()
+                <br />
+                <span class="description">Returns true if pointer is within bounds.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfPager.html#method___construct">__construct</a>($class, $maxPerPage)
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_count"></a>
+              <h3>
+                <span class="method-name">count</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the total number of results.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_current"></a>
+              <h3>
+                <span class="method-name">current</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current result.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getclass"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getClass</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current class.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcurrent"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getCurrent</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcurrentmaxlink"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getCurrentMaxLink</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current pager&#039;s max link.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcursor"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getCursor</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current cursor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfirstindice"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getFirstIndice</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the first index on the current page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfirstpage"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getFirstPage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the first page number.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlastindice"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getLastIndice</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the last index on the current page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlastpage"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getLastPage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the last page number.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlinks"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getLinks</span>&nbsp;($nb_links)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$nb_links</td>
+                <td>The maximum number of page numbers to return</td>
+              </tr>
+                        </table>
+              <p><strong>Returns an array of page numbers to use in pagination links.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmaxperpage"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getMaxPerPage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the maximum number of results per page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmaxrecordlimit"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getMaxRecordLimit</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current pager&#039;s max record limit.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnbresults"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getNbResults</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the number of results.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnext"></a>
+              <h3>
+                (mixed|null)&nbsp;<span class="method-name">getNext</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the next object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnextpage"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getNextPage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the next page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getobjectbycursor"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getObjectByCursor</span>&nbsp;($pos)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns an object by cursor position.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpage"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getPage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getparameter"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getParameter</span>&nbsp;($name, $default)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                                    </table>
+              <p><strong>Returns a parameter.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getparameterholder"></a>
+              <h3>
+                (sfParameterHolder)&nbsp;<span class="method-name">getParameterHolder</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current pager&#039;s parameter holder.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getprevious"></a>
+              <h3>
+                (mixed|null)&nbsp;<span class="method-name">getPrevious</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the previous object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpreviouspage"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getPreviousPage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the previous page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getresults"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getResults</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns an array of results on the given page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_hasparameter"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">hasParameter</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Checks whether a parameter has been set.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_havetopaginate"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">haveToPaginate</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the current query requires pagination.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_init"></a>
+              <h3>
+                <span class="method-name">init</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Initialize the pager.</strong></p>
+              <p><p>
+<br /> Function to be called after parameters have been set.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initializeiterator"></a>
+              <h3>
+                <span class="method-name">initializeIterator</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Loads data into properties used for iteration.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isfirstpage"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isFirstPage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if on the first page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isiteratorinitialized"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isIteratorInitialized</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the properties used for iteration have been initialized.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_islastpage"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isLastPage</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if on the last page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_key"></a>
+              <h3>
+                <span class="method-name">key</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the current key.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_next"></a>
+              <h3>
+                <span class="method-name">next</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Advances the internal pointer and returns the current result.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_resetiterator"></a>
+              <h3>
+                <span class="method-name">resetIterator</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Empties properties used for iteration.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_retrieveobject"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">retrieveObject</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns an object at a certain offset.</strong></p>
+              <p><p>
+<br /> Used internally by {@link getCurrent()}.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_rewind"></a>
+              <h3>
+                <span class="method-name">rewind</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Resets the internal pointer and returns the current result.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setclass"></a>
+              <h3>
+                <span class="method-name">setClass</span>&nbsp;($class)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Sets the current class.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setcursor"></a>
+              <h3>
+                <span class="method-name">setCursor</span>&nbsp;($pos)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Sets the current cursor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setlastpage"></a>
+              <h3>
+                <span class="method-name">setLastPage</span>&nbsp;($page)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Sets the last page number.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setmaxperpage"></a>
+              <h3>
+                <span class="method-name">setMaxPerPage</span>&nbsp;($max)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Sets the maximum number of results per page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setmaxrecordlimit"></a>
+              <h3>
+                <span class="method-name">setMaxRecordLimit</span>&nbsp;($limit)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Sets the current pager&#039;s max record limit.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnbresults"></a>
+              <h3>
+                <span class="method-name">setNbResults</span>&nbsp;($nb)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Sets the number of results.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpage"></a>
+              <h3>
+                <span class="method-name">setPage</span>&nbsp;($page)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Sets the current page.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setparameter"></a>
+              <h3>
+                <span class="method-name">setParameter</span>&nbsp;($name, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                                    </table>
+              <p><strong>Sets a parameter.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_valid"></a>
+              <h3>
+                <span class="method-name">valid</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if pointer is within bounds.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($class, $maxPerPage)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$class</td>
+                <td>The model class</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$maxPerPage</td>
+                <td>Number of records to display per page</td>
+              </tr>
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

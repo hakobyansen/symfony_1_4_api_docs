@@ -1,0 +1,957 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfDoctrineFormGenerator Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfDoctrineFormGenerator Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      generator      </strong>
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfDoctrineFormFilterGenerator">sfDoctrineFormFilterGenerator</a></li>
+                      <li><a href="/api/1_4/sfDoctrineFormGenerator">sfDoctrineFormGenerator</a></li>
+                      <li><a href="/api/1_4/sfGenerator">sfGenerator</a></li>
+                      <li><a href="/api/1_4/sfGeneratorManager">sfGeneratorManager</a></li>
+                      <li><a href="/api/1_4/sfModelGenerator">sfModelGenerator</a></li>
+                      <li><a href="/api/1_4/sfModelGeneratorConfiguration">sfModelGeneratorConfiguration</a></li>
+                      <li><a href="/api/1_4/sfModelGeneratorConfigurationField">sfModelGeneratorConfigurationField</a></li>
+                      <li><a href="/api/1_4/sfModelGeneratorHelper">sfModelGeneratorHelper</a></li>
+                      <li><a href="/api/1_4/sfPropelFormFilterGenerator">sfPropelFormFilterGenerator</a></li>
+                      <li><a href="/api/1_4/sfPropelFormGenerator">sfPropelFormGenerator</a></li>
+                  </ul>
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfDoctrineFormGenerator">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfDoctrineFormGenerator">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfDoctrineFormGenerator">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfDoctrineFormGenerator">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>Doctrine form generator.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="/api/1_4/sfDoctrineFormFilterGenerator">sfDoctrineFormFilterGenerator</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfDoctrineFormGenerator</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="/api/1_4/sfGenerator">sfGenerator</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_arrayexport">arrayExport</a>($values)
+                <br />
+                <span class="description">Array export. Export array to formatted php code</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_filtermodels">filterModels</a>()
+                <br />
+                <span class="description">Filter out models that have disabled generation of form classes</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_generate">generate</a>()
+                <br />
+                <span class="description">Generates classes and templates in cache.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="#method_getcolumnnamemaxlength">getColumnNameMaxLength</a>()
+                <br />
+                <span class="description">Returns the maximum length for a column name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getcolumns">getColumns</a>()
+                <br />
+                <span class="description">Get array of sfDoctrineColumn objects that exist on the current model but not its parent.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getforeignkeynames">getForeignKeyNames</a>()
+                <br />
+                <span class="description">Returns PHP names for all foreign keys of the current table.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getformclasstoextend">getFormClassToExtend</a>()
+                <br />
+                <span class="description">Get the name of the form class to extend based on the inheritance of the model</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_geti18nmodel">getI18nModel</a>()
+                <br />
+                <span class="description">Returns the i18n model name for the current table.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getmanytomanyrelations">getManyToManyRelations</a>()
+                <br />
+                <span class="description">Returns an array of relations that represents a many to many relationship.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string|null</span>
+                <a href="#method_getparentmodel">getParentModel</a>()
+                <br />
+                <span class="description">Returns the name of the model class this model extends.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getpluginmodels">getPluginModels</a>()
+                <br />
+                <span class="description">Get all the models which are a part of a plugin and the name of the plugin.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpluginnameformodel">getPluginNameForModel</a>($modelName)
+                <br />
+                <span class="description">Get the name of the plugin a model belongs to</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_getprimarykey">getPrimaryKey</a>()
+                <br />
+                <span class="description">Returns the first primary key column of the current table.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getprimarykeycolumnames">getPrimaryKeyColumNames</a>()
+                <br />
+                <span class="description">Returns an array of primary key column names.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getprimarykeycolumnamesasstring">getPrimaryKeyColumNamesAsString</a>()
+                <br />
+                <span class="description">Returns a PHP string representation for the array of all primary key column names.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_getuniquecolumnnames">getUniqueColumnNames</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getvalidatorclassforcolumn">getValidatorClassForColumn</a>($column)
+                <br />
+                <span class="description">Returns a sfValidator class name for a given column.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getvalidatoroptionsforcolumn">getValidatorOptionsForColumn</a>($column)
+                <br />
+                <span class="description">Returns a PHP string representing options to pass to a validator for a given column.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getwidgetclassforcolumn">getWidgetClassForColumn</a>($column)
+                <br />
+                <span class="description">Returns a sfWidgetForm class name for a given column.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getwidgetoptionsforcolumn">getWidgetOptionsForColumn</a>($column)
+                <br />
+                <span class="description">Returns a PHP string representing options to pass to a widget for a given column.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_initialize">initialize</a>()
+                <br />
+                <span class="description">Initializes the current sfGenerator instance.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="#method_isi18n">isI18n</a>()
+                <br />
+                <span class="description">Returns true if the current table is internationalized.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_ispluginmodel">isPluginModel</a>($modelName)
+                <br />
+                <span class="description">Check to see if a model is part of a plugin</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_loadmodels">loadModels</a>()
+                <br />
+                <span class="description">Loads all Doctrine builders.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_underscore">underscore</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="/api/1_4/sfGenerator">sfGenerator</a>              </h3>
+                                                                <a href="/api/1_4/sfGenerator#method_evaltemplate">evalTemplate</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_generate">generate</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_generatephpfiles">generatePhpFiles</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_getgeneratedmodulename">getGeneratedModuleName</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_getgeneratorclass">getGeneratorClass</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_getgeneratormanager">getGeneratorManager</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_getmodulename">getModuleName</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_gettheme">getTheme</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_initialize">initialize</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_replacephpmarks">replacePhpMarks</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_setgeneratedmodulename">setGeneratedModuleName</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_setgeneratorclass">setGeneratorClass</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_setmodulename">setModuleName</a>                  ,                                   <a href="/api/1_4/sfGenerator#method_settheme">setTheme</a>                  ,                                   <a href="/api/1_4/sfGenerator#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_arrayexport"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">arrayExport</span>&nbsp;($values)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Array export. Export array to formatted php code</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> $php</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_filtermodels"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">filterModels</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Filter out models that have disabled generation of form classes</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> $models Array of models to generate forms for</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_generate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">generate</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Generates classes and templates in cache.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The data to put in configuration cache</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcolumnnamemaxlength"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">getColumnNameMaxLength</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the maximum length for a column name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The length of the longer column name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcolumns"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getColumns</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Get array of sfDoctrineColumn objects that exist on the current model but not its parent.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> $columns</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getforeignkeynames"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getForeignKeyNames</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns PHP names for all foreign keys of the current table.</strong></p>
+              <p><p>
+<br /> This method does not returns foreign keys that are also primary keys.</p></p>
+                        <p><strong>returns</strong> An array composed of: * The foreign table PHP name * The foreign key PHP name * A Boolean to indicate whether the column is required or not * A Boolean to indicate whether the column is a many to many relationship or not</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformclasstoextend"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getFormClassToExtend</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Get the name of the form class to extend based on the inheritance of the model</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geti18nmodel"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getI18nModel</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the i18n model name for the current table.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The model class name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmanytomanyrelations"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getManyToManyRelations</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns an array of relations that represents a many to many relationship.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of relations</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getparentmodel"></a>
+              <h3>
+                (string|null)&nbsp;<span class="method-name">getParentModel</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the name of the model class this model extends.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpluginmodels"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPluginModels</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Get all the models which are a part of a plugin and the name of the plugin.</strong></p>
+              <p><p> The array format is modelName => pluginName</p></p>
+                        <p><strong>returns</strong> $pluginModels</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpluginnameformodel"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPluginNameForModel</span>&nbsp;($modelName)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Get the name of the plugin a model belongs to</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> $pluginName</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getprimarykey"></a>
+              <h3>
+                <span class="method-name">getPrimaryKey</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns the first primary key column of the current table.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getprimarykeycolumnames"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPrimaryKeyColumNames</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns an array of primary key column names.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of primary key column names</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getprimarykeycolumnamesasstring"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPrimaryKeyColumNamesAsString</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns a PHP string representation for the array of all primary key column names.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> A PHP string representation for the array of all primary key column names</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getuniquecolumnnames"></a>
+              <h3>
+                <span class="method-name">getUniqueColumnNames</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvalidatorclassforcolumn"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getValidatorClassForColumn</span>&nbsp;($column)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns a sfValidator class name for a given column.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The name of a subclass of sfValidator</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getvalidatoroptionsforcolumn"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getValidatorOptionsForColumn</span>&nbsp;($column)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns a PHP string representing options to pass to a validator for a given column.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The options to pass to the validator as a PHP string</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getwidgetclassforcolumn"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getWidgetClassForColumn</span>&nbsp;($column)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns a sfWidgetForm class name for a given column.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The name of a subclass of sfWidgetForm</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getwidgetoptionsforcolumn"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getWidgetOptionsForColumn</span>&nbsp;($column)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns a PHP string representing options to pass to a widget for a given column.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The options to pass to the widget as a PHP string</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                <span class="method-name">initialize</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Initializes the current sfGenerator instance.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isi18n"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">isI18n</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the current table is internationalized.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the current table is internationalized, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_ispluginmodel"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isPluginModel</span>&nbsp;($modelName)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Check to see if a model is part of a plugin</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> $bool</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_loadmodels"></a>
+              <h3>
+                <span class="method-name">loadModels</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Loads all Doctrine builders.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_underscore"></a>
+              <h3>
+                <span class="method-name">underscore</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/plugins/sfDoctrinePlugin/lib/generator/sfDoctrineFormGenerator.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

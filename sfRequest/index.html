@@ -1,0 +1,614 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+        <meta name="robots" content="index, follow, all" />
+        <meta name="Author" content="Extreme Sensio" />
+        <meta name="Language" content="en"/>
+        <meta name="Copyright" content="Sensio Labs" />
+        <meta name="Publisher" content="Sensio Labs" />
+        <meta name="Description" content="Symfony is a set of reusable PHP components and a PHP framework to build web applications, APIs, microservices and web services." />
+        <meta name="Keywords" content="symfony2, symfony, project, framework, php, php5, open-source, components, symphony, symfony framework, symfony tutorial" />
+
+        <link rel="search" type="application/opensearchdescription+xml" href="https://symfony.com/opensearch/documentation.xml" title="Symfony2 documentation" />
+
+        <title> - Symfony</title>
+        <link rel="stylesheet" href="/legacy/css/all.css">
+            <link rel="stylesheet" type="text/css" media="all" href="/legacy/css/highlight.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="/legacy/css/legacy.css" />
+
+        <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA-89393-6', 'auto');
+        ga('send', 'pageview');
+        </script>
+        <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+            </head>
+
+    <body>
+        <div id="content_wrapper" class="">
+            <div id="sln"></div>
+
+            <div class="content">
+                
+    
+    
+<div class="header">
+    <div class="content_header clear_fix">
+        <div class="illustration_logo_header">
+                            <a href="/"><img src="/images/common/logo/logo_symfony_header.png" alt="Symfony" class="png_fix" /></a>
+                    </div>
+        <div class="box_download clear_fix">
+            <div class="legend_download">
+                <img src="/images/en/a_sensiolabs_product.png" alt="a SensioLabs product" class="png_fix" />
+            </div>
+            <div class="download_button_wrapper">
+                <a href="/download" class="download_button">    <span class="border_l png_fix">
+        <span class="border_r png_fix">
+            <span class="btn_bg png_fix">
+                DOWNLOAD NOW
+            </span>
+        </span>
+    </span>
+</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                <div class="main_menu clear_fix" id="main_menu_id">
+                    
+    <li class="selected">
+        <a href="/what-is-symfony">What is Symfony?</a>
+    </li>
+    <li >
+        <a href="/doc/current/index.html">Documentation</a>
+    </li>
+    <li >
+        <a href="/community">Community</a>
+    </li>
+    <li >
+        <a href="/showcase/">Showcase</a>
+    </li>
+    <li >
+        <a href="/services">Business Solutions</a>
+    </li>
+    <li >
+        <a href="/blog/">News</a>
+    </li>
+                </div>
+
+                                    <div class="main_content">
+                            <div style="-moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; background-color: #ffa; padding: 15px; margin-bottom: 20px; color: #555">
+        <strong>Caution</strong>: You are browsing the legacy <a href="/legacy"><img style="vertical-align: middle; padding-left: 3px" src="/legacy/images/symfony_button.gif" /></a> <a href="/legacy">1.x</a> part of this website.
+    </div>
+
+    
+                                <div class="box_columns clear_fix">
+                                                                                                            <div class="column_01">
+                                                                                                                                                                                                <div class="submenu">
+                                                        <ul class="list_submenu">
+                                                            
+    <li >
+        <a href="/at-a-glance">Symfony at a Glance</a>
+    </li>
+    <li >
+        <a href="/components">Symfony Components</a>
+    </li>
+    <li >
+        <a href="/projects">Projects using Symfony</a>
+    </li>
+    <li >
+        <a href="/blog/category/case-studies">Case Studies</a>
+    </li>
+    <li >
+        <a href="/roadmap">Symfony Roadmap</a>
+    </li>
+    <li >
+        <a href="/doc/current/contributing/code/security.html">Security Policy</a>
+    </li>
+    <li >
+        <a href="/logo">Logo &amp; Screenshots</a>
+    </li>
+    <li >
+        <a href="/license">Trademark &amp; Licenses</a>
+    </li>
+    <li >
+        <a href="/legacy">symfony1 Legacy</a>
+    </li>
+
+                                                        </ul>
+                                                    </div>
+                                                
+                                                <div class="ads m-b-30">
+            <div class="ad m-b-15" id="ad_trainings_1">
+            <h3>
+                <a href="https://training.sensiolabs.com/en/courses?q=symfony" data-tracked data-category="Ads" data-action="Ads" data-label="trainings_1">
+                    Master Symfony fundamentals
+                </a>
+            </h3>
+            <div>Be trained by SensioLabs experts (2 to 6 day sessions -- French or English).</div>
+            <div><cite>training.sensiolabs.com</cite></div>
+        </div>
+            <div class="ad m-b-15" id="ad_support_1">
+            <h3>
+                <a href="https://sensiolabs.com/en/packaged-solutions/index.html" data-tracked data-category="Ads" data-action="Ads" data-label="support_1">
+                    Discover SensioLabs&#039; Professional Business Solutions
+                </a>
+            </h3>
+            <div>Peruse our complete Symfony &amp; PHP solutions catalog for your web development needs.</div>
+            <div><cite>sensiolabs.com</cite></div>
+        </div>
+    </div>
+
+<div class="ads">
+    <a href="https://blackfire.io/24-days" data-tracked data-category="Ads" data-action="sidebar" data-label="blackfire">
+        <img src="/images/blackfire-profiler.png" class="m-b-15 img-responsive" alt="Blackfire Profiler Fire up your PHP Apps Performance" />
+    </a>
+
+    <a href="https://insight.sensiolabs.com" data-tracked data-category="Ads" data-action="sidebar" data-label="insight">
+        <img src="/images/sensiolabsinsight.png" class="img-responsive" alt="PHP Project Quality Done Right" />
+    </a>
+</div>
+                                                                                                                                                                                    </div>
+                                                                        <div class="column_02">
+                                                                                    <div class="breadcrumb">
+                                                <a href="/">Home</a> &raquo;
+                                                            symfony 1.x &raquo;
+                                                </div>
+
+                                                                                                <div class="box_title">
+                                                                                                        <h1 class="title_01"></h1>
+                                                </div>
+                                            
+        
+                                                <div class="block_grey_highlight_wrapper">
+        <div class="block_grey_highlight">
+            <div class="clear_fix">
+                <div class="column_left">
+                    <img style="width: 170px" src="/logos/symfony1.gif" alt="symfony 1.x" title="symfony 1.x" />
+                </div>
+                <div class="column_right">
+                    <h2>The symfony 1.x Homepage</h2>
+                    <p>
+
+                        The symfony 1.x branch of the framework started in 2005 and the latest
+                        stable version and long term support release is symfony 1.4. As of
+                        November 2012, symfony 1.x is not maintained anymore and you are
+                        encouraged to have a look at Symfony2 for any new projects.
+
+                    </p>
+                    <p>
+                        <a href="/legacy/doc" class="non_extensible_button button_01 button_01_selected">    <span class="border_l png_fix">
+        <span class="border_r png_fix">
+            <span class="btn_bg png_fix">
+                ACCESS THE DOCUMENTATION
+            </span>
+        </span>
+    </span>
+</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="block_grey_highlight_spacer"></div>
+                <div class="box_hr_dark"><hr /></div>
+
+            <div class="block_grey_highlight_spacer"></div>
+
+            <div class="block_grey_footer_links clear_fix">
+                <ul>
+                    <li><a href="/legacy/doc">Documentation</a></li>
+                </ul>
+                <ul>
+                    <li><a href="http://www.symfony-project.org/plugins">Plugins</a></li>
+                </ul>
+                <ul>
+                    <li><a href="http://symfony-project.org/api/">API</a></li>
+                </ul>
+            </div>
+
+            <div class="block_grey_highlight_spacer"></div>
+                <div class="box_hr_dark"><hr /></div>
+
+            <div class="block_grey_highlight_spacer"></div>
+
+            <div class="clear_fix">
+                <h3 style="font-family: Georgia, sans-serif; font-size: 18px; margin-bottom: 1em;">Download symfony 1.x legacy versions</h3>
+                <form action="/download_legacy" method="get">
+                    <fieldset>
+                        <div class="form_row">
+                            <div class="field_column">
+                                <label for="version_selection_02_id" style="color: #999; font-size: 14px;">Select version</label>
+
+                                <select id="version_selection_02_id" name="version" style="font-size: 14px; padding: 3px;">
+                                                                                                                                                                        <option value="1.4.20">Symfony 1.4.20</option>
+                                                                                            <option value="1.4.19">Symfony 1.4.19</option>
+                                                                                            <option value="1.4.18">Symfony 1.4.18</option>
+                                                                                            <option value="1.4.17">Symfony 1.4.17</option>
+                                                                                            <option value="1.4.16">Symfony 1.4.16</option>
+                                                                                            <option value="1.4.15">Symfony 1.4.15</option>
+                                                                                            <option value="1.4.14">Symfony 1.4.14</option>
+                                                                                            <option value="1.4.13">Symfony 1.4.13</option>
+                                                                                            <option value="1.4.12">Symfony 1.4.12</option>
+                                                                                            <option value="1.4.11">Symfony 1.4.11</option>
+                                                                                            <option value="1.4.10">Symfony 1.4.10</option>
+                                                                                            <option value="1.4.9">Symfony 1.4.9</option>
+                                                                                            <option value="1.4.8">Symfony 1.4.8</option>
+                                                                                            <option value="1.4.7">Symfony 1.4.7</option>
+                                                                                            <option value="1.4.6">Symfony 1.4.6</option>
+                                                                                            <option value="1.4.5">Symfony 1.4.5</option>
+                                                                                            <option value="1.4.4">Symfony 1.4.4</option>
+                                                                                            <option value="1.4.3">Symfony 1.4.3</option>
+                                                                                            <option value="1.4.2">Symfony 1.4.2</option>
+                                                                                            <option value="1.4.1">Symfony 1.4.1</option>
+                                                                                            <option value="1.4.0">Symfony 1.4.0</option>
+                                                                                                                                                                                                                                                            <option value="1.3.11">Symfony 1.3.11</option>
+                                                                                            <option value="1.3.10">Symfony 1.3.10</option>
+                                                                                            <option value="1.3.9">Symfony 1.3.9</option>
+                                                                                            <option value="1.3.8">Symfony 1.3.8</option>
+                                                                                            <option value="1.3.7">Symfony 1.3.7</option>
+                                                                                            <option value="1.3.6">Symfony 1.3.6</option>
+                                                                                            <option value="1.3.5">Symfony 1.3.5</option>
+                                                                                            <option value="1.3.4">Symfony 1.3.4</option>
+                                                                                            <option value="1.3.3">Symfony 1.3.3</option>
+                                                                                            <option value="1.3.2">Symfony 1.3.2</option>
+                                                                                            <option value="1.3.1">Symfony 1.3.1</option>
+                                                                                            <option value="1.3.0">Symfony 1.3.0</option>
+                                                                                                                                                                                                                                                            <option value="1.2.12">Symfony 1.2.12</option>
+                                                                                            <option value="1.2.11">Symfony 1.2.11</option>
+                                                                                            <option value="1.2.10">Symfony 1.2.10</option>
+                                                                                            <option value="1.2.9">Symfony 1.2.9</option>
+                                                                                            <option value="1.2.8">Symfony 1.2.8</option>
+                                                                                            <option value="1.2.7">Symfony 1.2.7</option>
+                                                                                            <option value="1.2.6">Symfony 1.2.6</option>
+                                                                                            <option value="1.2.5">Symfony 1.2.5</option>
+                                                                                            <option value="1.2.4">Symfony 1.2.4</option>
+                                                                                            <option value="1.2.3">Symfony 1.2.3</option>
+                                                                                            <option value="1.2.2">Symfony 1.2.2</option>
+                                                                                            <option value="1.2.1">Symfony 1.2.1</option>
+                                                                                            <option value="1.2.0">Symfony 1.2.0</option>
+                                                                                                                                                                                                                                                            <option value="1.1.9">Symfony 1.1.9</option>
+                                                                                            <option value="1.1.8">Symfony 1.1.8</option>
+                                                                                            <option value="1.1.7">Symfony 1.1.7</option>
+                                                                                            <option value="1.1.6">Symfony 1.1.6</option>
+                                                                                            <option value="1.1.5">Symfony 1.1.5</option>
+                                                                                            <option value="1.1.4">Symfony 1.1.4</option>
+                                                                                            <option value="1.1.3">Symfony 1.1.3</option>
+                                                                                            <option value="1.1.2">Symfony 1.1.2</option>
+                                                                                            <option value="1.1.1">Symfony 1.1.1</option>
+                                                                                            <option value="1.1.0">Symfony 1.1.0</option>
+                                                                                                                                                                                                                                                            <option value="1.0.22">Symfony 1.0.22</option>
+                                                                                            <option value="1.0.21">Symfony 1.0.21</option>
+                                                                                            <option value="1.0.20">Symfony 1.0.20</option>
+                                                                                            <option value="1.0.19">Symfony 1.0.19</option>
+                                                                                            <option value="1.0.18">Symfony 1.0.18</option>
+                                                                                            <option value="1.0.17">Symfony 1.0.17</option>
+                                                                                            <option value="1.0.16">Symfony 1.0.16</option>
+                                                                                            <option value="1.0.15">Symfony 1.0.15</option>
+                                                                                            <option value="1.0.14">Symfony 1.0.14</option>
+                                                                                            <option value="1.0.13">Symfony 1.0.13</option>
+                                                                                            <option value="1.0.12">Symfony 1.0.12</option>
+                                                                                            <option value="1.0.11">Symfony 1.0.11</option>
+                                                                                            <option value="1.0.10">Symfony 1.0.10</option>
+                                                                                            <option value="1.0.9">Symfony 1.0.9</option>
+                                                                                            <option value="1.0.8">Symfony 1.0.8</option>
+                                                                                            <option value="1.0.7">Symfony 1.0.7</option>
+                                                                                            <option value="1.0.6">Symfony 1.0.6</option>
+                                                                                            <option value="1.0.5">Symfony 1.0.5</option>
+                                                                                            <option value="1.0.4">Symfony 1.0.4</option>
+                                                                                            <option value="1.0.3">Symfony 1.0.3</option>
+                                                                                            <option value="1.0.2">Symfony 1.0.2</option>
+                                                                                            <option value="1.0.1">Symfony 1.0.1</option>
+                                                                                            <option value="1.0.0">Symfony 1.0.0</option>
+                                                                                                                                                        </select>
+
+                                <button type="submit" class="non_extensible_button button_01 button_01_selected" style="float: none">
+                                        <span class="border_l png_fix">
+        <span class="border_r png_fix">
+            <span class="btn_bg png_fix">
+                DOWNLOAD
+            </span>
+        </span>
+    </span>
+
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+                                                                            </div>
+                                                            </div>
+                        
+
+                        
+                                                    <div class="box_relative_content">
+    <div class="relative_content_box_columns clear_fix">
+        <div class="column_01">
+            <h4 class="text-accent">News from the Symfony blog</h4>
+
+<ul class="list--unstyled list--border">
+            <li>
+            <a href="/blog/new-in-symfony-4-1-added-support-for-immutable-dates-in-forms">New in Symfony 4.1: Added support for immutable dates in forms</a>
+            <span class="metadata block m-b-0">February 7, 2018</span>
+        </li>
+            <li>
+            <a href="/blog/a-week-of-symfony-579-29-january-4-february-2018">A week of symfony #579 (29 January - 4 February 2018)</a>
+            <span class="metadata block m-b-0">February 4, 2018</span>
+        </li>
+            <li>
+            <a href="/blog/new-in-symfony-4-1-getting-container-parameters-as-a-service">New in Symfony 4.1: Getting container parameters as a service</a>
+            <span class="metadata block m-b-0">February 1, 2018</span>
+        </li>
+    </ul>
+
+<p><a class="read-more" href="/blog/">Visit The Symfony Blog</a></p>
+
+        </div>
+
+        <div class="column_02">
+                        <h4 class="text-accent">In the news</h4>
+
+<div class="upcoming_event">
+    <div>
+        <a href="https://sensiolabs.com/symfony-certification" target="_blank">
+            <img class="m-b-15" width="100" src="/images/certification-big.png" alt="The Symfony Certification by SensioLabs" />
+        </a>
+        <p class="m-b-5">Symfony 3 Certification now available in 4,000 centers around the world!</p>
+        <p><a class="read-more" href="https://sensiolabs.com/en/symfony/certification/order">Get certified</a></p>
+    </div>
+</div>
+
+                    </div>
+
+        <div class="column_03">
+            <h2 class="title_05">Upcoming training sessions</h2>
+            <ul class="list--unstyled list--border">
+            <li>
+            <a href="https://training.sensiolabs.com/en/courses?q=SF3C1&amp;from=02/12/2018&amp;to=02/13/2018">Getting Started with Symfony 3</a>
+            <span class="metadata block m-b-0">Berlin - February 12, 2018</span>
+        </li>
+            <li>
+            <a href="https://training.sensiolabs.com/en/courses?q=SF3C4&amp;from=02/12/2018&amp;to=02/15/2018">Web Development with Symfony 3</a>
+            <span class="metadata block m-b-0">Berlin - February 12, 2018</span>
+        </li>
+            <li>
+            <a href="https://training.sensiolabs.com/en/courses?q=SF3C2&amp;from=02/14/2018&amp;to=02/15/2018">Mastering Symfony 3</a>
+            <span class="metadata block m-b-0">Berlin - February 14, 2018</span>
+        </li>
+    </ul>
+
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"Getting Started with Symfony 3","startDate":"2018-02-12T00:00:00+00:00","endDate":"2018-02-13T00:00:00+00:00","location":{"@type":"Place","name":"SensioLabs Offices","address":{"@type":"PostalAddress","addressLocality":"Berlin","addressCountry":"Germany"}},"offers":{"@type":"Offer","url":"https:\/\/training.sensiolabs.com\/en\/courses?q=SF3C1&from=02\/12\/2018&to=02\/13\/2018","availability":"https:\/\/schema.org\/InStock"}}</script>
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"Web Development with Symfony 3","startDate":"2018-02-12T00:00:00+00:00","endDate":"2018-02-15T00:00:00+00:00","location":{"@type":"Place","name":"SensioLabs Offices","address":{"@type":"PostalAddress","addressLocality":"Berlin","addressCountry":"Germany"}},"offers":{"@type":"Offer","url":"https:\/\/training.sensiolabs.com\/en\/courses?q=SF3C4&from=02\/12\/2018&to=02\/15\/2018","availability":"https:\/\/schema.org\/InStock"}}</script>
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Event","name":"Mastering Symfony 3","startDate":"2018-02-14T00:00:00+00:00","endDate":"2018-02-15T00:00:00+00:00","location":{"@type":"Place","name":"SensioLabs Offices","address":{"@type":"PostalAddress","addressLocality":"Berlin","addressCountry":"Germany"}},"offers":{"@type":"Offer","url":"https:\/\/training.sensiolabs.com\/en\/courses?q=SF3C2&from=02\/14\/2018&to=02\/15\/2018","availability":"https:\/\/schema.org\/InStock"}}</script>
+
+            <div class="link_01">
+                <a href="https://training.sensiolabs.com/" class="png_fix">View all sessions</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+                        
+                    </div>
+                            </div>
+
+                
+<div class="footer">
+    <div class="content">
+        <h2 class="title_02">
+            <img src="/images/common/logo/logo_sf.png" alt="sf - Symfony" class="illustration_logo_footer png_fix"/> is a trademark of Fabien Potencier. All rights reserved.
+        </h2>
+
+        <ul class="sitemap ">
+    <li>
+        <h6><a href="/what-is-symfony">What is Symfony?</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+    <li >
+        <a href="/at-a-glance">Symfony at a Glance</a>
+    </li>
+    <li >
+        <a href="/components">Symfony Components</a>
+    </li>
+    <li >
+        <a href="/projects">Projects using Symfony</a>
+    </li>
+    <li >
+        <a href="/blog/category/case-studies">Case Studies</a>
+    </li>
+    <li >
+        <a href="/roadmap">Symfony Roadmap</a>
+    </li>
+    <li >
+        <a href="/doc/current/contributing/code/security.html">Security Policy</a>
+    </li>
+    <li >
+        <a href="/logo">Logo &amp; Screenshots</a>
+    </li>
+    <li >
+        <a href="/license">Trademark &amp; Licenses</a>
+    </li>
+    <li >
+        <a href="/legacy">symfony1 Legacy</a>
+    </li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/doc/current/index.html">Learn Symfony</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+                
+    
+
+
+    <li class="">
+        <a href="/doc/current/setup.html">Getting Started</a>
+    </li>
+    <li class="">
+        <a href="/doc/current/components/index.html">Components</a>
+    </li>
+    <li class="">
+        <a href="/doc/current/best_practices/index.html">Best Practices</a>
+    </li>
+    <li class="">
+        <a href="/doc/bundles/">Bundles</a>
+    </li>
+    <li class="">
+        <a href="/doc/current/reference/index.html">Reference</a>
+    </li>
+    <li class="">
+        <a href="https://training.sensiolabs.com/en/courses?q=symfony">Training</a>
+    </li>
+    <li class="">
+        <a href="https://sensiolabs.com/certification">Certification</a>
+    </li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/community">Community</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+    <li >
+        <a href="https://connect.sensiolabs.com/">SensioLabs Connect</a>
+    </li>
+    <li >
+        <a href="/support">Support</a>
+    </li>
+    <li >
+        <a href="/doc/current/contributing/index.html">How to be Involved</a>
+    </li>
+    <li >
+        <a href="/stats/code">Code Stats</a>
+    </li>
+    <li >
+        <a href="/stats/downloads">Downloads Stats</a>
+    </li>
+    <li >
+        <a href="/contributors">Contributors</a>
+    </li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/blog/">Blog</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+    <li class="">
+        <a href="/blog/category/a-week-of-symfony">A week of symfony</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/case-studies">Case studies</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/community">Community</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/documentation">Documentation</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/living-on-the-edge">Living on the edge</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/meet-the-bundle">Meet the Bundle</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/releases">Releases</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/security-advisories">Security Advisories</a>
+    </li>
+    <li class="">
+        <a href="/blog/category/symfony-cmf">Symfony CMF</a>
+    </li>
+
+<li><a href="/events/"><em>Community Events</em></a></li>
+
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/services">Services</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            <li><a href="/services">Our services</a></li>
+            <li><a href="https://training.sensiolabs.com/en">Train developers</a></li>
+            <li><a href="/services#before">Start a project</a></li>
+            <li><a href="https://insight.sensiolabs.com/">Manage your project quality</a></li>
+            <li><a href="https://blackfire.io/">Improve your project performance</a></li>
+            <li><a href="/services">Struggling with your project</a></li>
+            <li><a href="https://sensiolabs.com/en/packaged-solutions/index.html">Support</a></li>
+            <li><a href="/services">Contact us</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <h6><a href="/about">About</a></h6>
+        <ul class="list_menu_footer list-unstyled">
+            
+    <li >
+        <a href="https://sensiolabs.com/en/join_us/join_us.html">SensioLabs</a>
+    </li>
+    <li >
+        <a href="/contributors">Contributors</a>
+    </li>
+    <li >
+        <a href="https://sensiolabs.com/en/join_us/join_us.html">Careers</a>
+    </li>
+    <li >
+        <a href="/support">Support</a>
+    </li>
+
+        </ul>
+    </li>
+</ul>
+
+    </div>
+</div>
+
+        </div>
+
+                <script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
+<script type="text/javascript">
+    window.criteo_q = window.criteo_q || [];
+    window.criteo_q.push (
+        { event: "setAccount", account: 14086 },
+        { event: "viewHome"}
+    );
+</script>
+
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                (function(w, d, s) {
+                    function go() {
+                        var js, fjs = d.getElementsByTagName(s)[0], load = function(url, id) {
+                            if (d.getElementById(id)) {return;}
+                            js = d.createElement(s); js.src = url; js.id = id;
+                            fjs.parentNode.insertBefore(js, fjs);
+                        };
+                        load('https://connect.sensiolabs.com/sln.js?customize_url=https://symfony.com/sln_customiser.js', 'sln_bar');
+                    }
+                    if (w.addEventListener) { w.addEventListener("load", go, false); }
+                    else if (w.attachEvent) { w.attachEvent("onload",go); }
+                } (window, document, 'script'));
+
+               (function () {
+                   var s = document.createElement('link');
+                   s.rel = 'stylesheet';
+                   s.href = 'https://connect.sensiolabs.com/css/sln.css';
+                   var x = document.getElementsByTagName('title')[0];
+                   x.parentNode.insertBefore(s, x);
+               })();
+           });
+       </script>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b10765e88c","applicationID":"3535762","transactionName":"ZVVSYEdRWkACVEJRC1wfcVdBWVtdTHZGSDhxX15AR19YXwZFanoIXVdzW1tERlwPW1NKXghdVVpAcVdHClhY","queueTime":0,"applicationTime":98,"atts":"SRJRFg9LSU4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

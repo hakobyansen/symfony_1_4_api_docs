@@ -1,0 +1,1749 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1 class="only">symfony API</h1>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+        
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/index.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/index.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/index.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/index.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+                  <h2><a href="action.html">action</a></h2>
+          <ul>
+                          <li>
+                <a href="sfAction.html">sfAction</a>:
+                sfAction executes all the logic for the current request.              </li>
+                          <li>
+                <a href="sfActions.html">sfActions</a>:
+                sfActions executes all the logic for the current request.              </li>
+                          <li>
+                <a href="sfActionStack.html">sfActionStack</a>:
+                sfActionStack keeps a list of all requested actions and provides accessor              </li>
+                          <li>
+                <a href="sfActionStackEntry.html">sfActionStackEntry</a>:
+                sfActionStackEntry represents information relating to a single sfAction request during a single HTTP request.              </li>
+                          <li>
+                <a href="sfComponent.html">sfComponent</a>:
+                sfComponent.              </li>
+                          <li>
+                <a href="sfComponents.html">sfComponents</a>:
+                sfComponents.              </li>
+                      </ul>
+                  <h2><a href="addon.html">addon</a></h2>
+          <ul>
+                          <li>
+                <a href="sfData.html">sfData</a>:
+                This class defines the interface for interacting with data, as well              </li>
+                          <li>
+                <a href="sfPager.html">sfPager</a>:
+                sfPager class.              </li>
+                          <li>
+                <a href="sfPropel.html">sfPropel</a>:
+                Initialization for propel and i18n propel integration.              </li>
+                          <li>
+                <a href="sfPropelPager.html">sfPropelPager</a>:
+                This class is the Propel implementation of sfPager.  It interacts with the propel record set and              </li>
+                      </ul>
+                  <h2><a href="autoload.html">autoload</a></h2>
+          <ul>
+                          <li>
+                <a href="sfAutoload.html">sfAutoload</a>:
+                sfAutoload class.              </li>
+                          <li>
+                <a href="sfAutoloadAgain.html">sfAutoloadAgain</a>:
+                Autoload again for dev environments.              </li>
+                          <li>
+                <a href="sfCoreAutoload.html">sfCoreAutoload</a>:
+                sfCoreAutoload class.              </li>
+                          <li>
+                <a href="sfSimpleAutoload.html">sfSimpleAutoload</a>:
+                sfSimpleAutoload class.              </li>
+                      </ul>
+                  <h2><a href="behavior.html">behavior</a></h2>
+          <ul>
+                          <li>
+                <a href="SfPropelBehaviorBase.html">SfPropelBehaviorBase</a>:
+                Base behavior class.              </li>
+                          <li>
+                <a href="SfPropelBehaviorI18n.html">SfPropelBehaviorI18n</a>:
+                Internationalizes Propel models.              </li>
+                          <li>
+                <a href="SfPropelBehaviorI18nTranslation.html">SfPropelBehaviorI18nTranslation</a>:
+                Translation behavior.              </li>
+                          <li>
+                <a href="SfPropelBehaviorSymfony.html">SfPropelBehaviorSymfony</a>:
+                A database behavior that adds default symfony behaviors.              </li>
+                          <li>
+                <a href="SfPropelBehaviorSymfonyBehaviors.html">SfPropelBehaviorSymfonyBehaviors</a>:
+                Adds support for symfony&#039;s {@link sfMixer} behaviors.              </li>
+                          <li>
+                <a href="SfPropelBehaviorTimestampable.html">SfPropelBehaviorTimestampable</a>:
+                A timestampable implementation BC with symfony &lt;= 1.2.              </li>
+                      </ul>
+                  <h2><a href="cache.html">cache</a></h2>
+          <ul>
+                          <li>
+                <a href="sfAPCCache.html">sfAPCCache</a>:
+                Cache class that stores cached content in APC.              </li>
+                          <li>
+                <a href="sfCache.html">sfCache</a>:
+                sfCache is an abstract class for all cache classes in symfony.              </li>
+                          <li>
+                <a href="sfEAcceleratorCache.html">sfEAcceleratorCache</a>:
+                Cache class that stores cached content in EAccelerator.              </li>
+                          <li>
+                <a href="sfFileCache.html">sfFileCache</a>:
+                Cache class that stores content in files.              </li>
+                          <li>
+                <a href="sfFunctionCache.html">sfFunctionCache</a>:
+                This class can be used to cache the result and output of any PHP callable (function and method calls).              </li>
+                          <li>
+                <a href="sfMemcacheCache.html">sfMemcacheCache</a>:
+                Cache class that stores cached content in memcache.              </li>
+                          <li>
+                <a href="sfNoCache.html">sfNoCache</a>:
+                Cache class that does nothing.              </li>
+                          <li>
+                <a href="sfSQLiteCache.html">sfSQLiteCache</a>:
+                Cache class that stores cached content in a SQLite database.              </li>
+                          <li>
+                <a href="sfXCacheCache.html">sfXCacheCache</a>:
+                Cache class that stores cached content in XCache.              </li>
+                      </ul>
+                  <h2><a href="command.html">command</a></h2>
+          <ul>
+                          <li>
+                <a href="sfAnsiColorFormatter.html">sfAnsiColorFormatter</a>:
+                sfAnsiColorFormatter provides methods to colorize text to be displayed on a console.              </li>
+                          <li>
+                <a href="sfCommandApplication.html">sfCommandApplication</a>:
+                sfCommandApplication manages the lifecycle of a CLI application.              </li>
+                          <li>
+                <a href="sfCommandArgument.html">sfCommandArgument</a>:
+                Represents a command line argument.              </li>
+                          <li>
+                <a href="sfCommandArgumentSet.html">sfCommandArgumentSet</a>:
+                Represent a set of command line arguments.              </li>
+                          <li>
+                <a href="sfCommandManager.html">sfCommandManager</a>:
+                Class to manage command line arguments and options.              </li>
+                          <li>
+                <a href="sfCommandOption.html">sfCommandOption</a>:
+                Represents a command line option.              </li>
+                          <li>
+                <a href="sfCommandOptionSet.html">sfCommandOptionSet</a>:
+                Represent a set of command line options.              </li>
+                          <li>
+                <a href="sfFormatter.html">sfFormatter</a>:
+                sfFormatter provides methods to format text to be displayed on a console.              </li>
+                          <li>
+                <a href="sfPhing.html">sfPhing</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfSymfonyCommandApplication.html">sfSymfonyCommandApplication</a>:
+                sfSymfonyCommandApplication manages the symfony CLI.              </li>
+                      </ul>
+                  <h2><a href="config.html">config</a></h2>
+          <ul>
+                          <li>
+                <a href="sfApplicationConfiguration.html">sfApplicationConfiguration</a>:
+                sfConfiguration represents a configuration for a symfony application.              </li>
+                          <li>
+                <a href="sfAutoloadConfigHandler.html">sfAutoloadConfigHandler</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfCacheConfigHandler.html">sfCacheConfigHandler</a>:
+                sfCacheConfigHandler allows you to configure cache.              </li>
+                          <li>
+                <a href="sfCompileConfigHandler.html">sfCompileConfigHandler</a>:
+                sfCompileConfigHandler gathers multiple files and puts them into a single file.              </li>
+                          <li>
+                <a href="sfConfig.html">sfConfig</a>:
+                sfConfig stores all configuration information for a symfony application.              </li>
+                          <li>
+                <a href="sfConfigCache.html">sfConfigCache</a>:
+                sfConfigCache allows you to customize the format of a configuration file to              </li>
+                          <li>
+                <a href="sfConfigHandler.html">sfConfigHandler</a>:
+                sfConfigHandler allows a developer to create a custom formatted configuration              </li>
+                          <li>
+                <a href="sfDatabaseConfigHandler.html">sfDatabaseConfigHandler</a>:
+                sfDatabaseConfigHandler allows you to setup database connections in a              </li>
+                          <li>
+                <a href="sfDefineEnvironmentConfigHandler.html">sfDefineEnvironmentConfigHandler</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfFactoryConfigHandler.html">sfFactoryConfigHandler</a>:
+                sfFactoryConfigHandler allows you to specify which factory implementation the              </li>
+                          <li>
+                <a href="sfFilterConfigHandler.html">sfFilterConfigHandler</a>:
+                sfFilterConfigHandler allows you to register filters with the system.              </li>
+                          <li>
+                <a href="sfGeneratorConfigHandler.html">sfGeneratorConfigHandler</a>:
+                sfGeneratorConfigHandler.              </li>
+                          <li>
+                <a href="sfPluginConfiguration.html">sfPluginConfiguration</a>:
+                sfPluginConfiguration represents a configuration for a symfony plugin.              </li>
+                          <li>
+                <a href="sfPluginConfigurationGeneric.html">sfPluginConfigurationGeneric</a>:
+                sfPluginConfigurationGeneric represents a configuration for a plugin with no configuration class.              </li>
+                          <li>
+                <a href="sfProjectConfiguration.html">sfProjectConfiguration</a>:
+                sfProjectConfiguration represents a configuration for a symfony project.              </li>
+                          <li>
+                <a href="sfPropelPluginConfiguration.html">sfPropelPluginConfiguration</a>:
+                sfPropelPlugin configuration.              </li>
+                          <li>
+                <a href="sfRootConfigHandler.html">sfRootConfigHandler</a>:
+                sfRootConfigHandler allows you to specify configuration handlers for the              </li>
+                          <li>
+                <a href="sfRoutingConfigHandler.html">sfRoutingConfigHandler</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfSecurityConfigHandler.html">sfSecurityConfigHandler</a>:
+                sfSecurityConfigHandler allows you to configure action security.              </li>
+                          <li>
+                <a href="sfSimpleYamlConfigHandler.html">sfSimpleYamlConfigHandler</a>:
+                sfSimpleYamlConfigHandler allows you to load simple configuration files formatted as YAML.              </li>
+                          <li>
+                <a href="sfViewConfigHandler.html">sfViewConfigHandler</a>:
+                sfViewConfigHandler allows you to configure views.              </li>
+                          <li>
+                <a href="sfYamlConfigHandler.html">sfYamlConfigHandler</a>:
+                sfYamlConfigHandler is a base class for YAML (.yml) configuration handlers. This class              </li>
+                      </ul>
+                  <h2><a href="controller.html">controller</a></h2>
+          <ul>
+                          <li>
+                <a href="sfController.html">sfController</a>:
+                sfController directs application flow.              </li>
+                          <li>
+                <a href="sfFrontWebController.html">sfFrontWebController</a>:
+                sfFrontWebController allows you to centralize your entry point in your web              </li>
+                          <li>
+                <a href="sfWebController.html">sfWebController</a>:
+                sfWebController provides web specific methods to sfController such as, url redirection.              </li>
+                      </ul>
+                  <h2><a href="database.html">database</a></h2>
+          <ul>
+                          <li>
+                <a href="sfDatabase.html">sfDatabase</a>:
+                sfDatabase is a base abstraction class that allows you to setup any type of              </li>
+                          <li>
+                <a href="sfDatabaseManager.html">sfDatabaseManager</a>:
+                sfDatabaseManager allows you to setup your database connectivity before the              </li>
+                          <li>
+                <a href="sfDoctrineConnectionProfiler.html">sfDoctrineConnectionProfiler</a>:
+                Connection profiler.              </li>
+                          <li>
+                <a href="sfMySQLDatabase.html">sfMySQLDatabase</a>:
+                sfMySQLDatabase provides connectivity for the MySQL brand database.              </li>
+                          <li>
+                <a href="sfPDODatabase.html">sfPDODatabase</a>:
+                sfPDODatabase provides connectivity for the PDO database abstraction layer.              </li>
+                          <li>
+                <a href="sfPostgreSQLDatabase.html">sfPostgreSQLDatabase</a>:
+                sfPostgreSQLDatabase provides connectivity for the PostgreSQL brand database.              </li>
+                          <li>
+                <a href="sfPropelDatabase.html">sfPropelDatabase</a>:
+                A symfony database driver for Propel.              </li>
+                      </ul>
+                  <h2><a href="debug.html">debug</a></h2>
+          <ul>
+                          <li>
+                <a href="sfDebug.html">sfDebug</a>:
+                sfDebug provides some method to help debugging a symfony application.              </li>
+                          <li>
+                <a href="sfWebDebug.html">sfWebDebug</a>:
+                sfWebDebug creates debug information for easy debugging in the browser.              </li>
+                          <li>
+                <a href="sfWebDebugPanel.html">sfWebDebugPanel</a>:
+                sfWebDebugPanel represents a web debug panel.              </li>
+                          <li>
+                <a href="sfWebDebugPanelCache.html">sfWebDebugPanelCache</a>:
+                sfWebDebugPanelCache adds a panel to the web debug toolbar with a link to ignore the cache              </li>
+                          <li>
+                <a href="sfWebDebugPanelConfig.html">sfWebDebugPanelConfig</a>:
+                sfWebDebugPanelConfig adds a panel to the web debug toolbar with the current configuration.              </li>
+                          <li>
+                <a href="sfWebDebugPanelDoctrine.html">sfWebDebugPanelDoctrine</a>:
+                sfWebDebugPanelDoctrine adds a panel to the web debug toolbar with Doctrine information.              </li>
+                          <li>
+                <a href="sfWebDebugPanelLogs.html">sfWebDebugPanelLogs</a>:
+                sfWebDebugPanelLogs adds a panel to the web debug toolbar with log messages.              </li>
+                          <li>
+                <a href="sfWebDebugPanelMailer.html">sfWebDebugPanelMailer</a>:
+                sfWebDebugPanelMailer adds a panel to the web debug toolbar with sent emails.              </li>
+                          <li>
+                <a href="sfWebDebugPanelMemory.html">sfWebDebugPanelMemory</a>:
+                sfWebDebugPanelMemory adds a panel to the web debug toolbar with the memory used by the script.              </li>
+                          <li>
+                <a href="sfWebDebugPanelPropel.html">sfWebDebugPanelPropel</a>:
+                sfWebDebugPanelPropel adds a panel to the web debug toolbar with Propel information.              </li>
+                          <li>
+                <a href="sfWebDebugPanelSymfonyVersion.html">sfWebDebugPanelSymfonyVersion</a>:
+                sfWebDebugPanelSymfonyVersion adds a panel to the web debug toolbar with the symfony version.              </li>
+                          <li>
+                <a href="sfWebDebugPanelTimer.html">sfWebDebugPanelTimer</a>:
+                sfWebDebugPanelTimer adds a panel to the web debug toolbar with timer information.              </li>
+                          <li>
+                <a href="sfWebDebugPanelView.html">sfWebDebugPanelView</a>:
+                sfWebDebugPanelView adds a panel to the web debug toolbar with information about the view layer.              </li>
+                      </ul>
+                  <h2><a href="default.html">default</a></h2>
+          <ul>
+                          <li>
+                <a href="lime_symfony.html">lime_symfony</a>:
+                              </li>
+                          <li>
+                <a href="sfFakeRenderingFilter.html">sfFakeRenderingFilter</a>:
+                              </li>
+                          <li>
+                <a href="sfMySQLiDatabase.html">sfMySQLiDatabase</a>:
+                sfMySQLiDatabase provides connectivity for the MySQL brand database.              </li>
+                          <li>
+                <a href="sfPhingListener.html">sfPhingListener</a>:
+                              </li>
+                          <li>
+                <a href="sfValidatorFDToken.html">sfValidatorFDToken</a>:
+                              </li>
+                          <li>
+                <a href="sfValidatorFDTokenFilter.html">sfValidatorFDTokenFilter</a>:
+                              </li>
+                          <li>
+                <a href="sfValidatorFDTokenLeftBracket.html">sfValidatorFDTokenLeftBracket</a>:
+                              </li>
+                          <li>
+                <a href="sfValidatorFDTokenOperator.html">sfValidatorFDTokenOperator</a>:
+                              </li>
+                          <li>
+                <a href="sfValidatorFDTokenRightBracket.html">sfValidatorFDTokenRightBracket</a>:
+                              </li>
+                      </ul>
+                  <h2><a href="doctrine.html">doctrine</a></h2>
+          <ul>
+                          <li>
+                <a href="sfDoctrineBaseTask.html">sfDoctrineBaseTask</a>:
+                Base class for all symfony Doctrine tasks.              </li>
+                          <li>
+                <a href="sfDoctrineBuildDbTask.html">sfDoctrineBuildDbTask</a>:
+                Creates database for current model.              </li>
+                          <li>
+                <a href="sfDoctrineBuildFiltersTask.html">sfDoctrineBuildFiltersTask</a>:
+                Create filter form classes for the current model.              </li>
+                          <li>
+                <a href="sfDoctrineBuildFormsTask.html">sfDoctrineBuildFormsTask</a>:
+                Create form classes for the current model.              </li>
+                          <li>
+                <a href="sfDoctrineBuildModelTask.html">sfDoctrineBuildModelTask</a>:
+                Create classes for the current model.              </li>
+                          <li>
+                <a href="sfDoctrineBuildSchemaTask.html">sfDoctrineBuildSchemaTask</a>:
+                Creates a schema.yml from an existing database.              </li>
+                          <li>
+                <a href="sfDoctrineBuildSqlTask.html">sfDoctrineBuildSqlTask</a>:
+                Create SQL for the current model.              </li>
+                          <li>
+                <a href="sfDoctrineCleanModelFilesTask.html">sfDoctrineCleanModelFilesTask</a>:
+                Delete all generated model classes for models which no longer exist in your YAML schema              </li>
+                          <li>
+                <a href="sfDoctrineCli.html">sfDoctrineCli</a>:
+                sfDoctrineCli              </li>
+                          <li>
+                <a href="sfDoctrineColumn.html">sfDoctrineColumn</a>:
+                Represents a Doctrine column              </li>
+                          <li>
+                <a href="sfDoctrineConnectionListener.html">sfDoctrineConnectionListener</a>:
+                Standard connection listener              </li>
+                          <li>
+                <a href="sfDoctrineCreateModelTables.html">sfDoctrineCreateModelTables</a>:
+                Create tables for specified list of models              </li>
+                          <li>
+                <a href="sfDoctrineDatabase.html">sfDoctrineDatabase</a>:
+                A symfony database driver for Doctrine.              </li>
+                          <li>
+                <a href="sfDoctrineDataDumpTask.html">sfDoctrineDataDumpTask</a>:
+                Dumps data to the fixtures directory.              </li>
+                          <li>
+                <a href="sfDoctrineDataLoadTask.html">sfDoctrineDataLoadTask</a>:
+                Loads YAML fixture data.              </li>
+                          <li>
+                <a href="sfDoctrineDeleteModelFilesTask.html">sfDoctrineDeleteModelFilesTask</a>:
+                Delete all generated files associated with a Doctrine model. Forms, filters, etc.              </li>
+                          <li>
+                <a href="sfDoctrineDqlTask.html">sfDoctrineDqlTask</a>:
+                Creates database for current model.              </li>
+                          <li>
+                <a href="sfDoctrineDropDbTask.html">sfDoctrineDropDbTask</a>:
+                Drops database for current model.              </li>
+                          <li>
+                <a href="sfDoctrineException.html">sfDoctrineException</a>:
+                sfDoctrine exception class              </li>
+                          <li>
+                <a href="sfDoctrineGenerateAdminTask.html">sfDoctrineGenerateAdminTask</a>:
+                Generates a Doctrine admin module.              </li>
+                          <li>
+                <a href="sfDoctrineGenerateMigrationsDbTask.html">sfDoctrineGenerateMigrationsDbTask</a>:
+                Generate migrations from database              </li>
+                          <li>
+                <a href="sfDoctrineGenerateMigrationsDiffTask.html">sfDoctrineGenerateMigrationsDiffTask</a>:
+                Generate migration classes by producing a diff between your old and new schema.              </li>
+                          <li>
+                <a href="sfDoctrineGenerateMigrationsModelsTask.html">sfDoctrineGenerateMigrationsModelsTask</a>:
+                Inserts SQL for current model.              </li>
+                          <li>
+                <a href="sfDoctrineGenerateMigrationTask.html">sfDoctrineGenerateMigrationTask</a>:
+                Inserts SQL for current model.              </li>
+                          <li>
+                <a href="sfDoctrineGenerateModuleForRouteTask.html">sfDoctrineGenerateModuleForRouteTask</a>:
+                Generates a Doctrine module for a route definition.              </li>
+                          <li>
+                <a href="sfDoctrineGenerateModuleTask.html">sfDoctrineGenerateModuleTask</a>:
+                Generates a Doctrine module.              </li>
+                          <li>
+                <a href="sfDoctrineGenerator.html">sfDoctrineGenerator</a>:
+                Doctrine generator.              </li>
+                          <li>
+                <a href="sfDoctrineInsertSqlTask.html">sfDoctrineInsertSqlTask</a>:
+                Inserts SQL for current model.              </li>
+                          <li>
+                <a href="sfDoctrineMigrateTask.html">sfDoctrineMigrateTask</a>:
+                Inserts SQL for current model.              </li>
+                          <li>
+                <a href="sfDoctrinePluginConfiguration.html">sfDoctrinePluginConfiguration</a>:
+                sfDoctrinePluginConfiguration Class              </li>
+                          <li>
+                <a href="sfDoctrineRecord.html">sfDoctrineRecord</a>:
+                Base sfDoctrineRecord extends the base Doctrine_Record in Doctrine to provide some              </li>
+                          <li>
+                <a href="sfDoctrineRecordI18nFilter.html">sfDoctrineRecordI18nFilter</a>:
+                sfDoctrineRecordI18nFilter implements access to the translated properties for              </li>
+                          <li>
+                <a href="sfDoctrineRoute.html">sfDoctrineRoute</a>:
+                sfDoctrineRoute represents a route that is bound to a Doctrine class.              </li>
+                          <li>
+                <a href="sfDoctrineRouteCollection.html">sfDoctrineRouteCollection</a>:
+                sfObjectRouteCollection represents a collection of routes bound to Doctrine objects.              </li>
+                          <li>
+                <a href="sfValidatorDoctrineChoice.html">sfValidatorDoctrineChoice</a>:
+                sfValidatorDoctrineChoice validates that the value is one of the rows of a table.              </li>
+                          <li>
+                <a href="sfValidatorDoctrineUnique.html">sfValidatorDoctrineUnique</a>:
+                sfValidatorDoctrineUnique validates that the uniqueness of a column.              </li>
+                          <li>
+                <a href="sfWidgetFormDoctrineChoice.html">sfWidgetFormDoctrineChoice</a>:
+                sfWidgetFormDoctrineChoice represents a choice widget for a model.              </li>
+                      </ul>
+                  <h2><a href="event_dispatcher.html">event_dispatcher</a></h2>
+          <ul>
+                          <li>
+                <a href="sfEvent.html">sfEvent</a>:
+                sfEvent.              </li>
+                          <li>
+                <a href="sfEventDispatcher.html">sfEventDispatcher</a>:
+                sfEventDispatcher implements a dispatcher object.              </li>
+                      </ul>
+                  <h2><a href="exception.html">exception</a></h2>
+          <ul>
+                          <li>
+                <a href="sfCacheException.html">sfCacheException</a>:
+                sfCacheException is thrown when ConfigCache fails to execute properly.              </li>
+                          <li>
+                <a href="sfCommandArgumentsException.html">sfCommandArgumentsException</a>:
+                sfCommandException is thrown when an error occurs in a task.              </li>
+                          <li>
+                <a href="sfCommandException.html">sfCommandException</a>:
+                sfCommandException is thrown when an error occurs in a task.              </li>
+                          <li>
+                <a href="sfConfigurationException.html">sfConfigurationException</a>:
+                sfConfigurationException is thrown when the framework finds an error in a              </li>
+                          <li>
+                <a href="sfControllerException.html">sfControllerException</a>:
+                sfControllerException is thrown when a requested Controller implementation              </li>
+                          <li>
+                <a href="sfDatabaseException.html">sfDatabaseException</a>:
+                sfDatabaseException is thrown when a database related error occurs.              </li>
+                          <li>
+                <a href="sfError404Exception.html">sfError404Exception</a>:
+                sfError404Exception is thrown when a 404 error occurs in an action.              </li>
+                          <li>
+                <a href="sfException.html">sfException</a>:
+                sfException is the base class for all symfony related exceptions and              </li>
+                          <li>
+                <a href="sfFactoryException.html">sfFactoryException</a>:
+                sfFactoryException is thrown when an error occurs while attempting to create              </li>
+                          <li>
+                <a href="sfFileException.html">sfFileException</a>:
+                sfFileException is thrown when an error occurs while moving an uploaded file.              </li>
+                          <li>
+                <a href="sfFilterException.html">sfFilterException</a>:
+                sfFilterException is thrown when an error occurs while attempting to initialize              </li>
+                          <li>
+                <a href="sfForwardException.html">sfForwardException</a>:
+                sfForwardException is thrown when an error occurs while attempting to forward              </li>
+                          <li>
+                <a href="sfInitializationException.html">sfInitializationException</a>:
+                sfInitializationException is thrown when an initialization procedure fails.              </li>
+                          <li>
+                <a href="sfParseException.html">sfParseException</a>:
+                sfParseException is thrown when a parsing procedure fails to complete              </li>
+                          <li>
+                <a href="sfRenderException.html">sfRenderException</a>:
+                sfRenderException is thrown when a view&#039;s pre-render check fails.              </li>
+                          <li>
+                <a href="sfSecurityException.html">sfSecurityException</a>:
+                sfSecurityException is thrown when a security related error occurs.              </li>
+                          <li>
+                <a href="sfStopException.html">sfStopException</a>:
+                sfStopException is thrown when you want to stop action flow.              </li>
+                          <li>
+                <a href="sfStorageException.html">sfStorageException</a>:
+                sfStorageException is thrown when a requested sfStorage implementation doesn&#039;t              </li>
+                          <li>
+                <a href="sfViewException.html">sfViewException</a>:
+                sfViewException is thrown when an error occurs in a view.              </li>
+                      </ul>
+                  <h2><a href="filter.html">filter</a></h2>
+          <ul>
+                          <li>
+                <a href="sfBasicSecurityFilter.html">sfBasicSecurityFilter</a>:
+                sfBasicSecurityFilter checks security by calling the getCredential() method              </li>
+                          <li>
+                <a href="sfCacheFilter.html">sfCacheFilter</a>:
+                sfCacheFilter deals with page caching and action caching.              </li>
+                          <li>
+                <a href="sfCommonFilter.html">sfCommonFilter</a>:
+                sfCommonFilter automatically adds javascripts and stylesheets information in the sfResponse content.              </li>
+                          <li>
+                <a href="sfExecutionFilter.html">sfExecutionFilter</a>:
+                sfExecutionFilter is the last filter registered for each filter chain. This              </li>
+                          <li>
+                <a href="sfFilter.html">sfFilter</a>:
+                sfFilter provides a way for you to intercept incoming requests or outgoing responses.              </li>
+                          <li>
+                <a href="sfFilterChain.html">sfFilterChain</a>:
+                sfFilterChain manages registered filters for a specific context.              </li>
+                          <li>
+                <a href="sfRenderingFilter.html">sfRenderingFilter</a>:
+                sfRenderingFilter is the last filter registered for each filter chain. This              </li>
+                      </ul>
+                  <h2><a href="form.html">form</a></h2>
+          <ul>
+                          <li>
+                <a href="sfForm.html">sfForm</a>:
+                sfForm represents a form.              </li>
+                          <li>
+                <a href="sfFormDoctrine.html">sfFormDoctrine</a>:
+                sfFormDoctrine is the base class for forms based on Doctrine objects.              </li>
+                          <li>
+                <a href="sfFormField.html">sfFormField</a>:
+                sfFormField represents a widget bind to a name and a value.              </li>
+                          <li>
+                <a href="sfFormFieldSchema.html">sfFormFieldSchema</a>:
+                sfFormFieldSchema represents an array of widgets bind to names and values.              </li>
+                          <li>
+                <a href="sfFormFilter.html">sfFormFilter</a>:
+                sfFormFilter represents a form that acts as a filter.              </li>
+                          <li>
+                <a href="sfFormFilterDoctrine.html">sfFormFilterDoctrine</a>:
+                sfFormFilterDoctrine is the base class for filter forms based on Doctrine objects.              </li>
+                          <li>
+                <a href="sfFormFilterPropel.html">sfFormFilterPropel</a>:
+                sfFormFilterPropel is the base class for filter forms based on Propel objects.              </li>
+                          <li>
+                <a href="sfFormObject.html">sfFormObject</a>:
+                Base class for forms that deal with a single object.              </li>
+                          <li>
+                <a href="sfFormPropel.html">sfFormPropel</a>:
+                sfFormPropel is the base class for forms based on Propel objects.              </li>
+                          <li>
+                <a href="sfFormSymfony.html">sfFormSymfony</a>:
+                Extends the form component with symfony-specific functionality.              </li>
+                      </ul>
+                  <h2><a href="generator.html">generator</a></h2>
+          <ul>
+                          <li>
+                <a href="sfDoctrineFormFilterGenerator.html">sfDoctrineFormFilterGenerator</a>:
+                Doctrine filter form generator.              </li>
+                          <li>
+                <a href="sfDoctrineFormGenerator.html">sfDoctrineFormGenerator</a>:
+                Doctrine form generator.              </li>
+                          <li>
+                <a href="sfGenerator.html">sfGenerator</a>:
+                sfGenerator is the abstract base class for all generators.              </li>
+                          <li>
+                <a href="sfGeneratorManager.html">sfGeneratorManager</a>:
+                sfGeneratorManager helps generate classes, views and templates for scaffolding, admin interface, ...              </li>
+                          <li>
+                <a href="sfModelGenerator.html">sfModelGenerator</a>:
+                Model generator.              </li>
+                          <li>
+                <a href="sfModelGeneratorConfiguration.html">sfModelGeneratorConfiguration</a>:
+                Model generator configuration.              </li>
+                          <li>
+                <a href="sfModelGeneratorConfigurationField.html">sfModelGeneratorConfigurationField</a>:
+                Model generator field.              </li>
+                          <li>
+                <a href="sfModelGeneratorHelper.html">sfModelGeneratorHelper</a>:
+                Model generator helper.              </li>
+                          <li>
+                <a href="sfPropelFormFilterGenerator.html">sfPropelFormFilterGenerator</a>:
+                Propel filter form generator.              </li>
+                          <li>
+                <a href="sfPropelFormGenerator.html">sfPropelFormGenerator</a>:
+                Propel form generator.              </li>
+                      </ul>
+                  <h2><a href="helper.html">helper</a></h2>
+          <ul>
+                          <li>
+                <a href="AssetHelper.html">AssetHelper</a>:
+                AssetHelper.              </li>
+                          <li>
+                <a href="CacheHelper.html">CacheHelper</a>:
+                CacheHelper.              </li>
+                          <li>
+                <a href="DateHelper.html">DateHelper</a>:
+                DateHelper.              </li>
+                          <li>
+                <a href="EscapingHelper.html">EscapingHelper</a>:
+                The functions are primarily used by the output escaping component.              </li>
+                          <li>
+                <a href="HelperHelper.html">HelperHelper</a>:
+                HelperHelper.              </li>
+                          <li>
+                <a href="I18NHelper.html">I18NHelper</a>:
+                I18NHelper.              </li>
+                          <li>
+                <a href="JavascriptBaseHelper.html">JavascriptBaseHelper</a>:
+                JavascriptBaseHelper.              </li>
+                          <li>
+                <a href="NumberHelper.html">NumberHelper</a>:
+                NumberHelper.              </li>
+                          <li>
+                <a href="PartialHelper.html">PartialHelper</a>:
+                PartialHelper.              </li>
+                          <li>
+                <a href="TagHelper.html">TagHelper</a>:
+                TagHelper defines some base helpers to construct html tags.              </li>
+                          <li>
+                <a href="TextHelper.html">TextHelper</a>:
+                TextHelper.              </li>
+                          <li>
+                <a href="UrlHelper.html">UrlHelper</a>:
+                UrlHelper.              </li>
+                      </ul>
+                  <h2><a href="i18n.html">i18n</a></h2>
+          <ul>
+                          <li>
+                <a href="sfChoiceFormat.html">sfChoiceFormat</a>:
+                sfChoiceFormat class.              </li>
+                          <li>
+                <a href="sfCultureInfo.html">sfCultureInfo</a>:
+                sfCultureInfo class.              </li>
+                          <li>
+                <a href="sfDateFormat.html">sfDateFormat</a>:
+                sfDateFormat class.              </li>
+                          <li>
+                <a href="sfDateTimeFormatInfo.html">sfDateTimeFormatInfo</a>:
+                Defines how DateTime values are formatted and displayed, depending               </li>
+                          <li>
+                <a href="sfI18N.html">sfI18N</a>:
+                sfI18N wraps the core i18n classes for a symfony context.              </li>
+                          <li>
+                <a href="sfI18nApplicationExtract.html">sfI18nApplicationExtract</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfI18nExtract.html">sfI18nExtract</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfI18nExtractorInterface.html">sfI18nExtractorInterface</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfI18nModuleExtract.html">sfI18nModuleExtract</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfI18nPhpExtractor.html">sfI18nPhpExtractor</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfI18nYamlExtractor.html">sfI18nYamlExtractor</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfI18nYamlGeneratorExtractor.html">sfI18nYamlGeneratorExtractor</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfI18nYamlValidateExtractor.html">sfI18nYamlValidateExtractor</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfIMessageSource.html">sfIMessageSource</a>:
+                sfIMessageSource interface.              </li>
+                          <li>
+                <a href="sfMessageFormat.html">sfMessageFormat</a>:
+                sfMessageFormat class.              </li>
+                          <li>
+                <a href="sfMessageSource.html">sfMessageSource</a>:
+                Abstract sfMessageSource class.              </li>
+                          <li>
+                <a href="sfMessageSource_Aggregate.html">sfMessageSource_Aggregate</a>:
+                sfMessageSource_Aggregate aggregates several message source objects.              </li>
+                          <li>
+                <a href="sfMessageSource_Database.html">sfMessageSource_Database</a>:
+                sfMessageSource_Database class.              </li>
+                          <li>
+                <a href="sfMessageSource_File.html">sfMessageSource_File</a>:
+                sfMessageSource_File class.              </li>
+                          <li>
+                <a href="sfMessageSource_gettext.html">sfMessageSource_gettext</a>:
+                sfMessageSource_gettext class.              </li>
+                          <li>
+                <a href="sfMessageSource_MySQL.html">sfMessageSource_MySQL</a>:
+                sfMessageSource_MySQL class.              </li>
+                          <li>
+                <a href="sfMessageSource_SQLite.html">sfMessageSource_SQLite</a>:
+                sfMessageSource_SQLite class.              </li>
+                          <li>
+                <a href="sfMessageSource_XLIFF.html">sfMessageSource_XLIFF</a>:
+                sfMessageSource_XLIFF class.              </li>
+                          <li>
+                <a href="sfNumberFormat.html">sfNumberFormat</a>:
+                sfNumberFormat class.              </li>
+                          <li>
+                <a href="sfNumberFormatInfo.html">sfNumberFormatInfo</a>:
+                sfNumberFormatInfo class              </li>
+                      </ul>
+                  <h2><a href="log.html">log</a></h2>
+          <ul>
+                          <li>
+                <a href="sfAggregateLogger.html">sfAggregateLogger</a>:
+                sfAggregateLogger logs messages through several loggers.              </li>
+                          <li>
+                <a href="sfCommandLogger.html">sfCommandLogger</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfConsoleLogger.html">sfConsoleLogger</a>:
+                sfConsoleLogger logs messages to the console.              </li>
+                          <li>
+                <a href="sfFileLogger.html">sfFileLogger</a>:
+                sfFileLogger logs messages in a file.              </li>
+                          <li>
+                <a href="sfLogger.html">sfLogger</a>:
+                sfLogger is the abstract class for all logging classes.              </li>
+                          <li>
+                <a href="sfLoggerInterface.html">sfLoggerInterface</a>:
+                sfLoggerInterface is the interface all symfony loggers must implement.              </li>
+                          <li>
+                <a href="sfLoggerWrapper.html">sfLoggerWrapper</a>:
+                sfLoggerWrapper wraps a class that implements sfLoggerInterface into a real sfLogger object.              </li>
+                          <li>
+                <a href="sfNoLogger.html">sfNoLogger</a>:
+                sfNoLogger is a noop logger.              </li>
+                          <li>
+                <a href="sfPropelLogger.html">sfPropelLogger</a>:
+                A symfony logging adapter for Propel              </li>
+                          <li>
+                <a href="sfStreamLogger.html">sfStreamLogger</a>:
+                sfStreamLogger logs messages to a PHP stream.              </li>
+                          <li>
+                <a href="sfVarLogger.html">sfVarLogger</a>:
+                sfVarLogger logs messages within its instance for later use.              </li>
+                          <li>
+                <a href="sfWebDebugLogger.html">sfWebDebugLogger</a>:
+                sfWebDebugLogger logs messages into the web debug toolbar.              </li>
+                      </ul>
+                  <h2><a href="mailer.html">mailer</a></h2>
+          <ul>
+                          <li>
+                <a href="sfMailer.html">sfMailer</a>:
+                sfMailer is the main entry point for the mailer system.              </li>
+                          <li>
+                <a href="sfMailerMessageLoggerPlugin.html">sfMailerMessageLoggerPlugin</a>:
+                sfMailerMessageLoggerPlugin is a Swift plugin to log all sent messages.              </li>
+                          <li>
+                <a href="Swift_DoctrineSpool.html">Swift_DoctrineSpool</a>:
+                Swift_DoctrineSpool is a spool that uses Doctrine.              </li>
+                          <li>
+                <a href="Swift_PropelSpool.html">Swift_PropelSpool</a>:
+                Swift_PropelSpool is a spool that uses Propel.              </li>
+                      </ul>
+                  <h2><a href="pager.html">pager</a></h2>
+          <ul>
+                          <li>
+                <a href="sfDoctrinePager.html">sfDoctrinePager</a>:
+                sfDoctrine pager class.              </li>
+                      </ul>
+                  <h2><a href="plugin.html">plugin</a></h2>
+          <ul>
+                          <li>
+                <a href="sfPearConfig.html">sfPearConfig</a>:
+                sfPearConfig.              </li>
+                          <li>
+                <a href="sfPearDownloader.html">sfPearDownloader</a>:
+                sfPearDownloader downloads files from the Internet.              </li>
+                          <li>
+                <a href="sfPearEnvironment.html">sfPearEnvironment</a>:
+                sfPearEnvironment represents a PEAR environment.              </li>
+                          <li>
+                <a href="sfPearFrontendPlugin.html">sfPearFrontendPlugin</a>:
+                The PEAR Frontend object.              </li>
+                          <li>
+                <a href="sfPearRest.html">sfPearRest</a>:
+                sfPearRest interacts with a PEAR channel.              </li>
+                          <li>
+                <a href="sfPearRest10.html">sfPearRest10</a>:
+                sfPearRest10 interacts with a PEAR channel that supports REST 1.0.              </li>
+                          <li>
+                <a href="sfPearRest11.html">sfPearRest11</a>:
+                sfPearRest10 interacts with a PEAR channel that supports REST 1.1.              </li>
+                          <li>
+                <a href="sfPearRestPlugin.html">sfPearRestPlugin</a>:
+                sfPearRestPlugin interacts with a symfony plugin channel.              </li>
+                          <li>
+                <a href="sfPluginDependencyException.html">sfPluginDependencyException</a>:
+                sfPluginDependencyException.              </li>
+                          <li>
+                <a href="sfPluginException.html">sfPluginException</a>:
+                sfPluginException.              </li>
+                          <li>
+                <a href="sfPluginManager.html">sfPluginManager</a>:
+                sfPluginManager allows you to manage plugins installation and uninstallation.              </li>
+                          <li>
+                <a href="sfPluginRecursiveDependencyException.html">sfPluginRecursiveDependencyException</a>:
+                sfPluginRecursiveDependencyException.              </li>
+                          <li>
+                <a href="sfPluginRestException.html">sfPluginRestException</a>:
+                sfPluginRestException.              </li>
+                          <li>
+                <a href="sfSymfonyPluginManager.html">sfSymfonyPluginManager</a>:
+                sfSymfonyPluginManager allows you to manage symfony plugins installation and uninstallation.              </li>
+                      </ul>
+                  <h2><a href="propel.html">propel</a></h2>
+          <ul>
+                          <li>
+                <a href="sfMixer.html">sfMixer</a>:
+                sfMixer implements mixins and hooks.              </li>
+                          <li>
+                <a href="sfPropelBaseTask.html">sfPropelBaseTask</a>:
+                Base class for all symfony Propel tasks.              </li>
+                          <li>
+                <a href="sfPropelBehavior.html">sfPropelBehavior</a>:
+                Manages behaviors for propel. Implements hooks for propel objects.              </li>
+                          <li>
+                <a href="sfPropelBuildAllLoadTask.html">sfPropelBuildAllLoadTask</a>:
+                Generates Propel model, SQL, initializes database, and load data.              </li>
+                          <li>
+                <a href="sfPropelBuildAllTask.html">sfPropelBuildAllTask</a>:
+                Generates Propel model, SQL and initializes the database.              </li>
+                          <li>
+                <a href="sfPropelBuildFiltersTask.html">sfPropelBuildFiltersTask</a>:
+                Create filter form classes for the current model.              </li>
+                          <li>
+                <a href="sfPropelBuildFormsTask.html">sfPropelBuildFormsTask</a>:
+                Create form classes for the current model.              </li>
+                          <li>
+                <a href="sfPropelBuildModelTask.html">sfPropelBuildModelTask</a>:
+                Create classes for the current model.              </li>
+                          <li>
+                <a href="sfPropelBuildSchemaTask.html">sfPropelBuildSchemaTask</a>:
+                Creates a schema.xml from an existing database.              </li>
+                          <li>
+                <a href="sfPropelBuildSqlTask.html">sfPropelBuildSqlTask</a>:
+                Create SQL for the current model.              </li>
+                          <li>
+                <a href="sfPropelData.html">sfPropelData</a>:
+                This class is the Propel implementation of sfData.  It interacts with the data source              </li>
+                          <li>
+                <a href="sfPropelDatabaseSchema.html">sfPropelDatabaseSchema</a>:
+                Manages propel database schemas as YAML and XML.              </li>
+                          <li>
+                <a href="sfPropelDataDumpTask.html">sfPropelDataDumpTask</a>:
+                Dumps data to the fixtures directory.              </li>
+                          <li>
+                <a href="sfPropelDataLoadTask.html">sfPropelDataLoadTask</a>:
+                Loads YAML fixture data.              </li>
+                          <li>
+                <a href="sfPropelGenerateAdminTask.html">sfPropelGenerateAdminTask</a>:
+                Generates a Propel admin module.              </li>
+                          <li>
+                <a href="sfPropelGenerateModuleForRouteTask.html">sfPropelGenerateModuleForRouteTask</a>:
+                Generates a Propel module for a route definition.              </li>
+                          <li>
+                <a href="sfPropelGenerateModuleTask.html">sfPropelGenerateModuleTask</a>:
+                Generates a Propel module.              </li>
+                          <li>
+                <a href="sfPropelGenerator.html">sfPropelGenerator</a>:
+                Propel generator.              </li>
+                          <li>
+                <a href="sfPropelGraphvizTask.html">sfPropelGraphvizTask</a>:
+                Generates a graphviz chart of current object model.              </li>
+                          <li>
+                <a href="sfPropelInsertSqlTask.html">sfPropelInsertSqlTask</a>:
+                Inserts SQL for current model.              </li>
+                          <li>
+                <a href="sfPropelManyToMany.html">sfPropelManyToMany</a>:
+                Utilities for managing many to many relationships in propel.              </li>
+                          <li>
+                <a href="sfPropelSchemaToXmlTask.html">sfPropelSchemaToXmlTask</a>:
+                Creates schema.yml from schema.xml.              </li>
+                          <li>
+                <a href="sfPropelSchemaToYmlTask.html">sfPropelSchemaToYmlTask</a>:
+                Creates schema.yml from schema.xml.              </li>
+                      </ul>
+                  <h2><a href="request.html">request</a></h2>
+          <ul>
+                          <li>
+                <a href="sfRequest.html">sfRequest</a>:
+                sfRequest provides methods for manipulating client request information such              </li>
+                          <li>
+                <a href="sfWebRequest.html">sfWebRequest</a>:
+                sfWebRequest class.              </li>
+                      </ul>
+                  <h2><a href="response.html">response</a></h2>
+          <ul>
+                          <li>
+                <a href="sfResponse.html">sfResponse</a>:
+                sfResponse provides methods for manipulating client response information such              </li>
+                          <li>
+                <a href="sfWebResponse.html">sfWebResponse</a>:
+                sfWebResponse class.              </li>
+                      </ul>
+                  <h2><a href="routing.html">routing</a></h2>
+          <ul>
+                          <li>
+                <a href="sfObjectRoute.html">sfObjectRoute</a>:
+                sfObjectRoute represents a route that is bound to PHP object(s).              </li>
+                          <li>
+                <a href="sfObjectRouteCollection.html">sfObjectRouteCollection</a>:
+                sfObjectRouteCollection represents a collection of routes bound to objects.              </li>
+                          <li>
+                <a href="sfPatternRouting.html">sfPatternRouting</a>:
+                sfPatternRouting class controls the generation and parsing of URLs.              </li>
+                          <li>
+                <a href="sfPropelRoute.html">sfPropelRoute</a>:
+                sfPropelRoute represents a route that is bound to a Propel class.              </li>
+                          <li>
+                <a href="sfPropelRouteCollection.html">sfPropelRouteCollection</a>:
+                sfPropelRouteCollection represents a collection of routes bound to Propel objects.              </li>
+                          <li>
+                <a href="sfRequestRoute.html">sfRequestRoute</a>:
+                sfRequestRoute represents a route that is request aware.              </li>
+                          <li>
+                <a href="sfRoute.html">sfRoute</a>:
+                sfRoute represents a route.              </li>
+                          <li>
+                <a href="sfRouteCollection.html">sfRouteCollection</a>:
+                sfRouteCollection represents a collection of routes.              </li>
+                          <li>
+                <a href="sfRouting.html">sfRouting</a>:
+                sfRouting class controls the generation and parsing of URLs.              </li>
+                      </ul>
+                  <h2><a href="storage.html">storage</a></h2>
+          <ul>
+                          <li>
+                <a href="sfCacheSessionStorage.html">sfCacheSessionStorage</a>:
+                sfCacheSessionStorage manages session storage via a signed cookie and cache backend.              </li>
+                          <li>
+                <a href="sfDatabaseSessionStorage.html">sfDatabaseSessionStorage</a>:
+                Base class for all sfStorage that uses a sfDatabase object as a storage.              </li>
+                          <li>
+                <a href="sfMySQLiSessionStorage.html">sfMySQLiSessionStorage</a>:
+                Provides support for session storage using a MySQL brand database               </li>
+                          <li>
+                <a href="sfMySQLSessionStorage.html">sfMySQLSessionStorage</a>:
+                Provides support for session storage using a MySQL brand database.              </li>
+                          <li>
+                <a href="sfNoStorage.html">sfNoStorage</a>:
+                sfNoStorage allows you to disable session support.              </li>
+                          <li>
+                <a href="sfPDOSessionStorage.html">sfPDOSessionStorage</a>:
+                Provides support for session storage using a PDO database abstraction layer.              </li>
+                          <li>
+                <a href="sfPostgreSQLSessionStorage.html">sfPostgreSQLSessionStorage</a>:
+                Provides support for session storage using a PostgreSQL brand database.              </li>
+                          <li>
+                <a href="sfSessionStorage.html">sfSessionStorage</a>:
+                sfSessionStorage allows you to store persistent symfony data in the user session.              </li>
+                          <li>
+                <a href="sfSessionTestStorage.html">sfSessionTestStorage</a>:
+                sfSessionTestStorage is a fake sfSessionStorage implementation to allow easy testing.              </li>
+                          <li>
+                <a href="sfStorage.html">sfStorage</a>:
+                sfStorage allows you to customize the way symfony stores its persistent data.              </li>
+                      </ul>
+                  <h2><a href="task.html">task</a></h2>
+          <ul>
+                          <li>
+                <a href="sfAppRoutesTask.html">sfAppRoutesTask</a>:
+                Displays the current routes for an application.              </li>
+                          <li>
+                <a href="sfBaseTask.html">sfBaseTask</a>:
+                Base class for all symfony tasks.              </li>
+                          <li>
+                <a href="sfCacheClearTask.html">sfCacheClearTask</a>:
+                Clears the symfony cache.              </li>
+                          <li>
+                <a href="sfCommandApplicationTask.html">sfCommandApplicationTask</a>:
+                Base class for tasks that depends on a sfCommandApplication object.              </li>
+                          <li>
+                <a href="sfConfigureAuthorTask.html">sfConfigureAuthorTask</a>:
+                Configures the main author of the project.              </li>
+                          <li>
+                <a href="sfDeprecatedClassesValidation.html">sfDeprecatedClassesValidation</a>:
+                Finds deprecated classes usage.              </li>
+                          <li>
+                <a href="sfDeprecatedConfigurationFilesValidation.html">sfDeprecatedConfigurationFilesValidation</a>:
+                Finds deprecated configuration files usage.              </li>
+                          <li>
+                <a href="sfDeprecatedHelpersValidation.html">sfDeprecatedHelpersValidation</a>:
+                Finds deprecated helpers usage.              </li>
+                          <li>
+                <a href="sfDeprecatedMethodsValidation.html">sfDeprecatedMethodsValidation</a>:
+                Finds deprecated methods usage.              </li>
+                          <li>
+                <a href="sfDeprecatedPluginsValidation.html">sfDeprecatedPluginsValidation</a>:
+                Finds deprecated plugins usage.              </li>
+                          <li>
+                <a href="sfDeprecatedSettingsValidation.html">sfDeprecatedSettingsValidation</a>:
+                Finds deprecated settings usage.              </li>
+                          <li>
+                <a href="sfDoctrineBuildTask.html">sfDoctrineBuildTask</a>:
+                Generates code based on your schema.              </li>
+                          <li>
+                <a href="sfDoctrineConfigureDatabaseTask.html">sfDoctrineConfigureDatabaseTask</a>:
+                Configures the database connection.              </li>
+                          <li>
+                <a href="sfGenerateAppTask.html">sfGenerateAppTask</a>:
+                Generates a new application.              </li>
+                          <li>
+                <a href="sfGenerateModuleTask.html">sfGenerateModuleTask</a>:
+                Generates a new module.              </li>
+                          <li>
+                <a href="sfGenerateProjectTask.html">sfGenerateProjectTask</a>:
+                Generates a new project.              </li>
+                          <li>
+                <a href="sfGenerateTaskTask.html">sfGenerateTaskTask</a>:
+                Creates a task skeleton              </li>
+                          <li>
+                <a href="sfGeneratorBaseTask.html">sfGeneratorBaseTask</a>:
+                Base class for all symfony generator tasks.              </li>
+                          <li>
+                <a href="sfHelpTask.html">sfHelpTask</a>:
+                Displays help for a task.              </li>
+                          <li>
+                <a href="sfI18nExtractTask.html">sfI18nExtractTask</a>:
+                Extracts i18n strings from php files.              </li>
+                          <li>
+                <a href="sfI18nFindTask.html">sfI18nFindTask</a>:
+                Finds non &quot;i18n ready&quot; strings in an application.              </li>
+                          <li>
+                <a href="sfListTask.html">sfListTask</a>:
+                Lists tasks.              </li>
+                          <li>
+                <a href="sfLogClearTask.html">sfLogClearTask</a>:
+                Clears log files.              </li>
+                          <li>
+                <a href="sfLogRotateTask.html">sfLogRotateTask</a>:
+                Rotates an application log files.              </li>
+                          <li>
+                <a href="sfParameterHolderValidation.html">sfParameterHolderValidation</a>:
+                Finds usage of array notation with a parameter holder.              </li>
+                          <li>
+                <a href="sfPluginAddChannelTask.html">sfPluginAddChannelTask</a>:
+                Installs a plugin.              </li>
+                          <li>
+                <a href="sfPluginBaseTask.html">sfPluginBaseTask</a>:
+                Base class for all symfony plugin tasks.              </li>
+                          <li>
+                <a href="sfPluginInstallTask.html">sfPluginInstallTask</a>:
+                Installs a plugin.              </li>
+                          <li>
+                <a href="sfPluginListTask.html">sfPluginListTask</a>:
+                Lists installed plugins.              </li>
+                          <li>
+                <a href="sfPluginPublishAssetsTask.html">sfPluginPublishAssetsTask</a>:
+                Publishes Web Assets for Core and third party plugins              </li>
+                          <li>
+                <a href="sfPluginUninstallTask.html">sfPluginUninstallTask</a>:
+                Uninstall a plugin.              </li>
+                          <li>
+                <a href="sfPluginUpgradeTask.html">sfPluginUpgradeTask</a>:
+                Upgrades a plugin.              </li>
+                          <li>
+                <a href="sfProjectClearControllersTask.html">sfProjectClearControllersTask</a>:
+                Clears all non production environment controllers.              </li>
+                          <li>
+                <a href="sfProjectDeployTask.html">sfProjectDeployTask</a>:
+                Deploys a project to another server.              </li>
+                          <li>
+                <a href="sfProjectDisableTask.html">sfProjectDisableTask</a>:
+                Disables an application in a given environment.              </li>
+                          <li>
+                <a href="sfProjectEnableTask.html">sfProjectEnableTask</a>:
+                Enables an application in a given environment.              </li>
+                          <li>
+                <a href="sfProjectOptimizeTask.html">sfProjectOptimizeTask</a>:
+                Optimizes a project for better performance.              </li>
+                          <li>
+                <a href="sfProjectPermissionsTask.html">sfProjectPermissionsTask</a>:
+                Fixes symfony directory permissions.              </li>
+                          <li>
+                <a href="sfProjectSendEmailsTask.html">sfProjectSendEmailsTask</a>:
+                Send emails stored in a queue.              </li>
+                          <li>
+                <a href="sfPropelBuildTask.html">sfPropelBuildTask</a>:
+                Generates code based on your schema.              </li>
+                          <li>
+                <a href="sfPropelConfigureDatabaseTask.html">sfPropelConfigureDatabaseTask</a>:
+                Configures the database connection.              </li>
+                          <li>
+                <a href="sfSymfonyTestTask.html">sfSymfonyTestTask</a>:
+                Launches the symfony test suite.              </li>
+                          <li>
+                <a href="sfTask.html">sfTask</a>:
+                Abstract class for all tasks.              </li>
+                          <li>
+                <a href="sfValidateTask.html">sfValidateTask</a>:
+                Finds deprecated usage in a project.              </li>
+                          <li>
+                <a href="sfValidation.html">sfValidation</a>:
+                Abstract class for validation classes.              </li>
+                      </ul>
+                  <h2><a href="user.html">user</a></h2>
+          <ul>
+                          <li>
+                <a href="sfBasicSecurityUser.html">sfBasicSecurityUser</a>:
+                sfBasicSecurityUser will handle any type of data as a credential.              </li>
+                          <li>
+                <a href="sfSecurityUser.html">sfSecurityUser</a>:
+                sfSecurityUser interface provides advanced security manipulation methods.              </li>
+                          <li>
+                <a href="sfUser.html">sfUser</a>:
+                sfUser wraps a client session and provides accessor methods for user              </li>
+                      </ul>
+                  <h2><a href="util.html">util</a></h2>
+          <ul>
+                          <li>
+                <a href="sfBrowser.html">sfBrowser</a>:
+                sfBrowser simulates a browser which can surf a symfony application.              </li>
+                          <li>
+                <a href="sfBrowserBase.html">sfBrowserBase</a>:
+                sfBrowserBase is the base class for sfBrowser.              </li>
+                          <li>
+                <a href="sfCallable.html">sfCallable</a>:
+                sfCallable represents a PHP callable.              </li>
+                          <li>
+                <a href="sfClassManipulator.html">sfClassManipulator</a>:
+                sfClassManipulator manipulates class code.              </li>
+                          <li>
+                <a href="sfContext.html">sfContext</a>:
+                sfContext provides information about the current application context, such as              </li>
+                          <li>
+                <a href="sfDomCssSelector.html">sfDomCssSelector</a>:
+                sfDomCssSelector allows to navigate a DOM with CSS selector.              </li>
+                          <li>
+                <a href="sfFilesystem.html">sfFilesystem</a>:
+                sfFilesystem provides basic utility to manipulate the file system.              </li>
+                          <li>
+                <a href="sfFinder.html">sfFinder</a>:
+                Allow to build rules to find files and directories.              </li>
+                          <li>
+                <a href="sfGlobToRegex.html">sfGlobToRegex</a>:
+                Match globbing patterns against text.              </li>
+                          <li>
+                <a href="sfInflector.html">sfInflector</a>:
+                @package    symfony              </li>
+                          <li>
+                <a href="sfNamespacedParameterHolder.html">sfNamespacedParameterHolder</a>:
+                sfNamespacedParameterHolder provides a class for managing parameters              </li>
+                          <li>
+                <a href="sfNumberCompare.html">sfNumberCompare</a>:
+                Numeric comparisons.              </li>
+                          <li>
+                <a href="sfParameterHolder.html">sfParameterHolder</a>:
+                sfParameterHolder provides a base class for managing parameters.              </li>
+                          <li>
+                <a href="sfTimer.html">sfTimer</a>:
+                sfTimer class allows to time some PHP code.              </li>
+                          <li>
+                <a href="sfTimerManager.html">sfTimerManager</a>:
+                sfTimerManager is a container for sfTimer objects.              </li>
+                          <li>
+                <a href="sfToolkit.html">sfToolkit</a>:
+                sfToolkit provides basic utility methods.              </li>
+                      </ul>
+                  <h2><a href="validator.html">validator</a></h2>
+          <ul>
+                          <li>
+                <a href="sfValidatedFile.html">sfValidatedFile</a>:
+                sfValidatedFile represents a validated uploaded file.              </li>
+                          <li>
+                <a href="sfValidatorAnd.html">sfValidatorAnd</a>:
+                sfValidatorAnd validates an input value if all validators passes.              </li>
+                          <li>
+                <a href="sfValidatorBase.html">sfValidatorBase</a>:
+                sfValidatorBase is the base class for all validators.              </li>
+                          <li>
+                <a href="sfValidatorBoolean.html">sfValidatorBoolean</a>:
+                sfValidatorBoolean validates a boolean. It also converts the input value to a valid boolean.              </li>
+                          <li>
+                <a href="sfValidatorCallback.html">sfValidatorCallback</a>:
+                sfValidatorCallback validates an input value if the given callback does not throw a sfValidatorError.              </li>
+                          <li>
+                <a href="sfValidatorChoice.html">sfValidatorChoice</a>:
+                sfValidatorChoice validates than the value is one of the expected values.              </li>
+                          <li>
+                <a href="sfValidatorCSRFToken.html">sfValidatorCSRFToken</a>:
+                sfValidatorCSRFToken checks that the token is valid.              </li>
+                          <li>
+                <a href="sfValidatorDate.html">sfValidatorDate</a>:
+                sfValidatorDate validates a date. It also converts the input value to a valid date.              </li>
+                          <li>
+                <a href="sfValidatorDateRange.html">sfValidatorDateRange</a>:
+                sfValidatorDateRange validates a range of date. It also converts the input values to valid dates.              </li>
+                          <li>
+                <a href="sfValidatorDateTime.html">sfValidatorDateTime</a>:
+                sfValidatorDateTime validates a date and a time. It also converts the input value to a valid date.              </li>
+                          <li>
+                <a href="sfValidatorDecorator.html">sfValidatorDecorator</a>:
+                sfValidatorDecorator decorates another validator.              </li>
+                          <li>
+                <a href="sfValidatorEmail.html">sfValidatorEmail</a>:
+                sfValidatorEmail validates emails.              </li>
+                          <li>
+                <a href="sfValidatorError.html">sfValidatorError</a>:
+                sfValidatorError represents a validation error.              </li>
+                          <li>
+                <a href="sfValidatorErrorSchema.html">sfValidatorErrorSchema</a>:
+                sfValidatorErrorSchema represents a validation schema error.              </li>
+                          <li>
+                <a href="sfValidatorFile.html">sfValidatorFile</a>:
+                sfValidatorFile validates an uploaded file.              </li>
+                          <li>
+                <a href="sfValidatorFromDescription.html">sfValidatorFromDescription</a>:
+                sfValidatorFromDescription converts a string to a validator.              </li>
+                          <li>
+                <a href="sfValidatorI18nChoiceCountry.html">sfValidatorI18nChoiceCountry</a>:
+                sfValidatorI18nChoiceCountry validates than the value is a valid country.              </li>
+                          <li>
+                <a href="sfValidatorI18nChoiceLanguage.html">sfValidatorI18nChoiceLanguage</a>:
+                sfValidatorI18nChoiceLanguage validates than the value is a valid language.              </li>
+                          <li>
+                <a href="sfValidatorI18nChoiceTimezone.html">sfValidatorI18nChoiceTimezone</a>:
+                sfValidatorI18nChoiceLanguage validates than the value is a valid timezone.              </li>
+                          <li>
+                <a href="sfValidatorInteger.html">sfValidatorInteger</a>:
+                sfValidatorInteger validates an integer. It also converts the input value to an integer.              </li>
+                          <li>
+                <a href="sfValidatorNumber.html">sfValidatorNumber</a>:
+                sfValidatorNumber validates a number (integer or float). It also converts the input value to a float.              </li>
+                          <li>
+                <a href="sfValidatorOr.html">sfValidatorOr</a>:
+                sfValidatorOr validates an input value if at least one validator passes.              </li>
+                          <li>
+                <a href="sfValidatorPass.html">sfValidatorPass</a>:
+                sfValidatorPass is an identity validator. It simply returns the value unmodified.              </li>
+                          <li>
+                <a href="sfValidatorPropelChoice.html">sfValidatorPropelChoice</a>:
+                sfValidatorPropelChoice validates that the value is one of the rows of a table.              </li>
+                          <li>
+                <a href="sfValidatorPropelUnique.html">sfValidatorPropelUnique</a>:
+                sfValidatorPropelUnique validates that the uniqueness of a column.              </li>
+                          <li>
+                <a href="sfValidatorRegex.html">sfValidatorRegex</a>:
+                sfValidatorRegex validates a value with a regular expression.              </li>
+                          <li>
+                <a href="sfValidatorSchema.html">sfValidatorSchema</a>:
+                sfValidatorSchema represents an array of fields.              </li>
+                          <li>
+                <a href="sfValidatorSchemaCompare.html">sfValidatorSchemaCompare</a>:
+                sfValidatorSchemaCompare compares several values from an array.              </li>
+                          <li>
+                <a href="sfValidatorSchemaFilter.html">sfValidatorSchemaFilter</a>:
+                sfValidatorSchemaFilter executes non schema validator on a schema input value.              </li>
+                          <li>
+                <a href="sfValidatorSchemaForEach.html">sfValidatorSchemaForEach</a>:
+                sfValidatorSchemaForEach wraps a validator multiple times in a single validator.              </li>
+                          <li>
+                <a href="sfValidatorString.html">sfValidatorString</a>:
+                sfValidatorString validates a string. It also converts the input value to a string.              </li>
+                          <li>
+                <a href="sfValidatorTime.html">sfValidatorTime</a>:
+                sfValidatorTime validates a time. It also converts the input value to a valid time.              </li>
+                          <li>
+                <a href="sfValidatorUrl.html">sfValidatorUrl</a>:
+                sfValidatorUrl validates Urls.              </li>
+                      </ul>
+                  <h2><a href="view.html">view</a></h2>
+          <ul>
+                          <li>
+                <a href="sfOutputEscaper.html">sfOutputEscaper</a>:
+                Abstract class that provides an interface for escaping of output.              </li>
+                          <li>
+                <a href="sfOutputEscaperArrayDecorator.html">sfOutputEscaperArrayDecorator</a>:
+                Output escaping decorator class for arrays.              </li>
+                          <li>
+                <a href="sfOutputEscaperGetterDecorator.html">sfOutputEscaperGetterDecorator</a>:
+                Abstract output escaping decorator class for &quot;getter&quot; objects.              </li>
+                          <li>
+                <a href="sfOutputEscaperIteratorDecorator.html">sfOutputEscaperIteratorDecorator</a>:
+                Output escaping iterator decorator.              </li>
+                          <li>
+                <a href="sfOutputEscaperObjectDecorator.html">sfOutputEscaperObjectDecorator</a>:
+                Output escaping object decorator that intercepts all method calls and escapes              </li>
+                          <li>
+                <a href="sfOutputEscaperSafe.html">sfOutputEscaperSafe</a>:
+                Marks a variable as being safe for output.              </li>
+                          <li>
+                <a href="sfPartialView.html">sfPartialView</a>:
+                A View to render partials.              </li>
+                          <li>
+                <a href="sfPHPView.html">sfPHPView</a>:
+                A view that uses PHP as the templating engine.              </li>
+                          <li>
+                <a href="sfView.html">sfView</a>:
+                A view represents the presentation layer of an action. Output can be              </li>
+                          <li>
+                <a href="sfViewCacheManager.html">sfViewCacheManager</a>:
+                Cache class to cache the HTML results for actions and templates.              </li>
+                          <li>
+                <a href="sfViewParameterHolder.html">sfViewParameterHolder</a>:
+                sfViewParameterHolder stores all variables that will be available to the template.              </li>
+                      </ul>
+                  <h2><a href="widget.html">widget</a></h2>
+          <ul>
+                          <li>
+                <a href="sfWidget.html">sfWidget</a>:
+                sfWidget is the base class for all widgets.              </li>
+                          <li>
+                <a href="sfWidgetForm.html">sfWidgetForm</a>:
+                sfWidgetForm is the base class for all form widgets.              </li>
+                          <li>
+                <a href="sfWidgetFormChoice.html">sfWidgetFormChoice</a>:
+                sfWidgetFormChoice represents a choice widget.              </li>
+                          <li>
+                <a href="sfWidgetFormChoiceBase.html">sfWidgetFormChoiceBase</a>:
+                sfWidgetFormChoiceBase is the base class for all choice/select widgets              </li>
+                          <li>
+                <a href="sfWidgetFormDate.html">sfWidgetFormDate</a>:
+                sfWidgetFormDate represents a date widget.              </li>
+                          <li>
+                <a href="sfWidgetFormDateRange.html">sfWidgetFormDateRange</a>:
+                sfWidgetFormDateRange represents a date range widget.              </li>
+                          <li>
+                <a href="sfWidgetFormDateTime.html">sfWidgetFormDateTime</a>:
+                sfWidgetFormDateTime represents a datetime widget.              </li>
+                          <li>
+                <a href="sfWidgetFormFilterDate.html">sfWidgetFormFilterDate</a>:
+                sfWidgetFormFilterDate represents a date filter widget.              </li>
+                          <li>
+                <a href="sfWidgetFormFilterInput.html">sfWidgetFormFilterInput</a>:
+                sfWidgetFormFilterInput represents an HTML input tag used for filtering text.              </li>
+                          <li>
+                <a href="sfWidgetFormI18nChoiceCountry.html">sfWidgetFormI18nChoiceCountry</a>:
+                sfWidgetFormI18nChoiceCountry represents a country choice widget.              </li>
+                          <li>
+                <a href="sfWidgetFormI18nChoiceCurrency.html">sfWidgetFormI18nChoiceCurrency</a>:
+                sfWidgetFormI18nChoiceCurrency represents a currency choice widget.              </li>
+                          <li>
+                <a href="sfWidgetFormI18nChoiceLanguage.html">sfWidgetFormI18nChoiceLanguage</a>:
+                sfWidgetFormI18nChoiceLanguage represents a language choice widget.              </li>
+                          <li>
+                <a href="sfWidgetFormI18nChoiceTimezone.html">sfWidgetFormI18nChoiceTimezone</a>:
+                sfWidgetFormI18nChoiceTimezone represents a timezone choice widget.              </li>
+                          <li>
+                <a href="sfWidgetFormI18nDate.html">sfWidgetFormI18nDate</a>:
+                sfWidgetFormI18nDate represents a date widget.              </li>
+                          <li>
+                <a href="sfWidgetFormI18nDateTime.html">sfWidgetFormI18nDateTime</a>:
+                sfWidgetFormI18nDateTime represents a date and time widget.              </li>
+                          <li>
+                <a href="sfWidgetFormI18nTime.html">sfWidgetFormI18nTime</a>:
+                sfWidgetFormI18nTime represents a time widget.              </li>
+                          <li>
+                <a href="sfWidgetFormInput.html">sfWidgetFormInput</a>:
+                sfWidgetFormInput represents an HTML input tag.              </li>
+                          <li>
+                <a href="sfWidgetFormInputCheckbox.html">sfWidgetFormInputCheckbox</a>:
+                sfWidgetFormInputCheckbox represents an HTML checkbox tag.              </li>
+                          <li>
+                <a href="sfWidgetFormInputFile.html">sfWidgetFormInputFile</a>:
+                sfWidgetFormInputFile represents an upload HTML input tag.              </li>
+                          <li>
+                <a href="sfWidgetFormInputFileEditable.html">sfWidgetFormInputFileEditable</a>:
+                sfWidgetFormInputFileEditable represents an upload HTML input tag with the possibility              </li>
+                          <li>
+                <a href="sfWidgetFormInputHidden.html">sfWidgetFormInputHidden</a>:
+                sfWidgetFormInputHidden represents a hidden HTML input tag.              </li>
+                          <li>
+                <a href="sfWidgetFormInputPassword.html">sfWidgetFormInputPassword</a>:
+                sfWidgetFormInputPassword represents a password HTML input tag.              </li>
+                          <li>
+                <a href="sfWidgetFormInputText.html">sfWidgetFormInputText</a>:
+                sfWidgetFormInput represents an HTML text input tag.              </li>
+                          <li>
+                <a href="sfWidgetFormPropelChoice.html">sfWidgetFormPropelChoice</a>:
+                sfWidgetFormPropelChoice represents a choice widget for a model.              </li>
+                          <li>
+                <a href="sfWidgetFormSchema.html">sfWidgetFormSchema</a>:
+                sfWidgetFormSchema represents an array of fields.              </li>
+                          <li>
+                <a href="sfWidgetFormSchemaDecorator.html">sfWidgetFormSchemaDecorator</a>:
+                sfWidgetFormSchemaDecorator wraps a form schema widget inside a given HTML snippet.              </li>
+                          <li>
+                <a href="sfWidgetFormSchemaForEach.html">sfWidgetFormSchemaForEach</a>:
+                sfWidgetFormSchemaForEach duplicates a given widget multiple times in a widget schema.              </li>
+                          <li>
+                <a href="sfWidgetFormSchemaFormatter.html">sfWidgetFormSchemaFormatter</a>:
+                sfWidgetFormSchemaFormatter allows to format a form schema with HTML formats.              </li>
+                          <li>
+                <a href="sfWidgetFormSchemaFormatterList.html">sfWidgetFormSchemaFormatterList</a>:
+                              </li>
+                          <li>
+                <a href="sfWidgetFormSchemaFormatterTable.html">sfWidgetFormSchemaFormatterTable</a>:
+                              </li>
+                          <li>
+                <a href="sfWidgetFormSelect.html">sfWidgetFormSelect</a>:
+                sfWidgetFormSelect represents a select HTML tag.              </li>
+                          <li>
+                <a href="sfWidgetFormSelectCheckbox.html">sfWidgetFormSelectCheckbox</a>:
+                sfWidgetFormSelectCheckbox represents an array of checkboxes.              </li>
+                          <li>
+                <a href="sfWidgetFormSelectMany.html">sfWidgetFormSelectMany</a>:
+                sfWidgetFormSelectMany represents a select HTML tag where you can select multiple values.              </li>
+                          <li>
+                <a href="sfWidgetFormSelectRadio.html">sfWidgetFormSelectRadio</a>:
+                sfWidgetFormSelectRadio represents radio HTML tags.              </li>
+                          <li>
+                <a href="sfWidgetFormTextarea.html">sfWidgetFormTextarea</a>:
+                sfWidgetFormTextarea represents a textarea HTML tag.              </li>
+                          <li>
+                <a href="sfWidgetFormTime.html">sfWidgetFormTime</a>:
+                sfWidgetFormTime represents a time widget.              </li>
+                      </ul>
+                  <h2><a href="yaml.html">yaml</a></h2>
+          <ul>
+                          <li>
+                <a href="sfYaml.html">sfYaml</a>:
+                sfYaml offers convenience methods to load and dump YAML.              </li>
+                          <li>
+                <a href="sfYamlDumper.html">sfYamlDumper</a>:
+                sfYamlDumper dumps PHP variables to YAML strings.              </li>
+                          <li>
+                <a href="sfYamlInline.html">sfYamlInline</a>:
+                sfYamlInline implements a YAML parser/dumper for the YAML inline syntax.              </li>
+                          <li>
+                <a href="sfYamlParser.html">sfYamlParser</a>:
+                sfYamlParser parses YAML strings to convert them to PHP arrays.              </li>
+                      </ul>
+              </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

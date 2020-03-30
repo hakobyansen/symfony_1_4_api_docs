@@ -1,0 +1,1108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfCultureInfo Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfCultureInfo Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      i18n      </strong>
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+              <ul>
+                      <li><a href="sfChoiceFormat.html">sfChoiceFormat</a></li>
+                      <li><a href="sfCultureInfo.html">sfCultureInfo</a></li>
+                      <li><a href="sfDateFormat.html">sfDateFormat</a></li>
+                      <li><a href="sfDateTimeFormatInfo.html">sfDateTimeFormatInfo</a></li>
+                      <li><a href="sfI18N.html">sfI18N</a></li>
+                      <li><a href="sfI18nApplicationExtract.html">sfI18nApplicationExtract</a></li>
+                      <li><a href="sfI18nExtract.html">sfI18nExtract</a></li>
+                      <li><a href="sfI18nExtractorInterface.html">sfI18nExtractorInterface</a></li>
+                      <li><a href="sfI18nModuleExtract.html">sfI18nModuleExtract</a></li>
+                      <li><a href="sfI18nPhpExtractor.html">sfI18nPhpExtractor</a></li>
+                      <li><a href="sfI18nYamlExtractor.html">sfI18nYamlExtractor</a></li>
+                      <li><a href="sfI18nYamlGeneratorExtractor.html">sfI18nYamlGeneratorExtractor</a></li>
+                      <li><a href="sfI18nYamlValidateExtractor.html">sfI18nYamlValidateExtractor</a></li>
+                      <li><a href="sfIMessageSource.html">sfIMessageSource</a></li>
+                      <li><a href="sfMessageFormat.html">sfMessageFormat</a></li>
+                      <li><a href="sfMessageSource.html">sfMessageSource</a></li>
+                      <li><a href="sfMessageSource_Aggregate.html">sfMessageSource_Aggregate</a></li>
+                      <li><a href="sfMessageSource_Database.html">sfMessageSource_Database</a></li>
+                      <li><a href="sfMessageSource_File.html">sfMessageSource_File</a></li>
+                      <li><a href="sfMessageSource_gettext.html">sfMessageSource_gettext</a></li>
+                      <li><a href="sfMessageSource_MySQL.html">sfMessageSource_MySQL</a></li>
+                      <li><a href="sfMessageSource_SQLite.html">sfMessageSource_SQLite</a></li>
+                      <li><a href="sfMessageSource_XLIFF.html">sfMessageSource_XLIFF</a></li>
+                      <li><a href="sfNumberFormat.html">sfNumberFormat</a></li>
+                      <li><a href="sfNumberFormatInfo.html">sfNumberFormatInfo</a></li>
+                  </ul>
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfCultureInfo.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfCultureInfo.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfCultureInfo.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfCultureInfo.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfCultureInfo class.</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfCultureInfo.html#method__amp_">&amp;</a>($filename)
+                <br />
+                <span class="description">Gets the data by unserializing the ICU data from disk.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfCultureInfo.html#method_array_add">array_add</a>()
+                <br />
+                <span class="description">Adds an array to an already existing array.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfCultureInfo.html#method_datadir">dataDir</a>()
+                <br />
+                <span class="description">Gets the default directory for the ICU data.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfCultureInfo.html#method_fileext">fileExt</a>()
+                <br />
+                <span class="description">Gets the filename extension for ICU data. Default is &quot;.dat&quot;.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfCultureInfo.html#method_findinfo">findInfo</a>($path, $merge)
+                <br />
+                <span class="description">Finds the specific ICU data information from the data.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfCultureInfo.html#method_getcalendar">getCalendar</a>()
+                <br />
+                <span class="description">Gets the default calendar used by the culture, e.g. &quot;gregorian&quot;.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfCultureInfo.html#method_getcountries">getCountries</a>($countries)
+                <br />
+                <span class="description">Gets a list of countries in the language of the localized version.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfCultureInfo.html#method_getcountry">getCountry</a>($code)
+                <br />
+                <span class="description">Get the country name in the current culture for the given code.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfCultureInfo.html#method_getcultures">getCultures</a>($type)
+                <br />
+                <span class="description">Gets the list of supported cultures filtered by the specified </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfCultureInfo.html#method_getcurrencies">getCurrencies</a>($currencies, $full)
+                <br />
+                <span class="description">Gets a list of currencies in the language of the localized version.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfCultureInfo.html#method_getcurrency">getCurrency</a>($code)
+                <br />
+                <span class="description">Get the currency name in the current culture for the given code.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfDateTimeFormatInfo</span>
+                <a href="sfCultureInfo.html#method_getdatetimeformat">getDateTimeFormat</a>()
+                <br />
+                <span class="description">Gets the sfDateTimeFormatInfo that defines the culturally appropriate</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfCultureInfo.html#method_getenglishname">getEnglishName</a>()
+                <br />
+                <span class="description">Gets the culture name in English.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfCultureInfo</span>
+                <a href="sfCultureInfo.html#method_getinstance">getInstance</a>($culture)
+                <br />
+                <span class="description">Gets the sfCultureInfo that for this culture string.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfCultureInfo</span>
+                <a href="sfCultureInfo.html#method_getinvariantculture">getInvariantCulture</a>()
+                <br />
+                <span class="description">Gets the sfCultureInfo that is culture-independent (invariant).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfCultureInfo.html#method_getisneutralculture">getIsNeutralCulture</a>()
+                <br />
+                <span class="description">Gets a value indicating whether the current sfCultureInfo </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfCultureInfo.html#method_getlanguage">getLanguage</a>($code)
+                <br />
+                <span class="description">Get the language name in the current culture for the given code.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfCultureInfo.html#method_getlanguages">getLanguages</a>($languages)
+                <br />
+                <span class="description">Gets a list of languages in the language of the localized version.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfCultureInfo.html#method_getname">getName</a>()
+                <br />
+                <span class="description">Gets the culture name in the format </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfCultureInfo.html#method_getnativename">getNativeName</a>()
+                <br />
+                <span class="description">Gets the culture name in the language that the culture is set</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfNumberFormatInfo</span>
+                <a href="sfCultureInfo.html#method_getnumberformat">getNumberFormat</a>()
+                <br />
+                <span class="description">Gets the sfNumberFormatInfo that defines the culturally appropriate</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfCultureInfo</span>
+                <a href="sfCultureInfo.html#method_getparent">getParent</a>()
+                <br />
+                <span class="description">Gets the sfCultureInfo that represents the parent culture of the </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfCultureInfo.html#method_getscripts">getScripts</a>()
+                <br />
+                <span class="description">Gets a list of scripts in the language of the localized version.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfCultureInfo.html#method_gettimezones">getTimeZones</a>()
+                <br />
+                <span class="description">Gets a list of timezones in the language of the localized version.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfCultureInfo.html#method_loadculturedata">loadCultureData</a>($culture)
+                <br />
+                <span class="description">Loads the ICU culture data for the specific culture identifier.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfCultureInfo.html#method_searcharray">searchArray</a>($info, $path)
+                <br />
+                <span class="description">Searches the array for a specific value using a path separated using</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfCultureInfo.html#method_setculture">setCulture</a>($culture)
+                <br />
+                <span class="description">Sets the culture for the current instance. The culture indentifier</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfCultureInfo.html#method_setdatetimeformat">setDateTimeFormat</a>($dateTimeFormat)
+                <br />
+                <span class="description">Sets the date time format information.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfCultureInfo.html#method_setnumberformat">setNumberFormat</a>($numberFormat)
+                <br />
+                <span class="description">Sets the number format information.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfCultureInfo.html#method_sortarray">sortArray</a>()
+                <br />
+                <span class="description">sorts the passed array according to the locale of this sfCultureInfo class</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfCultureInfo.html#method_validculture">validCulture</a>($culture)
+                <br />
+                <span class="description">Determines if a given culture is valid. Simply checks that the</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">return</span>
+                <a href="sfCultureInfo.html#method___construct">__construct</a>($culture)
+                <br />
+                <span class="description">Initializes a new instance of the sfCultureInfo class based on the </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfCultureInfo.html#method___get">__get</a>($name)
+                <br />
+                <span class="description">Allows functions that begins with &#039;set&#039; to be called directly</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfCultureInfo.html#method___set">__set</a>($name, $value)
+                <br />
+                <span class="description">Allows functions that begins with &#039;set&#039; to be called directly</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfCultureInfo.html#method___tostring">__toString</a>()
+                <br />
+                <span class="description">Displays the culture name.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method__amp_"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">&amp;</span>&nbsp;($filename)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$filename</td>
+                <td>the ICU data filename</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the data by unserializing the ICU data from disk.</strong></p>
+              <p><p> The data files are cached in a static variable inside
+<br /> this function.</p></p>
+                        <p><strong>returns</strong> ICU data</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_array_add"></a>
+              <h3>
+                <span class="method-name">array_add</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Adds an array to an already existing array.</strong></p>
+              <p><p> If an element is already existing in array1 it is not overwritten.
+<br /> If this element is an array this logic will be applied recursively.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_datadir"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">dataDir</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the default directory for the ICU data.</strong></p>
+              <p><p> The default is the "data" directory for this class.</p></p>
+                        <p><strong>returns</strong> directory containing the ICU data.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_fileext"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">fileExt</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the filename extension for ICU data. Default is &quot;.dat&quot;.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> filename extension for ICU data.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_findinfo"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">findInfo</span>&nbsp;($path, $merge)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$path</td>
+                <td>the data you want to find.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$merge</td>
+                <td>merge the data from its parents.</td>
+              </tr>
+                        </table>
+              <p><strong>Finds the specific ICU data information from the data.</strong></p>
+              <p><p> The path to the specific ICU data is separated with a slash "/".
+<br /> E.g. To find the default calendar used by the culture, the path
+<br /> "calendar/default" will return the corresponding default calendar.
+<br /> Use merge=true to return the ICU including the parent culture.
+<br /> E.g. The currency data for a variant, say "en_AU" contains one
+<br /> entry, the currency for AUD, the other currency data are stored
+<br /> in the "en" data file. Thus to retrieve all the data regarding 
+<br /> currency for "en_AU", you need to use findInfo("Currencies,true);.</p></p>
+                        <p><strong>returns</strong> the specific ICU data.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcalendar"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getCalendar</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the default calendar used by the culture, e.g. &quot;gregorian&quot;.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> the default calendar.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcountries"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getCountries</span>&nbsp;($countries)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$countries</td>
+                <td>An array of countries used to restrict the returned array (null by default, which means all countries)</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a list of countries in the language of the localized version.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> a list of localized country names.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcountry"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getCountry</span>&nbsp;($code)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$code</td>
+                <td>A valid country code</td>
+              </tr>
+                        </table>
+              <p><strong>Get the country name in the current culture for the given code.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The country name in the current culture</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcultures"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getCultures</span>&nbsp;($type)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$type</td>
+                <td>culture type, sfCultureInfo::ALL, sfCultureInfo::NEUTRAL or sfCultureInfo::SPECIFIC.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the list of supported cultures filtered by the specified </strong></p>
+              <p><p> culture type. This is an EXPENSIVE function, it needs to traverse
+<br /> a list of ICU files in the data directory.
+<br /> This function can be called statically.</p></p>
+                        <p><strong>returns</strong> list of culture information available.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcurrencies"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getCurrencies</span>&nbsp;($currencies, $full)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$currencies</td>
+                <td>An array of currencies used to restrict the returned array (null by default, which means all currencies)</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$full</td>
+                <td>Whether to return the symbol and the name or not (false by default)</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a list of currencies in the language of the localized version.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> a list of localized currencies.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcurrency"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getCurrency</span>&nbsp;($code)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$code</td>
+                <td>A valid currency code</td>
+              </tr>
+                        </table>
+              <p><strong>Get the currency name in the current culture for the given code.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The currency name in the current culture</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdatetimeformat"></a>
+              <h3>
+                (sfDateTimeFormatInfo)&nbsp;<span class="method-name">getDateTimeFormat</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the sfDateTimeFormatInfo that defines the culturally appropriate</strong></p>
+              <p><p> format of displaying dates and times.</p></p>
+                        <p><strong>returns</strong> date time format information for the culture.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getenglishname"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getEnglishName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the culture name in English.</strong></p>
+              <p><p> Returns <code>array('Language','Country');</code>
+<br /> 'Country' is omitted if the culture is neutral.</p></p>
+                        <p><strong>returns</strong> array with language and country as elements.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getinstance"></a>
+              <h3>
+                (sfCultureInfo)&nbsp;<span class="method-name">getInstance</span>&nbsp;($culture)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>The culture for this instance</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the sfCultureInfo that for this culture string.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Invariant culture info is "en"</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getinvariantculture"></a>
+              <h3>
+                (sfCultureInfo)&nbsp;<span class="method-name">getInvariantCulture</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the sfCultureInfo that is culture-independent (invariant).</strong></p>
+              <p><p> Any changes to the invariant culture affects all other
+<br /> instances of the invariant culture.
+<br /> The invariant culture is assumed to be "en";</p></p>
+                        <p><strong>returns</strong> invariant culture info is "en".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getisneutralculture"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">getIsNeutralCulture</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets a value indicating whether the current sfCultureInfo </strong></p>
+              <p><p> represents a neutral culture. Returns true if the culture
+<br /> only contains two characters.</p></p>
+                        <p><strong>returns</strong> true if culture is neutral, false otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlanguage"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getLanguage</span>&nbsp;($code)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$code</td>
+                <td>A valid language code</td>
+              </tr>
+                        </table>
+              <p><strong>Get the language name in the current culture for the given code.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The language name in the current culture</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlanguages"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getLanguages</span>&nbsp;($languages)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$languages</td>
+                <td>An array of languages used to restrict the returned array (null by default, which means all languages)</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a list of languages in the language of the localized version.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> list of localized language names.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the culture name in the format </strong></p>
+              <p><p> "<languagecode2>_(country/regioncode2)".</p></p>
+                        <p><strong>returns</strong> culture name.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnativename"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getNativeName</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the culture name in the language that the culture is set</strong></p>
+              <p><p> to display. Returns <code>array('Language','Country');</code>
+<br /> 'Country' is omitted if the culture is neutral.</p></p>
+                        <p><strong>returns</strong> array with language and country as elements, localized.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnumberformat"></a>
+              <h3>
+                (sfNumberFormatInfo)&nbsp;<span class="method-name">getNumberFormat</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the sfNumberFormatInfo that defines the culturally appropriate</strong></p>
+              <p><p> format of displaying numbers, currency, and percentage.</p></p>
+                        <p><strong>returns</strong> the number format info for current culture.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getparent"></a>
+              <h3>
+                (sfCultureInfo)&nbsp;<span class="method-name">getParent</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the sfCultureInfo that represents the parent culture of the </strong></p>
+              <p><p> current sfCultureInfo</p></p>
+                        <p><strong>returns</strong> parent culture information.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getscripts"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getScripts</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets a list of scripts in the language of the localized version.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> list of localized script names.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettimezones"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getTimeZones</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets a list of timezones in the language of the localized version.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> list of localized timezones.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_loadculturedata"></a>
+              <h3>
+                <span class="method-name">loadCultureData</span>&nbsp;($culture)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>the culture identifier.</td>
+              </tr>
+                        </table>
+              <p><strong>Loads the ICU culture data for the specific culture identifier.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_searcharray"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">searchArray</span>&nbsp;($info, $path)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$info</td>
+                <td>the array for search</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$path</td>
+                <td>slash "/" separated array path.</td>
+              </tr>
+                        </table>
+              <p><strong>Searches the array for a specific value using a path separated using</strong></p>
+              <p><p> slash "/" separated path. e.g to find $info['hello']['world'],
+<br /> the path "hello/world" will return the corresponding value.</p></p>
+                        <p><strong>returns</strong> the value array using the path</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setculture"></a>
+              <h3>
+                <span class="method-name">setCulture</span>&nbsp;($culture)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>culture identifier, e.g. "fr_FR_EURO".</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the culture for the current instance. The culture indentifier</strong></p>
+              <p><p> must be of the form "<language>_(country/region)".</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdatetimeformat"></a>
+              <h3>
+                <span class="method-name">setDateTimeFormat</span>&nbsp;($dateTimeFormat)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$dateTimeFormat</td>
+                <td>the new date time format info.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the date time format information.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnumberformat"></a>
+              <h3>
+                <span class="method-name">setNumberFormat</span>&nbsp;($numberFormat)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$numberFormat</td>
+                <td>the new number format info.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the number format information.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_sortarray"></a>
+              <h3>
+                <span class="method-name">sortArray</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>sorts the passed array according to the locale of this sfCultureInfo class</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_validculture"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">validCulture</span>&nbsp;($culture)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>a culture</td>
+              </tr>
+                        </table>
+              <p><strong>Determines if a given culture is valid. Simply checks that the</strong></p>
+              <p><p> culture data exists.</p></p>
+                        <p><strong>returns</strong> true if valid, false otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                (return)&nbsp;<span class="method-name">__construct</span>&nbsp;($culture)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>a culture name, e.g. "en_AU".</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes a new instance of the sfCultureInfo class based on the </strong></p>
+              <p><p> culture specified by name. E.g. <code>new sfCultureInfo('en_AU');</code>
+<br /> The culture indentifier must be of the form 
+<br /> "<language>_(country/region/variant)".</p></p>
+                        <p><strong>returns</strong> new sfCultureInfo.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___get"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">__get</span>&nbsp;($name)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The property to get</td>
+              </tr>
+                        </table>
+              <p><strong>Allows functions that begins with &#039;set&#039; to be called directly</strong></p>
+              <p><p> as an attribute/property to retrieve the value.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___set"></a>
+              <h3>
+                <span class="method-name">__set</span>&nbsp;($name, $value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The property to set</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>The property value</td>
+              </tr>
+                        </table>
+              <p><strong>Allows functions that begins with &#039;set&#039; to be called directly</strong></p>
+              <p><p> as an attribute/property to set the value.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___tostring"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">__toString</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Displays the culture name.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> the culture name.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

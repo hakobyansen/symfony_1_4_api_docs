@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfRequestRoute Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfRequestRoute Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      routing      </strong>
+      <small> - <a href="routing.html">9 classes</a></small>
+
+              <ul>
+                      <li><a href="sfObjectRoute.html">sfObjectRoute</a></li>
+                      <li><a href="sfObjectRouteCollection.html">sfObjectRouteCollection</a></li>
+                      <li><a href="sfPatternRouting.html">sfPatternRouting</a></li>
+                      <li><a href="sfPropelRoute.html">sfPropelRoute</a></li>
+                      <li><a href="sfPropelRouteCollection.html">sfPropelRouteCollection</a></li>
+                      <li><a href="sfRequestRoute.html">sfRequestRoute</a></li>
+                      <li><a href="sfRoute.html">sfRoute</a></li>
+                      <li><a href="sfRouteCollection.html">sfRouteCollection</a></li>
+                      <li><a href="sfRouting.html">sfRouting</a></li>
+                  </ul>
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfRequestRoute.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfRequestRoute.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfRequestRoute.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfRequestRoute.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfRequestRoute represents a route that is request aware.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+                              <a href="sfObjectRoute.html">sfObjectRoute</a>                &nbsp;&lt;&nbsp;
+              
+              <strong>sfRequestRoute</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="sfRoute.html">sfRoute</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfRequestRoute.html#method_generate">generate</a>($params, $context, $absolute)
+                <br />
+                <span class="description">Generates a URL from the given parameters.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfRequestRoute.html#method_matchesparameters">matchesParameters</a>($params, $context)
+                <br />
+                <span class="description">Returns true if the parameters match this route, false otherwise.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfRequestRoute.html#method_matchesurl">matchesUrl</a>($url, $context)
+                <br />
+                <span class="description">Returns true if the URL matches this route, false otherwise.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfRequestRoute.html#method___construct">__construct</a>()
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="sfRoute.html">sfRoute</a>              </h3>
+                                                                <a href="sfRoute.html#method_bind">bind</a>                  ,                                   <a href="sfRoute.html#method_compile">compile</a>                  ,                                   <a href="sfRoute.html#method_compileforseparator">compileForSeparator</a>                  ,                                   <a href="sfRoute.html#method_compilefortext">compileForText</a>                  ,                                   <a href="sfRoute.html#method_compileforvariable">compileForVariable</a>                  ,                                   <a href="sfRoute.html#method_fixdefaults">fixDefaults</a>                  ,                                   <a href="sfRoute.html#method_fixrequirements">fixRequirements</a>                  ,                                   <a href="sfRoute.html#method_fixsuffix">fixSuffix</a>                  ,                                   <a href="sfRoute.html#method_generate">generate</a>                  ,                                   <a href="sfRoute.html#method_generatestarparameter">generateStarParameter</a>                  ,                                   <a href="sfRoute.html#method_generatewithtokens">generateWithTokens</a>                  ,                                   <a href="sfRoute.html#method_getdefaultoptions">getDefaultOptions</a>                  ,                                   <a href="sfRoute.html#method_getdefaultparameters">getDefaultParameters</a>                  ,                                   <a href="sfRoute.html#method_getdefaults">getDefaults</a>                  ,                                   <a href="sfRoute.html#method_getoptions">getOptions</a>                  ,                                   <a href="sfRoute.html#method_getparameters">getParameters</a>                  ,                                   <a href="sfRoute.html#method_getpattern">getPattern</a>                  ,                                   <a href="sfRoute.html#method_getregex">getRegex</a>                  ,                                   <a href="sfRoute.html#method_getrequirements">getRequirements</a>                  ,                                   <a href="sfRoute.html#method_gettokens">getTokens</a>                  ,                                   <a href="sfRoute.html#method_getvariables">getVariables</a>                  ,                                   <a href="sfRoute.html#method_hasstarparameter">hasStarParameter</a>                  ,                                   <a href="sfRoute.html#method_initializeoptions">initializeOptions</a>                  ,                                   <a href="sfRoute.html#method_isbound">isBound</a>                  ,                                   <a href="sfRoute.html#method_matchesparameters">matchesParameters</a>                  ,                                   <a href="sfRoute.html#method_matchesurl">matchesUrl</a>                  ,                                   <a href="sfRoute.html#method_mergearrays">mergeArrays</a>                  ,                                   <a href="sfRoute.html#method_parsestarparameter">parseStarParameter</a>                  ,                                   <a href="sfRoute.html#method_postcompile">postCompile</a>                  ,                                   <a href="sfRoute.html#method_precompile">preCompile</a>                  ,                                   <a href="sfRoute.html#method_serialize">serialize</a>                  ,                                   <a href="sfRoute.html#method_setdefaultoptions">setDefaultOptions</a>                  ,                                   <a href="sfRoute.html#method_setdefaultparameters">setDefaultParameters</a>                  ,                                   <a href="sfRoute.html#method_tokenize">tokenize</a>                  ,                                   <a href="sfRoute.html#method_tokenizebufferafter">tokenizeBufferAfter</a>                  ,                                   <a href="sfRoute.html#method_tokenizebufferbefore">tokenizeBufferBefore</a>                  ,                                   <a href="sfRoute.html#method_unserialize">unserialize</a>                  ,                                   <a href="sfRoute.html#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_generate"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">generate</span>&nbsp;($params, $context, $absolute)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$params</td>
+                <td>The parameter values</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$context</td>
+                <td>The context</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$absolute</td>
+                <td>Whether to generate an absolute URL</td>
+              </tr>
+                        </table>
+              <p><strong>Generates a URL from the given parameters.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The generated URL</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_matchesparameters"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">matchesParameters</span>&nbsp;($params, $context)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$params</td>
+                <td>The parameters</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$context</td>
+                <td>The context</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if the parameters match this route, false otherwise.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the parameters match this route, false otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_matchesurl"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">matchesUrl</span>&nbsp;($url, $context)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$url</td>
+                <td>The URL</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$context</td>
+                <td>The context</td>
+              </tr>
+                        </table>
+              <p><strong>Returns true if the URL matches this route, false otherwise.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of parameters</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p>
+<br /> Applies a default sf_method requirements of GET or HEAD.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

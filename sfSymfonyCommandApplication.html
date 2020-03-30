@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfSymfonyCommandApplication Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfSymfonyCommandApplication Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      command      </strong>
+      <small> - <a href="command.html">10 classes</a></small>
+
+              <ul>
+                      <li><a href="sfAnsiColorFormatter.html">sfAnsiColorFormatter</a></li>
+                      <li><a href="sfCommandApplication.html">sfCommandApplication</a></li>
+                      <li><a href="sfCommandArgument.html">sfCommandArgument</a></li>
+                      <li><a href="sfCommandArgumentSet.html">sfCommandArgumentSet</a></li>
+                      <li><a href="sfCommandManager.html">sfCommandManager</a></li>
+                      <li><a href="sfCommandOption.html">sfCommandOption</a></li>
+                      <li><a href="sfCommandOptionSet.html">sfCommandOptionSet</a></li>
+                      <li><a href="sfFormatter.html">sfFormatter</a></li>
+                      <li><a href="sfPhing.html">sfPhing</a></li>
+                      <li><a href="sfSymfonyCommandApplication.html">sfSymfonyCommandApplication</a></li>
+                  </ul>
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfSymfonyCommandApplication.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfSymfonyCommandApplication.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfSymfonyCommandApplication.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfSymfonyCommandApplication.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfSymfonyCommandApplication manages the symfony CLI.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+              
+              <strong>sfSymfonyCommandApplication</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="sfCommandApplication.html">sfCommandApplication</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">Boolean</span>
+                <a href="sfSymfonyCommandApplication.html#method_autoloadtask">autoloadTask</a>($class)
+                <br />
+                <span class="description">Autoloads a task class</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfSymfonyCommandApplication.html#method_configure">configure</a>()
+                <br />
+                <span class="description">Configures the current symfony command application.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfSymfonyCommandApplication.html#method_getlongversion">getLongVersion</a>()
+                <br />
+                <span class="description">@see sfCommandApplication</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfSymfonyCommandApplication.html#method_loadtasks">loadTasks</a>($configuration)
+                <br />
+                <span class="description">Loads all available tasks.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">integer</span>
+                <a href="sfSymfonyCommandApplication.html#method_run">run</a>($options)
+                <br />
+                <span class="description">Runs the current application.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="sfCommandApplication.html">sfCommandApplication</a>              </h3>
+                                                                <a href="sfCommandApplication.html#method_autodiscovertasks">autodiscoverTasks</a>                  ,                                   <a href="sfCommandApplication.html#method_cleartasks">clearTasks</a>                  ,                                   <a href="sfCommandApplication.html#method_configure">configure</a>                  ,                                   <a href="sfCommandApplication.html#method_fixcgi">fixCgi</a>                  ,                                   <a href="sfCommandApplication.html#method_getabbreviations">getAbbreviations</a>                  ,                                   <a href="sfCommandApplication.html#method_getformatter">getFormatter</a>                  ,                                   <a href="sfCommandApplication.html#method_getlongversion">getLongVersion</a>                  ,                                   <a href="sfCommandApplication.html#method_getname">getName</a>                  ,                                   <a href="sfCommandApplication.html#method_getoption">getOption</a>                  ,                                   <a href="sfCommandApplication.html#method_gettask">getTask</a>                  ,                                   <a href="sfCommandApplication.html#method_gettasks">getTasks</a>                  ,                                   <a href="sfCommandApplication.html#method_gettasktoexecute">getTaskToExecute</a>                  ,                                   <a href="sfCommandApplication.html#method_getversion">getVersion</a>                  ,                                   <a href="sfCommandApplication.html#method_guessbestformatter">guessBestFormatter</a>                  ,                                   <a href="sfCommandApplication.html#method_handleoptions">handleOptions</a>                  ,                                   <a href="sfCommandApplication.html#method_help">help</a>                  ,                                   <a href="sfCommandApplication.html#method_isstreamsupportscolors">isStreamSupportsColors</a>                  ,                                   <a href="sfCommandApplication.html#method_isverbose">isVerbose</a>                  ,                                   <a href="sfCommandApplication.html#method_registertask">registerTask</a>                  ,                                   <a href="sfCommandApplication.html#method_registertasks">registerTasks</a>                  ,                                   <a href="sfCommandApplication.html#method_renderexception">renderException</a>                  ,                                   <a href="sfCommandApplication.html#method_run">run</a>                  ,                                   <a href="sfCommandApplication.html#method_setformatter">setFormatter</a>                  ,                                   <a href="sfCommandApplication.html#method_setname">setName</a>                  ,                                   <a href="sfCommandApplication.html#method_setversion">setVersion</a>                  ,                                   <a href="sfCommandApplication.html#method_strlen">strlen</a>                  ,                                   <a href="sfCommandApplication.html#method_withtrace">withTrace</a>                  ,                                   <a href="sfCommandApplication.html#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_autoloadtask"></a>
+              <h3>
+                (Boolean)&nbsp;<span class="method-name">autoloadTask</span>&nbsp;($class)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$class</td>
+                <td>The task class name</td>
+              </tr>
+                        </table>
+              <p><strong>Autoloads a task class</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_configure"></a>
+              <h3>
+                <span class="method-name">configure</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Configures the current symfony command application.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlongversion"></a>
+              <h3>
+                <span class="method-name">getLongVersion</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>@see sfCommandApplication</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_loadtasks"></a>
+              <h3>
+                <span class="method-name">loadTasks</span>&nbsp;($configuration)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$configuration</td>
+                <td>The project configuration</td>
+              </tr>
+                        </table>
+              <p><strong>Loads all available tasks.</strong></p>
+              <p><p>
+<br /> Looks for tasks in the symfony core, the current project and all project plugins.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_run"></a>
+              <h3>
+                (integer)&nbsp;<span class="method-name">run</span>&nbsp;($options)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>The command line options</td>
+              </tr>
+                        </table>
+              <p><strong>Runs the current application.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> 0 if everything went fine, or an error code</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

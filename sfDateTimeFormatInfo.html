@@ -1,0 +1,1072 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfDateTimeFormatInfo Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfDateTimeFormatInfo Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      i18n      </strong>
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+              <ul>
+                      <li><a href="sfChoiceFormat.html">sfChoiceFormat</a></li>
+                      <li><a href="sfCultureInfo.html">sfCultureInfo</a></li>
+                      <li><a href="sfDateFormat.html">sfDateFormat</a></li>
+                      <li><a href="sfDateTimeFormatInfo.html">sfDateTimeFormatInfo</a></li>
+                      <li><a href="sfI18N.html">sfI18N</a></li>
+                      <li><a href="sfI18nApplicationExtract.html">sfI18nApplicationExtract</a></li>
+                      <li><a href="sfI18nExtract.html">sfI18nExtract</a></li>
+                      <li><a href="sfI18nExtractorInterface.html">sfI18nExtractorInterface</a></li>
+                      <li><a href="sfI18nModuleExtract.html">sfI18nModuleExtract</a></li>
+                      <li><a href="sfI18nPhpExtractor.html">sfI18nPhpExtractor</a></li>
+                      <li><a href="sfI18nYamlExtractor.html">sfI18nYamlExtractor</a></li>
+                      <li><a href="sfI18nYamlGeneratorExtractor.html">sfI18nYamlGeneratorExtractor</a></li>
+                      <li><a href="sfI18nYamlValidateExtractor.html">sfI18nYamlValidateExtractor</a></li>
+                      <li><a href="sfIMessageSource.html">sfIMessageSource</a></li>
+                      <li><a href="sfMessageFormat.html">sfMessageFormat</a></li>
+                      <li><a href="sfMessageSource.html">sfMessageSource</a></li>
+                      <li><a href="sfMessageSource_Aggregate.html">sfMessageSource_Aggregate</a></li>
+                      <li><a href="sfMessageSource_Database.html">sfMessageSource_Database</a></li>
+                      <li><a href="sfMessageSource_File.html">sfMessageSource_File</a></li>
+                      <li><a href="sfMessageSource_gettext.html">sfMessageSource_gettext</a></li>
+                      <li><a href="sfMessageSource_MySQL.html">sfMessageSource_MySQL</a></li>
+                      <li><a href="sfMessageSource_SQLite.html">sfMessageSource_SQLite</a></li>
+                      <li><a href="sfMessageSource_XLIFF.html">sfMessageSource_XLIFF</a></li>
+                      <li><a href="sfNumberFormat.html">sfNumberFormat</a></li>
+                      <li><a href="sfNumberFormatInfo.html">sfNumberFormatInfo</a></li>
+                  </ul>
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfDateTimeFormatInfo.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfDateTimeFormatInfo.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfDateTimeFormatInfo.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfDateTimeFormatInfo.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>Defines how DateTime values are formatted and displayed, depending </p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_formatdatetime">formatDateTime</a>()
+                <br />
+                <span class="description">Formats the date and time in a culture sensitive paterrn.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateTimeFormatInfo.html#method_getabbreviateddaynames">getAbbreviatedDayNames</a>()
+                <br />
+                <span class="description">A one-dimensional array of type String containing</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateTimeFormatInfo.html#method_getabbreviatedmonthnames">getAbbreviatedMonthNames</a>()
+                <br />
+                <span class="description">A one-dimensional array of type String containing the </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getamdesignator">getAMDesignator</a>()
+                <br />
+                <span class="description">The string designator for hours that are &quot;ante meridiem&quot; (before noon).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateTimeFormatInfo.html#method_getampmmarkers">getAMPMMarkers</a>()
+                <br />
+                <span class="description">Gets the AM and PM markers array.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateTimeFormatInfo.html#method_getdata">getData</a>()
+                <br />
+                <span class="description">Gets the internal ICU data for date time formatting.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getdatetimeorderpattern">getDateTimeOrderPattern</a>()
+                <br />
+                <span class="description">Returns the date time order pattern, &quot;{1} {0}&quot; (default).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateTimeFormatInfo.html#method_getdaynames">getDayNames</a>()
+                <br />
+                <span class="description">A one-dimensional array of type String containing the</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getera">getEra</a>($era)
+                <br />
+                <span class="description">A string containing the name of the era.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getfulldatepattern">getFullDatePattern</a>()
+                <br />
+                <span class="description">Returns the full date pattern &quot;EEEE, yyyy MMMM dd&quot; (default).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getfulltimepattern">getFullTimePattern</a>()
+                <br />
+                <span class="description">Returns the full time pattern &quot;HH:mm:ss z&quot; (default).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfDateTimeFormatInfo</span>
+                <a href="sfDateTimeFormatInfo.html#method_getinstance">getInstance</a>($culture)
+                <br />
+                <span class="description">Returns the sfDateTimeFormatInfo associated with the specified culture.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfDateTimeFormatInfo</span>
+                <a href="sfDateTimeFormatInfo.html#method_getinvariantinfo">getInvariantInfo</a>()
+                <br />
+                <span class="description">Gets the default sfDateTimeFormatInfo that is culture-independent (invariant).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getlongdatepattern">getLongDatePattern</a>()
+                <br />
+                <span class="description">Returns the long date pattern &quot;yyyy MMMM d&quot; (default).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getlongtimepattern">getLongTimePattern</a>()
+                <br />
+                <span class="description">Returns the long time pattern &quot;HH:mm:ss z&quot; (default).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getmediumdatepattern">getMediumDatePattern</a>()
+                <br />
+                <span class="description">Returns the medium date pattern &quot;yyyy MMMM d&quot; (default).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getmediumtimepattern">getMediumTimePattern</a>()
+                <br />
+                <span class="description">Returns the medium time pattern &quot;HH:mm:ss&quot; (default).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateTimeFormatInfo.html#method_getmonthnames">getMonthNames</a>()
+                <br />
+                <span class="description">A one-dimensional array of type String containing the </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateTimeFormatInfo.html#method_getnarrowdaynames">getNarrowDayNames</a>()
+                <br />
+                <span class="description">A one-dimensional array of type String containing</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateTimeFormatInfo.html#method_getnarrowmonthnames">getNarrowMonthNames</a>()
+                <br />
+                <span class="description">A one-dimensional array of type String containing the</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getpmdesignator">getPMDesignator</a>()
+                <br />
+                <span class="description">The string designator for hours that are &quot;post meridiem&quot; (after noon).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getshortdatepattern">getShortDatePattern</a>()
+                <br />
+                <span class="description">Returns the short date pattern &quot;yy/MM/dd&quot; (default).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateTimeFormatInfo.html#method_getshorttimepattern">getShortTimePattern</a>()
+                <br />
+                <span class="description">Returns the short time pattern &quot;HH:mm&quot; (default).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method_setabbreviateddaynames">setAbbreviatedDayNames</a>($value)
+                <br />
+                <span class="description">Sets the abbreviated day names. The value should be</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method_setabbreviatedmonthnames">setAbbreviatedMonthNames</a>($value)
+                <br />
+                <span class="description">Sets the abbreviated month names. The value should be</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method_setamdesignator">setAMDesignator</a>($value)
+                <br />
+                <span class="description">Sets the AM Designator. For example, &#039;AM&#039;.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method_setampmmarkers">setAMPMMarkers</a>($value)
+                <br />
+                <span class="description">Sets the AM and PM markers array.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method_setdaynames">setDayNames</a>($value)
+                <br />
+                <span class="description">Sets the day names. The value should be</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method_setmonthnames">setMonthNames</a>($value)
+                <br />
+                <span class="description">Sets the month names. The value should be</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method_setnarrowdaynames">setNarrowDayNames</a>($value)
+                <br />
+                <span class="description">Sets the narrow day names. The value should be</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method_setnarrowmonthnames">setNarrowMonthNames</a>($value)
+                <br />
+                <span class="description">Sets the narrow month names. The value should be</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method_setpmdesignator">setPMDesignator</a>($value)
+                <br />
+                <span class="description">Sets the PM Designator. For example, &#039;PM&#039;.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method___construct">__construct</a>($data)
+                <br />
+                <span class="description">Initializes a new writable instance of the sfDateTimeFormatInfo class </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfDateTimeFormatInfo.html#method___get">__get</a>()
+                <br />
+                <span class="description">Allows functions that begins with &#039;set&#039; to be called directly</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateTimeFormatInfo.html#method___set">__set</a>()
+                <br />
+                <span class="description">Allows functions that begins with &#039;set&#039; to be called directly</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_formatdatetime"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">formatDateTime</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Formats the date and time in a culture sensitive paterrn.</strong></p>
+              <p><p> The default is "Date Time".</p></p>
+                        <p><strong>returns</strong> date and time formated</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getabbreviateddaynames"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getAbbreviatedDayNames</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>A one-dimensional array of type String containing</strong></p>
+              <p><p> the culture-specific abbreviated names of the days
+<br /> of the week. The array for InvariantInfo contains
+<br /> "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", and "Sat".</p></p>
+                        <p><strong>returns</strong> abbreviated day names</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getabbreviatedmonthnames"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getAbbreviatedMonthNames</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>A one-dimensional array of type String containing the </strong></p>
+              <p><p> culture-specific abbreviated names of the months. The array 
+<br /> for InvariantInfo contains "Jan", "Feb", "Mar", "Apr", "May", 
+<br /> "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", and "Dec".</p><p> Returns wide names if abbreviated names doesn't exist.</p></p>
+                        <p><strong>returns</strong> abbreviated month names.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getamdesignator"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getAMDesignator</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>The string designator for hours that are &quot;ante meridiem&quot; (before noon).</strong></p>
+              <p><p> The default for InvariantInfo is "AM".</p></p>
+                        <p><strong>returns</strong> AM designator.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getampmmarkers"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getAMPMMarkers</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the AM and PM markers array.</strong></p>
+              <p><p> Default InvariantInfo for AM and PM is <code>array('AM','PM');</code></p></p>
+                        <p><strong>returns</strong> AM and PM markers</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdata"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getData</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the internal ICU data for date time formatting.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> ICU date time formatting data.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdatetimeorderpattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getDateTimeOrderPattern</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the date time order pattern, &quot;{1} {0}&quot; (default).</strong></p>
+              <p><p> This is culture sensitive.</p></p>
+                        <p><strong>returns</strong> pattern "{1} {0}".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdaynames"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getDayNames</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>A one-dimensional array of type String containing the</strong></p>
+              <p><p> culture-specific full names of the days of the week.
+<br /> The array for InvariantInfo contains "Sunday", "Monday",
+<br /> "Tuesday", "Wednesday", "Thursday", "Friday", and "Saturday".</p></p>
+                        <p><strong>returns</strong> day names</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getera"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getEra</span>&nbsp;($era)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$era</td>
+                <td>era The integer representing the era.</td>
+              </tr>
+                        </table>
+              <p><strong>A string containing the name of the era.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> the era name.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfulldatepattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getFullDatePattern</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the full date pattern &quot;EEEE, yyyy MMMM dd&quot; (default).</strong></p>
+              <p><p> This is culture sensitive.</p></p>
+                        <p><strong>returns</strong> pattern "EEEE, yyyy MMMM dd".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfulltimepattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getFullTimePattern</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the full time pattern &quot;HH:mm:ss z&quot; (default).</strong></p>
+              <p><p> This is culture sensitive.</p></p>
+                        <p><strong>returns</strong> pattern "HH:mm:ss z".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getinstance"></a>
+              <h3>
+                (sfDateTimeFormatInfo)&nbsp;<span class="method-name">getInstance</span>&nbsp;($culture)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$culture</td>
+                <td>the culture that gets the sfDateTimeFormat property.</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the sfDateTimeFormatInfo associated with the specified culture.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> sfDateTimeFormatInfo for the specified culture.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getinvariantinfo"></a>
+              <h3>
+                (sfDateTimeFormatInfo)&nbsp;<span class="method-name">getInvariantInfo</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the default sfDateTimeFormatInfo that is culture-independent (invariant).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> default sfDateTimeFormatInfo.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlongdatepattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getLongDatePattern</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the long date pattern &quot;yyyy MMMM d&quot; (default).</strong></p>
+              <p><p> This is culture sensitive.</p></p>
+                        <p><strong>returns</strong> pattern "yyyy MMMM d".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlongtimepattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getLongTimePattern</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the long time pattern &quot;HH:mm:ss z&quot; (default).</strong></p>
+              <p><p> This is culture sensitive.</p></p>
+                        <p><strong>returns</strong> pattern "HH:mm:ss z".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmediumdatepattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getMediumDatePattern</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the medium date pattern &quot;yyyy MMMM d&quot; (default).</strong></p>
+              <p><p> This is culture sensitive.</p></p>
+                        <p><strong>returns</strong> pattern "yyyy MMM d".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmediumtimepattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getMediumTimePattern</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the medium time pattern &quot;HH:mm:ss&quot; (default).</strong></p>
+              <p><p> This is culture sensitive.</p></p>
+                        <p><strong>returns</strong> pattern "HH:mm:ss".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmonthnames"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getMonthNames</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>A one-dimensional array of type String containing the </strong></p>
+              <p><p> culture-specific full names of the months. The array for 
+<br /> InvariantInfo contains "January", "February", "March", "April",
+<br /> "May", "June", "July", "August", "September", "October", "November",
+<br /> and "December"</p></p>
+                        <p><strong>returns</strong> month names.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnarrowdaynames"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getNarrowDayNames</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>A one-dimensional array of type String containing</strong></p>
+              <p><p> the culture-specific narrow names of the days
+<br /> of the week. The array for InvariantInfo contains
+<br /> "S", "M", "T", "W", "T", "F", and "S".</p></p>
+                        <p><strong>returns</strong> narrow day names</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getnarrowmonthnames"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getNarrowMonthNames</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>A one-dimensional array of type String containing the</strong></p>
+              <p><p> culture-specific narrow names of the months. The array
+<br /> for InvariantInfo contains "J", "F", "M", "A", "M", "J",
+<br /> "J", "A", "S", "O", "N", and "D".</p></p>
+                        <p><strong>returns</strong> narrow month names.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpmdesignator"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPMDesignator</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>The string designator for hours that are &quot;post meridiem&quot; (after noon).</strong></p>
+              <p><p> The default for InvariantInfo is "PM".</p></p>
+                        <p><strong>returns</strong> PM designator.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getshortdatepattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getShortDatePattern</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the short date pattern &quot;yy/MM/dd&quot; (default).</strong></p>
+              <p><p> This is culture sensitive.</p></p>
+                        <p><strong>returns</strong> pattern "yy/MM/dd".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getshorttimepattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getShortTimePattern</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the short time pattern &quot;HH:mm&quot; (default).</strong></p>
+              <p><p> This is culture sensitive.</p></p>
+                        <p><strong>returns</strong> pattern "HH:mm".</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setabbreviateddaynames"></a>
+              <h3>
+                <span class="method-name">setAbbreviatedDayNames</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>abbreviated day names.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the abbreviated day names. The value should be</strong></p>
+              <p><p> an array of string starting with Sunday and ends in Saturady.
+<br /> For example,
+<br /> <code>array("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setabbreviatedmonthnames"></a>
+              <h3>
+                <span class="method-name">setAbbreviatedMonthNames</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>month names.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the abbreviated month names. The value should be</strong></p>
+              <p><p> an array of string starting with Jan and ends in Dec.
+<br /> For example,
+<br /> <code>array("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+<br /> "Jul", "Aug", "Sep","Oct","Nov","Dec");</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setamdesignator"></a>
+              <h3>
+                <span class="method-name">setAMDesignator</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>AM designator.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the AM Designator. For example, &#039;AM&#039;.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setampmmarkers"></a>
+              <h3>
+                <span class="method-name">setAMPMMarkers</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>AM and PM markers</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the AM and PM markers array.</strong></p>
+              <p><p> For example <code>array('AM','PM');</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setdaynames"></a>
+              <h3>
+                <span class="method-name">setDayNames</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>day names.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the day names. The value should be</strong></p>
+              <p><p> an array of string starting with Sunday and ends in Saturady.
+<br /> For example,
+<br /> <code>array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+<br /> "Friday", "Saturday".);</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setmonthnames"></a>
+              <h3>
+                <span class="method-name">setMonthNames</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>month names.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the month names. The value should be</strong></p>
+              <p><p> an array of string starting with Janurary and ends in December.
+<br /> For example,
+<br /> <code>array("January", "February", "March", "April", "May", "June",
+<br /> "July", "August", "September","October","November","December");</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnarrowdaynames"></a>
+              <h3>
+                <span class="method-name">setNarrowDayNames</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>narrow day names.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the narrow day names. The value should be</strong></p>
+              <p><p> an array of string starting with Sunday and ends in Saturady.
+<br /> For example,
+<br /> <code>array("S", "M", "T", "W", "T", "F", "S");</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setnarrowmonthnames"></a>
+              <h3>
+                <span class="method-name">setNarrowMonthNames</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>month names.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the narrow month names. The value should be</strong></p>
+              <p><p> an array of string starting with J and ends in D.
+<br /> For example,
+<br /> <code>array("J","F","M","A","M","J","J","A","S","O","N","D");</code></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setpmdesignator"></a>
+              <h3>
+                <span class="method-name">setPMDesignator</span>&nbsp;($value)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>PM designator.</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the PM Designator. For example, &#039;PM&#039;.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($data)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$data</td>
+                <td>ICU data for date time formatting.</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes a new writable instance of the sfDateTimeFormatInfo class </strong></p>
+              <p><p> that is dependent on the ICU data for date time formatting 
+<br /> information. <b>N.B.</b>You should not initialize this class directly
+<br /> unless you know what you are doing. Please use use 
+<br /> sfDateTimeFormatInfo::getInstance() to create an instance.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___get"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">__get</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Allows functions that begins with &#039;set&#039; to be called directly</strong></p>
+              <p><p> as an attribute/property to retrieve the value.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___set"></a>
+              <h3>
+                <span class="method-name">__set</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Allows functions that begins with &#039;set&#039; to be called directly</strong></p>
+              <p><p> as an attribute/property to set the value.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

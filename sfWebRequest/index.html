@@ -1,0 +1,1487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
+
+    <title>symfony API &raquo; sfWebRequest Class | symfony | Web PHP Framework</title>
+
+    <link rel="alternate" type="application/rss+xml" title="Blog Entries"  href="http://feeds.feedburner.com/symfony/blog" />
+    <link rel="alternate" type="application/rss+xml" title="Blog Comments"  href="http://feeds.feedburner.com/symfony/blog/comments" />
+    <link rel="alternate" type="application/rss+xml" title="Forum Entries"  href="http://forum.symfony-project.org/feed.php" />
+    <link rel="alternate" type="application/rss+xml" title="symfony1 User Mailing-List Messages"  href="http://groups.google.com/group/symfony1/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Symfony2 User Mailing-List Messages"  href="http://groups.google.com/group/symfony2/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Dev Mailing-List Messages"  href="http://groups.google.com/group/symfony-devs/feed/atom_v1_0_msgs.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Project Timeline"  href="http://trac.symfony-project.org/timeline?milestone=on&amp;ticket=on&amp;ticket_details=on&amp;changeset=on&amp;wiki=on&amp;max=10&amp;daysback=10&amp;format=rss" />
+
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_0/opensearch.xml" title="symfony 1.0 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_2/opensearch.xml" title="symfony 1.2 API" />
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.symfony-project.org/api/1_4/opensearch.xml" title="symfony 1.4 API" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/sfSymfonyWebDocPlugin/css/api.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/auto_complete.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/js/effects.js"></script>
+<script type="text/javascript" src="/js/controls.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="/"><img alt="symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/installation">Installation</a></li>
+            <li><a href="/doc/1_4/">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="/community">Community</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li class="last"><a href="http://trac.symfony-project.org/timeline">Development</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfWebRequest Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="http://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="/api/1_4/">&laquo; Back to API menu</a></p>
+
+  <div class="opensearch">
+  <a href="#" onClick="window.external.AddSearchProvider('http://www.symfony-project.org/api/1_4/opensearch.xml')">
+    1.4 API OpenSearch
+  </a>
+</div>
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="/api/1_4/action">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="/api/1_4/addon">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="/api/1_4/autoload">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="/api/1_4/behavior">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="/api/1_4/cache">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="/api/1_4/command">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="/api/1_4/config">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="/api/1_4/controller">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="/api/1_4/database">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="/api/1_4/debug">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="/api/1_4/default">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="/api/1_4/doctrine">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="/api/1_4/event_dispatcher">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="/api/1_4/exception">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="/api/1_4/filter">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="/api/1_4/form">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="/api/1_4/generator">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="/api/1_4/helper">12 classes</a></small>
+
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="/api/1_4/i18n">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="/api/1_4/log">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="/api/1_4/mailer">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="/api/1_4/pager">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="/api/1_4/plugin">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="/api/1_4/propel">23 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      request      </strong>
+      <small> - <a href="/api/1_4/request">2 classes</a></small>
+
+              <ul>
+                      <li><a href="/api/1_4/sfRequest">sfRequest</a></li>
+                      <li><a href="/api/1_4/sfWebRequest">sfWebRequest</a></li>
+                  </ul>
+          </li>
+          <li>
+            response      
+      <small> - <a href="/api/1_4/response">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="/api/1_4/routing">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="/api/1_4/storage">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="/api/1_4/task">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="/api/1_4/user">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="/api/1_4/util">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="/api/1_4/validator">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="/api/1_4/view">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="/api/1_4/widget">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="/api/1_4/yaml">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="/api/1_0/sfWebRequest">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="/api/1_1/sfWebRequest">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="/api/1_2/sfWebRequest">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="/api/1_3/sfWebRequest">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+<div id="search_box">
+  <form action="/api/search/1_4" method="get">
+    <small>Search by class, method name, or package</small>
+    <input type="text" name="search" value="" autocomplete="off" id="search" /><div id="search_auto_complete" class="auto_complete"></div>
+    <img src="/sfSymfonyWebDocPlugin/images/indicator.gif" id="search_indicator" style="display: none" />
+    <script type="text/javascript">
+//<![CDATA[
+new Ajax.Autocompleter('search', 'search_auto_complete', '/api/search/1_4/autocomplete.html', {indicator:'search_indicator', minChars:3});
+//]]>
+    </script><input type="submit" value="search" />
+    <a href="#" onClick="el = document.getElementById('search_box_help'); el.style.display = 'none' == el.style.display ? 'block' : 'none'; return false;"><img src="/sfSymfonyWebDocPlugin/images/info.gif" alt="API search help" /></a>
+    <div id="search_box_help" style="display: none">
+      <table>
+        <tr>
+          <td>Beggining of a class name</td>
+          <td>Beggining of a method name</td>
+          <td>Class name followed by ::</td>
+          <td>Class name followed by :: and the beginning of a method name</td>
+        </tr>
+        <tr>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_1.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_2.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_3.png" /></td>
+          <td><img src="/sfSymfonyWebDocPlugin/images/search_4.png" /></td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+  
+    <div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfWebRequest class.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+              
+              <strong>sfWebRequest</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="/api/1_4/sfRequest">sfRequest</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_addrequestparameters">addRequestParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_checkcsrfprotection">checkCSRFProtection</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_convertfileinformation">convertFileInformation</a>($taintedFiles)
+                <br />
+                <span class="description">Converts uploaded file array to a format following the $_GET and $POST naming convention.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_fixparameters">fixParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_fixphpfilesarray">fixPhpFilesArray</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getacceptablecontenttypes">getAcceptableContentTypes</a>()
+                <br />
+                <span class="description">Gets a list of content types acceptable by the client browser</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getcharsets">getCharsets</a>()
+                <br />
+                <span class="description">Gets a list of charsets acceptable by the client browser.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getcontenttype">getContentType</a>($trimmed)
+                <br />
+                <span class="description">Returns the content type of the current request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="#method_getcookie">getCookie</a>($name, $defaultValue)
+                <br />
+                <span class="description">Gets a cookie value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getfiles">getFiles</a>($key)
+                <br />
+                <span class="description">Retrieves an array of files.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getformat">getFormat</a>($mimeType)
+                <br />
+                <span class="description">Gets the format associated with the mime type.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string|null</span>
+                <a href="#method_getforwardedfor">getForwardedFor</a>()
+                <br />
+                <span class="description">Returns an array containing a list of IPs, the first being the client address</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getgetparameter">getGetParameter</a>($name, $default)
+                <br />
+                <span class="description">Returns the value of a GET parameter.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_getgetparameters">getGetParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_gethost">getHost</a>()
+                <br />
+                <span class="description">Returns current host name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_gethttpheader">getHttpHeader</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getlanguages">getLanguages</a>()
+                <br />
+                <span class="description">Gets a list of languages acceptable by the client browser</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getmimetype">getMimeType</a>($format)
+                <br />
+                <span class="description">Gets the mime type associated with the format.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpathinfo">getPathInfo</a>()
+                <br />
+                <span class="description">Retrieves the path info for the current web request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getpathinfoarray">getPathInfoArray</a>()
+                <br />
+                <span class="description">Returns the array that contains all request information ($_SERVER or $_ENV).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_getpathinfoprefix">getPathInfoPrefix</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpostparameter">getPostParameter</a>($name, $default)
+                <br />
+                <span class="description">Returns the value of a POST parameter.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_getpostparameters">getPostParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getpreferredculture">getPreferredCulture</a>($cultures)
+                <br />
+                <span class="description">Returns the preferred culture for the current request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getreferer">getReferer</a>()
+                <br />
+                <span class="description">Returns referer.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getrelativeurlroot">getRelativeUrlRoot</a>()
+                <br />
+                <span class="description">Retrieves relative root url.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getremoteaddress">getRemoteAddress</a>()
+                <br />
+                <span class="description">Returns the remote IP address that made the request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_getrequestcontext">getRequestContext</a>()
+                <br />
+                <span class="description">Returns the request context used.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getrequestformat">getRequestFormat</a>()
+                <br />
+                <span class="description">Gets the request format.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_getrequestparameters">getRequestParameters</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_getscriptname">getScriptName</a>()
+                <br />
+                <span class="description">Returns current script name.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_geturi">getUri</a>()
+                <br />
+                <span class="description">Retrieves the uniform resource identifier for the current web request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_geturiprefix">getUriPrefix</a>()
+                <br />
+                <span class="description">Returns Uri prefix, including protocol, hostname and server port.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="#method_geturlparameter">getUrlParameter</a>($name, $default)
+                <br />
+                <span class="description">Returns the value of a parameter passed as a URL segment.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_initialize">initialize</a>($dispatcher, $parameters, $attributes, $options)
+                <br />
+                <span class="description">Initializes this sfRequest.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_isabsuri">isAbsUri</a>()
+                <br />
+                <span class="description">See if the client is using absolute uri</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_isforwardedsecure">isForwardedSecure</a>()
+                <br />
+                <span class="description">Returns true if the current request is forwarded from a request that is secure.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_ismethod">isMethod</a>($method)
+                <br />
+                <span class="description">Checks if the request method is the given one.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="#method_issecure">isSecure</a>()
+                <br />
+                <span class="description">Returns true if the current or forwarded request is secure (HTTPS protocol).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">bool</span>
+                <a href="#method_isxmlhttprequest">isXmlHttpRequest</a>()
+                <br />
+                <span class="description">Returns true if the request is a XMLHttpRequest.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="#method_parserequestparameters">parseRequestParameters</a>()
+                <br />
+                <span class="description">Parses the request parameters.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setformat">setFormat</a>($format, $mimeTypes)
+                <br />
+                <span class="description">Associates a format with mime types.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setrelativeurlroot">setRelativeUrlRoot</a>($value)
+                <br />
+                <span class="description">Sets the relative root url for the current web request.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_setrequestformat">setRequestFormat</a>($format)
+                <br />
+                <span class="description">Sets the request format.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="#method_splithttpacceptheader">splitHttpAcceptHeader</a>($header)
+                <br />
+                <span class="description">Splits an HTTP header for the current web request.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="/api/1_4/sfRequest">sfRequest</a>              </h3>
+                                                                <a href="/api/1_4/sfRequest#method_extractparameters">extractParameters</a>                  ,                                   <a href="/api/1_4/sfRequest#method_getattribute">getAttribute</a>                  ,                                   <a href="/api/1_4/sfRequest#method_getattributeholder">getAttributeHolder</a>                  ,                                   <a href="/api/1_4/sfRequest#method_getcontent">getContent</a>                  ,                                   <a href="/api/1_4/sfRequest#method_getmethod">getMethod</a>                  ,                                   <a href="/api/1_4/sfRequest#method_getoptions">getOptions</a>                  ,                                   <a href="/api/1_4/sfRequest#method_getparameter">getParameter</a>                  ,                                   <a href="/api/1_4/sfRequest#method_getparameterholder">getParameterHolder</a>                  ,                                   <a href="/api/1_4/sfRequest#method_hasattribute">hasAttribute</a>                  ,                                   <a href="/api/1_4/sfRequest#method_hasparameter">hasParameter</a>                  ,                                   <a href="/api/1_4/sfRequest#method_initialize">initialize</a>                  ,                                   <a href="/api/1_4/sfRequest#method_offsetexists">offsetExists</a>                  ,                                   <a href="/api/1_4/sfRequest#method_offsetget">offsetGet</a>                  ,                                   <a href="/api/1_4/sfRequest#method_offsetset">offsetSet</a>                  ,                                   <a href="/api/1_4/sfRequest#method_offsetunset">offsetUnset</a>                  ,                                   <a href="/api/1_4/sfRequest#method_setattribute">setAttribute</a>                  ,                                   <a href="/api/1_4/sfRequest#method_setmethod">setMethod</a>                  ,                                   <a href="/api/1_4/sfRequest#method_setparameter">setParameter</a>                  ,                                   <a href="/api/1_4/sfRequest#method___call">__call</a>                  ,                                   <a href="/api/1_4/sfRequest#method___clone">__clone</a>                  ,                                   <a href="/api/1_4/sfRequest#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_addrequestparameters"></a>
+              <h3>
+                <span class="method-name">addRequestParameters</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_checkcsrfprotection"></a>
+              <h3>
+                <span class="method-name">checkCSRFProtection</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_convertfileinformation"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">convertFileInformation</span>&nbsp;($taintedFiles)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$taintedFiles</td>
+                <td>An array representing uploaded file information</td>
+              </tr>
+                        </table>
+              <p><strong>Converts uploaded file array to a format following the $_GET and $POST naming convention.</strong></p>
+              <p><p>
+<br /> It's safe to pass an already converted array, in which case this method just returns the original array unmodified.</p></p>
+                        <p><strong>returns</strong> An array of re-ordered uploaded file information</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_fixparameters"></a>
+              <h3>
+                <span class="method-name">fixParameters</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_fixphpfilesarray"></a>
+              <h3>
+                <span class="method-name">fixPhpFilesArray</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getacceptablecontenttypes"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getAcceptableContentTypes</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets a list of content types acceptable by the client browser</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Languages ordered in the user browser preferences</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcharsets"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getCharsets</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets a list of charsets acceptable by the client browser.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> List of charsets in preferable order</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcontenttype"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getContentType</span>&nbsp;($trimmed)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$trimmed</td>
+                <td>If false the full Content-Type header will be returned</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the content type of the current request.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcookie"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getCookie</span>&nbsp;($name, $defaultValue)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>Cookie name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$defaultValue</td>
+                <td>Default value returned when no cookie with given name is found</td>
+              </tr>
+                        </table>
+              <p><strong>Gets a cookie value.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfiles"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getFiles</span>&nbsp;($key)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$key</td>
+                <td>A key</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves an array of files.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An associative array of files</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getformat"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getFormat</span>&nbsp;($mimeType)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$mimeType</td>
+                <td>The associated mime type</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the format associated with the mime type.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The format (null if not found)</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getforwardedfor"></a>
+              <h3>
+                (string|null)&nbsp;<span class="method-name">getForwardedFor</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns an array containing a list of IPs, the first being the client address</strong></p>
+              <p><p> and the others the addresses of each proxy that passed the request. The address
+<br /> for the last proxy can be retrieved via getRemoteAddress().</p><p> This method returns null if no proxy passed this request. Note that some proxies
+<br /> do not use this header, and act as if they were the client.</p></p>
+                        <p><strong>returns</strong> An array of IP from the client and the proxies that passed the request, or null if no proxy was used.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgetparameter"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getGetParameter</span>&nbsp;($name, $default)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The GET parameter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the value of a GET parameter.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The GET parameter value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getgetparameters"></a>
+              <h3>
+                <span class="method-name">getGetParameters</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethost"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getHost</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns current host name.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethttpheader"></a>
+              <h3>
+                <span class="method-name">getHttpHeader</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlanguages"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getLanguages</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets a list of languages acceptable by the client browser</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Languages ordered in the user browser preferences</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmimetype"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getMimeType</span>&nbsp;($format)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$format</td>
+                <td>The format</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the mime type associated with the format.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The associated mime type (null if not found)</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpathinfo"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPathInfo</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the path info for the current web request.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Path info</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpathinfoarray"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getPathInfoArray</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the array that contains all request information ($_SERVER or $_ENV).</strong></p>
+              <p><p>
+<br /> This information is stored in the path_info_array option.</p></p>
+                        <p><strong>returns</strong> Path information</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpathinfoprefix"></a>
+              <h3>
+                <span class="method-name">getPathInfoPrefix</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpostparameter"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPostParameter</span>&nbsp;($name, $default)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The POST parameter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the value of a POST parameter.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The POST parameter value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpostparameters"></a>
+              <h3>
+                <span class="method-name">getPostParameters</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpreferredculture"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPreferredCulture</span>&nbsp;($cultures)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$cultures</td>
+                <td>An array of ordered cultures available</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the preferred culture for the current request.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The preferred culture</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getreferer"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getReferer</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns referer.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrelativeurlroot"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getRelativeUrlRoot</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves relative root url.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> URL</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getremoteaddress"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getRemoteAddress</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the remote IP address that made the request.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The remote IP address</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrequestcontext"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getRequestContext</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the request context used.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> An array of values representing the current request</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrequestformat"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getRequestFormat</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Gets the request format.</strong></p>
+              <p><p>
+<br /> Here is the process to determine the format:</p><p>  * format defined by the user (with setRequestFormat())
+<br />  * sf_format request parameter
+<br />  * default format from factories</p></p>
+                        <p><strong>returns</strong> The request format</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getrequestparameters"></a>
+              <h3>
+                <span class="method-name">getRequestParameters</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getscriptname"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getScriptName</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns current script name.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geturi"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getUri</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Retrieves the uniform resource identifier for the current web request.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Unified resource identifier</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geturiprefix"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getUriPrefix</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns Uri prefix, including protocol, hostname and server port.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> Uniform resource identifier prefix</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_geturlparameter"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getUrlParameter</span>&nbsp;($name, $default)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$name</td>
+                <td>The parameter name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$default</td>
+                <td>The default value</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the value of a parameter passed as a URL segment.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> The parameter value</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_initialize"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">initialize</span>&nbsp;($dispatcher, $parameters, $attributes, $options)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$dispatcher</td>
+                <td>An sfEventDispatcher instance</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$parameters</td>
+                <td>An associative array of initialization parameters</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$attributes</td>
+                <td>An associative array of initialization attributes</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>An associative array of options</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes this sfRequest.</strong></p>
+              <p><p>
+<br /> Available options:</p><p>  * formats:           The list of supported format and their associated mime-types
+<br />  * path_info_key:     The path info key (default to PATH_INFO)
+<br />  * path_info_array:   The path info array (default to SERVER)
+<br />  * relative_url_root: The relative URL root
+<br />  * http_port:         The port to use for HTTP requests
+<br />  * https_port:        The port to use for HTTPS requests</p></p>
+                        <p><strong>returns</strong> true, if initialization completes successfully, otherwise false</p>
+                                  <p><strong>throws</strong> <b>sfInitializationException</b> If an error occurs while initializing this sfRequest</p>
+                        <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isabsuri"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isAbsUri</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>See if the client is using absolute uri</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true, if is absolute uri otherwise false</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isforwardedsecure"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isForwardedSecure</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the current request is forwarded from a request that is secure.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_ismethod"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isMethod</span>&nbsp;($method)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$method</td>
+                <td>The method name</td>
+              </tr>
+                        </table>
+              <p><strong>Checks if the request method is the given one.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the current method is the given one, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_issecure"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isSecure</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the current or forwarded request is secure (HTTPS protocol).</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isxmlhttprequest"></a>
+              <h3>
+                (bool)&nbsp;<span class="method-name">isXmlHttpRequest</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns true if the request is a XMLHttpRequest.</strong></p>
+              <p><p>
+<br /> It works if your JavaScript library set an X-Requested-With HTTP header.
+<br /> Works with Prototype, Mootools, jQuery, and perhaps others.</p></p>
+                        <p><strong>returns</strong> true if the request is an XMLHttpRequest, false otherwise</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_parserequestparameters"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">parseRequestParameters</span>&nbsp;()
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Parses the request parameters.</strong></p>
+              <p><p>
+<br /> This method notifies the request.filter_parameters event.</p></p>
+                        <p><strong>returns</strong> An array of request parameters.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setformat"></a>
+              <h3>
+                <span class="method-name">setFormat</span>&nbsp;($format, $mimeTypes)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$format</td>
+                <td>The format</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$mimeTypes</td>
+                <td>The associated mime types (the preferred one must be the first as it will be used as the content type)</td>
+              </tr>
+                        </table>
+              <p><strong>Associates a format with mime types.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setrelativeurlroot"></a>
+              <h3>
+                <span class="method-name">setRelativeUrlRoot</span>&nbsp;($value)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$value</td>
+                <td>Value for the url</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the relative root url for the current web request.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_setrequestformat"></a>
+              <h3>
+                <span class="method-name">setRequestFormat</span>&nbsp;($format)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$format</td>
+                <td>The request format</td>
+              </tr>
+                        </table>
+              <p><strong>Sets the request format.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_splithttpacceptheader"></a>
+              <h3>
+                <span class="method-name">splitHttpAcceptHeader</span>&nbsp;($header)
+
+                <span class="browse">
+                  <a href="http://trac.symfony-project.org/browser/branches/1.4/lib/request/sfWebRequest.class.php">Browse code</a>
+                </span>
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$header</td>
+                <td>Header to split</td>
+              </tr>
+                        </table>
+              <p><strong>Splits an HTTP header for the current web request.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="http://www.symfony-project.org/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      <a href="/donate">Make a donation</a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="http://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

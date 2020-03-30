@@ -1,0 +1,1018 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfDateFormat Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfDateFormat Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      i18n      </strong>
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+              <ul>
+                      <li><a href="sfChoiceFormat.html">sfChoiceFormat</a></li>
+                      <li><a href="sfCultureInfo.html">sfCultureInfo</a></li>
+                      <li><a href="sfDateFormat.html">sfDateFormat</a></li>
+                      <li><a href="sfDateTimeFormatInfo.html">sfDateTimeFormatInfo</a></li>
+                      <li><a href="sfI18N.html">sfI18N</a></li>
+                      <li><a href="sfI18nApplicationExtract.html">sfI18nApplicationExtract</a></li>
+                      <li><a href="sfI18nExtract.html">sfI18nExtract</a></li>
+                      <li><a href="sfI18nExtractorInterface.html">sfI18nExtractorInterface</a></li>
+                      <li><a href="sfI18nModuleExtract.html">sfI18nModuleExtract</a></li>
+                      <li><a href="sfI18nPhpExtractor.html">sfI18nPhpExtractor</a></li>
+                      <li><a href="sfI18nYamlExtractor.html">sfI18nYamlExtractor</a></li>
+                      <li><a href="sfI18nYamlGeneratorExtractor.html">sfI18nYamlGeneratorExtractor</a></li>
+                      <li><a href="sfI18nYamlValidateExtractor.html">sfI18nYamlValidateExtractor</a></li>
+                      <li><a href="sfIMessageSource.html">sfIMessageSource</a></li>
+                      <li><a href="sfMessageFormat.html">sfMessageFormat</a></li>
+                      <li><a href="sfMessageSource.html">sfMessageSource</a></li>
+                      <li><a href="sfMessageSource_Aggregate.html">sfMessageSource_Aggregate</a></li>
+                      <li><a href="sfMessageSource_Database.html">sfMessageSource_Database</a></li>
+                      <li><a href="sfMessageSource_File.html">sfMessageSource_File</a></li>
+                      <li><a href="sfMessageSource_gettext.html">sfMessageSource_gettext</a></li>
+                      <li><a href="sfMessageSource_MySQL.html">sfMessageSource_MySQL</a></li>
+                      <li><a href="sfMessageSource_SQLite.html">sfMessageSource_SQLite</a></li>
+                      <li><a href="sfMessageSource_XLIFF.html">sfMessageSource_XLIFF</a></li>
+                      <li><a href="sfNumberFormat.html">sfNumberFormat</a></li>
+                      <li><a href="sfNumberFormatInfo.html">sfNumberFormatInfo</a></li>
+                  </ul>
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfDateFormat.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfDateFormat.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfDateFormat.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfDateFormat.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfDateFormat class.</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_format">format</a>($time, $pattern, $inputPattern, $charset)
+                <br />
+                <span class="description">Formats a date according to the pattern.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getampm">getAMPM</a>($date, $pattern)
+                <br />
+                <span class="description">Get the AM/PM designator, 12 noon is PM, 12 midnight is AM.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateFormat.html#method_getdate">getDate</a>($time, $pattern)
+                <br />
+                <span class="description">Guesses a date without calling strtotime.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="sfDateFormat.html#method_getdayinmonth">getDayInMonth</a>($date, $pattern)
+                <br />
+                <span class="description">Gets day in the month.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getera">getEra</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the era. i.e. in gregorian, year &gt; 0 is AD, else BC.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">mixed</span>
+                <a href="sfDateFormat.html#method_getfunctionname">getFunctionName</a>($token)
+                <br />
+                <span class="description">For a particular token, get the corresponding function to call.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_gethour12">getHour12</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the hours in 12 hour format. </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="sfDateFormat.html#method_gethourinampm">getHourInAMPM</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the hours in AM/PM format, e.g [1-12]</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="sfDateFormat.html#method_gethourinday">getHourInDay</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the hours [1-24].</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_gethours">getHours</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the hours in 24 hour format, i.e. [0-23]. </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getinputpattern">getInputPattern</a>($pattern)
+                <br />
+                <span class="description">Returns an easy to parse input pattern</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getmday">getMday</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the day of the month.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getminutes">getMinutes</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the minutes.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getmon">getMon</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the month.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getpattern">getPattern</a>($pattern)
+                <br />
+                <span class="description">Gets the pattern from DateTimeFormatInfo or some predefined patterns.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getseconds">getSeconds</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the seconds.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_gettimezone">getTimeZone</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the timezone from the server machine.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfDateFormat.html#method_gettokens">getTokens</a>($pattern)
+                <br />
+                <span class="description">Tokenizes the pattern. The tokens are delimited by group of</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfDateFormat.html#method_getunixdate">getUnixDate</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getwday">getWday</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the day of the week.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="sfDateFormat.html#method_getweekinmonth">getWeekInMonth</a>($date, $pattern)
+                <br />
+                <span class="description">Gets week in the month.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="sfDateFormat.html#method_getweekinyear">getWeekInYear</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the week in the year.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="sfDateFormat.html#method_getyday">getYday</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the day in the year, e.g. [1-366]</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="sfDateFormat.html#method_getyear">getYear</a>($date, $pattern)
+                <br />
+                <span class="description">Gets the year.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">sfDateFormat</span>
+                <a href="sfDateFormat.html#method___construct">__construct</a>($formatInfo)
+                <br />
+                <span class="description">Initializes a new sfDateFormat.</span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_format"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">format</span>&nbsp;($time, $pattern, $inputPattern, $charset)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$time</td>
+                <td>the time as integer or string in strtotime format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>the pattern</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$inputPattern</td>
+                <td>the input pattern</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$charset</td>
+                <td>the charset</td>
+              </tr>
+                        </table>
+              <p><strong>Formats a date according to the pattern.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> formatted date time.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getampm"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getAMPM</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Get the AM/PM designator, 12 noon is PM, 12 midnight is AM.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> AM or PM designator</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdate"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getDate</span>&nbsp;($time, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$time</td>
+                <td>the time as integer or string in strtotime format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>the input pattern; default is sql date or timestamp</td>
+              </tr>
+                        </table>
+              <p><strong>Guesses a date without calling strtotime.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> same array as the getdate function</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getdayinmonth"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getDayInMonth</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets day in the month.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> day in month</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getera"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getEra</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the era. i.e. in gregorian, year &gt; 0 is AD, else BC.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> era</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getfunctionname"></a>
+              <h3>
+                (mixed)&nbsp;<span class="method-name">getFunctionName</span>&nbsp;($token)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$token</td>
+                <td>token</td>
+              </tr>
+                        </table>
+              <p><strong>For a particular token, get the corresponding function to call.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> the function if good token, null otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethour12"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getHour12</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the hours in 12 hour format. </strong></p>
+              <p><p> "h" for non-padding, "hh" will always return 2 characters.</p></p>
+                        <p><strong>returns</strong> hours in 12 hour format.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethourinampm"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getHourInAMPM</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the hours in AM/PM format, e.g [1-12]</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> hours in AM/PM format.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethourinday"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getHourInDay</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the hours [1-24].</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> hours [1-24]</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gethours"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getHours</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the hours in 24 hour format, i.e. [0-23]. </strong></p>
+              <p><p> "H" for non-padding, "HH" will always return 2 characters.</p></p>
+                        <p><strong>returns</strong> hours in 24 hour format.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getinputpattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getInputPattern</span>&nbsp;($pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Returns an easy to parse input pattern</strong></p>
+              <p><p> yy is replaced by yyyy and h by H</p></p>
+                        <p><strong>returns</strong> input pattern</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmday"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getMday</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the day of the month.</strong></p>
+              <p><p> "d" for non-padding, "dd" will always return 2 characters.</p></p>
+                        <p><strong>returns</strong> day of the month</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getminutes"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getMinutes</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the minutes.</strong></p>
+              <p><p> "m" for non-padding, "mm" will always return 2 characters.</p></p>
+                        <p><strong>returns</strong> minutes.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getmon"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getMon</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the month.</strong></p>
+              <p><p> "M" will return integer 1 through 12
+<br /> "MM" will return integer 1 through 12 padded with 0 to two characters width
+<br /> "MMM" will return the abrreviated month name, e.g. "Jan"
+<br /> "MMMM" will return the month name, e.g. "January"
+<br /> "MMMMM" will return the narrow month name, e.g. "J"</p></p>
+                        <p><strong>returns</strong> month name</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getpattern"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getPattern</span>&nbsp;($pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the pattern from DateTimeFormatInfo or some predefined patterns.</strong></p>
+              <p><p> If the $pattern parameter is an array of 2 element, it will assume
+<br /> that the first element is the date, and second the time
+<br /> and try to find an appropriate pattern and apply 
+<br /> DateTimeFormatInfo::formatDateTime
+<br /> See the tutorial documentation for futher details on the patterns.</p></p>
+                        <p><strong>returns</strong> a pattern.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getseconds"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getSeconds</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the seconds.</strong></p>
+              <p><p> "s" for non-padding, "ss" will always return 2 characters.</p></p>
+                        <p><strong>returns</strong> seconds</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettimezone"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getTimeZone</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the timezone from the server machine.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> time zone</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_gettokens"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getTokens</span>&nbsp;($pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Tokenizes the pattern. The tokens are delimited by group of</strong></p>
+              <p><p> similar characters, e.g. 'aabb' will form 2 tokens of 'aa' and 'bb'.
+<br /> Any substrings, starting and ending with a single quote (') 
+<br /> will be treated as a single token.</p></p>
+                        <p><strong>returns</strong> string tokens in an array.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getunixdate"></a>
+              <h3>
+                <span class="method-name">getUnixDate</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getwday"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getWday</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the day of the week.</strong></p>
+              <p><p> "E" will return integer 0 (for Sunday) through 6 (for Saturday).
+<br /> "EE" will return the narrow day of the week, e.g. "M"
+<br /> "EEE" will return the abrreviated day of the week, e.g. "Mon"
+<br /> "EEEE" will return the day of the week, e.g. "Monday"</p></p>
+                        <p><strong>returns</strong> day of the week.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getweekinmonth"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getWeekInMonth</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern</td>
+              </tr>
+                        </table>
+              <p><strong>Gets week in the month.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> week in month</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getweekinyear"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getWeekInYear</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the week in the year.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> week in year</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getyday"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getYday</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the day in the year, e.g. [1-366]</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> hours in AM/PM format.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getyear"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">getYear</span>&nbsp;($date, $pattern)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$date</td>
+                <td>getdate format.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$pattern</td>
+                <td>a pattern.</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the year.</strong></p>
+              <p><p> "yy" will return the last two digits of year.
+<br /> "y", "yyy" and "yyyy" will return the full integer year.</p></p>
+                        <p><strong>returns</strong> year</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                (sfDateFormat)&nbsp;<span class="method-name">__construct</span>&nbsp;($formatInfo)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$formatInfo</td>
+                <td>either, null, a sfCultureInfo instance, a DateTimeFormatInfo instance, or a locale.</td>
+              </tr>
+                        </table>
+              <p><strong>Initializes a new sfDateFormat.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> instance</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

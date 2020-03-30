@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; sfMessageSource_SQLite Class | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>sfMessageSource_SQLite Class</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+            helper      
+      <small> - <a href="helper.html">12 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      i18n      </strong>
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+              <ul>
+                      <li><a href="sfChoiceFormat.html">sfChoiceFormat</a></li>
+                      <li><a href="sfCultureInfo.html">sfCultureInfo</a></li>
+                      <li><a href="sfDateFormat.html">sfDateFormat</a></li>
+                      <li><a href="sfDateTimeFormatInfo.html">sfDateTimeFormatInfo</a></li>
+                      <li><a href="sfI18N.html">sfI18N</a></li>
+                      <li><a href="sfI18nApplicationExtract.html">sfI18nApplicationExtract</a></li>
+                      <li><a href="sfI18nExtract.html">sfI18nExtract</a></li>
+                      <li><a href="sfI18nExtractorInterface.html">sfI18nExtractorInterface</a></li>
+                      <li><a href="sfI18nModuleExtract.html">sfI18nModuleExtract</a></li>
+                      <li><a href="sfI18nPhpExtractor.html">sfI18nPhpExtractor</a></li>
+                      <li><a href="sfI18nYamlExtractor.html">sfI18nYamlExtractor</a></li>
+                      <li><a href="sfI18nYamlGeneratorExtractor.html">sfI18nYamlGeneratorExtractor</a></li>
+                      <li><a href="sfI18nYamlValidateExtractor.html">sfI18nYamlValidateExtractor</a></li>
+                      <li><a href="sfIMessageSource.html">sfIMessageSource</a></li>
+                      <li><a href="sfMessageFormat.html">sfMessageFormat</a></li>
+                      <li><a href="sfMessageSource.html">sfMessageSource</a></li>
+                      <li><a href="sfMessageSource_Aggregate.html">sfMessageSource_Aggregate</a></li>
+                      <li><a href="sfMessageSource_Database.html">sfMessageSource_Database</a></li>
+                      <li><a href="sfMessageSource_File.html">sfMessageSource_File</a></li>
+                      <li><a href="sfMessageSource_gettext.html">sfMessageSource_gettext</a></li>
+                      <li><a href="sfMessageSource_MySQL.html">sfMessageSource_MySQL</a></li>
+                      <li><a href="sfMessageSource_SQLite.html">sfMessageSource_SQLite</a></li>
+                      <li><a href="sfMessageSource_XLIFF.html">sfMessageSource_XLIFF</a></li>
+                      <li><a href="sfNumberFormat.html">sfNumberFormat</a></li>
+                      <li><a href="sfNumberFormatInfo.html">sfNumberFormatInfo</a></li>
+                  </ul>
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/sfMessageSource_SQLite.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/sfMessageSource_SQLite.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/sfMessageSource_SQLite.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/sfMessageSource_SQLite.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>sfMessageSource_SQLite class.</p>
+                  </div>
+
+        <div>
+
+                      <div class="inheritence-tree">
+              <h2>Inheritence</h2>
+
+              
+              <strong>sfMessageSource_SQLite</strong>
+
+                              &nbsp;&lt;&nbsp;
+                <a href="sfMessageSource_Database.html">sfMessageSource_Database</a>&nbsp;&lt;&nbsp;<a href="sfMessageSource.html">sfMessageSource</a>              
+            </div>
+          
+          <a name="method-summary"></a>
+          <h2>Method Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfMessageSource_SQLite.html#method__amp_">&amp;</a>($variant)
+                <br />
+                <span class="description">Gets an array of messages for a particular catalogue and cultural variant.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfMessageSource_SQLite.html#method_catalogues">catalogues</a>()
+                <br />
+                <span class="description">Returns a list of catalogue as key and all it variants as value.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfMessageSource_SQLite.html#method_delete">delete</a>($message, $catalogue)
+                <br />
+                <span class="description">Deletes a particular message from the specified catalogue.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">array</span>
+                <a href="sfMessageSource_SQLite.html#method_getcataloguedetails">getCatalogueDetails</a>($catalogue)
+                <br />
+                <span class="description">Retrieves catalogue details, array($cat_id, $variant, $count).</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">int</span>
+                <a href="sfMessageSource_SQLite.html#method_getlastmodified">getLastModified</a>($source)
+                <br />
+                <span class="description">Gets the last modified unix-time for this particular catalogue+variant.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfMessageSource_SQLite.html#method_isvalidsource">isValidSource</a>($variant)
+                <br />
+                <span class="description">Checks if a particular catalogue+variant exists in the database.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfMessageSource_SQLite.html#method_save">save</a>($catalogue)
+                <br />
+                <span class="description">Saves the list of untranslated blocks to the translation source. </span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfMessageSource_SQLite.html#method_update">update</a>($text, $target, $comments, $catalogue)
+                <br />
+                <span class="description">Updates the translation.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">boolean</span>
+                <a href="sfMessageSource_SQLite.html#method_updatecataloguetime">updateCatalogueTime</a>()
+                <br />
+                <span class="description">Updates the catalogue last modified time.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="sfMessageSource_SQLite.html#method___construct">__construct</a>($source)
+                <br />
+                <span class="description">Constructor.</span>
+              </li>
+                      </ul>
+
+                                    <h3>
+                Methods inherited from <a href="sfMessageSource_Database.html">sfMessageSource_Database</a>              </h3>
+                                                                <a href="sfMessageSource_Database.html#method_getcataloguelist">getCatalogueList</a>                  ,                                   <a href="sfMessageSource_Database.html#method_getid">getId</a>                  ,                                   <a href="sfMessageSource_Database.html#method_parsedsn">parseDSN</a>                                                                          <h3>
+                Methods inherited from <a href="sfMessageSource.html">sfMessageSource</a>              </h3>
+                                                                <a href="sfMessageSource.html#method__amp_">&amp;</a>                  ,                                   <a href="sfMessageSource.html#method_append">append</a>                  ,                                   <a href="sfMessageSource.html#method_factory">factory</a>                  ,                                   <a href="sfMessageSource.html#method_getcache">getCache</a>                  ,                                   <a href="sfMessageSource.html#method_getcataloguelist">getCatalogueList</a>                  ,                                   <a href="sfMessageSource.html#method_getculture">getCulture</a>                  ,                                   <a href="sfMessageSource.html#method_getlastmodified">getLastModified</a>                  ,                                   <a href="sfMessageSource.html#method_getsource">getSource</a>                  ,                                   <a href="sfMessageSource.html#method_isvalidsource">isValidSource</a>                  ,                                   <a href="sfMessageSource.html#method_load">load</a>                  ,                                   <a href="sfMessageSource.html#method_read">read</a>                  ,                                   <a href="sfMessageSource.html#method_setcache">setCache</a>                  ,                                   <a href="sfMessageSource.html#method_setculture">setCulture</a>                  ,                                   <a href="sfMessageSource.html#method___construct">__construct</a>                                                                      
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Method Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method__amp_"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">&amp;</span>&nbsp;($variant)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$variant</td>
+                <td>the catalogue name + variant</td>
+              </tr>
+                        </table>
+              <p><strong>Gets an array of messages for a particular catalogue and cultural variant.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> translation messages.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_catalogues"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">catalogues</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns a list of catalogue as key and all it variants as value.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> list of catalogues</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_delete"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">delete</span>&nbsp;($message, $catalogue)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$message</td>
+                <td>the source message to delete.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$catalogue</td>
+                <td>the catalogue to delete from.</td>
+              </tr>
+                        </table>
+              <p><strong>Deletes a particular message from the specified catalogue.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if deleted, false otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getcataloguedetails"></a>
+              <h3>
+                (array)&nbsp;<span class="method-name">getCatalogueDetails</span>&nbsp;($catalogue)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$catalogue</td>
+                <td>catalogue</td>
+              </tr>
+                        </table>
+              <p><strong>Retrieves catalogue details, array($cat_id, $variant, $count).</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> catalogue details, array($cat_id, $variant, $count).</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_getlastmodified"></a>
+              <h3>
+                (int)&nbsp;<span class="method-name">getLastModified</span>&nbsp;($source)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$source</td>
+                <td>catalogue+variant</td>
+              </tr>
+                        </table>
+              <p><strong>Gets the last modified unix-time for this particular catalogue+variant.</strong></p>
+              <p><p> We need to query the database to get the date_modified.</p></p>
+                        <p><strong>returns</strong> last modified in unix-time format.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_isvalidsource"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">isValidSource</span>&nbsp;($variant)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$variant</td>
+                <td>catalogue+variant</td>
+              </tr>
+                        </table>
+              <p><strong>Checks if a particular catalogue+variant exists in the database.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if the catalogue+variant is in the database, false otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_save"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">save</span>&nbsp;($catalogue)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$catalogue</td>
+                <td>the catalogue to add to</td>
+              </tr>
+                        </table>
+              <p><strong>Saves the list of untranslated blocks to the translation source. </strong></p>
+              <p><p> If the translation was not found, you should add those
+<br /> strings to the translation source via the <b>append()</b> method.</p></p>
+                        <p><strong>returns</strong> true if saved successfuly, false otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_update"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">update</span>&nbsp;($text, $target, $comments, $catalogue)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$text</td>
+                <td>the source string.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$target</td>
+                <td>the new translation string.</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$comments</td>
+                <td>comments</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$catalogue</td>
+                <td>the catalogue of the translation.</td>
+              </tr>
+                        </table>
+              <p><strong>Updates the translation.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if translation was updated, false otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_updatecataloguetime"></a>
+              <h3>
+                (boolean)&nbsp;<span class="method-name">updateCatalogueTime</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Updates the catalogue last modified time.</strong></p>
+              <p><p></p></p>
+                        <p><strong>returns</strong> true if updated, false otherwise.</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method___construct"></a>
+              <h3>
+                <span class="method-name">__construct</span>&nbsp;($source)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$source</td>
+                <td>SQLite datasource, in PEAR's DB DSN format.</td>
+              </tr>
+                        </table>
+              <p><strong>Constructor.</strong></p>
+              <p><p> Creates a new message source using SQLite.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>

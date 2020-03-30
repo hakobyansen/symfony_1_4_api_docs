@@ -1,0 +1,887 @@
+/* SETUP */
+
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input { margin: 0; padding: 0; }
+a img,:link img,:visited img { border: none; }
+a:link { color: #683B00; }
+a:visited { color: #683B00; }
+a:hover { text-decoration: none; }
+body {background:white; color:black; }
+body, th, td { font:14px Verdana,sans-serif; line-height:1.6em }
+p { margin:0.5em 0;}
+.marged {margin-left:1em;}
+.center {text-align:center;}
+
+/* Layout */
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family: Verdana,sans-serif;
+}
+
+pre, code
+{
+  font-family: "Bitstream Vera Sans Mono", monospace;
+}
+
+#topbar a img {
+text-decoration:none;
+}
+
+#header {
+background:#683B00;
+}
+
+#navigation {
+background:#683B00;
+text-align:right;
+vertical-align:middle;
+font-size:14px;
+white-space:nowrap;
+background:#683B00;
+}
+
+  #navigation li {
+  display: inline;
+  margin: 0 5px;
+  padding-right:10px;
+  }
+
+  #navigation li.last {
+  border-right: none;
+  }
+  
+  #navigation li a:link {
+  text-decoration:none;
+  color: #FFFFBC;
+  }
+  
+  #navigation li a:visited {
+  text-decoration:none;
+  color: #FFFFBC;
+  }
+  
+  #navigation li a:hover {
+  text-decoration:underline;
+  }
+
+#topseparator {
+height:15px;
+background:#747A89 url(/web/20170627054632im_/http://www.symfony-project.org/images/bar_background.gif) repeat-x;
+}
+
+#topbar h1 {
+padding:0 10px 0 15px;
+background:#747A89;
+font-family:arial,sans-serif;
+font-size:25px;
+line-height:1em;
+font-weight:normal;
+color:#FFF;
+margin:0;
+}
+
+#topbar h1.only {
+  padding-bottom: 15px;
+}
+
+#topbar a {
+  color:#FFF;
+  text-decoration: none;
+}
+
+#topbar h2 {
+  margin:0;
+  padding:0 1em 0.5em 15px;
+  background:#747A89;
+  font-family:arial,sans-serif;
+  line-height:1em;
+  font-size:22px;
+  font-weight:normal;
+  color:#FFFFBC;
+}
+
+#content1 {
+margin:0;
+margin-right:18.5em;
+padding:1.5em;
+padding-top: 3px;
+background-color:#fff;
+color:#000;
+text-align:justify;
+}
+
+  #content1, #content1 td, #content1 th
+  {
+    font: 14px Verdana, sans-serif;
+    line-height: 1.4em;
+  }
+
+  #content1 h1 {
+  margin:1em 0 1em 0;
+  font-size: 20px;
+  }
+
+  .rounded h2 {
+  font-size:15px;
+  color:#fff;
+  }
+
+  .documentation .rounded img{
+  margin:0;
+  }
+
+  td.rounded table
+  {
+    margin-bottom:10px;
+  }
+
+  #content1 ul {
+  margin-left:2em;
+  }
+
+  #content1 ul.glued {
+  margin-left:1em;
+  list-style-type:none;
+  }
+
+  #content1 dt {
+  margin-top:0.5em;
+  }
+
+  #content1 dd {
+  border: none;
+  margin:1em;
+  }
+
+  #content1 dd pre {
+  margin:1em 0;
+  }
+
+  #content1 .head2 td {
+  background:#008821;
+  color:#fff;
+  }
+
+  #content1 .bottom2 td {
+  background:#B2E8BF;
+  }
+
+  #content1 td.roundedtitle {
+  padding-bottom:5px;
+  text-align:center;
+  }
+
+  #content1 td.roundedtitle h2 {
+  margin: 0;
+  }
+
+  #content1 td.roundedcontent {
+  padding-top:5px;
+  vertical-align:top;
+  text-align: left;
+  }
+
+  #content1 .book_summary li {
+  margin:0; padding:0
+  }
+
+  #content1 .book_summary a {
+  text-decoration:none;
+  }
+
+  #content1 .book_summary a:hover {
+  text-decoration:underline;
+  }
+
+  #content1 .book_translations {
+  margin: 0; padding: 0;
+  }
+
+  #content1 .book_translations li {
+  display: inline;
+  list-style: none;
+  }
+
+  .siteintro {
+  margin-top:0;
+  padding-right:20px;
+  padding-top:0;
+  }
+
+  .siteintro p {
+  margin-top:0;
+  padding-top:0;
+  }
+
+  .siteintro ul {
+  margin-bottom:5px;
+  }
+
+#bar {
+float:right;
+width:17em;
+font-size: 13px;
+line-height: 1.2em;
+padding:1em;
+background:#C6CDDE url(/web/20170627054632im_/http://www.symfony-project.org/images/side_background.gif) repeat-x;
+color:#683B00;
+}
+
+  #bar td, #bar th  {
+    font-size: 13px;
+    line-height: 1.2em;
+  }
+
+  #bar h1 {
+  font-size:15px;
+  font-weight:bold;
+  margin-bottom:0.5em;
+  color:black;
+  }
+  
+  #bar h2 {
+  font-size:15px;
+  font-weight:bold;
+  margin:0.5em 0;
+  color:black;
+  }
+
+  #bar h3 {
+  font-size:13px;
+  font-weight:bold;
+  margin:0.5em 0;
+  color:black;
+  }
+  
+  #bar li {
+  list-style-position: inside;
+  list-style-type:disc;
+  }
+
+  #bar ol li {
+  list-style-position: inside;
+  list-style-type:decimal;
+  }
+  
+  #bar a:link {
+  color:#683B00;
+  text-decoration:underline;
+  }
+  
+  #bar a:visited {
+  color:#683B00;
+  text-decoration:underline;
+  }
+  
+  #bar a:hover{
+  text-decoration:none;
+  }
+
+  #bar #chapter_contents {
+    margin-bottom: 20px;
+  }
+
+  #bar #chapter_contents h3 {
+  font-size: 11px;
+  margin: 4px 0;
+  }
+
+  #bar #chapter_contents h4 {
+  font-size: 11px;
+  font-weight: normal;
+  margin: 2px 0 2px 5px;
+  }
+
+  #bar #chapter_contents h5 {
+  font-size: 11px;
+  font-weight: normal;
+  margin-left: 10px;
+  }
+
+  #bar .book_keywords li {
+  list-style: none;
+  list-style-position:inside;
+  }
+
+.tags td {
+  padding-right:15px;
+  padding-left: 10px;
+}
+
+#errors {
+border: solid 1px #A30045;
+color:#A30045;
+padding:5px;
+}
+
+.documentation p.figure {
+  font-style: italic;
+}
+
+.documentation pre {
+padding:0.5em 0 0.5em 1em;
+background-color:#222;
+overflow:auto;
+line-height: 17px;
+font-size: 13px;
+color:#fff;
+font-family: "Bitstream Vera Sans Mono", monospace;
+}
+
+.documentation pre.command-line {
+background-color:#000;
+color:#fff;
+}
+
+.documentation pre.url {
+background-color:#fff;
+color:#006;
+}
+
+.documentation pre.url code {
+  font-family: "Bitstream Vera Sans Mono", monospace;
+}
+
+.documentation p {
+text-align:left;
+margin-bottom:0.5em;
+}
+
+.documentation h2 {
+margin:1em 0 .5em 0;
+font-size:16px;
+}
+
+.documentation h3 {
+margin:1em 0 .5em 0;
+font-size:14px;
+}
+
+.documentation li {
+margin-bottom:5px;
+margin-left:20px;
+}
+
+.documentation blockquote {
+padding:0.5em 0 0.5em 30px;
+font-size: 95%;
+}
+
+.documentation blockquote.note {
+  padding: 2px 20px 5px 45px;
+  margin: 15px 0;
+  background: #fff url(/web/20170627054632im_/http://www.symfony-project.org/images/note.png) no-repeat -10px 0px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.documentation blockquote.caution {
+  padding: 2px 20px 5px 45px;
+  margin: 15px 0;
+  background: #fff url(/web/20170627054632im_/http://www.symfony-project.org/images/caution.png) no-repeat -10px 0px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.documentation blockquote.tip {
+  padding: 2px 20px 5px 45px;
+  margin: 15px 0;
+  background: #fff url(/web/20170627054632im_/http://www.symfony-project.org/images/tip.png) no-repeat -10px 0px;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+.documentation blockquote.sidebar {
+margin: 10px 0;
+padding: 20px;
+background: #ccc;
+}
+
+.documentation blockquote.sidebar p.title {
+margin: -20px;
+margin-bottom: 10px;
+padding: 10px;
+background: #aaa;
+color: #fff;
+font-weight: bold;
+}
+
+.documentation img{
+margin:5px;
+}
+
+.documentation th {
+font-weight:bold;
+border-bottom:solid 1px #D3D3D3;
+}
+
+.documentation .doc_table th {
+font-weight:bold;
+background-color: #e7eef6;
+}
+
+.documentation .doc_table td, .documentation .doc_table th
+{
+  padding: 4px 6px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+hr {
+border:1px solid #ddd;
+}
+
+a:link.read, a:visited.read, a:link.download, a:visited.download, a:link.test, a:visited.test, a:link.watch, a:visited.watch, a:link.browse, a:visited.browse
+{
+  padding-left:24px;
+  background:url(/web/20170627054632im_/http://www.symfony-project.org/images/read_icon.gif) top left no-repeat;
+  line-height:22px;
+  padding-bottom:6px;
+}
+
+a:link.read, a:visited.read
+{
+  background:url(/web/20170627054632im_/http://www.symfony-project.org/images/read_icon.gif) top left no-repeat;
+}
+
+a:link.download, a:visited.download
+{
+  background:url(/web/20170627054632im_/http://www.symfony-project.org/images/save_icon.gif) top left no-repeat;
+}
+
+a:link.test, a:visited.test
+{
+  background:url(/web/20170627054632im_/http://www.symfony-project.org/images/use_icon.gif) top left no-repeat;
+}
+
+a:link.watch, a:visited.watch
+{
+  background:url(/web/20170627054632im_/http://www.symfony-project.org/images/watch_icon.gif) top left no-repeat;
+}
+
+a:link.browse, a:visited.browse
+{
+  background:url(/web/20170627054632im_/http://www.symfony-project.org/images/browse_icon.gif) top left no-repeat;
+}
+
+#footer {
+clear:both;
+margin-top:20px;
+margin-right:18.5em;
+padding-left:10px;
+margin-bottom:10px;
+text-align:center;
+font-size: 12px;
+}
+
+  #footer li {
+  display:inline;
+  }
+  #footer li a:link {
+  text-decoration:none;
+  color: #BB2;
+  }
+
+#footer img
+{
+vertical-align: middle;
+}
+
+.author {
+margin-left:20px;
+margin-bottom:5px;
+font-style:italic;
+}
+
+q
+{
+  font-style: italic;
+}
+
+#documentation_release_info
+{
+  margin: 0;
+  padding: 4px 10px;
+  background-color: #ff9;
+  font-size:12px;
+  line-height: 1.4em;
+}
+
+#documentation_release_info ul
+{
+  display: inline;
+}
+
+#documentation_release_info li
+{
+  display: inline;
+  padding: 0 3px;
+}
+
+#bar a:link.tag_1 {
+  color: #A09385;
+}
+
+#bar a:link.tag_2 {
+  color: #836540;
+}
+
+#bar a.tag_3 {
+
+}
+
+#documentation_summary ul, #documentation_summary li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 15px;
+}
+
+.author
+{
+  display: block;
+}
+
+ol
+{
+  list-style: decimal inside;
+}
+
+.feedback
+{
+  margin: 25px 0 10px 0;
+  padding: 10px;
+  background-color: #ccf;
+}
+
+.feedback h3
+{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+#license
+{
+  padding: 2px 10px;
+  background-color: #eee;
+  text-align: left;
+  font-size: 11px;
+}
+
+#license td
+{
+  text-align: left;
+  font-size: 11px;
+  vertical-align: top;
+}
+
+.bar_block
+{
+  margin-bottom: 10px;
+}
+
+.error_list
+{
+  color: #c00;
+  margin-left: 0 !important;
+}
+
+.error_list li
+{
+  margin-left: 0;
+  list-style: none;
+}
+
+.notice
+{
+  background-color: green;
+  margin: 10px 0;
+  padding: 7px;
+  color: #eee;
+}
+
+#documentation_summary .languages
+{
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+#documentation_summary .languages li
+{
+  margin: 0;
+  padding: 0;
+  display: inline;
+  list-style= none;
+  vertical-align: middle;
+}
+
+#user
+{
+  background-color: #f7f7f7;
+  padding: 5px;
+  text-align: left;
+  margin-top: 10px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+}
+
+#user ul
+{
+  margin-left: 10px;
+  margin-top: 10px;
+  list-style: none;
+}
+
+#user li
+{
+  list-style: none;
+}
+
+#signin_username, #signin_password
+{
+  width: 100px;
+}
+
+span.foobar
+{
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.gravatar
+{
+  vertical-align: middle;
+}
+
+#version_matrix
+{
+  text-align: left;
+}
+
+#version_matrix td, #version_matrix th
+{
+  padding: 5px;
+  vertical-align: top;
+  border-bottom: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+}
+
+#version_matrix th
+{
+  font-weight: bold;
+}
+
+#version_matrix th.version
+{
+  text-align: center;
+}
+
+#installation_choice
+{
+  margin: 0 !important;
+  list-style: none;
+  text-align: left;
+}
+
+#installation_choice th
+{
+  font-weight: bold;
+  padding-right: 10px;
+  white-space: nowrap;
+}
+
+#installation_choice td, #installation_choice th
+{
+  vertical-align: top;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #aaa;
+  padding: 7px 20px 7px 0;
+}
+
+#next_training_session, #sidebar_box
+{
+  font-size: 90%;
+  padding: 7px;
+  margin-right: 4px;
+  margin-bottom: 15px;
+  border: 3px solid #969290;
+  border-top: 0;
+  background-color: #ddd;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.culture_ar, .culture_ar p
+{
+  direction: rtl;
+  text-align: right;
+}
+
+.culture_ar pre, .culture_ar code
+{
+  direction: ltr
+}
+
+.opensearch
+{
+  padding-left: 20px;
+  background: transparent url(/web/20170627054632im_/http://www.symfony-project.org/images/opensearch.png) no-repeat 0px 0px;
+}
+
+
+
+#documentation_choice
+{
+  margin: 20px 0;
+  text-align: left;
+  border-top: 1px solid #3e2300;
+  border-left: 1px solid #3e2300;
+}
+
+#documentation_choice td, #documentation_choice th
+{
+  width: 50%;
+  padding: 5px;
+  vertical-align: top;
+  border-bottom: 1px solid #3e2300;
+  border-right: 1px solid #3e2300;
+}
+
+#documentation_choice th
+{
+  background-color: #683b00;
+  color: #fff;
+}
+
+#getting_started
+{
+  margin-top: 20px;
+}
+
+#content1 #getting_started ul
+{
+  padding: 7px;
+  margin-left: 0;
+  list-style: none;
+}
+
+#getting_started li
+{
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.release_1_1
+{
+  text-decoration: line-through;
+}
+
+.release_1_0
+{
+  text-decoration: line-through;
+}
+
+.release_1_2
+{
+  text-decoration: line-through;
+}
+
+.obsolete
+{
+  margin: 0;
+  padding: 8px 10px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.4em;
+  background: #f99 url(/web/20170627054632im_/http://www.symfony-project.org/images/warning.png) no-repeat 0px 0px;
+}
+
+.flash_notice
+{
+  padding: 10px;
+  background-color: #fee;
+  border: 1px solid #faa;
+  text-align: center;
+  font-size: 110%;
+  margin: 10px 0;
+}
+
+div#symfony2
+{
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    font-family:"Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+
+#symfony2 a:link, #symfony2 a
+{
+    text-decoration: none;
+}
+
+#symfony2 img
+{
+    vertical-align: -8px;
+}
+
+#symfony2 a:hover
+{
+    text-decoration: underline;
+}
+
+#symfony2 hr
+{
+    border:1px solid #683B00;
+}
+
+.ads {
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.ads h3 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.ads cite {
+    color: #759E1A;
+}
+
+.ads .ad {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/*
+     FILE ARCHIVED ON 05:46:32 Jun 27, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:24:01 Mar 30, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  load_resource: 1329.365
+  RedisCDXSource: 11.575
+  exclusion.robots: 0.208
+  esindex: 0.012
+  PetaboxLoader3.resolve: 660.979 (2)
+  exclusion.robots.policy: 0.198
+  captures_list: 187.316
+  LoadShardBlock: 153.026 (3)
+  CDXLines.iter: 15.481 (3)
+  PetaboxLoader3.datanode: 197.39 (5)
+*/

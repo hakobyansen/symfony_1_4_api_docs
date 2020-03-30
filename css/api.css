@@ -1,0 +1,189 @@
+#symfony-api
+{
+  color: #111;
+  background-color: #fff;
+}
+
+#symfony-api h1, #symfony-api h2, #symfony-api h3
+{
+  font-weight: bold;
+}
+
+#symfony-api h1
+{
+  margin: 10px 0;
+  font-size: 2em;
+  color: #3E2300;
+}
+
+#symfony-api h2
+{
+  margin: 10px 0;
+  font-size: 1.4em;
+  color: #3E2300;
+}
+
+#symfony-api h3
+{
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+#symfony-api #method-details h3
+{
+  margin: 20px 0pt 0px;
+  padding: 5px;
+  color: #683B00;
+  font-size: 14px;
+  font-family: monospace;
+  font-weight: normal;
+  border-bottom: 1px solid #683B00;
+  background-color: #eee;
+}
+
+#symfony-api #class-description
+{
+  border-left: 4px solid #ccc;
+  padding: 3px 5px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+#symfony-api #method-summary
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#symfony-api li.declaration
+{
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #aaa;
+  list-style: none;
+}
+
+#symfony-api #method-details
+{
+  margin: 0;
+}
+
+#symfony-api #method-details li
+{
+  list-style-type: none;
+}
+
+#symfony-api #method-details li p
+{
+  margin-left:10px;
+}
+
+#symfony-api #method-details strong
+{
+  font-family: arial;
+}
+
+
+#symfony-api #method-details li pre
+{
+  margin-left:10px;
+  font-family: "Bitstream Vera Sans Mono", monospace;
+}
+
+#symfony-api .method-name
+{
+  color: #000;
+  font-weight: bold;
+}
+
+#symfony-api .parameter-name
+{
+  color: #683B00;
+}
+
+#symfony-api .method-parameters-summary
+{
+  margin: 8px 0 8px 8px;
+}
+
+#symfony-api .browse
+{
+  float: right;
+  font-size: 80%;
+}
+
+#search_auto_complete li
+{
+  list-style: none;
+  font-size: 80%;
+  padding: 0;
+  padding-left: 4px;
+  color: #000;
+  line-height: 1.4em;
+}
+
+#search
+{
+  width: 250px;
+}
+
+#search_box
+{
+  padding: 7px;
+  padding-left: 10px;
+  background-color: #ccc;
+  background: #C6CDDE url(/web/20170608175025im_/http://www.symfony-project.org/images/side_background.gif) repeat-x top;
+}
+
+.notfound
+{
+  font-style: italic;
+}
+
+#search_box_help td
+{
+  vertical-align: top;
+  color: #000;
+  font-size: 80%;
+}
+
+#search_box_help
+{
+  margin-top: 5px;
+  border-top: 2px solid #ddd;
+}
+
+#api_packages li
+{
+  list-style: none;
+  margin-bottom: 2px;
+}
+
+#api_packages li ul
+{
+  margin: 5px 0 5px 10px;
+  font-size: 90%;
+}
+
+/*
+     FILE ARCHIVED ON 17:50:25 Jun 08, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:24:02 Mar 30, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 170.414
+  RedisCDXSource: 39.184
+  load_resource: 722.358
+  exclusion.robots: 0.337
+  esindex: 0.025
+  LoadShardBlock: 104.915 (3)
+  exclusion.robots.policy: 0.289
+  PetaboxLoader3.resolve: 278.712 (2)
+  PetaboxLoader3.datanode: 192.911 (5)
+  CDXLines.iter: 19.695 (3)
+*/

@@ -1,0 +1,1022 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="symfony - open-source PHP web framework" />
+<meta name="robots" content="index, follow" />
+<meta name="description" content="symfony - open-source PHP web framework" />
+<meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<meta name="language" content="en" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="../../css/main.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../css/print.css" />
+
+    <title>symfony API &raquo; AssetHelper Functions | symfony | Web PHP Framework</title>
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/api.css" />
+    <script type="text/javascript" src="/js/prototype.js"></script>
+    <script type="text/javascript" src="/js/effects.js"></script>
+    <script type="text/javascript" src="/js/controls.js"></script>
+    <script src="/css/jquery.min.js" type="text/javascript"></script>
+
+    <!--[if IE 6]>
+      <script src="/js/DD_belatedPNG_0.0.8a-min.js" type="text/javascript"></script>
+      <script src="/js/ExtendDD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        DD_belatedPNG.fix('.png_fix');
+      </script>
+    <![endif]-->
+
+          <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-89393-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script');
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          ga.setAttribute('async', 'true');
+          document.documentElement.firstChild.appendChild(ga);
+        })();
+      </script>
+    
+    <script type="text/javascript">
+        jQuery.noConflict();
+
+        jQuery(document).ready(function () {
+            jQuery("#ad_trainings_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'trainings_1']); });
+            jQuery("#ad_book_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'book_1']); });
+            jQuery("#ad_audit_1").click(function () { _gaq.push(['_trackEvent', 'Ads', 'Ads', 'audit_1']); });
+        });
+    </script>
+
+    <link href="https://connect.sensiolabs.com/css/sln.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="https://connect.sensiolabs.com/sln.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="sln"></div>
+
+    <table id="topbar" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td id="header"><a href="https://symfony.com/"><img alt="Symfony Web PHP framework" src="/images/symfony_logo.gif" /></a></td>
+        <td id="navigation">
+          <ul>
+            <li><a href="https://symfony.com/about">About</a></li>
+            <li><a href="https://symfony.com/download#symfony1">Installation</a></li>
+            <li><a href="https://symfony.com/legacy/doc">Documentation</a></li>
+            <li><a href="/plugins/">Plugins</a></li>
+            <li><a href="https://symfony.com/blog/">Blog</a></li>
+          </ul>
+        </td>
+      </tr>
+      <tr><td id="topseparator" colspan="2"></td></tr>
+              <tr>
+          <td colspan="2">
+            <h1>symfony API</h1>
+                          <h2>AssetHelper Functions</h2>
+                      </td>
+        </tr>
+          </table>
+
+          <div id="bar">
+          <div id="symfony2">
+              <p>You are currently browsing<br />the website for <em>symfony 1</em></p>
+              <p><a href="https://symfony.com/"><strong>Visit the <em>Symfony2</em> website</strong></a></p>
+
+              <hr />
+          </div>
+
+          <p><a href="index.html">&laquo; Back to API menu</a></p>
+
+
+
+<script type="text/javascript">
+  if (undefined == window.external || undefined == window.external.AddSearchProvider) { $$('.opensearch')[0].hide(); }
+</script>
+
+<h2>Packages</h2>
+<ul id="api_packages">
+          <li>
+            action      
+      <small> - <a href="action.html">6 classes</a></small>
+
+          </li>
+          <li>
+            addon      
+      <small> - <a href="addon.html">4 classes</a></small>
+
+          </li>
+          <li>
+            autoload      
+      <small> - <a href="autoload.html">4 classes</a></small>
+
+          </li>
+          <li>
+            behavior      
+      <small> - <a href="behavior.html">6 classes</a></small>
+
+          </li>
+          <li>
+            cache      
+      <small> - <a href="cache.html">9 classes</a></small>
+
+          </li>
+          <li>
+            command      
+      <small> - <a href="command.html">10 classes</a></small>
+
+          </li>
+          <li>
+            config      
+      <small> - <a href="config.html">22 classes</a></small>
+
+          </li>
+          <li>
+            controller      
+      <small> - <a href="controller.html">3 classes</a></small>
+
+          </li>
+          <li>
+            database      
+      <small> - <a href="database.html">7 classes</a></small>
+
+          </li>
+          <li>
+            debug      
+      <small> - <a href="debug.html">13 classes</a></small>
+
+          </li>
+          <li>
+            default      
+      <small> - <a href="default.html">9 classes</a></small>
+
+          </li>
+          <li>
+            doctrine      
+      <small> - <a href="doctrine.html">37 classes</a></small>
+
+          </li>
+          <li>
+            event_dispatcher      
+      <small> - <a href="event_dispatcher.html">2 classes</a></small>
+
+          </li>
+          <li>
+            exception      
+      <small> - <a href="exception.html">19 classes</a></small>
+
+          </li>
+          <li>
+            filter      
+      <small> - <a href="filter.html">7 classes</a></small>
+
+          </li>
+          <li>
+            form      
+      <small> - <a href="form.html">10 classes</a></small>
+
+          </li>
+          <li>
+            generator      
+      <small> - <a href="generator.html">10 classes</a></small>
+
+          </li>
+          <li>
+      <strong>      helper      </strong>
+      <small> - <a href="helper.html">12 classes</a></small>
+
+              <ul>
+                      <li><a href="AssetHelper.html">AssetHelper</a></li>
+                      <li><a href="CacheHelper.html">CacheHelper</a></li>
+                      <li><a href="DateHelper.html">DateHelper</a></li>
+                      <li><a href="EscapingHelper.html">EscapingHelper</a></li>
+                      <li><a href="HelperHelper.html">HelperHelper</a></li>
+                      <li><a href="I18NHelper.html">I18NHelper</a></li>
+                      <li><a href="JavascriptBaseHelper.html">JavascriptBaseHelper</a></li>
+                      <li><a href="NumberHelper.html">NumberHelper</a></li>
+                      <li><a href="PartialHelper.html">PartialHelper</a></li>
+                      <li><a href="TagHelper.html">TagHelper</a></li>
+                      <li><a href="TextHelper.html">TextHelper</a></li>
+                      <li><a href="UrlHelper.html">UrlHelper</a></li>
+                  </ul>
+          </li>
+          <li>
+            i18n      
+      <small> - <a href="i18n.html">25 classes</a></small>
+
+          </li>
+          <li>
+            log      
+      <small> - <a href="log.html">12 classes</a></small>
+
+          </li>
+          <li>
+            mailer      
+      <small> - <a href="mailer.html">4 classes</a></small>
+
+          </li>
+          <li>
+            pager      
+      <small> - <a href="pager.html">1 classes</a></small>
+
+          </li>
+          <li>
+            plugin      
+      <small> - <a href="plugin.html">14 classes</a></small>
+
+          </li>
+          <li>
+            propel      
+      <small> - <a href="propel.html">23 classes</a></small>
+
+          </li>
+          <li>
+            request      
+      <small> - <a href="request.html">2 classes</a></small>
+
+          </li>
+          <li>
+            response      
+      <small> - <a href="response.html">2 classes</a></small>
+
+          </li>
+          <li>
+            routing      
+      <small> - <a href="routing.html">9 classes</a></small>
+
+          </li>
+          <li>
+            storage      
+      <small> - <a href="storage.html">10 classes</a></small>
+
+          </li>
+          <li>
+            task      
+      <small> - <a href="task.html">45 classes</a></small>
+
+          </li>
+          <li>
+            user      
+      <small> - <a href="user.html">3 classes</a></small>
+
+          </li>
+          <li>
+            util      
+      <small> - <a href="util.html">16 classes</a></small>
+
+          </li>
+          <li>
+            validator      
+      <small> - <a href="validator.html">33 classes</a></small>
+
+          </li>
+          <li>
+            view      
+      <small> - <a href="view.html">11 classes</a></small>
+
+          </li>
+          <li>
+            widget      
+      <small> - <a href="widget.html">36 classes</a></small>
+
+          </li>
+          <li>
+            yaml      
+      <small> - <a href="yaml.html">4 classes</a></small>
+
+          </li>
+  </ul>
+      </div>
+    
+      <div id="documentation_release_info">
+  You are currently browsing the symfony API for the <strong>1.4</strong> version. Switch to:
+  <ul>
+                <li class="release_1_0">
+        <a href="../1_0/AssetHelper.html">1.0</a>      </li>
+                <li class="release_1_1">
+        <a href="../1_1/AssetHelper.html">1.1</a>      </li>
+                <li class="release_1_2">
+        <a href="../1_2/AssetHelper.html">1.2</a>      </li>
+                <li class="release_1_3">
+        <a href="../1_3/AssetHelper.html">1.3</a>      </li>
+            </ul>
+</div>
+  
+
+
+  
+    <div class="obsolete">
+    This version of symfony is not maintained anymore.<br />
+    If some of your projects still use this version, consider upgrading as soon as possible.
+</div>
+
+<div id="content1" class="documentation ">
+      
+
+
+
+<table width="99%">
+  <tr>
+    <td>
+      <div id="symfony-api">
+
+        <div id="class-description">
+          <p>AssetHelper.</p>
+                  </div>
+
+        <div>
+
+          
+          <a name="method-summary"></a>
+          <h2>Function Summary</h2>
+          <ul id="method-summary">
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_auto_discovery_link_tag">auto_discovery_link_tag</a>($type, $url, $tag_options)
+                <br />
+                <span class="description">Returns a &lt;link&gt; tag that browsers and news readers</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_decorate_with">decorate_with</a>($layout)
+                <br />
+                <span class="description">Decorates the current template with a given layout.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_dynamic_javascript_include_tag">dynamic_javascript_include_tag</a>($uri, $absolute, $options)
+                <br />
+                <span class="description">Returns a &lt;script&gt; include tag for the given internal URI.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_get_javascripts">get_javascripts</a>()
+                <br />
+                <span class="description">Returns &lt;script&gt; tags for all javascripts configured in view.yml or added to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_get_javascripts_for_form">get_javascripts_for_form</a>()
+                <br />
+                <span class="description">Returns &lt;script&gt; tags for all javascripts associated with the given form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_get_stylesheets">get_stylesheets</a>()
+                <br />
+                <span class="description">Returns &lt;link&gt; tags for all stylesheets configured in view.yml or added to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_get_stylesheets_for_form">get_stylesheets_for_form</a>()
+                <br />
+                <span class="description">Returns &lt;link&gt; tags for all stylesheets associated with the given form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_image_path">image_path</a>($source, $absolute)
+                <br />
+                <span class="description">Returns the path to an image asset.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_image_tag">image_tag</a>($source, $options)
+                <br />
+                <span class="description">Returns an &lt;img&gt; image tag for the asset given as argument.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_include_http_metas">include_http_metas</a>()
+                <br />
+                <span class="description">Returns a set of &lt;meta http-equiv&gt; tags according to the response attributes,</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_include_javascripts">include_javascripts</a>()
+                <br />
+                <span class="description">Prints &lt;script&gt; tags for all javascripts configured in view.yml or added to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_include_javascripts_for_form">include_javascripts_for_form</a>()
+                <br />
+                <span class="description">Prints &lt;script&gt; tags for all javascripts associated with the given form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_include_metas">include_metas</a>()
+                <br />
+                <span class="description">Prints a set of &lt;meta&gt; tags according to the response attributes,</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_include_stylesheets">include_stylesheets</a>()
+                <br />
+                <span class="description">Prints &lt;link&gt; tags for all stylesheets configured in view.yml or added to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_include_stylesheets_for_form">include_stylesheets_for_form</a>()
+                <br />
+                <span class="description">Prints &lt;link&gt; tags for all stylesheets associated with the given form.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_include_title">include_title</a>()
+                <br />
+                <span class="description">Returns the title of the current page according to the response attributes,</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_javascript_include_tag">javascript_include_tag</a>(, )
+                <br />
+                <span class="description">Returns a &lt;script&gt; include tag per source given as argument.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_javascript_path">javascript_path</a>($source, $absolute)
+                <br />
+                <span class="description">Returns the path to a JavaScript asset.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_stylesheet_path">stylesheet_path</a>($source, $absolute)
+                <br />
+                <span class="description">Returns the path to a stylesheet asset.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type">string</span>
+                <a href="AssetHelper.html#method_stylesheet_tag">stylesheet_tag</a>(, )
+                <br />
+                <span class="description">Returns a css &lt;link&gt; tag per source given as argument,</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_use_dynamic_javascript">use_dynamic_javascript</a>()
+                <br />
+                <span class="description">Adds a dynamic javascript to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_use_dynamic_stylesheet">use_dynamic_stylesheet</a>()
+                <br />
+                <span class="description">Adds a dynamic stylesheet to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_use_javascript">use_javascript</a>()
+                <br />
+                <span class="description">Adds a javascript to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_use_javascripts_for_form">use_javascripts_for_form</a>($form)
+                <br />
+                <span class="description">Adds javascripts from the supplied form to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_use_stylesheet">use_stylesheet</a>()
+                <br />
+                <span class="description">Adds a stylesheet to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method_use_stylesheets_for_form">use_stylesheets_for_form</a>($form)
+                <br />
+                <span class="description">Adds stylesheets from the supplied form to the response object.</span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method__compute_public_path">_compute_public_path</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                          <li class="declaration">
+                <span class="type"></span>
+                <a href="AssetHelper.html#method__dynamic_path">_dynamic_path</a>()
+                <br />
+                <span class="description"></span>
+              </li>
+                      </ul>
+
+          
+        </div>
+
+        <a name="method-details"></a>
+        <h2>Function Details</h2>
+        <ul id="method-details">
+                      <li>
+              <a name="method_auto_discovery_link_tag"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">auto_discovery_link_tag</span>&nbsp;($type, $url, $tag_options)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$type</td>
+                <td>feed type ('rss', 'atom')</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$url</td>
+                <td>'module/action' or '@rule' of the feed</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$tag_options</td>
+                <td>additional HTML compliant <link> tag parameters</td>
+              </tr>
+                        </table>
+              <p><strong>Returns a &lt;link&gt; tag that browsers and news readers</strong></p>
+              <p><p> can use to auto-detect a RSS or ATOM feed for the current page,
+<br /> to be included in the <head> section of a HTML document.</p><p> <b>Options:</b>
+<br /> - rel - defaults to 'alternate'
+<br /> - type - defaults to 'application/rss+xml'
+<br /> - title - defaults to the feed type in upper case</p><p> <b>Examples:</b>
+<br /> <code>
+<br />  echo auto_discovery_link_tag('rss', 'module/feed');
+<br />    => <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.curenthost.com/module/feed" />
+<br />  echo auto_discovery_link_tag('rss', 'module/feed', array('title' => 'My RSS'));
+<br />    => <link rel="alternate" type="application/rss+xml" title="My RSS" href="http://www.curenthost.com/module/feed" />
+<br /> </code></p></p>
+                        <p><strong>returns</strong> XHTML compliant <link> tag</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_decorate_with"></a>
+              <h3>
+                <span class="method-name">decorate_with</span>&nbsp;($layout)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$layout</td>
+                <td>The layout name or path or false to disable the layout</td>
+              </tr>
+                        </table>
+              <p><strong>Decorates the current template with a given layout.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_dynamic_javascript_include_tag"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">dynamic_javascript_include_tag</span>&nbsp;($uri, $absolute, $options)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$uri</td>
+                <td>The internal URI for the dynamic javascript</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$absolute</td>
+                <td>Whether to generate an absolute URL</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>An array of options</td>
+              </tr>
+                        </table>
+              <p><strong>Returns a &lt;script&gt; include tag for the given internal URI.</strong></p>
+              <p><p>
+<br /> The helper automatically adds the sf_format to the internal URI, so you don't have to.</p></p>
+                        <p><strong>returns</strong> XHTML compliant <script> tag(s)</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_get_javascripts"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">get_javascripts</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns &lt;script&gt; tags for all javascripts configured in view.yml or added to the response object.</strong></p>
+              <p><p>
+<br /> You can use this helper to decide the location of javascripts in pages.
+<br /> By default, if you don't call this helper, symfony will automatically include javascripts before </head>.
+<br /> Calling this helper disables this behavior.</p></p>
+                        <p><strong>returns</strong> <script> tags</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_get_javascripts_for_form"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">get_javascripts_for_form</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns &lt;script&gt; tags for all javascripts associated with the given form.</strong></p>
+              <p><p>
+<br /> The scripts are set by implementing the getJavaScripts() method in the
+<br /> corresponding widget.</p><p> <code>
+<br /> class MyWidget extends sfWidgetForm
+<br /> {
+<br />   public function getJavaScripts()
+<br />   {
+<br />     return array('/path/to/a/file.js');
+<br />   }
+<br /> }
+<br /> </code></p></p>
+                        <p><strong>returns</strong> <script> tags</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_get_stylesheets"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">get_stylesheets</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns &lt;link&gt; tags for all stylesheets configured in view.yml or added to the response object.</strong></p>
+              <p><p>
+<br /> You can use this helper to decide the location of stylesheets in pages.
+<br /> By default, if you don't call this helper, symfony will automatically include stylesheets before </head>.
+<br /> Calling this helper disables this behavior.</p></p>
+                        <p><strong>returns</strong> <link> tags</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_get_stylesheets_for_form"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">get_stylesheets_for_form</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns &lt;link&gt; tags for all stylesheets associated with the given form.</strong></p>
+              <p><p>
+<br /> The stylesheets are set by implementing the getStyleSheets() method in the
+<br /> corresponding widget.</p><p> <code>
+<br /> class MyWidget extends sfWidgetForm
+<br /> {
+<br />   public function getStyleSheets()
+<br />   {
+<br />     return array('/path/to/a/file.css');
+<br />   }
+<br /> }
+<br /> </code></p></p>
+                        <p><strong>returns</strong> <link> tags</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_image_path"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">image_path</span>&nbsp;($source, $absolute)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$source</td>
+                <td>asset name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$absolute</td>
+                <td>return absolute path ?</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the path to an image asset.</strong></p>
+              <p><p>
+<br /> <b>Example:</b>
+<br /> <code>
+<br />  echo image_path('foobar');
+<br />    => /images/foobar.png
+<br /> </code></p><p> <b>Note:</b> The asset name can be supplied as a...
+<br /> - full path, like "/my_images/image.gif"
+<br /> - file name, like "rss.gif", that gets expanded to "/images/rss.gif"
+<br /> - file name without extension, like "logo", that gets expanded to "/images/logo.png"</p></p>
+                        <p><strong>returns</strong> file path to the image file</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_image_tag"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">image_tag</span>&nbsp;($source, $options)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$source</td>
+                <td>image asset name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$options</td>
+                <td>additional HTML compliant <img> tag parameters</td>
+              </tr>
+                        </table>
+              <p><strong>Returns an &lt;img&gt; image tag for the asset given as argument.</strong></p>
+              <p><p>
+<br /> <b>Options:</b>
+<br /> - 'absolute' - to output absolute file paths, useful for embedded images in emails
+<br /> - 'alt'  - defaults to the file name part of the asset (capitalized and without the extension)
+<br /> - 'size' - Supplied as "XxY", so "30x45" becomes width="30" and height="45"</p><p> <b>Examples:</b>
+<br /> <code>
+<br />  echo image_tag('foobar');
+<br />    => <img src="../1_4/images/foobar.png.html" alt="Foobar" />
+<br />  echo image_tag('/my_images/image.gif', array('alt' => 'Alternative text', 'size' => '100x200'));
+<br />    => <img src="http://www.symfony-project.org/my_images/image.gif" alt="Alternative text" width="100" height="200" />
+<br /> </code></p></p>
+                        <p><strong>returns</strong> XHTML compliant <img> tag</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_include_http_metas"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">include_http_metas</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns a set of &lt;meta http-equiv&gt; tags according to the response attributes,</strong></p>
+              <p><p> to be included in the <head> section of a HTML document.</p><p> <b>Examples:</b>
+<br /> <code>
+<br />  include_http_metas();
+<br />    => <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<br /> </code></p><p> <b>Note:</b> Modify the view.yml or use sfWebResponse::addHttpMeta() to change, add or remove HTTP metas.</p></p>
+                        <p><strong>returns</strong> XHTML compliant <meta> tag(s)</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_include_javascripts"></a>
+              <h3>
+                <span class="method-name">include_javascripts</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Prints &lt;script&gt; tags for all javascripts configured in view.yml or added to the response object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_include_javascripts_for_form"></a>
+              <h3>
+                <span class="method-name">include_javascripts_for_form</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Prints &lt;script&gt; tags for all javascripts associated with the given form.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_include_metas"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">include_metas</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Prints a set of &lt;meta&gt; tags according to the response attributes,</strong></p>
+              <p><p> to be included in the <head> section of a HTML document.</p><p> <b>Examples:</b>
+<br /> <code>
+<br />  include_metas();
+<br />    => <meta name="title" content="symfony - open-source PHP5 web framework" />
+<br />       <meta name="robots" content="index, follow" />
+<br />       <meta name="description" content="symfony - open-source PHP5 web framework" />
+<br />       <meta name="keywords" content="symfony, project, framework, php, php5, open-source, mit, symphony" />
+<br />       <meta name="language" content="en" /><link href="http://www.symfony-project.org/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<br /> </code></p><p> <b>Note:</b> Modify the view.yml or use sfWebResponse::addMeta() to change, add or remove metas.</p></p>
+                        <p><strong>returns</strong> XHTML compliant <meta> tag(s)</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_include_stylesheets"></a>
+              <h3>
+                <span class="method-name">include_stylesheets</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Prints &lt;link&gt; tags for all stylesheets configured in view.yml or added to the response object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_include_stylesheets_for_form"></a>
+              <h3>
+                <span class="method-name">include_stylesheets_for_form</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Prints &lt;link&gt; tags for all stylesheets associated with the given form.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_include_title"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">include_title</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Returns the title of the current page according to the response attributes,</strong></p>
+              <p><p> to be included in the <title> section of a HTML document.</p><p> <b>Note:</b> Modify the sfResponse object or the view.yml to modify the title of a page.</p></p>
+                        <p><strong>returns</strong> page title</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_javascript_include_tag"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">javascript_include_tag</span>&nbsp;(, )
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns a &lt;script&gt; include tag per source given as argument.</strong></p>
+              <p><p>
+<br /> <b>Examples:</b>
+<br /> <code>
+<br />  echo javascript_include_tag('xmlhr');
+<br />    => <script language="JavaScript" type="text/javascript" src="http://www.symfony-project.org/js/xmlhr.js"></script>
+<br />  echo javascript_include_tag('common.javascript', '/elsewhere/cools');
+<br />    => <script language="JavaScript" type="text/javascript" src="http://www.symfony-project.org/js/common.javascript"></script>
+<br />       <script language="JavaScript" type="text/javascript" src="http://www.symfony-project.org/elsewhere/cools.js"></script>
+<br /> </code></p></p>
+                        <p><strong>returns</strong> XHTML compliant <script> tag(s)</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_javascript_path"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">javascript_path</span>&nbsp;($source, $absolute)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$source</td>
+                <td>asset name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$absolute</td>
+                <td>return absolute path ?</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the path to a JavaScript asset.</strong></p>
+              <p><p>
+<br /> <b>Example:</b>
+<br /> <code>
+<br />  echo javascript_path('myscript');
+<br />    => /js/myscript.js
+<br /> </code></p><p> <b>Note:</b> The asset name can be supplied as a...
+<br /> - full path, like "/my_js/myscript.css"
+<br /> - file name, like "myscript.js", that gets expanded to "/js/myscript.js"
+<br /> - file name without extension, like "myscript", that gets expanded to "/js/myscript.js"</p></p>
+                        <p><strong>returns</strong> file path to the JavaScript file</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_stylesheet_path"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">stylesheet_path</span>&nbsp;($source, $absolute)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      <tr>
+                <td class="parameter-name">$source</td>
+                <td>asset name</td>
+              </tr>
+                                      <tr>
+                <td class="parameter-name">$absolute</td>
+                <td>return absolute path ?</td>
+              </tr>
+                        </table>
+              <p><strong>Returns the path to a stylesheet asset.</strong></p>
+              <p><p>
+<br /> <b>Example:</b>
+<br /> <code>
+<br />  echo stylesheet_path('style');
+<br />    => /css/style.css
+<br /> </code></p><p> <b>Note:</b> The asset name can be supplied as a...
+<br /> - full path, like "/my_css/style.css"
+<br /> - file name, like "style.css", that gets expanded to "/css/style.css"
+<br /> - file name without extension, like "style", that gets expanded to "/css/style.css"</p></p>
+                        <p><strong>returns</strong> file path to the stylesheet file</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_stylesheet_tag"></a>
+              <h3>
+                (string)&nbsp;<span class="method-name">stylesheet_tag</span>&nbsp;(, )
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Returns a css &lt;link&gt; tag per source given as argument,</strong></p>
+              <p><p> to be included in the <head> section of a HTML document.</p><p> <b>Options:</b>
+<br /> - rel - defaults to 'stylesheet'
+<br /> - type - defaults to 'text/css'
+<br /> - media - defaults to 'screen'</p><p> <b>Examples:</b>
+<br /> <code>
+<br />  echo stylesheet_tag('style');
+<br />    => <link href="http://www.symfony-project.org/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+<br />  echo stylesheet_tag('style', array('media' => 'all'));
+<br />    => <link href="http://www.symfony-project.org/stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
+<br />  echo stylesheet_tag('style', array('raw_name' => true));
+<br />    => <link href="../1_4/style.html" media="all" rel="stylesheet" type="text/css" />
+<br />  echo stylesheet_tag('random.styles', '/css/stylish');
+<br />    => <link href="http://www.symfony-project.org/stylesheets/random.styles" media="screen" rel="stylesheet" type="text/css" />
+<br />       <link href="http://www.symfony-project.org/css/stylish.css" media="screen" rel="stylesheet" type="text/css" />
+<br /> </code></p></p>
+                        <p><strong>returns</strong> XHTML compliant <link> tag(s)</p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_use_dynamic_javascript"></a>
+              <h3>
+                <span class="method-name">use_dynamic_javascript</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Adds a dynamic javascript to the response object.</strong></p>
+              <p><p>
+<br /> The first argument is an internal URI.
+<br /> The helper automatically adds the sf_format to the internal URI, so you don't have to.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_use_dynamic_stylesheet"></a>
+              <h3>
+                <span class="method-name">use_dynamic_stylesheet</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Adds a dynamic stylesheet to the response object.</strong></p>
+              <p><p>
+<br /> The first argument is an internal URI.
+<br /> The helper automatically adds the sf_format to the internal URI, so you don't have to.</p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_use_javascript"></a>
+              <h3>
+                <span class="method-name">use_javascript</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Adds a javascript to the response object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_use_javascripts_for_form"></a>
+              <h3>
+                <span class="method-name">use_javascripts_for_form</span>&nbsp;($form)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Adds javascripts from the supplied form to the response object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_use_stylesheet"></a>
+              <h3>
+                <span class="method-name">use_stylesheet</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong>Adds a stylesheet to the response object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method_use_stylesheets_for_form"></a>
+              <h3>
+                <span class="method-name">use_stylesheets_for_form</span>&nbsp;($form)
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                                      </table>
+              <p><strong>Adds stylesheets from the supplied form to the response object.</strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method__compute_public_path"></a>
+              <h3>
+                <span class="method-name">_compute_public_path</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                      <li>
+              <a name="method__dynamic_path"></a>
+              <h3>
+                <span class="method-name">_dynamic_path</span>&nbsp;()
+              </h3>
+              <table class="method-parameters-summary" cellspacing="1">
+                        </table>
+              <p><strong></strong></p>
+              <p><p></p></p>
+                                  <div style="clear: both;"></div>
+            </li>
+                  </ul>
+
+      </div>
+    </td>
+  </tr>
+</table>
+    </div>
+
+    <div id="footer">
+      Powered by <a href="https://symfony.com/"><img alt="Symfony" align="middle" src="/images/symfony_button.gif" /></a>&nbsp;-&nbsp;
+      "Symfony" is a <a href="https://symfony.com/trademark">trademark</a> of Fabien Potencier. All rights reserved.
+    </div>
+
+    <script type="text/javascript" src="/js/sln_customize.js"></script>
+  </body>
+</html>
